@@ -146,6 +146,9 @@ td {
     vertical-align:     top;
     border: 1px solid black;
 }
+table.navigation {
+    clear: both;
+}
 
 table.navigation td, #actions_panel table td {
     border: none;
