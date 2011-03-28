@@ -1060,6 +1060,10 @@ li#li_select_fontsize {
     float: <?php echo $left; ?>;
 }
 
+#div_table_order {
+    clear: left;
+}
+
 #div_table_copy,
 #div_partition_maintenance,
 #div_referential_integrity,
