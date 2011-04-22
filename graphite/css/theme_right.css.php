@@ -146,6 +146,9 @@ td {
     vertical-align:     top;
     border: 1px solid black;
 }
+table.navigation {
+    clear: both;
+}
 
 table.navigation td, #actions_panel table td {
     border: none;
@@ -1053,6 +1056,10 @@ li#li_select_fontsize {
     float: <?php echo $left; ?>;
 }
 
+#div_table_order {
+    clear: left;
+}
+
 #div_table_copy,
 #div_partition_maintenance,
 #div_referential_integrity,
@@ -1186,8 +1193,7 @@ table#serverconnection_trg_local  {
     margin-bottom: 0;
     margin-left: auto;
     padding: 3px 5px;   /** Keep a little space on the sides of the text */
-    min-width: 70px;
-    max-width: 350px;   /** This value might have to be changed */
+    width: 350px;
     background-color: #FFD700;
     z-index: 1100;      /** If this is not kept at a high z-index, the jQueryUI modal dialogs (z-index:1000) might hide this */
     text-align: center;
