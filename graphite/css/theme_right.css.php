@@ -29,7 +29,7 @@ body {
     padding:            0;
     margin:             0.5em;
     color:              <?php echo $GLOBALS['cfg']['MainColor']; ?>;
-    background:         <?php echo (isset($_SESSION['tmp_user_values']['custom_color']) ? $_SESSION['tmp_user_values']['custom_color'] : $GLOBALS['cfg']['MainBackground']); ?>;
+    background:         <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 }
 
 <?php if (! empty($GLOBALS['cfg']['FontFamilyFixed'])) { ?>
@@ -994,10 +994,6 @@ li#li_user_preferences {
     list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_tblops.png);
 }
 
-li#li_custom_color {
-    list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_color.png);
-}
-
 li#li_select_fontsize {
     list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_font.png);
 }
@@ -1161,7 +1157,7 @@ div.upload_progress_bar_outer
 
 div.upload_progress_bar_inner
 {
-    background-color: <?php echo (isset($_SESSION['userconf']['custom_color']) ? $_SESSION['userconf']['custom_color'] : $GLOBALS['cfg']['NaviBackground']); ?>;
+    background-color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     width: 0px;
     height: 12px;
     margin: 1px;
