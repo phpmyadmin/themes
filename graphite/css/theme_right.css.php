@@ -1051,7 +1051,7 @@ li#li_select_fontsize {
 }
 
 .operations_half_width {
-    min-width: 48%;
+    width: 48%;
     float: <?php echo $left; ?>;
 }
 
