@@ -394,7 +394,6 @@ td .icon {
 /* message boxes: warning, error, confirmation */
 .success h1,
 .notice h1,
-.warning h1,
 div.error h1 {
     border-bottom:      2px solid;
     font-weight:        bold;
@@ -404,7 +403,6 @@ div.error h1 {
 
 div.success,
 div.notice,
-div.warning,
 div.error,
 div.footnotes {
     clear: both;
@@ -454,22 +452,6 @@ div.footnotes {
 }
 .notice h1 {
     border-color:       #FFD700;
-}
-
-.warning {
-    color:              #CC0000;
-    background-color:   #FFFFCC;
-}
-p.warning,
-h1.warning,
-div.warning {
-    border-color:       #CC0000;
-    <?php if ($GLOBALS['cfg']['ErrorIconic']) { ?>
-    background-image:   url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_warn.png);
-    <?php } ?>
-}
-.warning h1 {
-    border-color:       #cc0000;
 }
 
 .error {
@@ -630,10 +612,6 @@ form.login label {
 #topmenu li a:hover, #topmenu2 li a:hover {
     background: #ddd;
     text-decoration: none;
-}
-#topmenu a.warning {
-    background: #ccc;
-    color: #666;
 }
 a.tabactive {
     font-weight: bolder;
