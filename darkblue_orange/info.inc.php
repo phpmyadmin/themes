@@ -11,5 +11,5 @@
  *
  */
 $theme_name = 'Darkblue/orange';
-$theme_full_version = '2.9';
+$theme_full_version = '2.10';
 ?>
