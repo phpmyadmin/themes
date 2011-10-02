@@ -693,6 +693,10 @@ ul#topmenu .submenu {
     position:           relative;
 }
 
+ul#topmenu .shown {
+    display: inline-block;
+}
+
 ul#topmenu ul {
     margin:             0;
     padding:            0;
