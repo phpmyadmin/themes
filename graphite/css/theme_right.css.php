@@ -177,6 +177,13 @@ fieldset.tblFooters {
     border-radius:      0 0 0.5em 0.5em;
 }
 
+div.null_div {
+    height: 20px;
+    text-align: center;
+    font-style:normal;
+    min-width:60px;
+}
+
 fieldset .formelement {
     float:              <?php echo $left; ?>;
     margin-<?php echo $right; ?>:       0.5em;

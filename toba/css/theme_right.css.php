@@ -165,6 +165,13 @@ fieldset.tblFooters {
     clear:              both;
 }
 
+div.null_div {
+    height: 20px;
+    text-align: center;
+    font-style:normal;
+    min-width:60px;
+}
+
 fieldset .formelement {
     float:              <?php echo $left; ?>;
     margin-<?php echo $right; ?>:       0.5em;
