@@ -12,5 +12,5 @@
  * Theme information
  */
 $theme_name = 'Paradice';
-$theme_full_version = '2.9';
+$theme_full_version = '3.4';
 ?>
