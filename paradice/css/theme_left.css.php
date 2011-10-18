@@ -3,7 +3,7 @@
 /**
  * navigation css file from theme Paradice
  *
- * @version $Id: theme_left.css.php 31 2010-04-06 18:39:37Z andyscherzinger $
+ * @version $Id: theme_left.css.php 38 2011-01-14 18:12:31Z andyscherzinger $
  * @package phpMyAdmin-theme
  * @subpackage Paradice
  */
@@ -19,7 +19,7 @@ $ipath = $_SESSION['PMA_Theme']->getImgPath();
 /******************************************************************************/
 /* general tags */
 html {
-    font-size: <?php echo (null !== $_SESSION['PMA_Config']->get('fontsize') ? $_SESSION['PMA_Config']->get('fontsize') : $_COOKIE['pma_fontsize']); ?>;
+    font-size: <?php echo (null !== $GLOBALS['PMA_Config']->get('fontsize') ? $GLOBALS['PMA_Config']->get('fontsize') : $_COOKIE['pma_fontsize']); ?>;
 }
 
 input, select, textarea {
@@ -30,8 +30,8 @@ body {
 <?php if (! empty($GLOBALS['cfg']['FontFamily'])) { ?>
     font-family:        <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 <?php } ?>
+    background:         <?php echo (isset($_SESSION['tmp_user_values']['custom_color']) ? $_SESSION['tmp_user_values']['custom_color'] : $GLOBALS['cfg']['NaviBackground']); ?>;
 	font-size:			0.8em;
-    background:         <?php echo (isset($_SESSION['userconf']['custom_color']) ? $_SESSION['userconf']['custom_color'] : $GLOBALS['cfg']['NaviBackground']); ?>;
     color:              <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
     margin:             0;
     padding:            0.2em 0.2em 0.2em 0.2em;
@@ -102,8 +102,8 @@ button {
 }
 
 .navi_dbName {
-    font-weight:    	bold;
-    color:          	<?php echo $GLOBALS['cfg']['NaviDatabaseNameColor']; ?>;
+    font-weight:    bold;
+    color:          <?php echo $GLOBALS['cfg']['NaviDatabaseNameColor']; ?>;
 }
 
 /******************************************************************************/
@@ -145,7 +145,7 @@ ul#databaseList li {
 }
 
 ul#databaseList a {
-    display: 			block;
+    display: block;
 }
 
 div#navidbpageselector a,
