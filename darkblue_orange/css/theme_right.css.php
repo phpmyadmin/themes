@@ -1632,6 +1632,14 @@ td.more_opts {
     white-space: nowrap;
 }
 
+iframe.IE_hack {
+    z-index: 1;
+    position: absolute;
+    display: none;
+    border: 0;
+    filter: alpha(opacity=0);
+}
+
 /* config forms */
 .config-form ul.tabs {
     margin:      1.1em 0.2em 0;
