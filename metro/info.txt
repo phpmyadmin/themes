@@ -1,0 +1,6 @@
+Windows 8 Boot (Metro) theme for phpMyAdmin
+
+This theme is a minimalistic, clean theme for phpMyAdmin, inspired by the new Windows 8 Boot (Metro) design.
+Tested under Firefox 17, Chrome 23, Safari 5.1.7, Opera 12.12 and Internet Explorer 9 & 10.
+Using this theme under any earlier version of browsers listed above may causes erroneous appearance. Such browsers like Internet Explorer 6, 7 and 8 are definitely not recommended for this theme.
+This theme has several color schemes. To switch between schemes, read layout.inc for further instructions.
