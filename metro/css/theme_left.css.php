@@ -390,7 +390,7 @@ select
 	padding: 3px;
 }
 
-<?php if ($GLOBALS['cfg']['BrowseMarkerColor']) { ?>
+<?php if (!empty($GLOBALS['cfg']['BrowseMarkerColor'])) { ?>
 /* marked items */
 
 div#left_tableList > ul li.marked > a,
