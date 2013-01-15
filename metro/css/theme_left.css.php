@@ -82,17 +82,17 @@ if (!defined('PMA_MINIMUM_COMMON')) {
 	outline: none;
 }
 
-html 
+html
 {
 	font-size: 90%;
 }
 
-input, select, textarea 
+input, select, textarea
 {
 	font-size: 1em;
 }
 
-body 
+body
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
@@ -117,14 +117,14 @@ input[type=text]
 	color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
 }
 
-a img 
+a img
 {
 	border: 0;
 }
 
 a:link,
 a:visited,
-a:active 
+a:active
 {
 	text-decoration: none;
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
@@ -135,7 +135,7 @@ ul
 	margin: 0;
 }
 
-form 
+form
 {
 	margin: 0;
 	padding: 0;
@@ -143,21 +143,21 @@ form
 }
 
 select#select_server,
-select#lightm_db 
+select#lightm_db
 {
 	width: 100%;
 }
 
 /* buttons in some browsers (eg. Konqueror) are block elements,
    this breaks design */
-button 
+button
 {
 	display: inline;
 }
 
 /* classes */
 
-.navi_dbName 
+.navi_dbName
 {
 	color: <?php echo $GLOBALS['cfg']['NaviDatabaseNameColor']; ?>;
 }
@@ -176,13 +176,13 @@ div#pmalogo:before
 	display: none;
 }
 
-div#recentTableList 
+div#recentTableList
 {
 	text-align: center;
 	margin: 20px 10px 0px 10px;
 }
 
-div#recentTableList select 
+div#recentTableList select
 {
 	width: 100%;
 }
@@ -195,7 +195,7 @@ div#pmalogo
 }
 
 div#leftframelinks,
-div#databaseList 
+div#databaseList
 {
 	text-align: center;
 	margin: 10px;
@@ -207,19 +207,19 @@ div#leftframelinks
 	padding-bottom: 1em;
 }
 
-ul#databaseList 
+ul#databaseList
 {
 	margin: 1em 0px;
 	padding: 0;
 	padding-bottom: 0.5em;
 }
 
-ul#databaseList span 
+ul#databaseList span
 {
 	padding: 5px;
 }
 
-ul#databaseList a 
+ul#databaseList a
 {
 	display: block;
 	text-indent: 0;
@@ -234,7 +234,7 @@ ul#databaseList a:before
 	margin-right: 10px;
 }
 
-div#navidbpageselector 
+div#navidbpageselector
 {
 	margin: 0.1em;
 	text-align: center;
@@ -247,13 +247,13 @@ div#navidbpageselector select
 	margin: 0.2em;
 }
 
-ul#databaseList ul 
+ul#databaseList ul
 {
 	margin: 0;
 	padding: 0;
 }
 
-ul#databaseList li 
+ul#databaseList li
 {
 	list-style: none;
 	text-indent: 20px;
@@ -268,32 +268,32 @@ ul#databaseList li:hover
 	background-color: <?php echo $GLOBALS['cfg']['NaviHoverBackground']; ?>;
 }
 
-ul#databaseList li.selected a 
+ul#databaseList li.selected a
 {
 	background: #eee;
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 }
 
-div#leftframelinks .icon 
+div#leftframelinks .icon
 {
 	padding: 0;
 	margin: 0;
 }
 
 div#reloadlink a img,
-div#leftframelinks a img.icon 
+div#leftframelinks a img.icon
 {
 	margin: 0.3em;
 	margin-top: 0.7em;
 	border: 0;
 }
 
-div#leftframelinks a:hover img 
+div#leftframelinks a:hover img
 {
 }
 
 /* serverlist */
-#body_leftFrame #list_server 
+#body_leftFrame #list_server
 {
 	list-style-image: url(<?php echo $GLOBALS['cfg']['ThemePath']; ?>/original/img/s_host.png);
 	list-style-position: inside;
@@ -302,18 +302,18 @@ div#leftframelinks a:hover img
 	padding: 0;
 }
 
-#body_leftFrame #list_server li 
+#body_leftFrame #list_server li
 {
 	margin: 0;
 	padding: 0;
 }
 
-div#left_tableList 
+div#left_tableList
 {
 	margin: 1em 0;
 }
 
-div#left_tableList ul 
+div#left_tableList ul
 {
 	list-style-type: none;
 	list-style-position: outside;
@@ -321,24 +321,24 @@ div#left_tableList ul
 	padding: 0;
 }
 
-div#left_tableList ul ul 
+div#left_tableList ul ul
 {
 	font-size: 100%;
 }
 
-div#left_tableList a 
+div#left_tableList a
 {
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 	text-decoration: none;
 }
 
-div#left_tableList a:hover 
+div#left_tableList a:hover
 {
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 	text-decoration: none;
 }
 
-div#left_tableList li 
+div#left_tableList li
 {
 	margin: 0;
 	padding-top: 5px;
@@ -346,7 +346,7 @@ div#left_tableList li
 	white-space: nowrap;
 }
 
-#newtable 
+#newtable
 {
 	margin: 10px !important;
 }
@@ -356,7 +356,7 @@ div#left_tableList li
 	padding: 0px !important;
 }
 
-#newtable a 
+#newtable a
 {
 	display: block;
 	padding: 5px;
@@ -369,17 +369,17 @@ div#left_tableList li
 	display: none;
 }
 
-#newtable li:hover 
+#newtable li:hover
 {
 	background: none !important;
 }
 
-#newtable a:hover 
+#newtable a:hover
 {
 	background-color: <?php echo $GLOBALS['cfg']['NaviHoverBackground']; ?> !important;
 }
 
-#newtable li a:hover 
+#newtable li a:hover
 {
 	text-decoration: none;
 }
@@ -394,7 +394,7 @@ select
 /* marked items */
 
 div#left_tableList > ul li.marked > a,
-div#left_tableList > ul li.marked 
+div#left_tableList > ul li.marked
 {
 	background: #216475;
 	color: <?php echo $GLOBALS['cfg']['BrowseMarkerColor']; ?>;
@@ -403,20 +403,20 @@ div#left_tableList > ul li.marked
 
 <?php if ($GLOBALS['cfg']['LeftPointerEnable']) { ?>
 div#left_tableList > ul li:hover > a,
-div#left_tableList > ul li:hover 
+div#left_tableList > ul li:hover
 {
 	background-color: <?php echo $GLOBALS['cfg']['NaviHoverBackground']; ?>;
 	color: <?php echo $GLOBALS['cfg']['BrowseMarkerColor']; ?>;
 }
 <?php } ?>
 
-div#left_tableList img 
+div#left_tableList img
 {
 	padding: 0;
 	vertical-align: middle;
 }
 
-div#left_tableList ul ul 
+div#left_tableList ul ul
 {
 	margin-<?php echo $left; ?>: 0;
 	padding-<?php echo $left; ?>: 25px;
@@ -425,19 +425,19 @@ div#left_tableList ul ul
 }
 
 /* for the servers list in navi panel */
-#serverinfo .item 
+#serverinfo .item
 {
 	white-space: nowrap;
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 }
 
-#serverinfo a:hover 
+#serverinfo a:hover
 {
 	background: <?php echo $GLOBALS['cfg']['NaviPointerBackground']; ?>;
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 }
 
-#reloadlink 
+#reloadlink
 {
 	clear: both;
 	float: <?php echo $right; ?>;
@@ -445,13 +445,13 @@ div#left_tableList ul ul
 	padding: 1em;
 }
 
-#NavFilter 
+#NavFilter
 {
 	display: none;
 	margin-left: 10px;
 }
 
-#clear_fast_filter 
+#clear_fast_filter
 {
 	cursor: pointer;
 	padding: 0;
@@ -461,18 +461,18 @@ div#left_tableList ul ul
 	color: <?php echo $GLOBALS['cfg']['NaviPointerColor']; ?>;
 }
 
-#fast_filter 
+#fast_filter
 {
 	width: 80%;
 	padding: 0.4em;
 }
 
-#fast_filter.gray 
+#fast_filter.gray
 {
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-li a .ic_b_browse 
+li a .ic_b_browse
 {
 	display: none;
 }
