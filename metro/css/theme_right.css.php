@@ -8,46 +8,46 @@ if (!defined('PMA_MINIMUM_COMMON')) {
 
 /* CSS Reset */
 
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video
 {
-	margin: 0; 
-	padding: 0; 
-	border: 0; 
+	margin: 0;
+	padding: 0;
+	border: 0;
 	font-family: 'Open Sans';
 }
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section 
-{ 
-	display: block; 
-}
-
-body 
-{ 
-	line-height: 1.5; 
-}
-
-ol, ul 
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
 {
-	list-style: none; 
+	display: block;
 }
 
-blockquote, q 
+body
 {
-	quotes: none; 
+	line-height: 1.5;
 }
 
-blockquote:before, blockquote:after, q:before, q:after 
-{ 
-	content: ''; 
-	content: none; 
+ol, ul
+{
+	list-style: none;
 }
 
-table 
-{ 
+blockquote, q
+{
+	quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after
+{
+	content: '';
+	content: none;
+}
+
+table
+{
 	border-collapse: collapse;
-	border-spacing: 0; 
+	border-spacing: 0;
 }
 
 /* fonts */
@@ -131,12 +131,12 @@ table
 	display: none;
 }
 
-input, select, textarea 
+input, select, textarea
 {
 	font-size: 100%;
 }
 
-body 
+body
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 	font-size: 11px;
@@ -189,12 +189,12 @@ strong
 	border: none !important;
 }
 
-textarea, tt, pre, code 
+textarea, tt, pre, code
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>;
 }
 
-h1 
+h1
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
 	font-weight: normal;
@@ -204,7 +204,7 @@ h1
 	letter-spacing: -0.5px;
 }
 
-h2 
+h2
 {
 	font-size: 3.6em;
 	font-weight: normal;
@@ -219,7 +219,7 @@ h2
 h2 img {display:none;}
 h2 a img {display:inline;}
 
-#tablestatistics table tr, #tablestatistics table tr .odd, #tablestatistics table tr .even, #tablestatistics table th 
+#tablestatistics table tr, #tablestatistics table tr .odd, #tablestatistics table tr .even, #tablestatistics table th
 {
 	line-height: 1em;
 	border-left: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -232,7 +232,7 @@ h2 a img {display:inline;}
 	margin-bottom: 1em;
 }
 
-.data_full_width 
+.data_full_width
 {
 	width: 100%;
 }
@@ -243,7 +243,7 @@ h2 a img {display:inline;}
 	margin-bottom: 1em;
 }
 
-h3 
+h3
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
 	font-size: 2em;
@@ -252,7 +252,7 @@ h3
 
 a, a:link,
 a:visited,
-a:active 
+a:active
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 	text-decoration: none;
@@ -261,7 +261,7 @@ a:active
 	outline: none;
 }
 
-#initials_table 
+#initials_table
 {
 	background: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
 	border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -273,14 +273,14 @@ a:active
 	padding:8px !important;
 }
 
-#initials_table a 
+#initials_table a
 {
 	border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 	padding: 4px 8px;
 }
 
-dfn:hover 
+dfn:hover
 {
 	cursor: help;
 }
@@ -306,12 +306,12 @@ th, th a
 	color: #999 !important;
 }
 
-a img 
+a img
 {
 	border: 0;
 }
 
-hr 
+hr
 {
 	color: <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -319,7 +319,7 @@ hr
 	height: 1px;
 }
 
-form 
+form
 {
 	padding: 0;
 	margin: 0;
@@ -359,7 +359,7 @@ input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover
 	cursor:pointer;
 	background-color: <?php echo $GLOBALS['cfg']['ButtonHover']; ?>;
 	border: 1px solid <?php echo $GLOBALS['cfg']['ButtonHover']; ?>;
-	
+
 }
 
 input[type=submit]:active, input[type=reset]:active, input[type=button]:active
@@ -385,17 +385,17 @@ button
 	background-color: <?php echo $GLOBALS['cfg']['ButtonBackground']; ?>;
 }
 
-textarea 
+textarea
 {
 	height: <?php echo ceil($GLOBALS['cfg']['TextareaRows'] * 1.2); ?>em;
 }
 
-textarea.char 
+textarea.char
 {
 	height: <?php echo ceil($GLOBALS['cfg']['CharTextareaRows'] * 1.2); ?>em;
 }
 
-fieldset 
+fieldset
 {
 	margin-top: 1em;
 	padding: 5px;
@@ -404,7 +404,7 @@ fieldset
 	background-color: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
 }
 
-fieldset fieldset 
+fieldset fieldset
 {
 	margin: 1em;
 	margin-bottom: 0px;
@@ -425,7 +425,7 @@ fieldset table td
 }
 
 /* buttons in some browsers (eg. Konqueror) are block elements, this breaks design */
-button 
+button
 {
 	display: inline;
 }
@@ -437,7 +437,7 @@ button
 
 table caption,
 table th,
-table td 
+table td
 {
 	padding: 0.6em;
 	vertical-align: top;
@@ -453,7 +453,7 @@ th
 	text-align:left;
 }
 
-img, button 
+img, button
 {
 	vertical-align: middle;
 }
@@ -475,7 +475,7 @@ select:focus
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-select[multiple] 
+select[multiple]
 {
 }
 
@@ -492,23 +492,23 @@ select#listTable, #textSqlquery
 
 /* classes */
 
-.clearfloat 
+.clearfloat
 {
 	clear: both;
 }
 
-.floatleft 
+.floatleft
 {
 	float: <?php echo $left; ?>;
 	margin-<?php echo $right; ?>: 1em;
 }
 
-.paddingtop 
+.paddingtop
 {
 	padding-top: 1em;
 }
 
-.separator 
+.separator
 {
 	color: white;
 }
@@ -575,7 +575,7 @@ tr.noclick td:first-child:before
 	width: 20px;
 }
 
-fieldset.tblFooters 
+fieldset.tblFooters
 {
 	margin-top: -54px;
 	border-top: 0;
@@ -591,7 +591,7 @@ div.null_div {
     min-width:50px;
 }
 
-fieldset .formelement 
+fieldset .formelement
 {
 	float: <?php echo $left; ?>;
 	margin-<?php echo $right; ?>: 0.5em;
@@ -602,12 +602,12 @@ fieldset .formelement
 }
 
 /* revert for Gecko */
-fieldset div[class=formelement] 
+fieldset div[class=formelement]
 {
 	white-space: normal;
 }
 
-button.mult_submit 
+button.mult_submit
 {
 	border: none;
 	background-color: transparent;
@@ -627,7 +627,7 @@ button.mult_submit
 
 /* odd items 1,3,5,7,... */
 table tr.odd th,
-.odd 
+.odd
 {
 	background: <?php echo $GLOBALS['cfg']['BgTwo']; ?>;
 	<?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>
@@ -637,7 +637,7 @@ table tr.odd th,
 /* even items 2,4,6,8,... */
 /* (tested on CRTs and ACLs) */
 table tr.even th,
-.even 
+.even
 {
 	background: <?php echo $GLOBALS['cfg']['BgOne']; ?>;
 	<?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>
@@ -648,7 +648,7 @@ table tr.even th,
 table tr.odd th,
 table tr.odd,
 table tr.even th,
-table tr.even 
+table tr.even
 {
 	text-align: <?php echo $left; ?>;
 	border-bottom: 1px solid #eee;
@@ -664,7 +664,7 @@ table tr.odd, table tr.even
 td.marked,
 table tr.marked td,
 table tr.marked th,
-table tr.marked 
+table tr.marked
 {
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
@@ -680,7 +680,7 @@ table tr.marked
 .odd:hover,
 .even:hover,
 .hover,
-.structure_actions_dropdown 
+.structure_actions_dropdown
 {
 	background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
@@ -694,7 +694,7 @@ table tr.marked
 /* hovered table rows */
 table tr.odd:hover th,
 table tr.even:hover th,
-table tr.hover th 
+table tr.hover th
 {
 	background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 	color: <?php echo $GLOBALS['cfg']['ThPointerColor']; ?>;
@@ -703,7 +703,7 @@ table tr.hover th
 
 /* marks table rows/cells if the db field is in a where condition */
 
-.condition 
+.condition
 {
 	border-color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?> !important;
 }
@@ -715,7 +715,7 @@ th.condition, th.condition a
 	color: <?php echo $GLOBALS['cfg']['MainBackground']; ?> !important;
 }
 
-td.condition 
+td.condition
 {
 	border: 1px solid;
 }
@@ -727,19 +727,19 @@ td.condition
 
 /* cells with the value NULL */
 
-td.null 
+td.null
 {
 	font-style: italic;
 	text-align: <?php echo $right; ?>;
 }
 
-table .valueHeader 
+table .valueHeader
 {
 	text-align: <?php echo $right; ?>;
 	white-space: normal;
 }
 
-table .value 
+table .value
 {
 	text-align: <?php echo $right; ?>;
 	white-space: normal;
@@ -747,32 +747,32 @@ table .value
 
 /* f*cking IE doesnt handles 'pre' right */
 
-table [class=value] 
+table [class=value]
 {
 	white-space: normal;
 }
 
-.value 
+.value
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>;
 }
 
-.attention 
+.attention
 {
 	color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
 }
 
-.allfine 
+.allfine
 {
 	color: <?php echo $GLOBALS['cfg']['BrowseSuccessColor']; ?>;
 }
 
-img.lightbulb 
+img.lightbulb
 {
 	cursor: pointer;
 }
 
-.pdflayout 
+.pdflayout
 {
 	overflow: hidden;
 	clip: inherit;
@@ -782,7 +782,7 @@ img.lightbulb
 	position: relative;
 }
 
-.pdflayout_table 
+.pdflayout_table
 {
 	background: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 	color: #000000;
@@ -804,13 +804,13 @@ img.lightbulb
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>;
 }
 
-.syntax a 
+.syntax a
 {
 	text-decoration: none;
 	border-bottom: 1px dotted #999999;
 }
 
-.syntax_comment 
+.syntax_comment
 {
 	padding-left: 4pt;
 	padding-right: 4pt;
@@ -867,18 +867,18 @@ img.lightbulb
 }
 
 /* leave some space between icons and text */
-img.footnotemarker 
+img.footnotemarker
 {
 	display: none;
 }
 
 /* no extra space in table cells */
-td .icon 
+td .icon
 {
 	margin: 0;
 }
 
-.selectallarrow 
+.selectallarrow
 {
 	margin-<?php echo $right; ?>: 0.3em;
 	margin-<?php echo $left; ?>: 0.6em;
@@ -888,7 +888,7 @@ td .icon
 
 .success h1,
 .notice h1,
-div.error h1 
+div.error h1
 {
 	text-align: <?php echo $left; ?>;
 	margin: 0 0 0.2em 0;
@@ -898,7 +898,7 @@ div.error h1
 div.success,
 div.notice,
 div.error,
-div.footnotes 
+div.footnotes
 {
 	margin: 0.5em 0 1.3em 0;
 	border: 1px solid;
@@ -928,13 +928,13 @@ div.success
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 }
 
-.success 
+.success
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['BrowseSuccessColor']; ?>;
 }
 
-h1.success, div.success 
+h1.success, div.success
 {
 	border-color: <?php echo $GLOBALS['cfg']['BrowseSuccessColor']; ?>;
 	<?php if ($GLOBALS['cfg']['ErrorIconic']) { ?>
@@ -948,7 +948,7 @@ h1.success, div.success
 	<?php } ?>
 }
 
-.notice, .footnotes 
+.notice, .footnotes
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['BlueHeader']; ?>;
@@ -956,7 +956,7 @@ h1.success, div.success
 
 h1.notice,
 div.notice,
-div.footnotes 
+div.footnotes
 {
 	border-color: <?php echo $GLOBALS['cfg']['BlueHeader']; ?>;
 	<?php if ($GLOBALS['cfg']['ErrorIconic']) { ?>
@@ -975,7 +975,7 @@ div.footnotes
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 }
 
-.error 
+.error
 {
 	border: 1px solid <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?> !important;
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
@@ -983,7 +983,7 @@ div.footnotes
 }
 
 h1.error,
-div.error 
+div.error
 {
 	border-color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 	<?php if ($GLOBALS['cfg']['ErrorIconic']) { ?>
@@ -997,7 +997,7 @@ div.error
 	<?php } ?>
 }
 
-.confirmation 
+.confirmation
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
@@ -1010,27 +1010,27 @@ div.error
 
 /* end messageboxes */
 
-.tblcomment 
+.tblcomment
 {
 	font-size: 70%;
 	font-weight: normal;
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-.tblHeaders 
+.tblHeaders
 {
 	color: <?php echo $GLOBALS['cfg']['BrowsePointerColor']; ?>;
 	text-transform: uppercase;
 }
 
-.tblFooters 
+.tblFooters
 {
 	font-weight: normal;
 }
 
 /* forbidden, no privilegs */
 
-.noPrivileges 
+.noPrivileges
 {
 	color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
 }
@@ -1039,38 +1039,38 @@ div.error
 .disabled,
 .disabled a:link,
 .disabled a:active,
-.disabled a:visited 
+.disabled a:visited
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonBackground']; ?>;
 }
 
-.disabled a:hover 
+.disabled a:hover
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonBackground']; ?>;
 	text-decoration: none;
 }
 
 tr.disabled td,
-td.disabled 
+td.disabled
 {
 	background-color: <?php echo $GLOBALS['cfg']['ThDisabledBackground']; ?>;
 	color: <?php echo $GLOBALS['cfg']['ThColor']; ?>;
 }
 
-.nowrap 
+.nowrap
 {
 	white-space: nowrap;
 }
 
 /* zoom search */
 
-div#resizer 
+div#resizer
 {
 	width: 600px;
 	height: 400px;
 }
 
-div#querychart 
+div#querychart
 {
 	float: left;
 	width: 600px;
@@ -1091,7 +1091,7 @@ body.loginform
 	overflow: hidden;
 }
 
-body.loginform div.container 
+body.loginform div.container
 {
 	text-align: <?php echo $left; ?>;
 	width: 50em;
@@ -1114,7 +1114,7 @@ body.loginform div.container:before
 	height: 230px;
 	width: 230px;
 	line-height: 1;
-	
+
 }
 
 body.loginform h1
@@ -1207,7 +1207,7 @@ body.loginform .error
 	width: 47em;
 }
 
-form.login label 
+form.login label
 {
 	display: none
 }
@@ -1223,20 +1223,20 @@ form.login label
 /* specific elements */
 
 /* topmenu */
-#topmenu a 
+#topmenu a
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
 	font-size: 1.5em;
 }
 
-#topmenu .error 
+#topmenu .error
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 	border: 0 !important;
 	color: <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 }
 
-ul#topmenu, ul#topmenu2, ul.tabs 
+ul#topmenu, ul#topmenu2, ul.tabs
 {
 	list-style-type: none;
 	margin: 0;
@@ -1256,19 +1256,19 @@ ul#topmenu2 {
     clear: both;
 }
 
-ul#topmenu li 
+ul#topmenu li
 {
 	float: <?php echo $left; ?>;
 	margin: 0;
 	vertical-align: middle;
 }
 
-ul#topmenu2 li 
+ul#topmenu2 li
 {
 	float: <?php echo $left; ?>;
 	margin: 0;
 	vertical-align: middle;
-	color: #999999;	
+	color: #999999;
 }
 
 ul#topmenu2 li:nth-child(3):before
@@ -1325,7 +1325,7 @@ ul#topmenu2 li:nth-child(8):before
 	margin-right: 5px;
 }
 
-#topmenu img, #topmenu2 img 
+#topmenu img, #topmenu2 img
 {
 	margin-right: 0.5em;
 	vertical-align: middle;
@@ -1341,7 +1341,7 @@ ul#topmenu2 li:nth-child(8):before
 }
 
 /* default tab styles */
-ul#topmenu .tabactive 
+ul#topmenu .tabactive
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?> !important;
 	border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -1349,7 +1349,7 @@ ul#topmenu .tabactive
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-ul#topmenu a, ul#topmenu span 
+ul#topmenu a, ul#topmenu span
 {
 	display: block;
 	margin: 0;
@@ -1358,23 +1358,23 @@ ul#topmenu a, ul#topmenu span
 	height: 27px;
 }
 
-ul#topmenu ul a 
+ul#topmenu ul a
 {
 	margin: 0px;
 }
 
-ul#topmenu .submenu 
+ul#topmenu .submenu
 {
     display: none;
     position: relative;
 }
 
-ul#topmenu .shown 
+ul#topmenu .shown
 {
 	display: inline-block;
 }
 
-ul#topmenu ul 
+ul#topmenu ul
 {
 	margin: 0;
 	padding: 0;
@@ -1402,12 +1402,12 @@ ul#topmenu ul.notonly {
     right: 0;
 }
 
-ul#topmenu li:hover ul, ul#topmenu .submenuhover ul 
+ul#topmenu li:hover ul, ul#topmenu .submenuhover ul
 {
 	display: block;
 }
 
-ul#topmenu ul li 
+ul#topmenu ul li
 {
 	width: 100%;
 	border-bottom: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -1418,7 +1418,7 @@ ul#topmenu ul li:hover
 	background: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 }
 
-ul#topmenu2 a 
+ul#topmenu2 a
 {
 	display: block;
 	margin: 7px 15px 7px 0;
@@ -1469,14 +1469,14 @@ fieldset.caution li a:nth-child(2) img
 	background: url('./themes/metro/img/s_info.png') !important;
 }
 
-fieldset.caution a 
+fieldset.caution a
 {
 	font-family: 'Open Sans Bold';
 	text-transform: uppercase;
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 }
 
-#tbl_maintenance li a 
+#tbl_maintenance li a
 {
 	font-family: 'Open Sans Bold';
 	text-transform: uppercase;
@@ -1492,13 +1492,13 @@ fieldset.caution a
 <?php if ($GLOBALS['cfg']['LightTabs']) { ?>
 /* active tab */
 
-ul#topmenu a.tabactive, ul#topmenu2 a.tabactive 
+ul#topmenu a.tabactive, ul#topmenu2 a.tabactive
 {
 	color: 999;
 }
 
 <?php } else { ?>
-#topmenu 
+#topmenu
 {
 	margin-top: 0.5em;
 	padding: 0.1em 0.3em 0.1em 0.3em;
@@ -1513,38 +1513,38 @@ ul#topmenu a, ul#topmenu span {
 
 /* enabled hover/active tabs */
 ul#topmenu > li > a:hover,
-ul#topmenu > li > .tabactive 
+ul#topmenu > li > .tabactive
 {
 	text-decoration: none;
 }
 
 ul#topmenu ul a:hover,
-ul#topmenu ul .tabactive 
+ul#topmenu ul .tabactive
 {
 	text-decoration: none;
 	border: none;
 }
 
 ul#topmenu a.tab:hover,
-ul#topmenu .tabactive 
+ul#topmenu .tabactive
 {
 }
 
 ul#topmenu2 a.tab:hover,
-ul#topmenu2 a.tabactive 
+ul#topmenu2 a.tabactive
 {
 	text-decoration: none;
 	color: <?php echo $GLOBALS['cfg']['ThColor']; ?>;
 }
 
-ul#topmenu > li.active 
+ul#topmenu > li.active
 {
 }
 
 /* disabled tabs */
 
 ul#topmenu span.tab,
-a.error 
+a.error
 {
 	cursor: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>error.ico), default;
 	color: <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
@@ -1553,13 +1553,13 @@ a.error
 /* end topmenu */
 
 /* zoom search */
-div#dataDisplay input, div#dataDisplay select 
+div#dataDisplay input, div#dataDisplay select
 {
 	margin: 0;
 	margin-<?php echo $right; ?>: 0.5em;
 }
 
-div#dataDisplay th 
+div#dataDisplay th
 {
 	line-height: 2em;
 }
@@ -1597,7 +1597,7 @@ form.clock {
 
 
 /* table stats */
-div#tablestatistics table 
+div#tablestatistics table
 {
 	float: <?php echo $left; ?>;
 	margin-bottom: 0.5em;
@@ -1612,7 +1612,7 @@ div#tablestatistics table
 /* server privileges */
 #tableuserrights td,
 #tablespecificuserrights td,
-#tabledatabases td 
+#tabledatabases td
 {
 	vertical-align: middle;
 }
@@ -1651,13 +1651,13 @@ div#tablestatistics table
 	right: 1em;
 }
 
-#topmenucontainer 
+#topmenucontainer
 {
 	margin-right: 1em;
 	padding-right: 1em;
 }
 
-#serverinfo 
+#serverinfo
 {
 	padding: 12px;
 	overflow: hidden;
@@ -1670,7 +1670,7 @@ div#tablestatistics table
 	height: 15px;
 }
 
-#serverinfo .item 
+#serverinfo .item
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 	white-space: nowrap;
@@ -1699,7 +1699,7 @@ div#tablestatistics table
 	display: none;
 }
 
-#span_table_comment 
+#span_table_comment
 {
 	font-weight: normal;
 	font-style: italic;
@@ -1711,7 +1711,7 @@ div#tablestatistics table
 	margin-left: 10px !important;
 }
 
-.success .ic_b_help 
+.success .ic_b_help
 {
 	background: url('./themes/metro/img/s_info.png') !important;
 }
@@ -1723,7 +1723,7 @@ div#tablestatistics table
 	font-size: 110%;
 }
 
-#TooltipContainer 
+#TooltipContainer
 {
 	position: absolute;
     z-index: 99;
@@ -1738,14 +1738,14 @@ div#tablestatistics table
 }
 
 /* user privileges */
-#fieldset_add_user_login div.item 
+#fieldset_add_user_login div.item
 {
 	border-bottom: 1px solid silver;
 	padding-bottom: 0.3em;
 	margin-bottom: 0.3em;
 }
 
-#fieldset_add_user_login label 
+#fieldset_add_user_login label
 {
 	float: <?php echo $left; ?>;
 	display: block;
@@ -1759,7 +1759,7 @@ div#tablestatistics table
 
 #fieldset_add_user_login span.options #select_pred_username,
 #fieldset_add_user_login span.options #select_pred_hostname,
-#fieldset_add_user_login span.options #select_pred_password 
+#fieldset_add_user_login span.options #select_pred_password
 {
 	width: 100%;
 	max-width: 100%;
@@ -1809,7 +1809,7 @@ div#tablestatistics table
 
 /* serverstatus */
 
-.linkElem:hover 
+.linkElem:hover
 {
 	text-decoration: none;
 	cursor: pointer;
@@ -1836,12 +1836,12 @@ img.sortableIcon {
 }
 
 /* Also used for the variables page */
-fieldset#tableFilter 
+fieldset#tableFilter
 {
 
 }
 
-div#serverStatusTabs 
+div#serverStatusTabs
 {
 	margin-top: 1em;
 }
@@ -1865,13 +1865,13 @@ table#serverstatusqueriesdetails th {
     min-width: 35px;
 }
 
-table#serverstatusvariables 
+table#serverstatusvariables
 {
 	width: 100%;
 	margin-bottom: 1em;
 }
 
-table#serverstatusvariables .name 
+table#serverstatusvariables .name
 {
 	width: 18em;
 	white-space:nowrap;
@@ -1879,7 +1879,7 @@ table#serverstatusvariables .name
 table#serverstatusvariables .value {
     width: 6em;
 }
-table#serverstatusconnections 
+table#serverstatusconnections
 {
 	float: <?php echo $left; ?>;
 }
@@ -1901,7 +1901,7 @@ div.liveChart {
     padding: 3px;
 }
 
-div#chartVariableSettings 
+div#chartVariableSettings
 {
 	border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 	background-color: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
@@ -1909,18 +1909,18 @@ div#chartVariableSettings
 	padding: 10px;
 }
 
-table#chartGrid div.monitorChart 
+table#chartGrid div.monitorChart
 {
 	background: #EBEBEB;
 }
 
-div#serverstatus div.tabLinks 
+div#serverstatus div.tabLinks
 {
 	float:<?php echo $left; ?>;
 	padding-bottom: 10px;
 }
 
-.popupContent 
+.popupContent
 {
 	display: none;
 	position: absolute;
@@ -2012,7 +2012,7 @@ table#serverVariables td {
 /* end server variables */
 
 
-p.notice 
+p.notice
 {
 	margin: 1.5em 0;
 	<?php if ($GLOBALS['cfg']['ErrorIconic']) { ?>
@@ -2036,7 +2036,7 @@ p.notice a {
 
 /* querywindow */
 
-body#bodyquerywindow 
+body#bodyquerywindow
 {
 	margin: 0;
 	padding: 10px;
@@ -2051,7 +2051,7 @@ body#bodyquerywindow #topmenucontainer, body#bodyquerywindow .menucontainer
 	padding: 0px;
 }
 
-div#querywindowcontainer 
+div#querywindowcontainer
 {
 	padding: 0;
 	width: 100%;
@@ -2105,7 +2105,7 @@ div#profilingchart {
 	background: <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
 }
 
-#sectionlinks a, .buttonlinks a, a.button 
+#sectionlinks a, .buttonlinks a, a.button
 {
 	line-height:35px;
 	margin-left:7px;
@@ -2118,13 +2118,13 @@ div#profilingchart {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 }
 
-#sectionlinks a:hover, .buttonlinks a:hover, a.button:hover 
+#sectionlinks a:hover, .buttonlinks a:hover, a.button:hover
 {
 	background-color: <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
 	border: 1px solid <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
 }
 
-#sectionlinks a:active, .buttonlinks a:active, a.button:active 
+#sectionlinks a:active, .buttonlinks a:active, a.button:active
 {
 	background-color: <?php echo $GLOBALS['cfg']['ButtonHover']; ?>;
 	border: 1px solid <?php echo $GLOBALS['cfg']['ButtonHover']; ?>;
@@ -2142,14 +2142,14 @@ div#tablefieldscontainer {
     /* height: 15em; */
 }
 
-div#tablefieldscontainer select 
+div#tablefieldscontainer select
 {
 	width: 100%;
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 	/* height: 12em; */
 }
 
-textarea#sqlquery 
+textarea#sqlquery
 {
 	width: 100%;
 	/* height: 100%; */
@@ -2197,7 +2197,7 @@ li#li_mysql_client_version
 	text-overflow: ellipsis;
 }
 
-li#li_create_database 
+li#li_create_database
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_newdb.png); */
 	background-color: #f6f6f6;
@@ -2212,7 +2212,7 @@ li#li_select_lang select
 	height: 35px;
 }
 
-li#li_select_lang 
+li#li_select_lang
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_lang.png); */
 	display: block;
@@ -2243,7 +2243,7 @@ li#li_select_mysql_collation select
 	margin: 0px !important;
 }
 
-li#li_select_mysql_collation 
+li#li_select_mysql_collation
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_asci.png); */
 	display: block;
@@ -2334,7 +2334,7 @@ li#li_mysql_binlogs
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_tbl.png);
 }
 
-li#li_mysql_databases 
+li#li_mysql_databases
 {
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_db.png);
 }
@@ -2344,12 +2344,12 @@ li#li_export
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_export.png);
 }
 
-li#li_import 
+li#li_import
 {
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_import.png);
 }
 
-li#li_change_password 
+li#li_change_password
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_passwd.png); */
 	display: block;
@@ -2375,7 +2375,7 @@ li#li_change_password:before
 	padding: 4px;
 }
 
-li#li_log_out 
+li#li_log_out
 {
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_loggoff.png);
 }
@@ -2385,7 +2385,7 @@ li#li_mysql_privilegs
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_rights.png);
 }
 
-li#li_switch_dbstats 
+li#li_switch_dbstats
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_dbstatistics.png); */
 	background-color: #f6f6f6;
@@ -2394,12 +2394,12 @@ li#li_switch_dbstats
 	display: block;
 }
 
-li#li_flush_privileges 
+li#li_flush_privileges
 {
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_reload.png);
 }
 
-li#li_user_preferences 
+li#li_user_preferences
 {
 	/* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>b_tblops.png); */
 	display: block;
@@ -2429,18 +2429,18 @@ li#li_user_preferences:before
 <?php } /* end if $GLOBALS['cfg']['MainPageIconic'] */ ?>
 
 
-#body_browse_foreigners 
+#body_browse_foreigners
 {
 	background: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
 	margin: 0.5em 0.5em 0 0.5em;
 }
 
-#bodyquerywindow 
+#bodyquerywindow
 {
 	background: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
 }
 
-#bodythemes 
+#bodythemes
 {
 	width: 500px;
 	margin: auto;
@@ -2459,7 +2459,7 @@ li#li_user_preferences:before
     float: <?php echo $left; ?>;
 }
 
-#selflink 
+#selflink
 {
 	clear: both;
 	display: block;
@@ -2478,13 +2478,13 @@ li#li_user_preferences:before
     float: <?php echo $left; ?>;
 }
 
-.operations_half_width 
+.operations_half_width
 {
 	width: 100%;
 	float: <?php echo $left; ?>;
 }
 
-.operations_full_width 
+.operations_full_width
 {
 	width: 100%;
 	clear: both;
@@ -2507,7 +2507,7 @@ label.desc sup {
     position: absolute;
 }
 
-code.sql, div.sqlvalidate 
+code.sql, div.sqlvalidate
 {
 	display: block;
 	padding: 1em;
@@ -2518,21 +2518,21 @@ code.sql, div.sqlvalidate
 	border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 }
 
-#main_pane_left 
+#main_pane_left
 {
 	width: 60%;
 	float: <?php echo $left; ?>;
 	padding-top: 1em;
 }
 
-#main_pane_right 
+#main_pane_right
 {
 	margin-<?php echo $left; ?>: 60%;
 	padding-top: 1em;
 	padding-<?php echo $left; ?>: 3em;
 }
 
-.group 
+.group
 {
 	margin-bottom: 1em;
 	padding-bottom: 1em;
@@ -2543,7 +2543,7 @@ code.sql, div.sqlvalidate
 	margin-left: 0px;
 }
 
-.group h2 
+.group h2
 {
 	color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
 	font-size: 2.8em;
@@ -2569,7 +2569,7 @@ textarea#partitiondefinition {
     display:            none;
 }
 
-#li_select_server 
+#li_select_server
 {
 	list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>s_host.png);
 }
@@ -2604,13 +2604,13 @@ table#serverconnection_trg_local
 
 /*  Validation error message styles */
 input[type=text].invalid_value,
-.invalid_value 
+.invalid_value
 {
 	background: #FFCCCC;
 }
 
 /*  Ajax notification styling */
-.ajax_notification 
+.ajax_notification
 {
 	top: 0;
 	position: fixed;
@@ -2646,7 +2646,7 @@ input[type=text].invalid_value,
  }
 /* Export and Import styles */
 
-.exportoptions h3, .importoptions h3 
+.exportoptions h3, .importoptions h3
 {
 	border-bottom: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 	font-family: 'Open Sans Bold';
@@ -2674,7 +2674,7 @@ input[type=text].invalid_value,
     width: 15em;
 }
 
-.exportoptions, .importoptions 
+.exportoptions, .importoptions
 {
 	margin: 20px 20px 30px 10px
 }
@@ -2886,7 +2886,7 @@ hr.enum_editor_no_js {
 /**
  * Table structure styles
  */
-.structure_actions_dropdown 
+.structure_actions_dropdown
 {
 	position: absolute;
 	padding: 0px;
@@ -2975,7 +2975,7 @@ iframe.IE_hack {
 
 /* config forms */
 
-.config-form ul.tabs 
+.config-form ul.tabs
 {
 	padding: 0 0 0.3em 0;
 	list-style: none;
@@ -2984,13 +2984,13 @@ iframe.IE_hack {
 	border-bottom: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 }
 
-.config-form ul.tabs li 
+.config-form ul.tabs li
 {
 	float: <?php echo $left; ?>;
 	height: 42px;
 }
 
-.config-form ul.tabs li a 
+.config-form ul.tabs li a
 {
 	display: block;
 	margin: 0.1em 0.2em 0;
@@ -3000,18 +3000,18 @@ iframe.IE_hack {
 	letter-spacing: -0.5px;
 }
 
-.config-form ul.tabs li a 
+.config-form ul.tabs li a
 {
 	padding: 6px 10px;
 	color: #666;
 }
 
 .config-form ul.tabs li a:hover,
-.config-form ul.tabs li a:active 
+.config-form ul.tabs li a:active
 {
 }
 
-.config-form ul.tabs li.active a 
+.config-form ul.tabs li.active a
 {
 	color: #333;
 	border-top: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
@@ -3021,7 +3021,7 @@ iframe.IE_hack {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 }
 
-.config-form fieldset 
+.config-form fieldset
 {
 	margin-top: 0;
 	padding: 0;
@@ -3034,7 +3034,7 @@ iframe.IE_hack {
     display: none;
 }
 
-.config-form fieldset p 
+.config-form fieldset p
 {
 	margin: 0;
 	padding: 0.5em;
@@ -3054,7 +3054,7 @@ iframe.IE_hack {
 	font-size: small;
 }
 
-.config-form fieldset .inline_errors 
+.config-form fieldset .inline_errors
 {
 	padding: 0;
 	list-style: none;
@@ -3063,7 +3063,7 @@ iframe.IE_hack {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 }
 
-.config-form fieldset th 
+.config-form fieldset th
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?> !important;
 	text-transform: none;
@@ -3082,12 +3082,12 @@ iframe.IE_hack {
     cursor: help;
 }
 
-.config-form fieldset td 
+.config-form fieldset td
 {
 	vertical-align: top;
 }
 
-.config-form fieldset th small 
+.config-form fieldset th small
 {
 	display: block;
 	font-weight: normal;
@@ -3097,8 +3097,8 @@ iframe.IE_hack {
 	text-transform: none;
 }
 
-.config-form fieldset th, 
-.config-form fieldset td 
+.config-form fieldset th,
+.config-form fieldset td
 {
 	border-right: none;
 	padding: 0.9em;
@@ -3113,7 +3113,7 @@ iframe.IE_hack {
 }
 
 
-fieldset .group-header th 
+fieldset .group-header th
 {
 	background: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
 }
@@ -3211,11 +3211,11 @@ form#copyTable fieldset:not(.tblFooters):before
 	margin-right: 1em;
 }
 
-.config-form .lastrow 
+.config-form .lastrow
 {
 }
 
-.config-form .lastrow 
+.config-form .lastrow
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 	padding: 0.5em;
@@ -3229,12 +3229,12 @@ form#copyTable fieldset:not(.tblFooters):before
     display: inline-block;
 }
 
-.config-form .custom 
+.config-form .custom
 {
 	background: #faa732;
 }
 
-.config-form span.checkbox.custom 
+.config-form span.checkbox.custom
 {
 	padding: 1px;
 	background: #Faa732;
@@ -3246,7 +3246,7 @@ form#copyTable fieldset:not(.tblFooters):before
 
 .config-form input[type="text"],
 .config-form select,
-.config-form textarea 
+.config-form textarea
 {
 	border: 1px <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?> solid;
 	height: auto;
@@ -3254,12 +3254,12 @@ form#copyTable fieldset:not(.tblFooters):before
 
 .config-form input[type="text"]:focus,
 .config-form select:focus,
-.config-form textarea:focus 
+.config-form textarea:focus
 {
 	border: 1px solid <?php echo $GLOBALS['cfg']['NaviHoverBackground']; ?>;
 }
 
-.config-form .field-comment-mark 
+.config-form .field-comment-mark
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 	color: <?php echo $GLOBALS['cfg']['ThPointerColor']; ?>;
@@ -3267,7 +3267,7 @@ form#copyTable fieldset:not(.tblFooters):before
 	padding: 0 0.2em;
 }
 
-.config-form .field-comment-warning 
+.config-form .field-comment-warning
 {
 	color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
 }
@@ -3293,18 +3293,18 @@ form#copyTable fieldset:not(.tblFooters):before
     margin-bottom: 0.5em;
 }
 
-.rte_table 
+.rte_table
 {
 	table-layout: fixed;
 	overflow: hidden;
 }
 
-.rte_table td 
+.rte_table td
 {
 	vertical-align: middle;
 }
 
-.rte_table tr td:nth-child(1) 
+.rte_table tr td:nth-child(1)
 {
 	font-weight: normal;
 }
@@ -3377,7 +3377,7 @@ form#copyTable fieldset:not(.tblFooters):before
 .doubleFieldset fieldset.right {
     margin-<?php echo $left; ?>: 1%;
 }
-.doubleFieldset legend 
+.doubleFieldset legend
 {
 	margin-<?php echo $left; ?>: -1px;
 }
@@ -3385,7 +3385,7 @@ form#copyTable fieldset:not(.tblFooters):before
     padding: 1.5em;
 }
 
-#table_columns input[type="text"], #table_columns select 
+#table_columns input[type="text"], #table_columns select
 {
 	width: 10em;
 	box-sizing: border-box;
@@ -3395,7 +3395,7 @@ form#copyTable fieldset:not(.tblFooters):before
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 }
 
-#table_columns select 
+#table_columns select
 {
 	font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 }
@@ -3487,7 +3487,7 @@ form#copyTable fieldset:not(.tblFooters):before
 	margin-top: 10px;
 }
 
-.CodeMirror-scroll 
+.CodeMirror-scroll
 {
 	overflow: auto;
 	height: <?php echo ceil($GLOBALS['cfg']['TextareaRows'] * 1.2); ?>em;
@@ -3550,7 +3550,7 @@ form#copyTable fieldset:not(.tblFooters):before
   visibility: visible;
 }
 
-span.CodeMirror-selected 
+span.CodeMirror-selected
 {
 	background: <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?> !important;
 	color: HighlightText !important;
@@ -3620,7 +3620,7 @@ span.CodeMirror-selected
 	border: 1px solid <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?> !important;
 }
 
-.normalqTip 
+.normalqTip
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?> !important;
 	opacity: 0.8 !important;
@@ -3629,13 +3629,13 @@ span.CodeMirror-selected
 	font-size: 0.8em !important;
 }
 
-.normalqTip * 
+.normalqTip *
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?> !important;
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?> !important;
 }
 
-.normalqTipContent 
+.normalqTipContent
 {
 	padding: 10px !important;
 }
@@ -3656,7 +3656,7 @@ span.CodeMirror-selected
     width: 16px;
 }
 
-.cList 
+.cList
 {
 	background: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 	border: solid 1px #999;
@@ -3690,14 +3690,14 @@ span.CodeMirror-selected
     background: <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 }
 
-.navigation 
+.navigation
 {
 	width: 100%;
 	border-bottom: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 	border-top: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
 }
 
-.navigation td 
+.navigation td
 {
 	margin: 0;
 	padding: 0;
@@ -3705,7 +3705,7 @@ span.CodeMirror-selected
 	white-space: nowrap;
 }
 
-.navigation_separator 
+.navigation_separator
 {
 	color: #999;
 	display: inline-block;
@@ -3715,7 +3715,7 @@ span.CodeMirror-selected
 	width: 1.2em;
 }
 
-.navigation input[type=submit] 
+.navigation input[type=submit]
 {
 	background: <?php echo $GLOBALS['cfg']['ButtonBackground']; ?>;
 	border: 0;
@@ -3724,14 +3724,14 @@ span.CodeMirror-selected
 	padding: 0.4em;
 }
 
-.navigation input[type=submit]:hover, .navigation input.edit_mode_active 
+.navigation input[type=submit]:hover, .navigation input.edit_mode_active
 {
 	color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 	cursor: pointer;
 	background-color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-.navigation select 
+.navigation select
 {
 	margin: 0 0.8em;
 }
@@ -3746,7 +3746,7 @@ span.CodeMirror-selected
 	width: 100%;
 }
 
-.cEdit 
+.cEdit
 {
 	margin: -0.5em;
 	padding: 0;
@@ -3760,7 +3760,7 @@ span.CodeMirror-selected
     padding: 0;
 }
 
-.cEdit .edit_area 
+.cEdit .edit_area
 {
 	background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
 	border: 1px solid <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
@@ -4018,7 +4018,7 @@ canvas.pmd * {
 
 /* --- */
 
-.bor 
+.bor
 {
 	width: 10px;
 	height: 10px;
@@ -4319,7 +4319,7 @@ h2.active {
     text-align:left;
 }
 
-#tblfooter 
+#tblfooter
 {
 	float: right;
 	padding-top:10px;
@@ -4327,7 +4327,7 @@ h2.active {
 	font-weight: normal;
 }
 
-input.btn 
+input.btn
 {
 	color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 	background-color: #D0DCE0;
@@ -4345,7 +4345,7 @@ body .ui-widget {
 
 /*rules for the plot target div. These will be cascaded down to all plot elements according to css rules */
 
-.jqplot-target 
+.jqplot-target
 {
 	position: relative;
 	color: #222222;
@@ -4565,7 +4565,7 @@ table.jqplot-cursor-tooltip {
     font-size: 0.75em;
     z-index: 2;
 }
-      
+
 td.jqplot-cursor-legend-swatch {
     vertical-align: middle;
     text-align: center;
