@@ -370,7 +370,7 @@ div#leftframelinks a:hover img
 div#left_tableList
 {
 	position: absolute;
-	top: 180px;
+	top: 200px;
 	bottom: 0px;
 	width: 250px;
 	overflow-x: hidden;
