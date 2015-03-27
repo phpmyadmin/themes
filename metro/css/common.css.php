@@ -2805,6 +2805,11 @@ form#tableOptionsForm .tblFooters
     background: #FFC;
 }
 
+.config-form img.ic_s_reload {
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
+}
+
 .config-form .field-error {
     border-color: #A11 !important;
 }
