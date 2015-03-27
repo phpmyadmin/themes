@@ -1587,12 +1587,6 @@ h3#serverstatusqueries span {
     display: inline;
 }
 
-img.sortableIcon {
-    float: <?php echo $right; ?>;
-    background-repeat: no-repeat;
-    margin: 0;
-}
-
 .buttonlinks {
     float: <?php echo $right; ?>;
     white-space: nowrap;
