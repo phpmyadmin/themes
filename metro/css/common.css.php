@@ -1669,7 +1669,7 @@ table#chartGrid td {
 }
 
 table#chartGrid div.monitorChart {
-    background: #EBEBEB;
+    background: <?php echo $GLOBALS['cfg']['ThBackground']; ?>;
     overflow: hidden;
 }
 
