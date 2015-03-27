@@ -827,6 +827,11 @@ table tr.marked
     color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
+td.marked
+{
+    background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
+}
+
 table tr.marked
 {
     border-left: 3px solid #24A0DA;
