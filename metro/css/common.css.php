@@ -546,6 +546,11 @@ fieldset fieldset
     border: none;
 }
 
+legend
+{
+  padding: 0px 5px;
+}
+
 .some-margin {
     margin: 20px;
 }
