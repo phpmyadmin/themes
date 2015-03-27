@@ -151,7 +151,7 @@ div#left_tableList li:hover a:first-child:before
     color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
 }
 
-img.ic_b_home, img.ic_s_loggoff, img.ic_b_selboard, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reload
+img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reload
 {
     display: none;
 }
