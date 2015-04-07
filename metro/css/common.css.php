@@ -1221,6 +1221,11 @@ fieldset.caution
     border: 1px solid <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
 }
 
+fieldset.caution legend
+{
+    background-color: #fff;
+}
+
 fieldset.caution a
 {
     font-family: 'Open Sans Bold';
