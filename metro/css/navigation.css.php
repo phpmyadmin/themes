@@ -153,7 +153,8 @@ div#left_tableList li:hover a:first-child:before
 
 img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reload
 {
-    display: none;
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
 }
 
 #navipanellinks a
@@ -171,37 +172,6 @@ img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reloa
 {
     color: <?php echo $GLOBALS['cfg']['ThColor']; ?>;
 }
-
-#navipanellinks a:first-child:before
-{
-    font-family: 'IcoMoon';
-    content: "!";
-}
-
-#navipanellinks a:nth-child(2):before
-{
-    font-family: 'IcoMoon';
-    content: "\e040";
-}
-
-#navipanellinks a:nth-child(3):before
-{
-    font-family: 'IcoMoon';
-    content: "";
-}
-
-#navipanellinks a:nth-child(4):before
-{
-    font-family: 'IcoMoon';
-    content: "";
-}
-
-#navipanellinks a:nth-child(5):before
-{
-    font-family: 'IcoMoon';
-    content: "";
-}
-
 
 #pma_navigation #serverChoice,
 #pma_navigation #databaseList,

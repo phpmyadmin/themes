@@ -1072,6 +1072,11 @@ div.error
     background-color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
 }
 
+fieldset.confirmation legend
+{
+    background-color: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
+}
+
 /* end messageboxes */
 
 .tblcomment {
@@ -1219,6 +1224,11 @@ fieldset.caution
 {
     background: <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
     border: 1px solid <?php echo $GLOBALS['cfg']['BrowseWarningColor']; ?>;
+}
+
+fieldset.caution legend
+{
+    background-color: #fff;
 }
 
 fieldset.caution a
