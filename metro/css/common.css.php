@@ -3227,6 +3227,7 @@ form.append_fields_form .tblFooters
 .cEdit .edit_box {
     overflow: hidden;
     padding: 0;
+    margin-top: 10px;
 }
 
 .cEdit .edit_box_posting {
