@@ -1449,7 +1449,7 @@ div#tablestatistics table {
     position: fixed;
     padding: 10px;
     top: 0;
-    z-index: 900;
+    z-index: 99;
 }
 
 #goto_pagetop {
