@@ -488,7 +488,7 @@ h2.active {
 
 .side-menu {
     float: left;
-    position: relative;
+    position: fixed;
     width: auto;
     height: auto;
     background: #efefef;
