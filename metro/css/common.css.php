@@ -1891,12 +1891,14 @@ div#sqlquerycontainer {
 div#tablefieldscontainer {
     float: <?php echo $right; ?>;
     width: 29%;
+    margin-top: -20px;
     /* height: 15em; */
 }
 
 div#tablefieldscontainer select {
     width: 100%;
     background: #fff;
+    max-width: initial;
     /* height: 12em; */
 }
 
