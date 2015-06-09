@@ -319,6 +319,10 @@ a.M_butt:hover {
     cursor: w-resize;
 }
 
+#layer_menu_sizer .icon {
+    margin: 0;
+}
+
 .panel {
     position: fixed;
     top: 60px;
