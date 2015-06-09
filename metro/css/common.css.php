@@ -1445,24 +1445,21 @@ div#tablestatistics table {
     display: none;
 }
 
-#goto_pagetop, #lock_page_icon, #page_settings_icon {
+#page_nav_icons {
     position: fixed;
-    padding: 10px;
     top: 0;
+    <?php echo $right; ?>: 0;
     z-index: 99;
+    padding: .25em 0;
 }
 
-#goto_pagetop {
-    <?php echo $right; ?>: 0;
+#goto_pagetop, #lock_page_icon, #page_settings_icon {
+    padding: .25em;
 }
 
 #page_settings_icon {
-    <?php echo $right; ?>: 2em;
     cursor: pointer;
     display: none;
-}
-#lock_page_icon {
-    <?php echo $right; ?>: 4em;
 }
 
 .page_settings_modal {
