@@ -805,17 +805,16 @@ table tr.odd, table tr.even
     border-left: 3px solid transparent;
 }
 
-<?php if ($GLOBALS['cfg']['BrowseMarkerEnable']) { ?>
 /* marked table rows */
-td.marked,
-table tr.marked td,
-table tr.marked th,
-table tr.marked
+td.marked:not(.nomarker),
+table tr.marked:not(.nomarker) td,
+table tr.marked:not(.nomarker) th,
+table tr.marked:not(.nomarker)
 {
     color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
 }
 
-td.marked
+td.marked:not(.nomarker)
 {
     background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 }
@@ -824,13 +823,11 @@ table tr.marked
 {
     border-left: 3px solid #24A0DA;
 }
-<?php } ?>
 
-<?php if ($GLOBALS['cfg']['BrowsePointerEnable']) { ?>
 /* hovered items */
-.odd:hover,
-.even:hover,
-.hover,
+.odd:not(.nopointer):hover,
+.even:not(.nopointer):hover,
+.hover:not(.nopointer),
 .structure_actions_dropdown
 {
     background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
@@ -843,14 +840,13 @@ table tr.marked
 }
 
 /* hovered table rows */
-table tr.odd:hover th,
-table tr.even:hover th,
-table tr.hover th
+table tr.odd:not(.nopointer):hover th,
+table tr.even:not(.nopointer):hover th,
+table tr.hover:not(.nopointer) th
 {
     background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
     color: <?php echo $GLOBALS['cfg']['ThPointerColor']; ?>;
 }
-<?php } ?>
 
 /* marks table rows/cells if the db field is in a where condition */
 
