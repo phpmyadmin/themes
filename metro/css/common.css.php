@@ -819,7 +819,7 @@ td.marked:not(.nomarker)
     background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;
 }
 
-table tr.marked
+table tr.marked:not(.nomarker)
 {
     border-left: 3px solid #24A0DA;
 }
