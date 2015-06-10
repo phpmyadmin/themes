@@ -67,6 +67,18 @@
     th.vbottom, td.vbottom {
         vertical-align: bottom;
     }
+    
+    th.column_heading, th.column_action {
+        border: .1em solid #000;
+    }
+    
+    table tr.odd, table tr.even {
+	    border-left: .1em solid #000;
+	}
+	
+	table tr.odd th, table tr.even th, table.data th {
+	    border-bottom: .1em solid #000;
+	}
 
     /* Common Elements not to be included */
     /* Hide Navigation and Top Menu bar */
