@@ -518,15 +518,10 @@ button
 
 textarea
 {
-    height: <?php echo ceil($GLOBALS['cfg']['TextareaRows'] * 1.2); ?>em;
     overflow: visible;
     border: 1px solid <?php echo $GLOBALS['cfg']['BrowseGrayColor']; ?>;
     color: <?php echo $GLOBALS['cfg']['ThColor']; ?>;
     background-color: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
-}
-
-textarea.char {
-    height: <?php echo ceil($GLOBALS['cfg']['CharTextareaRows'] * 1.2); ?>em;
 }
 
 fieldset
