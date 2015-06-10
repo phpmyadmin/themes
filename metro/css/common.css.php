@@ -3244,11 +3244,6 @@ form.append_fields_form .tblFooters
     height: 10em;
 }
 
-.cEdit .edit_area_right {
-    position: absolute;
-    right: 0;
-}
-
 .cEdit .goto_link {
     background: #EEE;
     color: #555;
