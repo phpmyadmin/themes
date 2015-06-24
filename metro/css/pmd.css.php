@@ -366,11 +366,11 @@ a.active.trigger:hover {
 .toggle_container .block {
     background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground'] ?>;
     border-top: 1px solid #999;
-    cursor: pointer;
 }
 
 .history_table {
     opacity: 1.0;
+    cursor: pointer;
 }
 
 .history_table2 {
