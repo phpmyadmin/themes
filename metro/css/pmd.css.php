@@ -325,7 +325,7 @@ a.M_butt:hover {
 
 .panel {
     position: fixed;
-    top: 60px;
+    top: 90px;
     <?php echo $right; ?>: 0;
     width: 350px;
     max-height: 500px;
@@ -338,7 +338,7 @@ a.M_butt:hover {
 a.trigger {
     position: fixed;
     text-decoration: none;
-    top: 60px;
+    top: 90px;
     <?php echo $right; ?>: 0;
     color: #fff;
     padding: 10px 40px 10px 15px;
@@ -421,7 +421,7 @@ a.active.trigger:hover {
 
 .side-menu.right {
     float: right;
-    margin-right: -20px;
+    right: 0;
 }
 
 .content_fullscreen .side-menu.right {
