@@ -3386,6 +3386,7 @@ table.show_create td {
 #pma_console .message span.text,
 #pma_console .message span.action,
 #pma_console .toolbar .button,
+#pma_console .toolbar .text,
 #pma_console .switch_button {
     padding: 0 3px;
     display: inline-block;
@@ -3395,10 +3396,15 @@ table.show_create td {
 #pma_console .switch_button {
     cursor: pointer;
 }
-#pma_console .toolbar .button {
+#pma_console .toolbar .text {
+    font-weight: bold;
+}
+#pma_console .toolbar .button,
+#pma_console .toolbar .text {
     margin-<?php echo $right; ?>: .4em;
 }
-#pma_console .toolbar .button {
+#pma_console .toolbar .button,
+#pma_console .toolbar .text {
     float: <?php echo $right; ?>;
 }
 #pma_console .content {
@@ -3610,6 +3616,7 @@ html.ie7 #pma_console .query_input {
     display: inline-block;
 }
 #debug_console.ungrouped .ungroup_queries,
+#debug_console.ungrouped .sort_count,
 #debug_console.grouped .group_queries {
     display: none;
 }
