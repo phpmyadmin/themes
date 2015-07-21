@@ -165,5 +165,3 @@ switch($scheme)
         $GLOBALS['cfg']['BlueHeader']               = '#555555';
         break;
 }
-
-?>
