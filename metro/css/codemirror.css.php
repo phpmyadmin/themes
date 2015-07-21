@@ -10,6 +10,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?> !important;
     height: <?php echo ceil($GLOBALS['cfg']['TextareaRows'] * 1.2); ?>em;
     border: 1px solid #ccc;
+    direction: ltr;
 }
 .CodeMirror * {
     font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>;
