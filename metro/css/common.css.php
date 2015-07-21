@@ -674,6 +674,11 @@ div.tools
     text-align: <?php echo $right; ?>;
 }
 
+div.tools span {
+    float: <?php echo $right; ?>;
+    margin: 6px 2px;
+}
+
 div.tools a
 {
     color: <?php echo $GLOBALS['cfg']['BlueHeader']; ?> !important;
@@ -2171,6 +2176,7 @@ label.desc sup {
     overflow: auto;
     background-color: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
     border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor']; ?>;
+    direction: ltr;
 }
 
 #main_pane_left
@@ -2860,6 +2866,7 @@ form#tableOptionsForm .tblFooters
 
 #prefs_autoload {
     margin-bottom: .5em;
+    margin-left: .5em;
 }
 
 #placeholder .button {
@@ -3773,6 +3780,20 @@ th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon {
 }
 /* end of styles of sortable tables */
 
+/* styles for jQuery-ui to support rtl languages */
+body .ui-dialog .ui-dialog-titlebar-close {
+    <?php echo $right; ?>: .3em;
+    <?php echo $left; ?>: initial;
+}
+
+body .ui-dialog .ui-dialog-title {
+    float: <?php echo $left; ?>;
+}
+
+body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
+    float: <?php echo $right; ?>;
+}
+/* end of styles for jQuery-ui to support rtl languages */
 
 /* Override some jQuery-ui styling to have square corners */
 body .ui-corner-all,
