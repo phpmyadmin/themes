@@ -110,11 +110,6 @@
         display: none;
     }
 
-    /* Hide the Debug div */
-    #session_debug {
-        display: none;
-    }
-
     /* Hide the #selflink div */
     #selflink {
         display: none;
