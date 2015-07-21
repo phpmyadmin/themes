@@ -1846,6 +1846,10 @@ div#profilingchart {
 #inner-resizer { /* make room for the resize handle */
     padding: 10px;
 }
+.chartOption {
+    float: <?php echo $left; ?>;
+    margin-<?php echo $right;?>: 40px;
+}
 
 /* END table charting */
 
