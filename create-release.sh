@@ -17,6 +17,18 @@ if [ $# -eq 0 ] ; then
     exit 1
 fi
 
+cat <<END
+
+Please ensure that you have updated data/themes.py in the website code before running this script.
+
+Continue (y/n)?
+END
+read do_release
+
+if [ "$do_release" != 'y' ]; then
+      exit 100
+fi
+
 THEME="${1%/}"
 if [ ! -d "$THEME" ] ; then
     echo "Directory $THEME does not exist!"
