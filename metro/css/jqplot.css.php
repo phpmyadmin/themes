@@ -48,7 +48,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 
 
 .jqplot-xaxis-tick {
-    top: 0px;
+    top: 0;
     /* initial position untill tick is drawn in proper place */
     <?php echo $left; ?>: 15px;
 /*    padding-top: 10px;*/
@@ -56,7 +56,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 
 .jqplot-x2axis-tick {
-    bottom: 0px;
+    bottom: 0;
     /* initial position untill tick is drawn in proper place */
     <?php echo $left; ?>: 15px;
 /*    padding-bottom: 10px;*/
@@ -64,7 +64,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 
 .jqplot-yaxis-tick {
-    <?php echo $right; ?>: 0px;
+    <?php echo $right; ?>: 0;
     /* initial position untill tick is drawn in proper place */
     top: 15px;
 /*    padding-right: 10px;*/
@@ -73,7 +73,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 
 .jqplot-yaxis-tick.jqplot-breakTick {
     <?php echo $right; ?>: -20px;
-    margin-<?php echo $right; ?>: 0px;
+    margin-<?php echo $right; ?>: 0;
     padding:1px 5px 1px;
 /*    background-color: white;*/
     z-index: 2;
@@ -81,7 +81,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 }
 
 .jqplot-y2axis-tick, .jqplot-y3axis-tick, .jqplot-y4axis-tick, .jqplot-y5axis-tick, .jqplot-y6axis-tick, .jqplot-y7axis-tick, .jqplot-y8axis-tick, .jqplot-y9axis-tick {
-    <?php echo $left; ?>: 0px;
+    <?php echo $left; ?>: 0;
     /* initial position untill tick is drawn in proper place */
     top: 15px;
 /*    padding-left: 10px;*/
@@ -165,7 +165,7 @@ td.jqplot-table-legend-swatch {
 }
 
 tr.jqplot-table-legend:first td.jqplot-table-legend-swatch {
-    padding-top: 0px;
+    padding-top: 0;
 }
 */
 
@@ -196,8 +196,8 @@ div.jqplot-table-legend-swatch {
 }
 
 .jqplot-title {
-    top: 0px;
-    <?php echo $left; ?>: 0px;
+    top: 0;
+    <?php echo $left; ?>: 0;
     padding-bottom: 0.5em;
     font-size: 1.2em;
 }

@@ -98,7 +98,7 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
 
 #pma_navigation #pmalogo
 {
-    margin: 0px;
+    margin: 0;
     padding: 12px;
     background: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
@@ -177,7 +177,7 @@ img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reloa
 #pma_navigation #databaseList,
 #pma_navigation div.pageselector.dbselector {
     text-align: center;
-    padding: 5px 10px 0px;
+    padding: 5px 10px 0;
     border: 0;
 }
 
@@ -196,7 +196,7 @@ img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reloa
 }
 #pma_navigation_select_database {
     text-align: left;
-    padding: 0px 0px 0px;
+    padding: 0 0 0;
     border: 0;
     margin: 0;
 }
@@ -210,7 +210,7 @@ img.ic_b_home, img.ic_s_loggoff, img.ic_b_docs, img.ic_b_sqlhelp, img.ic_s_reloa
     border-top: 1px solid #bbb;
     color: #333;
     padding: 4px 6px;
-    margin: 0px 0px 0px;
+    margin: 0 0 0;
     width: 92%;
 }
 #pma_navigation_tree_content {
@@ -382,7 +382,7 @@ li.fast_filter span {
 }
 li.fast_filter.db_fast_filter {
     border: 0;
-    margin-left: 0px;
+    margin-left: 0;
     margin-right: 10px;
 }
 

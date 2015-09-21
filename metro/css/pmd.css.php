@@ -111,7 +111,7 @@ canvas.pmd * {
     text-indent: 3px;
     margin-left: 2px;
     text-align: <?php echo $left; ?>;
-    border: #ccc solid 0px;
+    border: #ccc solid 0;
 }
 
 .pmd_Tabs2 {
@@ -121,7 +121,7 @@ canvas.pmd * {
     text-indent: 3px;
     white-space: nowrap;
     text-decoration: none;
-    border: #eee solid 0px;
+    border: #eee solid 0;
     text-align: <?php echo $left; ?>;
 }
 
@@ -279,7 +279,7 @@ a.M_butt:hover {
 }
 
 .content_fullscreen #layer_menu {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #layer_menu.left {
@@ -288,7 +288,7 @@ a.M_butt:hover {
 }
 
 .content_fullscreen #layer_menu.left {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 #layer_upd_relation {
@@ -316,29 +316,29 @@ a.M_butt:hover {
 
 #layer_menu_sizer {
     background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/resize.png'); ?>);
-    cursor: w-resize;
+    cursor: ew-resize;
+}
+
+#layer_menu_sizer .icon {
+    margin: 0;
 }
 
 .panel {
     position: fixed;
-    top: 60px;
+    top: 90px;
     <?php echo $right; ?>: 0;
-    display: none;
-    background: #FFF;
-    border: 1px solid gray;
-    width: 350 px;
+    width: 350px;
     max-height: 500px;
-    overflow:scroll;
-    padding: 30px;
-    padding-<?php echo $left; ?>: 30px;
-    color: #FFF;
+    display: none;
+    overflow: auto;
+    padding-top: 34px;
     z-index: 102;
 }
 
 a.trigger {
     position: fixed;
     text-decoration: none;
-    top: 60px;
+    top: 90px;
     <?php echo $right; ?>: 0;
     color: #fff;
     padding: 10px 40px 10px 15px;
@@ -363,117 +363,35 @@ a.active.trigger:hover {
     background: #fff696 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/minus.png'); ?>) 85% 55% no-repeat;
 }
 
-h2.tiger {
-    background-repeat: repeat-x;
-    padding: 1px;
-    font-weight: bold;
-    padding: 50px 20px 50px;
-    margin: 0 0 5px 0;
-    width: 250px;
-    float: <?php echo $left; ?>;
-    color : #333;
-    text-align: center;
-}
-
-h2.tiger a {
-    background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/Header.png'); ?>);
-    text-align: center;
-    text-decoration: none;
-    color : #333;
-    display: block;
-}
-
-h2.tiger a:hover {
-    color: #000;
-    background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/Header_Linked.png'); ?>);
-}
-
-h2.active {
-    background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/Header.png'); ?>);
-    background-repeat: repeat-x;
-    padding: 1px;
-    background-position: left bottom;
-}
-
-.toggle_container {
-    margin: 0 0 5px;
-    padding: 0;
-    border-top: 1px solid #d6d6d6;
-    background: #FFF;
-    overflow: hidden;
-    font-size: 1.2em;
-    clear: both;
-}
-
 .toggle_container .block {
-    background-color: #DBE4E8;
-    padding: 40px 15px 40px 15px; /*--Padding of Container--*/
-    border:1px solid #999;
-    color: #000;
+    background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground'] ?>;
+    border-top: 1px solid #999;
+}
+
+.toggle_container .block img.ic_s_info {
+    -webkit-filter: invert(70%);
+    filter: invert(70%);
 }
 
 .history_table {
-    text-align: center;
-    background-color: #9999CC;
+    opacity: 1.0;
+    cursor: pointer;
 }
 
 .history_table2 {
-    text-align: center;
-    background-color: #DBE4E8;
+    opacity: 0.7;
 }
 
-#filter {
-    display: none;
-    position: absolute;
-    top: 0%;
-    left: 0%;
-    width: 100%;
-    height: 100%;
-    background-color: #CCA;
-    z-index: 10;
-    opacity: .5;
-    filter: alpha(opacity=50);
+#ab {
+    min-width: 300px;
+}
+
+#ab .ui-accordion-content {
+    padding: 0;
 }
 
 #box {
     display: none;
-    position: absolute;
-    top: 20%;
-    <?php echo $left; ?>: 30%;
-    width: 500px;
-    height: 220px;
-    padding: 48px;
-    margin: 0;
-    border: 1px solid #000;
-    background-color: #fff;
-    z-index: 101;
-    overflow: visible;
-}
-
-#boxtitle {
-    position: absolute;
-    float: center;
-    top: 0;
-    <?php echo $left; ?>: 0;
-    width: 593px;
-    height: 20px;
-    padding: 0;
-    padding-top: 4px;
-    margin: 0;
-    border-bottom: 4px solid #3CF;
-    background-color: #D0DCE0;
-    color: black;
-    font-weight: bold;
-    padding-<?php echo $left; ?>: 2px;
-    text-align: <?php echo $left; ?>;
-}
-
-#tblfooter {
-    background-color: #D3DCE3;
-    float: <?php echo $right; ?>;
-    padding-top: 10px;
-    color: black;
-    font-weight: normal;
 }
 
 #foreignkeychk {
@@ -484,7 +402,7 @@ h2.active {
 
 .side-menu {
     float: left;
-    position: relative;
+    position: fixed;
     width: auto;
     height: auto;
     background: #efefef;
@@ -493,21 +411,21 @@ h2.active {
     overflow: hidden;
     z-index: 50;
     padding: 2px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: -20px;
 }
 
 .content_fullscreen .side-menu {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .side-menu.right {
     float: right;
-    margin-right: -20px;
+    right: 0;
 }
 
 .content_fullscreen .side-menu.right {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .side-menu .hide {
@@ -540,9 +458,9 @@ h2.active {
 }
 
 .content_fullscreen #name-panel {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #container-form {
