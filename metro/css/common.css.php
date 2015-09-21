@@ -158,7 +158,7 @@ body#loginform {
 
 body#loginform #page_content{
     background-color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
-    margin: 0px !important;
+    margin: 0 !important;
     padding: 20px;
     margin-top: 10% !important;
     height: 200px;
@@ -194,7 +194,7 @@ body#loginform h1
     text-align: left;
     color: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
     font-size: 2.5em;
-    padding-top: 0px;
+    padding-top: 0;
     margin-right: -50%;
     line-height: 2;
 }
@@ -223,7 +223,7 @@ body#loginform input.textfield
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
 }
 
 body#loginform input.textfield:hover,
@@ -234,7 +234,7 @@ body#loginform input.textfield:focus
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    margin: 0px;
+    margin: 0;
 }
 
 body#loginform input[type=submit]
@@ -242,16 +242,16 @@ body#loginform input[type=submit]
     background-color: <?php echo $GLOBALS['cfg']['ThColor']; ?>;
     border: none;
     padding: 7px;
-    margin: 0px;
+    margin: 0;
 }
 
 body#loginform select
 {
-    margin: 0px !important;
+    margin: 0 !important;
     border: 1px solid <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     background: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
-    padding-left: 0px !important;
+    padding-left: 0 !important;
     border: 1px solid <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
     min-width: 100%;
@@ -271,23 +271,23 @@ body#loginform fieldset
 {
     border: none;
     color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
-    padding: 0px;
-    margin-top: 0px;
+    padding: 0;
+    margin-top: 0;
     margin-bottom: 10px;
     background: none;
 }
 
 body#loginform fieldset:first-child
 {
-    margin-bottom: 0px;
+    margin-bottom: 0;
     border-bottom: none;
-    margin: 0px;
+    margin: 0;
 }
 
 body#loginform fieldset.tblFooters
 {
     border: none;
-    margin: 0px;
+    margin: 0;
     clear: none;
 }
 
@@ -330,7 +330,7 @@ h1
     font-weight: normal;
     font-size: 3em;
     color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
-    margin: 0px;
+    margin: 0;
     letter-spacing: -1px;
     line-height: 1;
 }
@@ -342,7 +342,7 @@ h2
     color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
     margin-top: 10px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     line-height: 1;
     letter-spacing: -1px;
 }
@@ -358,7 +358,7 @@ h2 a img {
 
 .data,
 .data_full_width {
-    margin: 10px 0px;
+    margin: 10px 0;
 }
 
 .data_full_width {
@@ -536,14 +536,14 @@ fieldset
 fieldset fieldset
 {
     margin: 20px;
-    margin-bottom: 0px;
+    margin-bottom: 0;
     background-color: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
     border: none;
 }
 
 legend
 {
-  padding: 0px 5px;
+  padding: 0 5px;
 }
 
 .some-margin {
@@ -740,7 +740,7 @@ tr.noclick td:first-child:before
 fieldset.tblFooters
 {
     margin-top: -1px;
-    border-top: 0px;
+    border-top: 0;
     text-align: <?php echo $right; ?>;
     float: none;
     clear: both;
@@ -769,7 +769,7 @@ button.mult_submit
     border: none;
     background-color: transparent;
     color: <?php echo $GLOBALS['cfg']['BrowsePointerColor']; ?>;
-    margin: 0px;
+    margin: 0;
 }
 
 /* odd items 1,3,5,7,... */
@@ -961,7 +961,7 @@ td .icon {
 
 #pma_errors #pma_errors
 {
-    padding: 0px;
+    padding: 0;
 }
 
 .success h1,
@@ -1189,7 +1189,7 @@ ul#topmenu2 li {
 
 ul#topmenu2 a {
     display: block;
-    margin: 7px 0px;
+    margin: 7px 0;
     margin-<?php echo $left; ?>: 0;
     padding: 5px 15px;
     white-space: nowrap;
@@ -1221,7 +1221,7 @@ fieldset.caution a
 
 fieldset.caution ul, #tbl_maintenance
 {
-    padding: 0px;
+    padding: 0;
 }
 
 fieldset.caution li, #tbl_maintenance li
@@ -1400,7 +1400,7 @@ div#tablestatistics table {
 {
     padding: 12px 30px;
     overflow: hidden;
-    margin: 0em;
+    margin: 0;
     margin-left: -1em;
     font-family: <?php echo $GLOBALS['cfg']['FontFamily']; ?>;
     color: <?php echo $GLOBALS['cfg']['ButtonColor']; ?>;
@@ -1675,7 +1675,7 @@ table#chartGrid div.monitorChart {
 div.tabLinks {
     margin-left: 0.3em;
     float: <?php echo $left; ?>;
-    padding: 5px 0px;
+    padding: 5px 0;
 }
 
 div.tabLinks a, div.tabLinks label {
@@ -1683,7 +1683,7 @@ div.tabLinks a, div.tabLinks label {
 }
 
 div.tabLinks .icon {
-    margin: -0.2em 0.3em 0px 0px;
+    margin: -0.2em 0.3em 0 0;
 }
 
 .popupContent {
@@ -1991,7 +1991,7 @@ li#li_create_database
 
 li#li_select_lang select
 {
-    margin: 0px !important;
+    margin: 0 !important;
     height: 26px;
 }
 
@@ -2010,7 +2010,7 @@ li#li_select_lang:hover
 
 li#li_select_mysql_collation select
 {
-    margin: 0px !important;
+    margin: 0 !important;
 }
 
 li#li_select_mysql_collation
@@ -2028,7 +2028,7 @@ li#li_select_mysql_collation:hover
 
 li#li_select_theme select
 {
-    margin: 0px !important;
+    margin: 0 !important;
 }
 
 li#li_select_theme
@@ -2207,7 +2207,7 @@ label.desc sup {
 
 .group input[type=submit]
 {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .group h2
@@ -2216,7 +2216,7 @@ label.desc sup {
     font-size: 2.8em;
     font-weight: normal;
     font-family: <?php echo $GLOBALS['cfg']['FontFamilyLight']; ?>;
-    margin-top: 0px;
+    margin-top: 0;
     margin-bottom: 0.6em;
 }
 
@@ -2324,7 +2324,7 @@ input[type=date].invalid_value
     background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath(); ?>ajax_clock_small.gif);
     background-repeat: no-repeat;
     background-position: 46%;
-    margin: 0px;
+    margin: 0;
     background-color: <?php echo $GLOBALS['cfg']['NaviColor']; ?>;
     color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
     padding: 10px !important;
@@ -2415,7 +2415,7 @@ input[type=date].invalid_value
     padding: 5px 12px;
     text-decoration: none;
     cursor: pointer;
-    margin: 0px;
+    margin: 0;
 }
 #buttonGo:hover {
 
@@ -3716,8 +3716,8 @@ html.ie7 #pma_console .query_input {
 .pma_drop_handler {
     display: none;
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.6);
     height: 100%;
@@ -3731,7 +3731,7 @@ html.ie7 #pma_console .query_input {
 .pma_sql_import_status {
     display: none;
     position: fixed;
-    bottom: 0px;
+    bottom: 0;
     right: 25px;
     width: 400px;
     border: 1px solid #999;
@@ -3770,13 +3770,13 @@ html.ie7 #pma_console .query_input {
 .pma_sql_import_status h2 .minimize {
     float: right;
     margin-right: 5px;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 .pma_sql_import_status h2 .close {
     float: right;
     margin-right: 5px;
-    padding: 0px 10px;
+    padding: 0 10px;
     display: none;
 }
 
@@ -3810,7 +3810,7 @@ html.ie7 #pma_console .query_input {
 .pma_drop_result h2 .close {
     float: right;
     margin-right: 5px;
-    padding: 0px 10px;
+    padding: 0 10px;
 }
 
 .dependencies_box {

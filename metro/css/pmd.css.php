@@ -111,7 +111,7 @@ canvas.pmd * {
     text-indent: 3px;
     margin-left: 2px;
     text-align: <?php echo $left; ?>;
-    border: #ccc solid 0px;
+    border: #ccc solid 0;
 }
 
 .pmd_Tabs2 {
@@ -121,7 +121,7 @@ canvas.pmd * {
     text-indent: 3px;
     white-space: nowrap;
     text-decoration: none;
-    border: #eee solid 0px;
+    border: #eee solid 0;
     text-align: <?php echo $left; ?>;
 }
 
@@ -279,7 +279,7 @@ a.M_butt:hover {
 }
 
 .content_fullscreen #layer_menu {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 #layer_menu.left {
@@ -288,7 +288,7 @@ a.M_butt:hover {
 }
 
 .content_fullscreen #layer_menu.left {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 #layer_upd_relation {
@@ -411,12 +411,12 @@ a.active.trigger:hover {
     overflow: hidden;
     z-index: 50;
     padding: 2px;
-    margin-top: 0px;
+    margin-top: 0;
     margin-left: -20px;
 }
 
 .content_fullscreen .side-menu {
-    margin-left: 0px;
+    margin-left: 0;
 }
 
 .side-menu.right {
@@ -425,7 +425,7 @@ a.active.trigger:hover {
 }
 
 .content_fullscreen .side-menu.right {
-    margin-right: 0px;
+    margin-right: 0;
 }
 
 .side-menu .hide {
@@ -458,9 +458,9 @@ a.active.trigger:hover {
 }
 
 .content_fullscreen #name-panel {
-    margin-top: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
+    margin-top: 0;
+    margin-left: 0;
+    margin-right: 0;
 }
 
 #container-form {
