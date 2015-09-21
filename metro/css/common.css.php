@@ -156,12 +156,12 @@ body#loginform {
     background-color: #666;
 }
 
-body#loginform #page_content{
+body#loginform #page_content {
     background-color: <?php echo $GLOBALS['cfg']['NaviBackground']; ?>;
     margin: 0 !important;
     padding: 20px;
     margin-top: 10% !important;
-    height: 200px;
+    height: 220px;
 }
 
 body#loginform div.container
