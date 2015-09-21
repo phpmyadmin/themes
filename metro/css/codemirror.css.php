@@ -23,6 +23,10 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     height: <?php echo ceil($GLOBALS['cfg']['TextareaRows'] * 0.6); ?>em;
     width: <?php echo ceil($GLOBALS['cfg']['TextareaCols'] * 0.6); ?>em;
 }
+#pma_console .CodeMirror-gutters {
+    background-color: initial;
+    border: none;
+}
 span.cm-keyword, span.cm-statement-verb {
     color: #909;
 }
