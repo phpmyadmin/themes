@@ -3,9 +3,9 @@
 set -e
 
 usage() {
-    echo 'Usage: create-release.sh dir [--tag] [--upload USERNAME]'
+    echo 'Usage: create-release.sh dir [--tag] [--upload]'
     echo
-    echo 'Creates a zip for themes download and optionally tags the git tree and uploads to sf.net'
+    echo 'Creates a zip for themes download and optionally tags the git tree and uploads to our files server'
 }
 
 if [ "x$1" = "x-h" -o "x$1" = "x--help" ] ; then
@@ -36,13 +36,6 @@ while [ $# -gt 0 ] ; do
             ;;
         --upload)
             UPLOAD=1
-            shift
-            UPLOAD_USER="$1"
-            if [ -z "$UPLOAD_USER" ] ; then
-                echo "Missing sf.net username for upload!"
-                usage
-                exit 1
-            fi
             shift
             ;;
         *)
@@ -78,13 +71,14 @@ if [ $TAG -eq 1 ] ; then
 fi
 
 if [ $UPLOAD -eq 1 ] ; then
-    sftp $UPLOAD_USER,phpmyadmin@frs.sourceforge.net <<EOT
-cd /home/frs/project/p/ph/phpmyadmin/themes
+    sftp -P 11022 files@klutz.phpmyadmin.net <<EOT
+cd /mnt/storage/files/themes
 mkdir $THEME
 cd $THEME
 mkdir $VERSION
 cd $VERSION
 put release/$NAME.zip
 EOT
+ssh -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
 fi
 
