@@ -316,7 +316,7 @@ a.M_butt:hover {
 
 #layer_menu_sizer {
     background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/resize.png'); ?>);
-    cursor: w-resize;
+    cursor: ew-resize;
 }
 
 #layer_menu_sizer .icon {
