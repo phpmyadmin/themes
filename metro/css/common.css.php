@@ -3707,7 +3707,6 @@ html.ie7 #pma_console .query_input {
     font-size: 120%;
 }
 .cm-s-pma .CodeMirror-scroll {
-    padding-bottom: 2em;
     cursor: text;
 }
 

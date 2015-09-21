@@ -12,6 +12,9 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     border: 1px solid #ccc;
     direction: ltr;
 }
+#pma_console .CodeMirror {
+    border: none;
+}
 .CodeMirror * {
     font-family: <?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>;
 }
