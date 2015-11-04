@@ -131,8 +131,8 @@ body {
 <?php } ?>
     padding: 0;
     margin-<?php echo $left; ?>: 250px;
-    color: #444;
-    background: #fff;
+    color: <?php echo $GLOBALS['cfg']['MainColor']; ?>;
+    background: <?php echo $GLOBALS['cfg']['MainBackground']; ?>;
     line-height: 1;
     font-size: 11px;
 }
