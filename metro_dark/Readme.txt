@@ -1,0 +1,1 @@
+This dark theme requires the original metro theme in order to keep the fonts the same so copy both of them into the PhpMyAdmin theme folder
