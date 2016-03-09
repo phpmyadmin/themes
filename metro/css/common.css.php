@@ -777,7 +777,6 @@ table tr.odd th,
 .odd
 {
     background: <?php echo $GLOBALS['cfg']['BgTwo']; ?>;
-    <?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>
     border-bottom: none;
 }
 
@@ -787,7 +786,6 @@ table tr.even th,
 .even
 {
     background: <?php echo $GLOBALS['cfg']['BgOne']; ?>;
-    <?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>
     border-bottom: none;
 }
 
@@ -2486,7 +2484,6 @@ input#input_import_file {
 #popup_background {
     display: none;
     position: fixed;
-    _position: absolute; /* hack for IE6 */
     width: 100%;
     height: 100%;
     top: 0;
