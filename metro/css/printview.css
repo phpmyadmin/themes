@@ -133,14 +133,8 @@ table tr.odd th, table tr.even th, table.data th {
 }
 
 /* For the Success message div */
-div.success {
-    width: 80%;
-    background-color: #fff;
-}
-
 .sqlOuter {
     color: black;
-    background-color: #000;
 }
 
 /* For hiding 'Open a New phpMyAdmin Window' button */
