@@ -7,4 +7,4 @@ Releasing
 ---------
 
 There is a script create-release.sh which creates zip with theme and optionally
-tags the repository and uploads it to sourceforge.
+tags the repository and uploads it to the phpMyAdmin web site.
