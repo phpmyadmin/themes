@@ -1,16 +1,16 @@
 <?php
 error_reporting('ALL^NOTICE');
-header('Content-type: image/svg+xml');
+$get = htmlspecialchars(isset($_REQUEST['i'])?$_REQUEST['i']:null);
+if(!$get): header('Content-type:text/plain'); die('Access Denied'); endif;
 $svg = '';
-$get = isset($_GET['i'])?$_GET['i']:'';
 function make_icon($i){
-	$txt = isset($_GET['c'])?$_GET['c']:'#555';
+	$txt = isset($_REQUEST['c'])?$_REQUEST['c']:'#555';
 	$txt = str_replace('h_','#',$txt);
 	$svg.='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 	if($i=='main-bg'):
-		$a = isset($_GET['a'])?$_GET['a']:'#EF6C00';
-		$b = isset($_GET['b'])?$_GET['b']:'#E65100';
-		$c = isset($_GET['c'])?$_GET['c']:'#E0F7FA';
+		$a = isset($_REQUEST['a'])?$_REQUEST['a']:'#EF6C00';
+		$b = isset($_REQUEST['b'])?$_REQUEST['b']:'#E65100';
+		$c = isset($_REQUEST['c'])?$_REQUEST['c']:'#E0F7FA';
 		$svg.='<svg version="1.1" id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1280px" height="800px" viewBox="0 0 1280 800" enable-background="new 0 0 1280 800" xml:space="preserve">';
 		$svg.='<g><defs><filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="10"/><feOffset dx="10" dy="10" result="offsetblur"/><feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
 		$svg.='<rect fill="'.str_replace('h_','#',$c).'" width="1280" height="800"/><polygon fill="'.str_replace('h_','#',$b).'" points="1280,572.496 1280,0 452.806,0" filter="url(#dropshadow)"/><polygon fill="'.str_replace('h_','#',$a).'" points="1280,499 1280,0 559,0" filter="url(#dropshadow)"/></g></svg>';
@@ -484,6 +484,7 @@ function make_icon($i){
 	endif;
 	echo $svg;
 }
-if(isset($get)){
+if(isset($get) && !empty($get)):
+	header('Content-type:image/svg+xml');
 	make_icon($get);
-}
+endif;
