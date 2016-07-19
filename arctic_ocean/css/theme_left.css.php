@@ -17,11 +17,9 @@
     if (PMA_USR_BROWSER_AGENT == 'IE' && PMA_USR_BROWSER_VER < 7)
         $forIE = true;
 
-    // 2007-08-24 (mkkeck)
     //            Get the whole http_url for the images
     $ipath = $_SESSION['PMA_Theme']->getImgPath();
 
-    // 2007-08-24 (mkkeck)
     //            Get font-sizes
     $pma_fsize = $GLOBALS['PMA_Config']->get('fontsize');
     $pma_fsize = preg_replace("/[^0-9]/", "", $pma_fsize);
