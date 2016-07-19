@@ -1,7 +1,10 @@
 <?php
 error_reporting('ALL^NOTICE');
 $get = htmlspecialchars(isset($_REQUEST['i'])?$_REQUEST['i']:null);
-if(!$get): header('Content-type:text/plain'); die('Access Denied'); endif;
+if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog','reload','db','db-grp','db-new','db-del','plus','minus','tbl-ops','theme','lang','sql','status','rights','export','import','app','vars','asci','engine','plugin','more','props','table-add','pause','column-add','search','find-replace','events','event-add','browse','track','triggers','trigger-add','designer','routines','routine-add','centralColumns','insrow','edit','views','view-add','drop','key','unique','index','index-add','spatial','ftext','print','tblanalyse','move','normalize','collapseall','link','unlink','data-full','data-empty','lightbulb','lightbulb-off','passwd','favourite','comment','search-plus','notice','error','success','usredit','usradd','usrcheck','usrdrop','sort-asc','sort-desc','bookmark','go-top','console','window-new'))){
+	header('Content-type:text/plain');
+	exit('Access Denied');
+}
 function make_icon($i){
 	$svg = '';
 	$txt = isset($_REQUEST['c'])?$_REQUEST['c']:'#555';
@@ -44,15 +47,6 @@ function make_icon($i){
 			$svg.='<line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="4" y1="12" x2="11" y2="12"/></g>';
 		break;
 		case 'cog':
-			/*$svg.='<path id="setting" fill="'.$txt.'" d="M15.76,10.146l-1.852-1.288c0-0.242,0.081-0.483,0.081-0.805c0-0.322,0-0.564-0.081-0.805l1.691-1.369 ';
-			$svg.='c0.161-0.161,0.161-0.322,0.081-0.483l-1.611-2.818c-0.081-0.081-0.242-0.161-0.483-0.081l-2.013,0.805 ';
-			$svg.='c-0.403-0.322-0.886-0.564-1.369-0.805L9.882,0.403C9.962,0.161,9.721,0,9.56,0H6.339C6.177,0,5.936,0.161,5.936,0.322L5.614,2.496 ';
-			$svg.='C5.131,2.657,4.728,2.979,4.245,3.302L2.312,2.496c-0.242-0.081-0.403,0-0.564,0.161L0.138,5.476c-0.081,0.081,0,0.322,0.161,0.483 ';
-			$svg.='L1.99,7.247c0,0.242-0.081,0.483-0.081,0.805c0,0.322,0,0.564,0.081,0.805l-1.691,1.369c-0.161,0.161-0.161,0.322-0.081,0.483 ';
-			$svg.='l1.611,2.818c0.081,0.081,0.242,0.161,0.483,0.081l2.013-0.805c0.403,0.322,0.886,0.564,1.369,0.805l0.322,2.081 ';
-			$svg.='c0,0.161,0.161,0.31,0.403,0.31H9.64c0.161,0,0.403-0.149,0.403-0.31l0.322-2.088c0.483-0.242,0.966-0.48,1.369-0.802l2.013,0.807 ';
-			$svg.='c0.161,0.081,0.403,0.001,0.483-0.16l1.611-2.818C15.921,10.468,15.921,10.227,15.76,10.146z M7.949,10.871 ';
-			$svg.='c-1.53,0-2.818-1.288-2.818-2.818s1.288-2.818,2.818-2.818s2.818,1.288,2.818,2.818S9.479,10.871,7.949,10.871z"/>';*/
 			$svg.='<path id="setting" fill="'.$txt.'" d="M14.903,6.241h-0.796c-0.117-0.475-0.288-0.928-0.506-1.353l0.524-0.524c0.408-0.408,0.408-1.069,0-1.476 ';
 			$svg.='l-1.012-1.012c-0.408-0.408-1.069-0.408-1.476,0l-0.453,0.453c-0.443-0.261-0.921-0.469-1.425-0.615V1.097 ';
 			$svg.='c0-0.576-0.467-1.044-1.044-1.044H7.284c-0.577,0-1.044,0.467-1.044,1.044v0.615C5.737,1.859,5.259,2.067,4.816,2.328L4.363,1.875 ';
@@ -75,9 +69,6 @@ function make_icon($i){
 			$svg.='<polyline fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" points="8.459,7.653 11.844,11.066 14.973,7.506"/></g>';
 		break;
 		case 'db':
-			/*$svg.='<g id="database"><polygon fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="15,15 15,15 1,15 1,15 1,12 1,12 15,12 15,12"/>';
-			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="15,9 15,9 1,9 1,9 1,7 1,7 15,7 15,7"/>';
-			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" points="15,4 15,4 1,4 1,4 1,1 1,1 15,1 15,1"/></g>';*/
 			$svg.='<path id="database" fill="'.$txt.'" d="M8,15.896c-3.737,0-6.768-1.011-6.768-2.256c0-0.681,0-1.425,0-2.256c0-0.196,0.098-0.382,0.239-0.564 C2.226,11.792,4.85,12.512,8,12.512s5.774-0.72,6.529-1.692c0.141,0.182,0.239,0.368,0.239,0.564c0,0.653,0,1.346,0,2.256 C14.768,14.885,11.736,15.896,8,15.896z M8,11.384c-3.737,0-6.768-1.011-6.768-2.256c0-0.681,0-1.425,0-2.256 c0-0.12,0.045-0.236,0.106-0.351l0,0c0.034-0.072,0.079-0.143,0.133-0.213C2.226,7.279,4.85,8,8,8s5.774-0.721,6.529-1.692 c0.054,0.07,0.099,0.141,0.133,0.213l0,0c0.061,0.115,0.106,0.231,0.106,0.351c0,0.653,0,1.346,0,2.256 C14.768,10.373,11.736,11.384,8,11.384z M8,6.872c-3.737,0-6.768-1.011-6.768-2.256c0-0.356,0-0.733,0-1.128 c0-0.359,0-0.731,0-1.128c0-1.245,3.031-2.256,6.768-2.256c3.736,0,6.768,1.011,6.768,2.256c0,0.352,0,0.725,0,1.128 c0,0.345,0,0.709,0,1.128C14.768,5.861,11.736,6.872,8,6.872z M8,1.232c-2.492,0-4.512,0.504-4.512,1.128S5.508,3.488,8,3.488 s4.512-0.504,4.512-1.128S10.492,1.232,8,1.232z"/>';
 		break;
 		case 'db-grp':
@@ -155,9 +146,6 @@ function make_icon($i){
 			$svg.='<rect x="10" y="1" fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="5" height="5"/></g>';
 		break;
 		case 'vars':
-			/*$svg.='<g id="code"><polyline fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="3.938,5.219 1,8.156 3.609,10.766"/>';
-			$svg.='<polyline fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="12,5.219 14.938,8.156 12.328,10.766"/>';
-			$svg.='<line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="9.063" y1="4.813" x2="6.875" y2="11.188"/></g>';*/
 			$svg.='<g id="code"><polyline fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6.137,6.19 4.446,7.881 5.948,9.384"/>';
 			$svg.='<polyline fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="12.394,6.19 14.085,7.881 12.583,9.384"/>';
 			$svg.='<line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="9.895" y1="5.956" x2="8.636" y2="9.626"/>';
@@ -374,9 +362,6 @@ function make_icon($i){
 			$svg.='<line fill="none" stroke="'.$txt.'" stroke-miterlimit="10" x1="4" y1="8.5" x2="12" y2="8.5"/></g>';
 		break;
 		case 'link':
-			/*$svg.='<g id="link"><polygon fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="5.5,11.5 0.5,11.5 0.5,5.5 5.5,5.5 5.5,7.5 2.5,7.5 2.5,9.5 5.5,9.5"/>';
-			$svg.='<rect x="7.5" y="6.5" fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="1" height="4"/>';
-			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="10.5,11.5 15.5,11.5 15.5,5.5 10.5,5.5 10.5,7.5 13.5,7.5 13.5,9.5 10.5,9.5"/></g>';*/
 			$svg.='<g id="link"><rect x="4.5" y="7.5" fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="7" height="1"/>';
 			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="6.5,12.5 0.5,12.5 0.5,3.5 6.5,3.5 6.5,5.5 2.5,5.5 2.5,10.5 6.5,10.5"/>';
 			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="9.5,12.5 15.5,12.5 15.5,3.5 9.5,3.5 9.5,5.5 13.5,5.5 13.5,10.5 9.5,10.5"/></g>';
@@ -420,7 +405,6 @@ function make_icon($i){
 			$svg.='<polygon fill="'.$txt.'" points="11.846,8.43 11.846,5.961 9.359,5.961 9.359,4.258 11.846,4.258 11.846,1.79 13.506,1.79 13.506,4.258 16,4.258 16,5.961 13.506,5.961 13.506,8.43"/></g>';
 		break;
 		case 'notice':
-			//$svg.='<path id="warning" fill="'.$txt.'" d="M7.023,1.855c0.54-0.874,1.417-0.872,1.956,0l6.695,10.832c0.721,1.167,0.196,2.112-1.172,2.112H1.5 c-1.369,0-1.896-0.942-1.172-2.112L7.023,1.855z M8.001,10.454c0.343,0,0.621-0.281,0.621-0.619V6.107 c0-0.342-0.276-0.619-0.621-0.619c-0.343,0-0.621,0.281-0.621,0.619v3.728C7.38,10.177,7.656,10.454,8.001,10.454z M8.001,12.937 c0.343,0,0.621-0.278,0.621-0.621s-0.278-0.621-0.621-0.621S7.38,11.973,7.38,12.316S7.658,12.937,8.001,12.937z"/>';
 			$svg.='<g id="notice"><line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="8" y1="6" x2="8" y2="10"/>';
 			$svg.='<line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linejoin="round" stroke-miterlimit="10" x1="8" y1="11" x2="8" y2="13"/>';
 			$svg.='<polygon fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="7.997,0.949 15.078,15 0.917,15"/></g>';
