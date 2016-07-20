@@ -467,7 +467,6 @@ function make_icon($i){
 	$svg.='</svg>';
 	endif;
 	echo $svg;
-	$svg = null;
 }
 if(isset($get) && !empty($get)):
 	header('Content-type:image/svg+xml');
