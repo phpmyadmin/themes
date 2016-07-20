@@ -1,19 +1,19 @@
 <?php
 error_reporting('ALL^NOTICE');
-$get = htmlspecialchars(isset($_REQUEST['i'])?$_REQUEST['i']:null);
+$get = htmlspecialchars(isset($_REQUEST['i'])?$_REQUEST['i']:null,ENT_QUOTES);
 if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog','reload','db','db-grp','db-new','db-del','plus','minus','tbl-ops','theme','lang','sql','status','rights','export','import','app','vars','asci','engine','plugin','more','props','table-add','pause','column-add','search','find-replace','events','event-add','browse','track','triggers','trigger-add','designer','routines','routine-add','centralColumns','insrow','edit','views','view-add','drop','key','unique','index','index-add','spatial','ftext','print','tblanalyse','move','normalize','collapseall','link','unlink','data-full','data-empty','lightbulb','lightbulb-off','passwd','favourite','comment','search-plus','notice','error','success','usredit','usradd','usrcheck','usrdrop','sort-asc','sort-desc','bookmark','go-top','console','window-new'))){
 	header('Content-type:text/plain');
 	exit('Access Denied');
 }
 function make_icon($i){
-	$svg = '';
+	$svg = null;
 	$txt = isset($_REQUEST['c'])?$_REQUEST['c']:'#555';
 	$txt = str_replace('h_','#',$txt);
 	$svg.='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 	if($i=='main-bg'):
-		$a = isset($_REQUEST['a'])?$_REQUEST['a']:'#EF6C00';
-		$b = isset($_REQUEST['b'])?$_REQUEST['b']:'#E65100';
-		$c = isset($_REQUEST['c'])?$_REQUEST['c']:'#E0F7FA';
+		$a = htmlspecialchars(isset($_REQUEST['a'])?$_REQUEST['a']:'#EF6C00',ENT_QUOTES);
+		$b = htmlspecialchars(isset($_REQUEST['b'])?$_REQUEST['b']:'#E65100',ENT_QUOTES);
+		$c = htmlspecialchars(isset($_REQUEST['c'])?$_REQUEST['c']:'#E0F7FA',ENT_QUOTES);
 		$svg.='<svg version="1.1" id="background" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="1280px" height="800px" viewBox="0 0 1280 800" enable-background="new 0 0 1280 800" xml:space="preserve">';
 		$svg.='<g><defs><filter id="dropshadow" height="130%"><feGaussianBlur in="SourceAlpha" stdDeviation="10"/><feOffset dx="10" dy="10" result="offsetblur"/><feComponentTransfer><feFuncA type="linear" slope="0.2"/></feComponentTransfer><feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>';
 		$svg.='<rect fill="'.str_replace('h_','#',$c).'" width="1280" height="800"/><polygon fill="'.str_replace('h_','#',$b).'" points="1280,572.496 1280,0 452.806,0" filter="url(#dropshadow)"/><polygon fill="'.str_replace('h_','#',$a).'" points="1280,499 1280,0 559,0" filter="url(#dropshadow)"/></g></svg>';
@@ -467,6 +467,7 @@ function make_icon($i){
 	$svg.='</svg>';
 	endif;
 	echo $svg;
+	$svg = null;
 }
 if(isset($get) && !empty($get)):
 	header('Content-type:image/svg+xml');
