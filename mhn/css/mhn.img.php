@@ -7,7 +7,7 @@ if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog',
 }
 function make_icon($i){
 	$svg = null;
-	$txt = isset($_REQUEST['c'])?$_REQUEST['c']:'#555';
+	$txt = htmlspecialchars(isset($_REQUEST['c'])?$_REQUEST['c']:'#555',ENT_QUOTES);
 	$txt = str_replace('h_','#',$txt);
 	$svg.='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 	if($i=='main-bg'):
