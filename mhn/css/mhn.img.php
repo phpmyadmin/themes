@@ -6,10 +6,10 @@ if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog',
 	exit('Access Denied');
 }
 function make_icon($i){
-	$svg = null;
+	$svg = '';
 	$txt = htmlspecialchars(isset($_REQUEST['c'])?$_REQUEST['c']:'#555',ENT_QUOTES);
 	$txt = str_replace('h_','#',$txt);
-	$svg.='<?xml version="1.0" encoding="utf-8"?><!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
+	$svg.='<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">';
 	if($i=='main-bg'):
 		$a = htmlspecialchars(isset($_REQUEST['a'])?$_REQUEST['a']:'#EF6C00',ENT_QUOTES);
 		$b = htmlspecialchars(isset($_REQUEST['b'])?$_REQUEST['b']:'#E65100',ENT_QUOTES);

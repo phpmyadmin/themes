@@ -10,6 +10,19 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 ::-webkit-scrollbar-thumb:hover{background:#888}
 ::-moz-selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec'];?>}
 ::selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec'];?>}
+progress[value]{
+	height:10px;
+	border:none;
+	width:100%;
+	-webkit-appearance:none;
+	-moz-appearance:none;
+	appearance:none;
+	vertical-align:middle;
+	background-color:<?php echo $GLOBALS['cfg']['cLte'];?>;
+}
+progress[value]::-webkit-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cLte'];?>}
+progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cfg']['cPri'];?>}
+progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri'];?>}
 fieldset{border:none}
 <?php require_once('mhn.icons.css.php'); ?>
 html{font-size:<?php echo $_SESSION['PMA_Theme']->getFontSize(); ?>}
@@ -3406,29 +3419,21 @@ html.ie7 #pma_console .query_input {
     bottom: 0;
     right: 25px;
     width: 400px;
-    border: 1px solid #999;
     background: #f3f3f3;
-    -moz-border-radius: 4px;
-    -webkit-border-radius: 4px;
-    border-radius: 4px;
-    -moz-box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 5px #ccc;
-    -webkit-box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 5px #ccc;
-    box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 5px #ccc;
+    border: 1px solid <?php echo $GLOBALS['cfg']['cPri'];?>;
 }
 
 .pma_sql_import_status h2,
 .pma_drop_result h2 {
-    background-color: #bbb;
-    padding: .1em .3em;
+    background-color:<?php echo $GLOBALS['cfg']['cPri'];?>;
+    padding: .2em .3em;
     margin-top: 0;
     margin-bottom: 0;
     color: #fff;
-    font-size: 1.6em;
-    font-weight: normal;
-    text-shadow: 0 1px 0 #777;
-    -moz-box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>1px 1px 15px #999 inset;
-    -webkit-box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>1px 1px 15px #999 inset;
-    box-shadow: <?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>1px 1px 15px #999 inset;
+    font-size: 1.4em;
+    font-weight: 300;
+	-webkit-text-shadow:none;
+	text-shadow:none;
 }
 
 .pma_sql_import_status div {
@@ -3450,16 +3455,25 @@ html.ie7 #pma_console .query_input {
 }
 
 .pma_sql_import_status h2 .minimize {
+	font-size:0;
     float: right;
     margin-right: 5px;
     padding: 0 10px;
 }
+.pma_sql_import_status h2 .minimize:before{
+	font-size:16px;
+	content:'\02212';
+}
 
-.pma_sql_import_status h2 .close {
+.pma_sql_import_status h2 .close{
     float: right;
-    margin-right: 5px;
     padding: 0 10px;
     display: none;
+	font-size:0;
+}
+.pma_sql_import_status h2 .close:before{
+	font-size:16px;
+	content:'\000D7';
 }
 
 .pma_sql_import_status h2 .minimize:hover,

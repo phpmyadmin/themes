@@ -91,6 +91,7 @@ $css.='.icon.ic_bd_select{background:url('.$url.'search-plus&c=h_8c8c8c)!importa
 $css.='.icon.ic_b_select{background:url('.$url.'search-plus)!important}';
 $css.='.icon.ic_s_notice{background:url('.$url.'notice&c=h_fff)!important}';
 $css.='.icon.ic_s_error{background:url('.$url.'error&c=h_fff)!important}';
+$css.='.pma_sql_import_status .icon.ic_s_error{background:url('.$url.'error)!important}';
 $css.='.icon.ic_s_success{background:url('.$url.'success&c=h_fff)!important}';
 $css.='.icon.ic_b_usredit{background:url('.$url.'usredit)!important}';
 $css.='.icon.ic_b_usradd{background:url('.$url.'usradd)!important}';
