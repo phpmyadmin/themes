@@ -39,6 +39,8 @@ $css.='.icon.ic_b_relations{background:url('.$url.'designer)!important}';
 $css.='.icon.ic_b_routines{background:url('.$url.'routines)!important}';
 $css.='.icon.ic_b_routine_add{background:url('.$url.'routine-add)!important}';
 $css.='.icon.ic_centralColumns{background:url('.$url.'centralColumns)!important}';
+$css.='.icon.ic_centralColumns_add{background:url('.$url.'centralColumns-add)!important}';
+$css.='.icon.ic_centralColumns_delete{background:url('.$url.'centralColumns-del)!important}';
 
 $css.='#navigation_controls_outer img[title="Collapse all"]{background:url('.$url.'collapseall)!important;padding:8px;margin:0 5px;width:16px;height:16px}';
 $css.='.icon.ic_b_props{background:url('.$url.'props)!important}';
@@ -66,6 +68,7 @@ $css.='.icon.ic_b_drop{background:url('.$url.'drop&c=h_EF5350)!important}';
 $css.='.icon.ic_b_primary{background:url('.$url.'key&c=h_FBC02D)!important}';
 $css.='.icon.ic_bd_primary{background:url('.$url.'key&c=h_8c8c8c)!important}';
 $css.='.icon.ic_b_unique{background:url('.$url.'unique)!important}';
+$css.='.icon.ic_bd_unique{background:url('.$url.'unique&c=h_8c8c8c)!important}';
 $css.='.icon.ic_b_index{background:url('.$url.'index)!important}';
 $css.='.icon.ic_b_index_add{background:url('.$url.'index-add)!important}';
 $css.='.icon.ic_b_spatial{background:url('.$url.'spatial&c=h_FBC02D)!important}';

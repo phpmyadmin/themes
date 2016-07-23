@@ -1,5 +1,5 @@
 <?php
-$colorScheme = 'brown';	// brown | orange | blue | teal | red | indigo | grey | purple
+$colorScheme = 'purple';	// brown | orange | blue | teal | red | indigo | grey | purple
 
 $GLOBALS['cfg']['scheme'] = $colorScheme;
 switch($colorScheme){

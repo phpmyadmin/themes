@@ -1,7 +1,7 @@
 <?php
 error_reporting('ALL^NOTICE');
 $get = htmlspecialchars(isset($_REQUEST['i'])?$_REQUEST['i']:null,ENT_QUOTES);
-if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog','reload','db','db-grp','db-new','db-del','plus','minus','tbl-ops','theme','lang','sql','status','rights','export','import','app','vars','asci','engine','plugin','more','props','table-add','pause','column-add','search','find-replace','events','event-add','browse','track','triggers','trigger-add','designer','routines','routine-add','centralColumns','insrow','edit','views','view-add','drop','key','unique','index','index-add','spatial','ftext','print','tblanalyse','move','normalize','collapseall','link','unlink','data-full','data-empty','lightbulb','lightbulb-off','passwd','favourite','comment','search-plus','notice','error','success','usredit','usradd','usrcheck','usrdrop','sort-asc','sort-desc','bookmark','go-top','console','window-new'))){
+if(!in_array($get,array('main-bg','host','home','logout','help','sqlhelp','cog','reload','db','db-grp','db-new','db-del','plus','minus','tbl-ops','theme','lang','sql','status','rights','export','import','app','vars','asci','engine','plugin','more','props','table-add','pause','column-add','search','find-replace','events','event-add','browse','track','triggers','trigger-add','designer','routines','routine-add','centralColumns','centralColumns-add','centralColumns-del','insrow','edit','views','view-add','drop','key','unique','index','index-add','spatial','ftext','print','tblanalyse','move','normalize','collapseall','link','unlink','data-full','data-empty','lightbulb','lightbulb-off','passwd','favourite','comment','search-plus','notice','error','success','usredit','usradd','usrcheck','usrdrop','sort-asc','sort-desc','bookmark','go-top','console','window-new'))){
 	header('Content-type:text/plain');
 	exit('Access Denied');
 }
@@ -270,6 +270,20 @@ function make_icon($i){
 			$svg.='<rect x="1" y="2" fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="12"/>';
 			$svg.='<rect x="8" y="4" fill="'.$txt.'" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="9"/>';
 			$svg.='<line stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="1" x2="15" y2="15"/></g>';
+		break;
+		case 'centralColumns-add':
+			$svg.='<g id="centeral-column-add"><line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="10" x2="15" y2="10"/>';
+			$svg.='<rect x="1" y="3" fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="12"/>';
+			$svg.='<rect x="8" y="8" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="7"/>';
+			$svg.='<line stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="8" x2="15" y2="15"/>';
+			$svg.='<polygon fill="'.$txt.'" points="12.305,5.845 12.305,3.659 10.103,3.659 10.103,2.15 12.305,2.15 12.305,-0.035 13.774,-0.035 13.774,2.15 15.982,2.15 15.982,3.659 13.774,3.659 13.774,5.845"/></g>';
+		break;
+		case 'centralColumns-del':
+			$svg.='<g id="central-column-remove"><line fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="1" y1="10" x2="15" y2="10"/>';
+			$svg.='<rect x="1" y="3" fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="12"/>';
+			$svg.='<rect x="8" y="8" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="3" height="7"/>';
+			$svg.='<line stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" x1="15" y1="8" x2="15" y2="15"/>';
+			$svg.='<polygon fill="'.$txt.'" points="10.049,5.027 11.68,3.396 10.036,1.753 11.162,0.628 12.805,2.271 14.436,0.64 15.531,1.736 13.901,3.366 15.548,5.014 14.423,6.14 12.775,4.492 11.145,6.122"/></g>';
 		break;
 		case 'insrow':
 			$svg.='<g id="insrow"><rect x="1" y="5" fill="none" stroke="'.$txt.'" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" width="10" height="10"/>';
