@@ -87,7 +87,7 @@ if [ $TAG -eq 1 ] ; then
 fi
 
 if [ $UPLOAD -eq 1 ] ; then
-    sftp -P 11022 files@klutz.phpmyadmin.net <<EOT
+    sftp -P 11022 files@klutz.phpmyadmin.net -f -b - <<EOT
 cd /mnt/storage/files/themes
 mkdir $THEME
 cd $THEME
