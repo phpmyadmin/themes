@@ -83,7 +83,7 @@ echo "Release files:"
 ls -la release/$NAME.zip
 
 if [ $TAG -eq 1 ] ; then
-    git tag -a -m "Tagging release of theme $THEME $VERSION" $NAME
+    git tag -s -a -m "Tagging release of theme $THEME $VERSION" $NAME
 fi
 
 if [ $UPLOAD -eq 1 ] ; then
