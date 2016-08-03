@@ -99,6 +99,6 @@ put release/$NAME.zip.md5
 put release/$NAME.zip.sha1
 put release/$NAME.zip.sha256
 EOT
-ssh -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
+ssh -xka2 -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
 fi
 
