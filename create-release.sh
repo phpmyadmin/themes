@@ -73,7 +73,6 @@ cd release
 
 7za a -bd -tzip $NAME.zip $THEME
 gpg --detach-sign --armor $NAME.zip
-md5sum $NAME.zip > $NAME.zip.md5
 sha1sum $NAME.zip > $NAME.zip.sha1
 sha256sum $NAME.zip > $NAME.zip.sha256
 
@@ -95,7 +94,6 @@ mkdir $VERSION
 cd $VERSION
 put release/$NAME.zip
 put release/$NAME.zip.asc
-put release/$NAME.zip.md5
 put release/$NAME.zip.sha1
 put release/$NAME.zip.sha256
 EOT
