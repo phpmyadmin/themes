@@ -13,7 +13,7 @@ php:
 sudo: false
 
 script:
-  - find . -name '*.php' -print0 | xargs -n1 php -l
+  - find . -name '*.php' -print0 | xargs -0 -r -n1 php -l
 
 # trigger Buildtime Trend Service to parse Travis CI log
 notifications:
