@@ -14,8 +14,9 @@
     }
 
     $forIE = false;
-    if (PMA_USR_BROWSER_AGENT == 'IE' && PMA_USR_BROWSER_VER < 7)
-        $forIE = true;
+    if (PMA_USR_BROWSER_AGENT == 'IE' && PMA_USR_BROWSER_VER < 7) {
+            $forIE = true;
+    }
 
     //            Get the whole http_url for the images
     $ipath = $_SESSION['PMA_Theme']->getImgPath();

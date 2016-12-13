@@ -70,7 +70,9 @@ if (version_compare(PMA_VERSION, '3.0', 'ge')) {
         echo $GLOBALS['PMA_Config']->get('fontsize');
         } elseif (!empty($_COOKIE['pma_fontsize'])) {
             echo $_COOKIE['pma_fontsize'];
-            } else echo '82%';
+            } else {
+                echo '82%';
+            }
     echo
     _E,
 
