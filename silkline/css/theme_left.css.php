@@ -106,7 +106,7 @@ div#left_tableList li {
     line-height:1.5;
 }
 
-<?php if ( $GLOBALS['cfg']['LeftPointerEnable'] ) { ?>
+<?php if ($GLOBALS['cfg']['LeftPointerEnable']) { ?>
 div#left_tableList li:hover, div#left_tableList li:hover a {
 background-color: <?php echo $GLOBALS['cfg']['LeftPointerColor']; ?>;
 color:#FFF;
