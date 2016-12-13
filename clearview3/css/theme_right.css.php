@@ -62,7 +62,10 @@ div.tools{text-align:right;background:#eee url(<?php echo $_SESSION['PMA_Theme']
 table tr.odd th,
 table tr.odd{/*background:#fff*/}
 table tr.even th,
-table tr.even{background:<?php if (!empty($GLOBALS['cfg']['zebra'])) echo $GLOBALS['cfg']['zebra']; ?>}
+table tr.even{background:<?php if (!empty($GLOBALS['cfg']['zebra'])) {
+    echo $GLOBALS['cfg']['zebra'];
+}
+?>}
 table tr.marked th,
 table tr.marked{color:#333;background:#ffe09d}
 table tr.odd:hover,

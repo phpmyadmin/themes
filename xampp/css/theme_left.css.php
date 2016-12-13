@@ -14,8 +14,9 @@
     }
 
     $forIE = false;
-    if (PMA_USR_BROWSER_AGENT == 'IE' && PMA_USR_BROWSER_VER < 7)
-        $forIE = true;
+    if (PMA_USR_BROWSER_AGENT == 'IE' && PMA_USR_BROWSER_VER < 7) {
+            $forIE = true;
+    }
 
     $ipath = $_SESSION['PMA_Theme']->getImgPath();
 
@@ -26,9 +27,10 @@
         $usr_fsize = preg_replace("/[^0-9]/", "", $GLOBALS['cfg']['FontSize']);
         $fsize     = ceil($usr_fsize * $pma_fsize) 
                    . ( (isset($GLOBALS['cfg']['FontSizePrefix']) && !empty($GLOBALS['cfg']['FontSizePrefix'])) ? $GLOBALS['cfg']['FontSizePrefix'] : 'pt' );
-    } else
-        $fsize = $GLOBALS['PMA_Config']->get('fontsize');
-?>
+    } else {
+            $fsize = $GLOBALS['PMA_Config']->get('fontsize');
+    }
+    ?>
 /******************************************************************************/
 /* general tags */
 html, td, body {
