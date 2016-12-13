@@ -3,6 +3,12 @@ phpMyAdmin themes
 
 Various contributed themes.
 
+Download
+--------
+
+Themes can be downloaded at <https://www.phpmyadmin.net/themes/>.
+
+
 Releasing
 ---------
 
