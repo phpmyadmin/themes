@@ -13,7 +13,7 @@ $GLOBALS['cfg']['FontFamilyFixed']          = 'Consolas, Monospace, "Lucida Gran
 $scheme                                     = "win";
 $GLOBALS['cfg']['Scheme']                   = $scheme;
 
-switch($scheme)
+switch ($scheme)
 {
     case "win":
 

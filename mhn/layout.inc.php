@@ -1,8 +1,8 @@
 <?php
-$colorScheme = 'purple';	// brown | orange | blue | teal | red | indigo | grey | purple
+$colorScheme = 'purple'; // brown | orange | blue | teal | red | indigo | grey | purple
 
 $GLOBALS['cfg']['scheme'] = $colorScheme;
-switch($colorScheme){
+switch ($colorScheme) {
     case 'orange':
         $GLOBALS['cfg']['cPri']             = '#FB8C00'; //600
         $GLOBALS['cfg']['cSec']             = '#8BC34A'; //500
@@ -73,31 +73,31 @@ $GLOBALS['cfg']['ThColor']          = '#000';
 $GLOBALS['cfg']['BgOne']            = '#E5E5E5';
 $GLOBALS['cfg']['BgTwo']            = '#D5D5D5';
 
-function shadeColor($hex,$percent){
+function shadeColor($hex, $percent) {
     $hash = '';
-    if (stristr($hex,'#')) {
-        $hex = str_replace('#','',$hex);
+    if (stristr($hex, '#')) {
+        $hex = str_replace('#', '', $hex);
         $hash = '#';
     }
-    $rgb = array(hexdec(substr($hex,0,2)), hexdec(substr($hex,2,2)), hexdec(substr($hex,4,2)));
-    for ($i=0; $i<3; $i++) {
+    $rgb = array(hexdec(substr($hex, 0, 2)), hexdec(substr($hex, 2, 2)), hexdec(substr($hex, 4, 2)));
+    for ($i = 0; $i < 3; $i++) {
         if ($percent > 0) {
-            $rgb[$i] = round($rgb[$i] * $percent) + round(255 * (1-$percent));
+            $rgb[$i] = round($rgb[$i] * $percent) + round(255 * (1 - $percent));
         } else {
-            $positivePercent = $percent - ($percent*2);
-            $rgb[$i] = round($rgb[$i] * $positivePercent) + round(0 * (1-$positivePercent));
+            $positivePercent = $percent - ($percent * 2);
+            $rgb[$i] = round($rgb[$i] * $positivePercent) + round(0 * (1 - $positivePercent));
         }
         if ($rgb[$i] > 255) {
             $rgb[$i] = 255;
         }
     }
     $hex = '';
-    for($i=0; $i < 3; $i++) {
+    for ($i = 0; $i < 3; $i++) {
         $hexDigit = dechex($rgb[$i]);
-        if(strlen($hexDigit) == 1) {
+        if (strlen($hexDigit) == 1) {
         $hexDigit = "0" . $hexDigit;
         }
         $hex .= $hexDigit;
     }
-    return $hash.$hex;
+    return $hash . $hex;
 }

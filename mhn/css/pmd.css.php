@@ -42,7 +42,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	cursor:default;
 }
 .tab_field_2{
-	background-color:<?php echo $GLOBALS['cfg']['cLte'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
 	color:#000;
 	cursor:default;
 }
@@ -118,7 +118,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 .small_tab2{
 	vertical-align:top;
 	color:#fff;
-	background-color:<?php echo $GLOBALS['cfg']['cLte'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
 	cursor:default;
 	padding-left:2px;
 	padding-right:2px;
@@ -162,7 +162,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	cursor:default;
 	text-decoration:none;
 	vertical-align:middle;
-	background:<?php echo $GLOBALS['cfg']['cLte'];?>;
+	background:<?php echo $GLOBALS['cfg']['cLte']; ?>;
 }
 /* ---------------------------------------------------------------------------*/
 .bor{width:10px;height:10px}
@@ -204,13 +204,13 @@ a.M_butt_Selected_down_IE,
 a.M_butt_Selected_down{
 	border:none;
 	color:#fff;
-	background-color:<?php echo $GLOBALS['cfg']['cSec'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cSec']; ?>;
 }
 a.M_butt_Selected_down_IE:hover,
 a.M_butt_Selected_down:hover,
 a.M_butt:hover{
 	color:#fff;
-	background-color:<?php echo $GLOBALS['cfg']['cPri'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>;
 }
 #layer_menu{
 	z-index:98;
