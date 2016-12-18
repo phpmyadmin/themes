@@ -35,7 +35,7 @@ input[type=submit], input[type=reset], input[type=button] {
 }
 
 fieldset.confirmation input[type=submit], input[type=reset], input[type=button] {
-  box-shadow: 0 1px 1px <?php echo $GLOBALS['cfg']['BrowseGrayColor'] ?>
+  box-shadow: 0 1px 1px <?php echo $GLOBALS['cfg']['ThColor'] ?>
 }
 
 input[type=submit]:hover, input[type=reset]:hover, input[type=button]:hover {
