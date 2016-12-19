@@ -1417,7 +1417,7 @@ p.print_ignore {
 
 li.fast_filter.db_fast_filter {
   margin-top: 20px;
-  margin-left: -8px
+  margin-left: -8px!important
 }
 
 /* End */
