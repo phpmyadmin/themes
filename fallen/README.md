@@ -1,6 +1,6 @@
 # Fallen (phpMyAdmin Theme)
 
-The First amazing phpMyAdmin theme in the world.
+The First amazing phpMyAdmin 4 theme in the world.
 
 ## Usage
 
