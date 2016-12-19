@@ -1408,3 +1408,16 @@ p.print_ignore {
 .prefsmanage_opts .localStorage-empty .notice {
   margin-left: -18px
 }
+
+/* Fix element position for demo server */
+
+#pma_navigation #serverChoice, #pma_navigation #databaseList, #pma_navigation div.pageselector.dbselector {
+  margin-top: 10px
+}
+
+li.fast_filter.db_fast_filter {
+  margin-top: 20px;
+  margin-left: -8px
+}
+
+/* End */
