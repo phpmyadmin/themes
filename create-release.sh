@@ -88,7 +88,7 @@ fi
 if [ $UPLOAD -eq 1 ] ; then
     sftp -P 11022 -f -b - files@klutz.phpmyadmin.net <<EOT
 cd /mnt/storage/files/themes
-mkdir $THEME
+-mkdir $THEME
 cd $THEME
 mkdir $VERSION
 cd $VERSION
