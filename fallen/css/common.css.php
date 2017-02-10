@@ -17,7 +17,7 @@ $brand = 'phpMyAdmin';
 # Or the theme will be error!
 
 $name = 'Fallen';
-$version = '0.2';
+$version = '0.4';
 $slug = 'fallen';
 $font_family_icon = 'Fallen' ?>
 /* ----------------------------------------------------- */
@@ -134,3 +134,8 @@ $font_family_icon = 'Fallen' ?>
 ---------------------------------------------- */
 
 <?php include CSS_PATH . '/common/responsive.css.php' ?>
+
+/* Miscellaneous
+---------------------------------------------- */
+
+<?php include CSS_PATH . '/common/misc.css.php' ?>

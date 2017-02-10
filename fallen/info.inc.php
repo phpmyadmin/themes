@@ -10,4 +10,4 @@
 # Theme info
 
 $theme_name = 'Fallen';
-$theme_full_version = '0.3';
+$theme_full_version = '0.4';
