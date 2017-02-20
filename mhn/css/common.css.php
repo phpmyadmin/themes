@@ -408,25 +408,35 @@ fieldset .formelement{
 }
 fieldset div[class=formelement]{white-space:normal}
 button.mult_submit{border:none;background-color:transparent}
-table tr.odd th, .odd{background:#fff;<?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>}
-table tr.even th, .even{background:#eee;<?php echo $_SESSION['PMA_Theme']->getCssIEClearFilter(); ?>}
 
-table tr.odd th,table tr.odd,table tr.even th,table tr.even{text-align:<?php echo $left; ?>}
+table tbody:first-of-type tr:nth-child(odd),
+table tbody:first-of-type tr:nth-child(odd) th {
+  background: #fff;
+}
+
+table tbody:first-of-type tr:nth-child(even),
+table tbody:first-of-type tr:nth-child(even) th {
+  background: #eee;
+}
+
+table tr:nth-child(odd){background:#fff;}
+table tr:nth-child(even){background:#eee;}
+
+table tr th, tr{text-align:<?php echo $left; ?>;}
 
 /* marked table rows */
 td.marked:not(.nomarker),
 table tr.marked:not(.nomarker) td,
 table tr.marked:not(.nomarker) th,
+table tbody:first-of-type tr.marked:not(.nomarker) th,
 table tr.marked:not(.nomarker){background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;color:<?php echo $GLOBALS['cfg']['BrowseMarkerColor']; ?>}
 
 /* hovered items */
-.odd:not(.nopointer):hover,
-.even:not(.nopointer):hover,
+table tbody:first-of-type tr:not(.nopointer):hover,
+table tbody:first-of-type tr:not(.nopointer):hover th,
 .hover:not(.nopointer){background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;color:<?php echo $GLOBALS['cfg']['BrowsePointerColor']; ?>}
 
 /* hovered table rows */
-table tr.odd:not(.nopointer):hover th,
-table tr.even:not(.nopointer):hover th,
 table tr.hover:not(.nopointer) th{background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;color:<?php echo $GLOBALS['cfg']['BrowsePointerColor']; ?>}
 
 /**
@@ -498,6 +508,7 @@ div.success,div.notice,div.error{
 .error{color:#fff;background:#E9573F}
 .confirmation{color:#000;background-color:pink}
 
+.new_central_col{width:100%;}
 .tblcomment{font-size:70%;font-weight:normal;color:#000099}
 .tblHeaders{
 	font-weight:bold;
@@ -785,7 +796,7 @@ div#tablestatistics table{float:<?php echo $left; ?>;margin-bottom:.5em;margin-<
 h3#serverstatusqueries span{font-size:60%;display:inline}
 .buttonlinks{float:<?php echo $right; ?>;white-space:nowrap}
 
-fieldset#tableFilter{margin-bottom:1em}
+fieldset#tableFilter{padding: 0.1em 1em;}
 div#serverStatusTabs{margin-top:1em}
 caption a.top{float:<?php echo $right; ?>}
 div#serverstatusquerieschart{float:<?php echo $left; ?>;width:500px;height:350px;padding-<?php echo $left; ?>:30px}
@@ -1030,6 +1041,16 @@ div.sqlvalidate{
 	direction:ltr;
 }
 
+code.php {
+  display: block;
+  padding-left: 0.3em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: 10em;
+  overflow: auto;
+  direction: ltr;
+}
+
 .result_query div.sqlOuter{background:<?php echo $GLOBALS['cfg']['BgOne']; ?>}
 .result_query .success, .result_query .error{margin-bottom:0}
 #PMA_slidingMessage code.sql,div.sqlvalidate{background:<?php echo $GLOBALS['cfg']['BgOne']; ?>}
@@ -1179,6 +1200,8 @@ select#db_select,select#table_select{width:400px}
 .importoptions #import_notification{margin:10px 0;font-style:italic}
 input#input_import_file{margin:5px}
 .formelementrow{margin:5px 0 5px 0}
+
+#filterText{vertical-align: baseline;}
 
 #popup_background{
 	display:none;
@@ -1521,7 +1544,7 @@ fieldset .disabled-field td{color:#666;background-color:#ddd}
 .cEdit .edit_area{background:#fff;border:1px solid #999;min-width:10em;padding:.3em .5em}
 .cEdit .edit_area select,.cEdit .edit_area textarea{width:97%}
 .cEdit .cell_edit_hint{color:#555;font-size:.8em;margin:.3em .2em}
-.cEdit .edit_box{overflow:hidden;padding:0;margin:0}
+.cEdit .edit_box{overflow-x:hidden;overflow-y:scroll;;padding:0;margin:0}
 .cEdit .edit_box_posting{
 	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif');?>) no-repeat right center;
 	padding-<?php echo $right; ?>:1.5em;
@@ -1565,7 +1588,6 @@ body .ui-widget{font-size:1em}
 }
 .report-description{height:10em;width:570px}
 div#page_content div#tableslistcontainer table.data{border-top:0.1px solid #eee}
-div#page_content form#db_search_form.ajax fieldset{margin-top:-0.3em}
 div#page_content div#tableslistcontainer, div#page_content div.notice, div#page_content div.result_query{margin-top:1em}
 table.show_create{margin-top:1em}
 table.show_create td{border-right:1px solid #bbb}
@@ -1737,7 +1759,6 @@ html.ie7 #pma_console .query_input{
 .cm-s-pma .CodeMirror-code>pre,
 .cm-s-pma .CodeMirror-lines{padding:0}
 .cm-s-pma.CodeMirror{resize:none;height:auto;width:100%;min-height:initial;max-height:initial}
-.firefox .cm-s-pma.CodeMirror{font-size:120%}
 .cm-s-pma .CodeMirror-scroll{cursor:text}
 
 .pma_drop_handler{
@@ -1811,6 +1832,10 @@ span.drag_icon{
 	cursor:move;
 }
 .topmargin{margin-top:1em}
+
+meter[value="1"]::-webkit-meter-optimum-value {background: linear-gradient(white 3%, #E32929 5%, transparent 10%, #E32929);}
+meter[value="2"]::-webkit-meter-optimum-value {background: linear-gradient(white 3%, #FF6600 5%, transparent 10%, #FF6600);}
+meter[value="3"]::-webkit-meter-optimum-value {background: linear-gradient(white 3%, #FFD700 5%, transparent 10%, #FFD700);}
 
 th.header{cursor:pointer;color:#235a81}
 th.header:hover{text-decoration:underline}

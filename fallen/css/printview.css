@@ -78,11 +78,11 @@ th.column_heading, th.column_action {
   border: .1em solid #000
 }
 
-table tr.odd, table tr.even {
+table tr {
   border-left: .1em solid #000
 }
 
-table tr.odd th, table tr.even th, table.data th {
+table tr th, table.data th {
   border-bottom: .1em solid #000
 }
 
@@ -192,11 +192,13 @@ table tr.odd th, table tr.even th, table.data th {
 
 /* For Odd-Even contrast */
 
-table tr.odd th, table tr.odd td, .odd {
+table tbody:first-of-type tr:nth-child(odd),
+table tbody:first-of-type tr:nth-child(odd) th {
   background: #fff
 }
 
-table tr.even th, table tr.even td, .even {
+table tbody:first-of-type tr:nth-child(even),
+table tbody:first-of-type tr:nth-child(even) th {
   background: #dfdfdf
 }
 

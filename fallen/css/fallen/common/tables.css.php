@@ -71,27 +71,27 @@ tr.vbottom th, tr.vbottom td, th.vbottom, td.vbottom {
   border: 1px solid <?php echo $GLOBALS['cfg']['BorderColor'] ?>
 }
 
-table tr.odd th, .odd {
+table tbody:first-of-type tr:nth-child(odd), table tbody:first-of-type tr:nth-child(odd) th {
   background: <?php echo $GLOBALS['cfg']['BgTwo'] ?>;
   border-bottom: none
 }
 
-table tr.even th, .even {
+table tbody:first-of-type tr:nth-child(even), table tbody:first-of-type tr:nth-child(even) th {
   background: <?php echo $GLOBALS['cfg']['BgOne'] ?>;
   border-bottom: none
 }
 
-table tr.odd th, table tr.odd, table tr.even th, table tr.even {
+table tr th, table tr {
   text-align: left;
   border-bottom: 1px solid #eee
 }
 
-table tr.odd, table tr.even {
+table tr {
   border-left: 3px solid transparent;
   line-height: 1em
 }
 
-td.marked:not(.nomarker), table tr.marked:not(.nomarker) td, table tr.marked:not(.nomarker) th, table tr.marked:not(.nomarker) {
+td.marked:not(.nomarker), table tr.marked:not(.nomarker) td, table tbody:first-of-type tr.marked:not(.nomarker) th, table tr.marked:not(.nomarker) {
   color: <?php echo $GLOBALS['cfg']['MainColor'] ?>
 }
 
@@ -103,7 +103,7 @@ table tr.marked:not(.nomarker) {
   border-left: 3px solid #4285f4
 }
 
-table tr.odd:not(.nopointer):hover th, table tr.even:not(.nopointer):hover th, table tr.hover:not(.nopointer) th {
+table tr.hover:not(.nopointer) th {
   background-color: <?php echo $GLOBALS['cfg']['BrowseMarkerBackground'] ?>;
   color: <?php echo $GLOBALS['cfg']['ThPointerColor'] ?>
 }
@@ -143,6 +143,10 @@ table [class=value] {
 
 td .icon {
   margin: 0
+}
+
+.new_central_col {
+  width: 100%;
 }
 
 .tblcomment {

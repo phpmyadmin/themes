@@ -11,4 +11,4 @@
  *
  */
 $theme_name = 'pmaterial';
-$theme_full_version = '1.0';
+$theme_full_version = '1.1';
