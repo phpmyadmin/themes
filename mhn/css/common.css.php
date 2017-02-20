@@ -1,5 +1,5 @@
 <?php
-if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')){ exit(); }
+if (!defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE')) { exit(); }
 ?>
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
@@ -8,8 +8,8 @@ progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=
 ::-webkit-scrollbar-track{background:#ddd}
 ::-webkit-scrollbar-thumb{background:#aaa}
 ::-webkit-scrollbar-thumb:hover{background:#888}
-::-moz-selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec'];?>}
-::selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec'];?>}
+::-moz-selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec']; ?>}
+::selection{color:#eee;text-shadow:none;background:<?php echo $GLOBALS['cfg']['cSec']; ?>}
 progress[value]{
 	height:10px;
 	border:none;
@@ -18,17 +18,17 @@ progress[value]{
 	-moz-appearance:none;
 	appearance:none;
 	vertical-align:middle;
-	background-color:<?php echo $GLOBALS['cfg']['cLte'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
 }
-progress[value]::-webkit-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cLte'];?>}
-progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cfg']['cPri'];?>}
-progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri'];?>}
+progress[value]::-webkit-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>}
+progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
+progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 fieldset{border:none}
 <?php require_once('mhn.icons.css.php'); ?>
 html{font-size:<?php echo $_SESSION['PMA_Theme']->getFontSize(); ?>}
 input,select,textarea{font-size:1em}
 body{
-<?php if (! empty($GLOBALS['cfg']['FontFamily'])) :?>
+<?php if (!empty($GLOBALS['cfg']['FontFamily'])) :?>
 	font-family:<?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 <?php endif; ?>
 	padding:0;
@@ -42,7 +42,7 @@ body{
 	margin:0 .5em;
 	margin-left:1em;
 }
-<?php if (! empty($GLOBALS['cfg']['FontFamilyFixed'])) :?>
+<?php if (!empty($GLOBALS['cfg']['FontFamilyFixed'])) :?>
 	textarea,
 	tt,
 	pre,
@@ -223,7 +223,7 @@ input[name=submit_reset]:hover,
 input.button:hover{
 	cursor:pointer;
 	position:relative;
-	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.7); ?>;
+	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.7); ?>;
 }
 
 input[type=submit]:active,
@@ -233,7 +233,7 @@ input[type=reset]:active,
 input[name=submit_reset]:active,
 input.button:active{
 	position:relative;
-	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.5); ?>;
+	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.5); ?>;
 }
 
 input[type=submit]:disabled,
@@ -330,9 +330,9 @@ fieldset legend{
 	color:#444;
 	padding:5px 10px;
 	background-color:#fff;
-	-moz-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>3px 3px 15px #bbb;
-	-webkit-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>3px 3px 15px #bbb;
-	box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>3px 3px 15px #bbb;
+	-moz-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>3px 3px 15px #bbb;
+	-webkit-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>3px 3px 15px #bbb;
+	box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>3px 3px 15px #bbb;
 	max-width:100%;
 }
 
@@ -455,7 +455,7 @@ td.null{font-style:italic}
 table .valueHeader{text-align:<?php echo $right; ?>;white-space:normal}
 table .value{text-align:<?php echo $right; ?>;white-space:normal}
 table [class=value]{white-space:normal}
-<?php if (! empty($GLOBALS['cfg']['FontFamilyFixed'])) :?>
+<?php if (!empty($GLOBALS['cfg']['FontFamilyFixed'])) :?>
 .value{font-family:<?php echo $GLOBALS['cfg']['FontFamilyFixed']; ?>}
 <?php endif; ?>
 .attention{color:red;font-weight:bold}
@@ -556,7 +556,7 @@ tr.disabled td,td.disabled{background-color:#f3f3f3;color:#aaa}
 	margin:auto;
 	text-align:center;
 	background:<?php echo $GLOBALS['cfg']['cPri']; ?>;
-	background:url(<?php echo $GLOBALS['cfg']['imgPath'].'main-bg&a='.str_replace('#','h_',$GLOBALS['cfg']['cPri']).'&b='.str_replace('#','h_',$GLOBALS['cfg']['cSec']).'&c='.str_replace('#','h_',$GLOBALS['cfg']['cLte']);?>);
+	background:url(<?php echo $GLOBALS['cfg']['imgPath'] . 'main-bg&a=' . str_replace('#', 'h_', $GLOBALS['cfg']['cPri']) . '&b=' . str_replace('#', 'h_', $GLOBALS['cfg']['cSec']) . '&c=' . str_replace('#', 'h_', $GLOBALS['cfg']['cLte']); ?>);
 	background-size:cover;
 	background-attachment:fixed;
 }
@@ -622,10 +622,10 @@ tr.disabled td,td.disabled{background-color:#f3f3f3;color:#aaa}
 .login label{float:<?php echo $left; ?>;margin-top:10px;font-size:12px;text-transform:uppercase}
 .login #input_username,
 .login #input_password{padding-left:28px;background-position:4px 4px;background-repeat:no-repeat}
-.login #input_username{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'].'rights'; ?>)}
-.login #input_password{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'].'passwd'; ?>)}
-.login #input_username:focus{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'].'rights&c=h_'.str_replace('#','',$GLOBALS['cfg']['cPri']); ?>)}
-.login #input_password:focus{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'].'passwd&c=h_'.str_replace('#','',$GLOBALS['cfg']['cPri']); ?>)}
+.login #input_username{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'] . 'rights'; ?>)}
+.login #input_password{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'] . 'passwd'; ?>)}
+.login #input_username:focus{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'] . 'rights&c=h_' . str_replace('#', '', $GLOBALS['cfg']['cPri']); ?>)}
+.login #input_password:focus{background-image:url(<?php echo $GLOBALS['cfg']['imgPath'] . 'passwd&c=h_' . str_replace('#', '', $GLOBALS['cfg']['cPri']); ?>)}
 .login select:focus,
 .login input[type=text]:focus,
 .login input[type=password]:focus{border-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
@@ -712,12 +712,12 @@ div#tablestatistics table{float:<?php echo $left; ?>;margin-bottom:.5em;margin-<
 	position:relative;
 	line-height:30px;
 	display:inline-block!important;
-	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.8); ?>;
+	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.8); ?>;
 }
 #lock_page_icon:empty{display:none!important}
 
 #goto_pagetop:hover,
-#page_settings_icon:hover{background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.7); ?>}
+#page_settings_icon:hover{background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.7); ?>}
 #page_settings_icon{cursor:pointer;display:none}
 #page_settings_modal{display:none}
 #pma_navigation_settings{display:none}
@@ -826,9 +826,9 @@ div.tabLinks .icon{margin:-0.2em 0.3em 0 0}
 	border:1px solid #CCC;
 	margin:0;
 	padding:3px;
-	-moz-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>2px 2px 3px #666;
-	-webkit-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>2px 2px 3px #666;
-	box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' :''; ?>2px 2px 3px #666;
+	-moz-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 3px #666;
+	-webkit-box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 3px #666;
+	box-shadow:<?php echo $GLOBALS['text_dir'] === 'rtl' ? '-' : ''; ?>2px 2px 3px #666;
 	background-color:#fff;
 	z-index:2;
 }
@@ -942,7 +942,7 @@ div#profilingchart{width:850px;height:370px;float:<?php echo $left; ?>}
 
 #resizer{border:1px solid silver}
 #inner-resizer{padding:10px}
-.chartOption{float:<?php echo $left; ?>;margin-<?php echo $right;?>:40px}
+.chartOption{float:<?php echo $left; ?>;margin-<?php echo $right; ?>:40px}
 
 #togglequerybox{margin:0 10px}
 #serverstatus h3{margin:15px 0;font-weight:normal;color:#999;font-size:1.7em}
@@ -1071,7 +1071,7 @@ code.php {
 }
 
 .group h2{
-	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'],.7); ?>;
+	background-color:<?php echo shadeColor($GLOBALS['cfg']['cPri'], .7); ?>;
 	padding:.2em .3em;
 	margin-top:0;
 	color:#fff;
@@ -1139,7 +1139,7 @@ select.invalid_value,
 	display:inline;
 	left:0;
 	right:0;
-	background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif');?>);
+	background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>);
 	background-repeat:no-repeat;
 	background-position:2%;
 	border:1px solid #e2b709;
@@ -1149,7 +1149,7 @@ select.invalid_value,
 .ajax_notification{
 	margin-top:200px;
 	color:#fff;
-	background:<?php /*#ffe57e*/ echo $GLOBALS['cfg']['cSec'];?>;
+	background:<?php /*#ffe57e*/ echo $GLOBALS['cfg']['cSec']; ?>;
 	border-radius:2px;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
@@ -1157,7 +1157,7 @@ select.invalid_value,
 	-moz-box-shadow:0 5px 90px #888;
 	-webkit-box-shadow:0 5px 90px #888;
 	text-transform:uppercase;
-	border:1px solid <?php echo shadeColor($GLOBALS['cfg']['cSec'],-0.65);?>;
+	border:1px solid <?php echo shadeColor($GLOBALS['cfg']['cSec'], -0.65); ?>;
 }
 .ajax_notification .error,
 .ajax_notification .success{margin:-6px}
@@ -1266,13 +1266,13 @@ table#index_columns select{width:85%;float:right}
 	text-shadow:0 1px 0 #fff;
 	border-bottom:2px solid transparent;
 }
-.config-form ul.tabs li a:hover{color:<?php echo $GLOBALS['cfg']['cSec'];?>}
+.config-form ul.tabs li a:hover{color:<?php echo $GLOBALS['cfg']['cSec']; ?>}
 .config-form ul.tabs li.active a,
 .config-form ul.tabs li.active a:hover{
 	margin-top:1px;
 	text-shadow:none;
-	color:<?php echo $GLOBALS['cfg']['cSec'];?>;
-	border-color:<?php echo $GLOBALS['cfg']['cSec'];?>;
+	color:<?php echo $GLOBALS['cfg']['cSec']; ?>;
+	border-color:<?php echo $GLOBALS['cfg']['cSec']; ?>;
 }
 .config-form fieldset{
 	margin-top:0;
@@ -1450,7 +1450,7 @@ fieldset .disabled-field td{color:#666;background-color:#ddd}
 	border-radius:.3em;
 }
 .cPointer{
-	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('col_pointer.png');?>);
+	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('col_pointer.png'); ?>);
 	height:20px;
 	margin-<?php echo $left; ?>:-5px;  /* must be minus half of its width */
 	margin-top:-10px;
@@ -1546,16 +1546,16 @@ fieldset .disabled-field td{color:#666;background-color:#ddd}
 .cEdit .cell_edit_hint{color:#555;font-size:.8em;margin:.3em .2em}
 .cEdit .edit_box{overflow-x:hidden;overflow-y:scroll;;padding:0;margin:0}
 .cEdit .edit_box_posting{
-	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif');?>) no-repeat right center;
+	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat right center;
 	padding-<?php echo $right; ?>:1.5em;
 }
 .cEdit .edit_area_loading{
-	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif');?>) no-repeat center;
+	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat center;
 	height:10em;
 }
 .cEdit .goto_link{background:#eee;color:#555;padding:.2em .3em}
 .saving_edited_data{
-	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif');?>) no-repeat left;
+	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat left;
 	padding-<?php echo $left; ?>:20px;
 }
 .relationalTable select{
@@ -1782,11 +1782,11 @@ html.ie7 #pma_console .query_input{
 	right:25px;
 	width:400px;
 	background:#f3f3f3;
-	border:1px solid <?php echo $GLOBALS['cfg']['cPri'];?>;
+	border:1px solid <?php echo $GLOBALS['cfg']['cPri']; ?>;
 }
 .pma_sql_import_status h2,
 .pma_drop_result h2{
-	background-color:<?php echo $GLOBALS['cfg']['cPri'];?>;
+	background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>;
 	padding:.2em .3em;
 	margin-top:0;
 	margin-bottom:0;
@@ -1824,7 +1824,7 @@ html.ie7 #pma_console .query_input{
 #composite_index_list{list-style-type:none;list-style-position:inside}
 span.drag_icon{
 	display:inline-block;
-	background-image:url('<?php echo $_SESSION['PMA_Theme']->getImgPath('s_sortable.png');?>');
+	background-image:url('<?php echo $_SESSION['PMA_Theme']->getImgPath('s_sortable.png'); ?>');
 	background-position:center center;
 	background-repeat:no-repeat;
 	width:1em;
@@ -1840,8 +1840,8 @@ meter[value="3"]::-webkit-meter-optimum-value {background: linear-gradient(white
 th.header{cursor:pointer;color:#235a81}
 th.header:hover{text-decoration:underline}
 th.header .sorticon{width:16px;height:16px;background-repeat:no-repeat;background-position:right center;display:inline-table;vertical-align:middle;float:right}
-th.headerSortUp .sorticon, th.headerSortDown:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_desc.png');?>)}
-th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_asc.png');?>)}
+th.headerSortUp .sorticon, th.headerSortDown:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_desc.png'); ?>)}
+th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_asc.png'); ?>)}
 
 body .ui-dialog .ui-dialog-titlebar-close{<?php echo $right; ?>:.3em;<?php echo $left; ?>:initial}
 body .ui-dialog .ui-dialog-title{float:<?php echo $left; ?>}
@@ -1911,7 +1911,7 @@ body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:<?php echo $rig
 }
 .ui-datepicker .ui-icon-circle-triangle-w:before{content:'<'}
 .ui-datepicker .ui-icon-circle-triangle-e:after{content:'>'}
-.ui-datepicker-header>a:hover{border:none;background:<?php echo $GLOBALS['cfg']['cPri'];?>!important}
+.ui-datepicker-header>a:hover{border:none;background:<?php echo $GLOBALS['cfg']['cPri']; ?>!important}
 .ui-widget-content.ui-slider{background-color:transparent}
 .ui-datepicker .ui-slider,
 .ui-widget-content .ui-slider{position:relative}
@@ -1925,30 +1925,30 @@ body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:<?php echo $rig
 	position:absolute;
 }
 .ui-datepicker .ui-slider-handle,
-.ui-widget-content .ui-slider-handle{top:-2px;border:none;background:<?php echo $GLOBALS['cfg']['cSec'];?>;border-radius:50%}
+.ui-widget-content .ui-slider-handle{top:-2px;border:none;background:<?php echo $GLOBALS['cfg']['cSec']; ?>;border-radius:50%}
 .ui-datepicker .ui-datepicker-calendar a{background:none}
-.ui-datepicker .ui-datepicker-calendar a.ui-state-highlight{background-color:<?php echo $GLOBALS['cfg']['cPri'];?>;text-shadow:none;color:#fff}
-.ui-datepicker .ui-datepicker-calendar a:hover{background-color:<?php echo $GLOBALS['cfg']['cSec'];?>;text-shadow:none;color:#fff}
+.ui-datepicker .ui-datepicker-calendar a.ui-state-highlight{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>;text-shadow:none;color:#fff}
+.ui-datepicker .ui-datepicker-calendar a:hover{background-color:<?php echo $GLOBALS['cfg']['cSec']; ?>;text-shadow:none;color:#fff}
 .ui-datepicker .ui-timepicker-div{padding:0 5px}
 
 .ui-dialog .ui-dialog-titlebar-close span{display:none}
-.ui-dialog .ui-dialog-titlebar-close:hover:after{background:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.7);?>}
+.ui-dialog .ui-dialog-titlebar-close:hover:after{background:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.7); ?>}
 .ui-dialog .ui-dialog-buttonpane button{
 	border:none;
 	color:#fff;
 	-moz-border-radius:2px;
 	-webkit-border-radius:2px;
 	border-radius:2px;
-	background:<?php echo $GLOBALS['cfg']['cPri'];?>;
+	background:<?php echo $GLOBALS['cfg']['cPri']; ?>;
 }
-.ui-dialog .ui-dialog-buttonpane button:hover{background:<?php echo shadeColor($GLOBALS['cfg']['cPri'],-0.7);?>}
-.ui-dialog .ui-dialog-buttonpane button:last-child{color:<?php echo $GLOBALS['cfg']['cPri'];?>;background:<?php echo shadeColor($GLOBALS['cfg']['cPri'],0.2);?>}
-.ui-dialog .ui-dialog-buttonpane button:last-child:hover{color:#fff;background:<?php echo shadeColor($GLOBALS['cfg']['cPri'],0.4);?>}
+.ui-dialog .ui-dialog-buttonpane button:hover{background:<?php echo shadeColor($GLOBALS['cfg']['cPri'], -0.7); ?>}
+.ui-dialog .ui-dialog-buttonpane button:last-child{color:<?php echo $GLOBALS['cfg']['cPri']; ?>;background:<?php echo shadeColor($GLOBALS['cfg']['cPri'], 0.2); ?>}
+.ui-dialog .ui-dialog-buttonpane button:last-child:hover{color:#fff;background:<?php echo shadeColor($GLOBALS['cfg']['cPri'], 0.4); ?>}
 .ui-button-text-only .ui-button-text{
 	font-weight:bold;
 	padding:6px 10px;
 	text-transform:uppercase;
-	font-family:<?php echo $GLOBALS['cfg']['FontFamily'];?>;
+	font-family:<?php echo $GLOBALS['cfg']['FontFamily']; ?>;
 }
 
 /* responsive */
