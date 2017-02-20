@@ -120,7 +120,6 @@ td.condition {
 
 td.null {
   font-style: italic;
-  text-align: right
 }
 
 table .valueHeader {

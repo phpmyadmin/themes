@@ -333,7 +333,7 @@ textarea.char {
 
 fieldset, .preview_sql {
     margin-top: 1em;
-    border-radius: 2px;    
+    border-radius: 2px;
     /*border: #bcf6ea solid 1px;*/
 	border:none;
     padding: 1.8em;
@@ -522,8 +522,8 @@ fieldset.tblFooters {
     float: none;
     clear: both;
     border-radius: 2px;
-    background: #ffffff; 
-    -moz-border-radius: 2px; 
+    background: #ffffff;
+    -moz-border-radius: 2px;
     -webkit-border-radius: 2px;
 	box-shadow: 0px 4px 15px -2px #000000;
 	-webkit-box-shadow: 0px 4px 15px -2px #000000;
@@ -611,7 +611,6 @@ th.condition {
  */
 td.null {
     font-style: italic;
-    text-align: <?php echo $right; ?>;
 }
 
 table .valueHeader {
@@ -992,7 +991,7 @@ fieldset.caution a:hover {
     background-color: #FF0000;
 }
 
-#topmenu { 
+#topmenu {
     margin-top: .5em;
     padding: .1em .3em;
 }

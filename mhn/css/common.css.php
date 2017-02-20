@@ -451,7 +451,7 @@ tr:last-child td.condition{border-width:0 1px 1px 1px}
 .before-condition{border-right:1px solid <?php echo $GLOBALS['cfg']['BrowseMarkerBackground']; ?>;}
 <?php endif; ?>
 
-td.null{font-style:italic;text-align:<?php echo $right; ?>}
+td.null{font-style:italic}
 table .valueHeader{text-align:<?php echo $right; ?>;white-space:normal}
 table .value{text-align:<?php echo $right; ?>;white-space:normal}
 table [class=value]{white-space:normal}
@@ -1850,7 +1850,7 @@ body .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset{float:<?php echo $rig
 /* Custom by @khadkamhn */
 .ui-widget-overlay{
 	opacity:.5;
-	filter:Alpha(Opacity=50); 
+	filter:Alpha(Opacity=50);
 	background-color:#000;
 	z-index:1000!important;
 }
