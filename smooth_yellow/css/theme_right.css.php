@@ -12,7 +12,6 @@
         exit();
     }
 
-    // mkkeck: 2007-05-10
     //    Added some special fixes
     //    for better behaviors on old IE
     $forIE = false;
@@ -20,11 +19,9 @@
         $forIE = true;
     }
 
-    // mkkeck: 2007-08-24
     //    Get the whole http_url for the images
     $ipath = $_SESSION['PMA_Theme']->getImgPath();
 
-    // 2007-08-24 (mkkeck)
     //    Get font-sizes
     if (isset($GLOBALS['PMA_Config']) && $GLOBALS['PMA_Config']->get('fontsize') !== null) {
         $pma_fsize = $GLOBALS['PMA_Config']->get('fontsize');
@@ -58,7 +55,6 @@
         $fsize = number_format( (intval($usr_fsize) * $pma_fsize), 0 );
     }
 
-    // mkkeck: 2007-05-10
     //    Get the file name for the css-style
     //    TODO:
     //        replace on /libraries/header_meta_style.inc.php

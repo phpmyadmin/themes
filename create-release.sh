@@ -75,6 +75,7 @@ cd release
 gpg --detach-sign --armor $NAME.zip
 md5sum $NAME.zip > $NAME.zip.md5
 sha1sum $NAME.zip > $NAME.zip.sha1
+sha256sum $NAME.zip > $NAME.zip.sha256
 
 cd ..
 
@@ -82,11 +83,11 @@ echo "Release files:"
 ls -la release/$NAME.zip
 
 if [ $TAG -eq 1 ] ; then
-    git tag -a -m "Tagging release of theme $THEME $VERSION" $NAME
+    git tag -s -a -m "Tagging release of theme $THEME $VERSION" $NAME
 fi
 
 if [ $UPLOAD -eq 1 ] ; then
-    sftp -P 11022 files@klutz.phpmyadmin.net <<EOT
+    sftp -P 11022 files@klutz.phpmyadmin.net -f -b - <<EOT
 cd /mnt/storage/files/themes
 mkdir $THEME
 cd $THEME
@@ -96,7 +97,8 @@ put release/$NAME.zip
 put release/$NAME.zip.asc
 put release/$NAME.zip.md5
 put release/$NAME.zip.sha1
+put release/$NAME.zip.sha256
 EOT
-ssh -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
+ssh -xka2 -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
 fi
 
