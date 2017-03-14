@@ -75,7 +75,7 @@ canvas.pmd * {
   cursor: default
 }
 
-.tab_field_2 {
+.tab_field:hover, .tab_field_3:hover {
   background-color: #CCFFCC;
   color: #000;
   background-repeat: repeat-x;
@@ -116,7 +116,7 @@ canvas.pmd * {
   border: #ccc solid 0
 }
 
-.pmd_Tabs2 {
+.pmd_Tabs:hover {
   cursor: default;
   color: #666;
   background: #eee;
@@ -161,7 +161,7 @@ canvas.pmd * {
   text-decoration: none
 }
 
-.small_tab2 {
+.small_tab:hover {
   vertical-align: top;
   color: #fff;
   background-color: #ff9966;
@@ -180,7 +180,7 @@ canvas.pmd * {
   width: 1px
 }
 
-.small_tab_pref2 {
+.small_tab_pref:hover {
   vertical-align: top;
   color: #fff;
   background-color: #ff9966;
@@ -198,7 +198,7 @@ canvas.pmd * {
   cursor: default
 }
 
-.L_butt2_2 {
+.L_butt2_1:hover {
   padding-left: 5px;
   color: #000;
   text-decoration: none;

@@ -41,7 +41,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	color:#000;
 	cursor:default;
 }
-.tab_field_2{
+.tab_field:hover, .tab_field_3:hover{
 	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
 	color:#000;
 	cursor:default;
@@ -77,7 +77,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	background-color:#fff;
 	border:#ccc solid 1px;
 }
-.pmd_Tabs2{
+.pmd_Tabs:hover{
 	cursor:default;
 	color:#0055bb;
 	text-indent:3px;
@@ -115,7 +115,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	text-decoration:none;
 	font-family:monospace,'Lucida Console','Courier New';
 }
-.small_tab2{
+.small_tab:hover{
 	vertical-align:top;
 	color:#fff;
 	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
@@ -133,7 +133,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	text-align:center;
 	width:1px;
 }
-.small_tab_pref2{
+.small_tab_pref:hover{
 	vertical-align:top;
 	color:#fff;
 	background-color:<?php echo $GLOBALS['cfg']['cLte']; ?>;
@@ -157,7 +157,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	vertical-align:middle;
 	cursor:default;
 }
-.L_butt2_2{
+.L_butt2_1:hover{
 	color:#000;
 	cursor:default;
 	text-decoration:none;
