@@ -1,21 +1,17 @@
 <?php
-# Unplanned execution path
-
-if ( !defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE') ) {
-  exit();
+// Unplanned execution path
+if (!defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE') ) {
+    exit();
 }
 
-# Set source folder for stylesheet
-
+// Set source folder for stylesheet
 define('CSS_PATH', 'fallen');
 
-# Set the Brand name, will be set for logo text. Display in menubar.
-
+// Set the Brand name, will be set for logo text. Display in menubar.
 $brand = 'phpMyAdmin';
 
-# Do not change!!!
-# Or the theme will be error!
-
+// Do not edit!!!
+// Or the theme will be broken!
 $name = 'Fallen';
 $version = '0.4';
 $slug = 'fallen';
@@ -31,111 +27,111 @@ $font_family_icon = 'Fallen' ?>
 /* Fonts
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/bundle-fonts.min.css' ?>
+<?php require CSS_PATH . '/bundle-fonts.min.css' ?>
 
 /* Reset
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/reset.css.php' ?>
+<?php require CSS_PATH . '/common/reset.css.php' ?>
 
 /* General
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/general.css.php' ?>
+<?php require CSS_PATH . '/common/general.css.php' ?>
 
 /* Login
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/login.css.php' ?>
+<?php require CSS_PATH . '/common/login.css.php' ?>
 
 /* Icons
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/icons.css.php' ?>
+<?php require CSS_PATH . '/common/icons.css.php' ?>
 
 /* Typography
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/typography.css.php' ?>
+<?php require CSS_PATH . '/common/typography.css.php' ?>
 
 /* Heading
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/heading.css.php' ?>
+<?php require CSS_PATH . '/common/heading.css.php' ?>
 
 /* Globals
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/globals.css.php' ?>
+<?php require CSS_PATH . '/common/globals.css.php' ?>
 
 /* Contents
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/content.css.php' ?>
+<?php require CSS_PATH . '/common/content.css.php' ?>
 
 /* Data
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/data.css.php' ?>
+<?php require CSS_PATH . '/common/data.css.php' ?>
 
 /* Tables &amp; Columns
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/tables.css.php' ?>
+<?php require CSS_PATH . '/common/tables.css.php' ?>
 
 /* Forms, Input &amp; Textarea
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/forms.css.php' ?>
+<?php require CSS_PATH . '/common/forms.css.php' ?>
 
 /* Buttons
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/buttons.css.php' ?>
+<?php require CSS_PATH . '/common/buttons.css.php' ?>
 
 /* Select
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/select.css.php' ?>
+<?php require CSS_PATH . '/common/select.css.php' ?>
 
 /* LTR
 ---------------------------------------------- */
 
-<?php if ( $GLOBALS['text_dir'] === 'ltr' ) {
-  include CSS_PATH . '/common/ltr.css.php';
+<?php if ($GLOBALS['text_dir'] === 'ltr' ) {
+    include CSS_PATH . '/common/ltr.css.php';
 } ?>
 
 /* Alert
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/alert.css.php' ?>
+<?php require CSS_PATH . '/common/alert.css.php' ?>
 
 /* Images
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/images.css.php' ?>
+<?php require CSS_PATH . '/common/images.css.php' ?>
 
 /* Layouts
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/layouts.css.php' ?>
+<?php require CSS_PATH . '/common/layouts.css.php' ?>
 
 /* Elements
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/elements.css.php' ?>
+<?php require CSS_PATH . '/common/elements.css.php' ?>
 
 /* Navigations
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/nav.css.php' ?>
+<?php require CSS_PATH . '/common/nav.css.php' ?>
 
 /* Responsive
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/responsive.css.php' ?>
+<?php require CSS_PATH . '/common/responsive.css.php' ?>
 
 /* Miscellaneous
 ---------------------------------------------- */
 
-<?php include CSS_PATH . '/common/misc.css.php' ?>
+<?php require CSS_PATH . '/common/misc.css.php' ?>

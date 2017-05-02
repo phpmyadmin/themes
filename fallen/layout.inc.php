@@ -3,14 +3,13 @@
  * Layout
  *
  * @package Fallen
- * @author Frans Allen
- * @link https://www.fransallen.com
+ * @author  Frans Allen
+ * @link    https://www.fransallen.com
  */
 
 /*
  * General
  */
-
 $GLOBALS['cfg']['NaviWidth']                = '250';
 $GLOBALS['cfg']['FontFamily']               = '"Roboto", Helvetica, Arial, sans-serif';
 $GLOBALS['cfg']['FontFamilyLight']          = '"Roboto", "Segoe UI Light", "Segoe UI"; font-weight: 300';
@@ -20,7 +19,6 @@ $GLOBALS['cfg']['FontFamilyFixed']          = 'Consolas, Monospace, "Lucida Gran
  * Color Scheme
  * No color scheme for this version
  */
-
 $GLOBALS['cfg']['BrowsePointerColor']       = '#4285f4';
 $GLOBALS['cfg']['BrowseMarkerColor']        = '#000';
 $GLOBALS['cfg']['BrowseWarningColor']       = '#ea4335';
