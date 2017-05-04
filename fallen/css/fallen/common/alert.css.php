@@ -146,7 +146,7 @@ p.notice {
   background-repeat: no-repeat;
   background: #555;
   color: #d4fb6a
-    <?php if ($GLOBALS['text_dir'] === 'ltr' ) { ?>
+    <?php if ($GLOBALS['text_dir'] === 'ltr') { ?>
   background-position: 10px 50%;
   padding: 10px 10px 10px 25px
     <?php } else { ?>
