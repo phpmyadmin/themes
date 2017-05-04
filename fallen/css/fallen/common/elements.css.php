@@ -895,7 +895,7 @@ div.upload_progress_bar_inner {
   margin: 1px;
   overflow: hidden;
   position: relative;
-    <?php if ($GLOBALS['cfg']['BrowseMarkerEnable'] ) { ?>
+    <?php if ($GLOBALS['cfg']['BrowseMarkerEnable']) { ?>
   color: <?php echo $GLOBALS['cfg']['BrowseMarkerColor'] ?>
     <?php } ?>
 }
