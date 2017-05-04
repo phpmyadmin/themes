@@ -1,3 +1,5 @@
+>> NOTE: This repository is no longer updated. To download **Fallen**, See [phpMyAdmin Themes directory](https://www.phpmyadmin.net/themes/).
+
 # Fallen (phpMyAdmin Theme)
 
 A Beautiful phpMyAdmin theme. Designed for you.

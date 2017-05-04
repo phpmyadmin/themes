@@ -1,8 +1,7 @@
 <?php
-# Unplanned execution path
-
-if ( !defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE') ) {
-  exit();
+// Unplanned execution path
+if (!defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE') ) {
+    exit();
 } ?>
 /* ----------------------------------------------------- */
 
@@ -75,7 +74,7 @@ canvas.pmd * {
   cursor: default
 }
 
-.tab_field:hover, .tab_field_3:hover {
+.tab_field_2 {
   background-color: #CCFFCC;
   color: #000;
   background-repeat: repeat-x;
@@ -116,7 +115,7 @@ canvas.pmd * {
   border: #ccc solid 0
 }
 
-.pmd_Tabs:hover {
+.pmd_Tabs2 {
   cursor: default;
   color: #666;
   background: #eee;
@@ -161,7 +160,7 @@ canvas.pmd * {
   text-decoration: none
 }
 
-.small_tab:hover {
+.small_tab2 {
   vertical-align: top;
   color: #fff;
   background-color: #ff9966;
@@ -180,7 +179,7 @@ canvas.pmd * {
   width: 1px
 }
 
-.small_tab_pref:hover {
+.small_tab_pref2 {
   vertical-align: top;
   color: #fff;
   background-color: #ff9966;
@@ -198,7 +197,7 @@ canvas.pmd * {
   cursor: default
 }
 
-.L_butt2_1:hover {
+.L_butt2_2 {
   padding-left: 5px;
   color: #000;
   text-decoration: none;

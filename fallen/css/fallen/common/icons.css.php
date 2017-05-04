@@ -3,7 +3,8 @@
   top: 8px;
   right: 0;
   z-index: 99;
-  padding: .25em 10px 0 0
+  padding: .25em 10px 0 0;
+  filter: invert(70%)
 }
 
 #goto_pagetop, #lock_page_icon, #page_settings_icon {
