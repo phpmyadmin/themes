@@ -21,9 +21,12 @@ THEME="${1%/}"
 
 ./lint-theme.sh $THEME
 
-cat <<END
+if [ ! -f $THEME/theme.json ] ; then
+    echo
+    echo "Please ensure that you have updated data/themes.py in the website code before running this script."
+fi
 
-Please ensure that you have updated data/themes.py in the website code before running this script.
+cat <<END
 
 Continue (y/n)?
 END
