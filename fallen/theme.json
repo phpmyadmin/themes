@@ -1,6 +1,7 @@
 {
     "name": "Fallen",
     "version": "0.6",
+    "description": "Fallen theme for phpMyAdmin",
     "author": "Frans Allen",
     "url": "https://www.fransallen.com/",
     "supports": ["4.7"]

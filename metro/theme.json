@@ -1,6 +1,7 @@
 {
-    "name": "pmahomme",
+    "name": "Metro",
     "version": "2.7",
+    "description": "Windows 8 / Metro Theme for phpMyAdmin",
     "author": "hplhu",
     "url": "https://www.phpmyadmin.net/",
     "supports": ["4.7"]
