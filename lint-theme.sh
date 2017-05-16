@@ -37,6 +37,8 @@ do_lint() {
     fi
     VERSION=$JVERSION
     echo " * Supported phpMyAdmin versions: `php -r "echo implode(', ', json_decode(file_get_contents('theme.json'), true)['supports']);"`"
+    echo " * Metadata:"
+    php -r "\$data = json_decode(file_get_contents('theme.json'), true); foreach (\$data as \$item => \$value) { echo '   - ' . \$item . ': '; if (is_array(\$value)) { echo implode(', ', \$value); } else { echo \$value; }; echo \"\\n\"; }"
 
     cd ..
 }
