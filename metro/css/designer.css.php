@@ -29,17 +29,17 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
     color: #000;
 }
 
-canvas.pmd {
+canvas.designer {
     display: inline-block;
     overflow: hidden;
     text-align: left;
 }
 
-canvas.pmd * {
+canvas.designer * {
     behavior: url(#default#VML);
 }
 
-.pmd_tab {
+.designer_tab {
     color: #333;
     border-collapse: collapse;
     border: 1px solid #ccc;
@@ -47,7 +47,7 @@ canvas.pmd * {
     -moz-user-select: none;
 }
 
-.pmd_tab .header {
+.designer_tab .header {
     background-color: #f6f6f6;
 }
 
@@ -87,7 +87,7 @@ canvas.pmd * {
     cursor: default;
 }
 
-#pmd_hint {
+#designer_hint {
     white-space: nowrap;
     position: absolute;
     background-color: #99FF99;
@@ -103,7 +103,7 @@ canvas.pmd * {
     height: 500px;
 }
 
-.pmd_Tabs {
+.designer_Tabs {
     cursor: default;
     color: #333;
     white-space: nowrap;
@@ -114,7 +114,7 @@ canvas.pmd * {
     border: #ccc solid 0;
 }
 
-.pmd_Tabs:hover {
+.designer_Tabs:hover {
     cursor: default;
     color: #666;
     background: #eee;
@@ -217,7 +217,7 @@ canvas.pmd * {
     width: 100% !important;
 }
 
-.pmd_header {
+.designer_header {
     background-color: #F6F6F6;
     border-top: 20px solid #FFFFFF;
     color: #333333;
@@ -232,14 +232,14 @@ canvas.pmd * {
     z-index: 101;
 }
 
-.pmd_header a {
+.designer_header a {
     display: block;
     float: <?php echo $left; ?>;
     margin: 3px 1px 4px;
     height: 20px;
 }
 
-.pmd_header .M_bord {
+.designer_header .M_bord {
     display: block;
     float: <?php echo $left; ?>;
     margin: 4px;
@@ -247,11 +247,11 @@ canvas.pmd * {
     width: 2px;
 }
 
-.pmd_header a.first {
+.designer_header a.first {
     margin-right: 1em;
 }
 
-.pmd_header a.last {
+.designer_header a.last {
     margin-left: 1em;
 }
 
@@ -306,7 +306,7 @@ a.M_butt:hover {
     width: 153px;
 }
 
-#pmd_optionse {
+#designer_optionse {
     position: absolute;
     <?php echo $left; ?>: 636px;
     top: 85px;
@@ -315,7 +315,7 @@ a.M_butt:hover {
 }
 
 #layer_menu_sizer {
-    background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/resize.png'); ?>);
+    background-image: url(<?php echo $theme->getImgPath('designer/resize.png'); ?>);
     cursor: ew-resize;
 }
 
@@ -342,7 +342,7 @@ a.trigger {
     <?php echo $right; ?>: 0;
     color: #fff;
     padding: 10px 40px 10px 15px;
-    background: #333 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/plus.png'); ?>) 85% 55% no-repeat;
+    background: #333 url(<?php echo $theme->getImgPath('designer/plus.png'); ?>) 85% 55% no-repeat;
     border: 1px solid #444;
     display: block;
     z-index: 102;
@@ -350,17 +350,17 @@ a.trigger {
 
 a.trigger:hover {
     color: #080808;
-    background: #fff696 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/plus.png'); ?>) 85% 55% no-repeat;
+    background: #fff696 url(<?php echo $theme->getImgPath('designer/plus.png'); ?>) 85% 55% no-repeat;
     border: 1px solid #999;
 }
 
 a.active.trigger {
-    background: #222 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/minus.png'); ?>) 85% 55% no-repeat;
+    background: #222 url(<?php echo $theme->getImgPath('designer/minus.png'); ?>) 85% 55% no-repeat;
     z-index: 999;
 }
 
 a.active.trigger:hover {
-    background: #fff696 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/minus.png'); ?>) 85% 55% no-repeat;
+    background: #fff696 url(<?php echo $theme->getImgPath('designer/minus.png'); ?>) 85% 55% no-repeat;
 }
 
 .toggle_container .block {
