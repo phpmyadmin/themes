@@ -92,7 +92,7 @@ if [ $TAG -eq 1 ] ; then
 fi
 
 if [ $UPLOAD -eq 1 ] ; then
-    sftp -P 11022 -f -b - files@klutz.phpmyadmin.net <<EOT
+    sftp -P 11022 -f -b - files@hertz.phpmyadmin.net <<EOT
 cd /mnt/storage/files/themes
 -mkdir $THEME
 cd $THEME
@@ -103,6 +103,6 @@ put release/$NAME.zip.asc
 put release/$NAME.zip.sha1
 put release/$NAME.zip.sha256
 EOT
-ssh -xka2 -p 11022 files@klutz.phpmyadmin.net ./bin/sync-files-cdn
+ssh -xka2 -p 11022 files@hertz.phpmyadmin.net ./bin/sync-files-cdn
 fi
 
