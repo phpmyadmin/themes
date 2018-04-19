@@ -14,3 +14,4 @@ sudo: false
 
 script:
   - find . -name '*.php' -print0 | xargs -0 -r -n1 php -l
+  - ./lint-theme.sh --all

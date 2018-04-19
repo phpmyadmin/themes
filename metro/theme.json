@@ -1,0 +1,9 @@
+{
+    "name": "Metro",
+    "version": "2.8",
+    "description": "Windows 8 / Metro Theme for phpMyAdmin",
+    "author": "phpMyAdmin developers and hplhu",
+    "url": "https://www.phpmyadmin.net/",
+    "supports": ["4.8"]
+}
+

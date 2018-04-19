@@ -155,7 +155,7 @@ form.clock {
   margin-left: -1em;
   font-family: <?php echo $GLOBALS['cfg']['FontFamily'] ?>;
   color: <?php echo $GLOBALS['cfg']['ButtonColor'] ?>;
-  background: <?php echo $GLOBALS['cfg']['NaviBackground'] ?>;
+  background: linear-gradient(270deg, #0fe4c8 0, <?php echo $GLOBALS['cfg']['NaviBackground'] ?> 100%);
   font-height: 1.1em;
   height: 15px
 }
@@ -271,7 +271,7 @@ form.clock {
 
 .linkElem:hover {
   text-decoration: underline;
-  color: #235a81;
+  color: <?php echo $GLOBALS['cfg']['BrowsePointerColor'] ?>;
   cursor: pointer
 }
 
@@ -895,9 +895,9 @@ div.upload_progress_bar_inner {
   margin: 1px;
   overflow: hidden;
   position: relative;
-  <?php if ( $GLOBALS['cfg']['BrowseMarkerEnable'] ) { ?>
+    <?php if ($GLOBALS['cfg']['BrowseMarkerEnable']) { ?>
   color: <?php echo $GLOBALS['cfg']['BrowseMarkerColor'] ?>
-  <?php } ?>
+    <?php } ?>
 }
 
 div.upload_progress_bar_outer div.percentage {

@@ -30,13 +30,13 @@ div.success, div.notice, div.error, div.footnotes {
   margin: 20px 0 20px;
   border: 1px solid;
   background-repeat: no-repeat;
-  <?php if ($GLOBALS['text_dir'] === 'ltr') { ?>
+    <?php if ($GLOBALS['text_dir'] === 'ltr') { ?>
   background-position: 10px 50%;
   padding: 10px
-  <?php } else { ?>
+    <?php } else { ?>
   background-position: 99% 50%;
   padding: 10px 35px 10px 10px
-  <?php } ?>
+    <?php } ?>
 }
 
 .ajax_notification .error {
@@ -146,13 +146,13 @@ p.notice {
   background-repeat: no-repeat;
   background: #555;
   color: #d4fb6a
-  <?php if ( $GLOBALS['text_dir'] === 'ltr' ) { ?>
+    <?php if ($GLOBALS['text_dir'] === 'ltr') { ?>
   background-position: 10px 50%;
   padding: 10px 10px 10px 25px
-  <?php } else { ?>
+    <?php } else { ?>
   background-position: 99% 50%;
   padding: 25px 10px 10px 10px
-  <?php } ?>
+    <?php } ?>
 }
 
 p.notice a {

@@ -17,9 +17,16 @@ if [ $# -eq 0 ] ; then
     exit 1
 fi
 
-cat <<END
+THEME="${1%/}"
 
-Please ensure that you have updated data/themes.py in the website code before running this script.
+./lint-theme.sh $THEME
+
+if [ ! -f $THEME/theme.json ] ; then
+    echo
+    echo "Please ensure that you have updated data/themes.py in the website code before running this script."
+fi
+
+cat <<END
 
 Continue (y/n)?
 END
@@ -29,7 +36,6 @@ if [ "$do_release" != 'y' ]; then
       exit 100
 fi
 
-THEME="${1%/}"
 if [ ! -d "$THEME" ] ; then
     echo "Directory $THEME does not exist!"
     exit 2
