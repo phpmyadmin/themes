@@ -64,7 +64,11 @@ while [ $# -gt 0 ] ; do
     esac
 done
 
-VERSION=`php -r "include '$THEME/info.inc.php'; echo \\\$theme_full_version;"`
+if [ ! -f "$THEME/info.inc.php" ]; then
+  VERSION=`php -r "echo json_decode(file_get_contents('$THEME/theme.json'), true)['version'];"`
+else
+  VERSION=`php -r "include '$THEME/info.inc.php'; echo \\\$theme_full_version;"`
+fi
 NAME=$THEME-$VERSION
 
 echo "Creating release for $THEME $VERSION ($NAME)"
