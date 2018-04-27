@@ -304,7 +304,7 @@ caption a.top {
 }
 
 .cPointer {
-  background: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('col_pointer.png');
+  background: url(<?php echo $theme->getImgPath('col_pointer.png');
   ?>);
   height: 20px;
   margin-left: -5px;
@@ -337,7 +337,7 @@ caption a.top {
 }
 
 .coldrop {
-  background: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('col_drop.png');
+  background: url(<?php echo $theme->getImgPath('col_drop.png');
   ?>);
   cursor: pointer;
   height: 16px;
@@ -429,12 +429,12 @@ caption a.top {
 }
 
 .cEdit .edit_box_posting {
-  background: #FFF url("<?php echo $_SESSION['PMA_Theme']->getImgPath('loader-blue.svg') ?>") no-repeat right center;
+  background: #FFF url("<?php echo $theme->getImgPath('loader-blue.svg') ?>") no-repeat right center;
   padding-right: 1.5em
 }
 
 .cEdit .edit_area_loading {
-  background: #FFF url("<?php echo $_SESSION['PMA_Theme']->getImgPath('loader-blue.svg') ?>") no-repeat center;
+  background: #FFF url("<?php echo $theme->getImgPath('loader-blue.svg') ?>") no-repeat center;
   height: 10em
 }
 
@@ -445,7 +445,7 @@ caption a.top {
 }
 
 .saving_edited_data {
-  background: url("<?php echo $_SESSION['PMA_Theme']->getImgPath('loader-blue.svg') ?>") no-repeat left;
+  background: url("<?php echo $theme->getImgPath('loader-blue.svg') ?>") no-repeat left;
   padding-left: 20px
 }
 
@@ -987,7 +987,7 @@ html.ie7 #pma_console .query_input {
 
 span.drag_icon {
   display: inline-block;
-  background-image: url('<?php echo $_SESSION['PMA_Theme']->getImgPath('s_sortable.png');?>');
+  background-image: url('<?php echo $theme->getImgPath('s_sortable.png');?>');
   background-position: center center;
   background-repeat: no-repeat;
   width: 1em;

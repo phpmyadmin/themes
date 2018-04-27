@@ -41,6 +41,10 @@ ul#topmenu li, ul#topmenu2 li {
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2)
 }
 
+.scrollindicator {
+  display: none
+}
+
 #topmenu .tabactive {
   background: #fff!important
 }
@@ -695,7 +699,7 @@ li#li_select_theme:hover {
 }
 
 li#li_change_password {
-  /* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath() ?>s_passwd.png); */
+  /* list-style-image: url(<?php echo $theme->getImgPath() ?>s_passwd.png); */
   display: block;
   padding: 10px;
   padding-left: 20px;
@@ -707,7 +711,7 @@ li#li_change_password:hover {
 }
 
 li#li_user_preferences {
-  /* list-style-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath() ?>b_tblops.png); */
+  /* list-style-image: url(<?php echo $theme->getImgPath() ?>b_tblops.png); */
   display: block;
   padding: 10px;
   padding-left: 20px;
@@ -939,7 +943,7 @@ input[type=text].invalid_value, input[type=password].invalid_value, input[type=n
   display: inline;
   left: 0;
   right: 0;
-  background-image: url("<?php echo $_SESSION['PMA_Theme']->getImgPath('loader-blue.svg') ?>");
+  background-image: url("<?php echo $theme->getImgPath('loader-blue.svg') ?>");
   background-repeat: no-repeat;
   background-position: 46%;
   margin: 0;
