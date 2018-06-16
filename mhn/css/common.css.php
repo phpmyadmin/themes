@@ -1,5 +1,9 @@
 <?php
-if (!defined('PMA_MINIMUM_COMMON') && !defined('TESTSUITE')) { exit(); }
+
+// unplanned execution path
+if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')) {
+    exit();
+}
 ?>
 /*! normalize.css v4.1.1 | MIT License | github.com/necolas/normalize.css */
 progress,sub,sup{vertical-align:baseline}button,hr,input{overflow:visible}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}button,input,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}
@@ -24,8 +28,8 @@ progress[value]::-webkit-progress-bar{background-color:<?php echo $GLOBALS['cfg'
 progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 fieldset{border:none}
-<?php require_once('mhn.icons.css.php'); ?>
-html{font-size:<?php echo $_SESSION['PMA_Theme']->getFontSize(); ?>}
+<?php //require_once('mhn.icons.css.php'); ?>
+html{font-size:1em;}
 input,select,textarea{font-size:1em}
 body{
 <?php if (!empty($GLOBALS['cfg']['FontFamily'])) :?>
@@ -640,6 +644,8 @@ tr.disabled td,td.disabled{background-color:#f3f3f3;color:#aaa}
 #floating_menubar{left:-3px!important}
 #topmenu a{text-shadow:0 1px 0 #fff;text-transform:uppercase}
 #topmenu .error{background:#eee;border:0 !important;color:#aaa}
+#topmenu .tabactive {background: #fff!important}
+.scrollindicator {display: none}
 ul#topmenu,
 ul#topmenu2,
 ul.tabs{font-weight:bold;list-style-type:none;margin:0;padding:0}
@@ -1139,7 +1145,7 @@ select.invalid_value,
 	display:inline;
 	left:0;
 	right:0;
-	background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>);
+	background-image:url(<?php echo $theme->getImgPath('ajax_clock_small.gif'); ?>);
 	background-repeat:no-repeat;
 	background-position:2%;
 	border:1px solid #e2b709;
@@ -1450,7 +1456,7 @@ fieldset .disabled-field td{color:#666;background-color:#ddd}
 	border-radius:.3em;
 }
 .cPointer{
-	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('col_pointer.png'); ?>);
+	background:url(<?php echo $theme->getImgPath('col_pointer.png'); ?>);
 	height:20px;
 	margin-<?php echo $left; ?>:-5px;  /* must be minus half of its width */
 	margin-top:-10px;
@@ -1546,16 +1552,16 @@ fieldset .disabled-field td{color:#666;background-color:#ddd}
 .cEdit .cell_edit_hint{color:#555;font-size:.8em;margin:.3em .2em}
 .cEdit .edit_box{overflow-x:hidden;overflow-y:scroll;;padding:0;margin:0}
 .cEdit .edit_box_posting{
-	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat right center;
+	background:#FFF url(<?php echo $theme->getImgPath('ajax_clock_small.gif'); ?>) no-repeat right center;
 	padding-<?php echo $right; ?>:1.5em;
 }
 .cEdit .edit_area_loading{
-	background:#FFF url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat center;
+	background:#FFF url(<?php echo $theme->getImgPath('ajax_clock_small.gif'); ?>) no-repeat center;
 	height:10em;
 }
 .cEdit .goto_link{background:#eee;color:#555;padding:.2em .3em}
 .saving_edited_data{
-	background:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('ajax_clock_small.gif'); ?>) no-repeat left;
+	background:url(<?php echo $theme->getImgPath('ajax_clock_small.gif'); ?>) no-repeat left;
 	padding-<?php echo $left; ?>:20px;
 }
 .relationalTable select{
@@ -1824,7 +1830,7 @@ html.ie7 #pma_console .query_input{
 #composite_index_list{list-style-type:none;list-style-position:inside}
 span.drag_icon{
 	display:inline-block;
-	background-image:url('<?php echo $_SESSION['PMA_Theme']->getImgPath('s_sortable.png'); ?>');
+	background-image:url('<?php echo $theme->getImgPath('s_sortable.png'); ?>');
 	background-position:center center;
 	background-repeat:no-repeat;
 	width:1em;
@@ -1840,8 +1846,8 @@ meter[value="3"]::-webkit-meter-optimum-value {background: linear-gradient(white
 th.header{cursor:pointer;color:#235a81}
 th.header:hover{text-decoration:underline}
 th.header .sorticon{width:16px;height:16px;background-repeat:no-repeat;background-position:right center;display:inline-table;vertical-align:middle;float:right}
-th.headerSortUp .sorticon, th.headerSortDown:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_desc.png'); ?>)}
-th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon{background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_asc.png'); ?>)}
+th.headerSortUp .sorticon, th.headerSortDown:hover .sorticon{background-image:url(<?php echo $theme->getImgPath('s_desc.png'); ?>)}
+th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon{background-image:url(<?php echo $theme->getImgPath('s_asc.png'); ?>)}
 
 body .ui-dialog .ui-dialog-titlebar-close{<?php echo $right; ?>:.3em;<?php echo $left; ?>:initial}
 body .ui-dialog .ui-dialog-title{float:<?php echo $left; ?>}
