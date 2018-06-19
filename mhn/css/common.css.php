@@ -29,7 +29,7 @@ progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cf
 progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 fieldset{border:none}
 <?php require_once('mhn.icons.css.php'); ?>
-html{font-size:1em;}
+html{font-size:<?php echo $theme->getFontSize(); ?>}
 input,select,textarea{font-size:1em}
 body{
 <?php if (!empty($GLOBALS['cfg']['FontFamily'])) :?>
