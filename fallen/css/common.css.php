@@ -13,7 +13,7 @@ $brand = 'phpMyAdmin';
 // Do not edit!!!
 // Or the theme will be broken!
 $name = 'Fallen';
-$version = '0.4';
+$version = '0.7';
 $slug = 'fallen';
 $font_family_icon = 'Fallen' ?>
 /* ----------------------------------------------------- */

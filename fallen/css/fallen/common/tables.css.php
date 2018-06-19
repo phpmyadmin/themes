@@ -280,12 +280,12 @@ th.header .sorticon {
 }
 
 th.headerSortUp .sorticon, th.headerSortDown:hover .sorticon {
-  background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_desc.png');
+  background-image: url(<?php echo $theme->getImgPath('s_desc.png');
   ?>)
 }
 
 th.headerSortDown .sorticon, th.headerSortUp:hover .sorticon {
-  background-image: url(<?php echo $_SESSION['PMA_Theme']->getImgPath('s_asc.png');
+  background-image: url(<?php echo $theme->getImgPath('s_asc.png');
   ?>)
 }
 /* end of styles of sortable tables */
