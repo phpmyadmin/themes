@@ -28,7 +28,7 @@ progress[value]::-webkit-progress-bar{background-color:<?php echo $GLOBALS['cfg'
 progress[value]::-webkit-progress-value{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 progress[value]::-moz-progress-bar{background-color:<?php echo $GLOBALS['cfg']['cPri']; ?>}
 fieldset{border:none}
-<?php //require_once('mhn.icons.css.php'); ?>
+<?php require_once('mhn.icons.css.php'); ?>
 html{font-size:1em;}
 input,select,textarea{font-size:1em}
 body{
