@@ -1,6 +1,6 @@
 <?php
 $css = '';
-$url = $_SESSION['PMA_Theme']->getPath().'/css/mhn.img.php?i=';
+$url = $GLOBALS['PMA_Theme']->getPath().'/css/mhn.img.php?i=';
 $GLOBALS['cfg']['imgPath'] = $url;
 $imp = '!important';
 function h($a){ return str_replace('#','',$a); }

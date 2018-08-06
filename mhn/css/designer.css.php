@@ -10,13 +10,13 @@ if (! defined('PMA_MINIMUM_COMMON') && ! defined('TESTSUITE')){ exit(); }
 	display:block;
 }
 #canvas{background-color:#fff;color:#000}
-canvas.pmd{
+canvas.designer{
 	display:inline-block;
 	overflow:hidden;
 	text-align:left;
 }
-canvas.pmd *{behavior:url(#default#VML)}
-.pmd_tab{
+canvas.designer *{behavior:url(#default#VML)}
+.designer_tab{
 	background-color:#fff;
 	color:#000;
 	border-collapse:collapse;
@@ -51,7 +51,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	cursor:default;
 	background-color:#FFE6E6;
 }
-#pmd_hint{
+#designer_hint{
 	white-space:nowrap;
 	position:absolute;
 	background-color:#99FF99;
@@ -65,7 +65,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	width:100%;
 	height:500px;
 }
-.pmd_Tabs{
+.designer_Tabs{
 	cursor:default;
 	color:#0055bb;
 	white-space:nowrap;
@@ -77,7 +77,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	background-color:#fff;
 	border:#ccc solid 1px;
 }
-.pmd_Tabs:hover{
+.designer_Tabs:hover{
 	cursor:default;
 	color:#0055bb;
 	text-indent:3px;
@@ -171,7 +171,7 @@ canvas.pmd *{behavior:url(#default#VML)}
 	background-color:#fff;
 	color:#000;
 }
-.pmd_header{
+.designer_header{
 	background-color:#EAEEF0;
 	color:#000;
 	text-align:center;
@@ -182,20 +182,20 @@ canvas.pmd *{behavior:url(#default#VML)}
 	width:100%;
 	position:fixed;
 }
-.pmd_header a, .pmd_header span{
+.designer_header a, .designer_header span{
 	float:left;
 	display:block;
 	padding:1.5px;
 }
-.pmd_header .M_bord{
+.designer_header .M_bord{
 	display:block;
 	float:<?php echo $left; ?>;
 	margin:4px;
 	height:20px;
 	width:2px;
 }
-.pmd_header a.first{margin-right:1em}
-.pmd_header a.last{margin-left:1em}
+.designer_header a.first{margin-right:1em}
+.designer_header a.last{margin-left:1em}
 a.M_butt{display:inline-block}
 a.M_butt img,a.M_butt_Selected_down img{
 	-webkit-filter:grayscale(1);
@@ -233,7 +233,7 @@ a.M_butt:hover{
 	z-index:100;
 	width:153px;
 }
-#pmd_optionse{
+#designer_optionse{
 	position:absolute;
 	<?php echo $left; ?>:636px;
 	top:85px;
@@ -241,7 +241,7 @@ a.M_butt:hover{
 	width:153px;
 }
 #layer_menu_sizer{
-	background-image:url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/resize.png'); ?>);
+	background-image:url(<?php echo $theme->getImgPath('designer/resize.png'); ?>);
 	cursor:ew-resize;
 }
 #layer_menu_sizer .icon{margin:0}
@@ -263,21 +263,21 @@ a.trigger{
 	<?php echo $right; ?>:0;
 	color:#fff;
 	padding:10px 40px 10px 15px;
-	background:#333 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/plus.png'); ?>) 85% 55% no-repeat;
+	background:#333 url(<?php echo $theme->getImgPath('designer/plus.png'); ?>) 85% 55% no-repeat;
 	border:1px solid #444;
 	display:block;
 	z-index:102;
 }
 a.trigger:hover{
 	color:#080808;
-	background:#fff696 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/plus.png'); ?>) 85% 55% no-repeat;
+	background:#fff696 url(<?php echo $theme->getImgPath('designer/plus.png'); ?>) 85% 55% no-repeat;
 	border:1px solid #999;
 }
 a.active.trigger{
-	background:#222 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/minus.png'); ?>) 85% 55% no-repeat;
+	background:#222 url(<?php echo $theme->getImgPath('designer/minus.png'); ?>) 85% 55% no-repeat;
 	z-index:999;
 }
-a.active.trigger:hover{background:#fff696 url(<?php echo $_SESSION['PMA_Theme']->getImgPath('pmd/minus.png'); ?>) 85% 55% no-repeat}
+a.active.trigger:hover{background:#fff696 url(<?php echo $theme->getImgPath('designer/minus.png'); ?>) 85% 55% no-repeat}
 .toggle_container .block{
 	background-color:#DBE4E8;
 	border-top:1px solid #999;
