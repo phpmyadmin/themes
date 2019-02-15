@@ -92,7 +92,8 @@ table tr {
 }
 
 td.marked:not(.nomarker), table tr.marked:not(.nomarker) td, table tbody:first-of-type tr.marked:not(.nomarker) th, table tr.marked:not(.nomarker) {
-  color: <?php echo $GLOBALS['cfg']['MainColor'] ?>
+  color: <?php echo $GLOBALS['cfg']['MainColor'] ?>;
+  background: #4285f438;
 }
 
 td.marked:not(.nomarker) {
