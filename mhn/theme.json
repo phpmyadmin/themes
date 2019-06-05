@@ -1,9 +1,9 @@
 {
     "name": "mhn",
-    "version": "1.4",
+    "version": "1.4.1",
     "description": "Flat Theme for phpMyAdmin",
     "author": "Mohan Khadka",
     "url": "http://www.mohankhadka.com.np/",
-    "supports": ["4.8"]
+    "supports": ["4.8","4.9"]
 }
 
