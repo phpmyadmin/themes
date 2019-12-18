@@ -9,7 +9,8 @@
   padding: 0;
   padding-left: 2px!important;
   vertical-align: middle;
-  white-space: nowrap
+  white-space: nowrap;
+  color: <?php echo $GLOBALS['cfg']['MainColor'] ?>
 }
 
 .navigation_separator {
