@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" height="512" width="512">
+    <path d="M299 43L128 43C105 43 86 62 86 85L85 427C85 450 104 469 128 469L384 469C407 469 427 450 427 427L427 171 299 43ZM128 427L128 85 277 85 277 192 384 192 384 427 128 427Z" fill="#c2c2c2" />
+</svg>

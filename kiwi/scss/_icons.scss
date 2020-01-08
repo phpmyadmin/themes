@@ -1,0 +1,680 @@
+.icon {
+  margin: 0;
+  margin-#{$left}: 0.3em;
+  padding: 0 !important;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+}
+
+.icon_fulltext {
+  width: 50px;
+  height: 19px;
+}
+
+.ic_asc_order {
+  background-image: url('../img/asc_order.svg');
+}
+
+.ic_b_bookmark {
+  background-image: url('../img/b_bookmark.svg');
+}
+
+.ic_b_browse {
+  background-image: url('../img/b_browse.svg');
+}
+
+.ic_b_calendar {
+  background-image: url('../img/b_calendar.svg');
+}
+
+.ic_b_chart {
+  background-image: url('../img/b_chart.svg');
+}
+
+.ic_b_close {
+  background-image: url('../img/b_close.svg');
+}
+
+.ic_b_column_add {
+  background-image: url('../img/b_column_add.svg');
+}
+
+.ic_b_comment {
+  background-image: url('../img/b_comment.svg');
+}
+
+.ic_b_dbstatistics {
+  background-image: url('../img/b_dbstatistics.svg');
+}
+
+.ic_b_deltbl {
+  background-image: url('../img/b_deltbl.svg');
+}
+
+.ic_b_docs {
+  background-image: url('../img/b_docs.svg');
+}
+
+.ic_b_docsql {
+  background-image: url('../img/b_docsql.svg');
+}
+
+.ic_b_drop {
+  background-image: url('../img/b_drop.svg');
+}
+
+.ic_b_edit {
+  background-image: url('../img/b_edit.svg');
+}
+
+.ic_b_empty {
+  background-image: url('../img/b_empty.svg');
+}
+
+.ic_b_engine {
+  background-image: url('../img/b_engine.svg');
+}
+
+.ic_b_event_add {
+  background-image: url('../img/b_event_add.svg');
+}
+
+.ic_b_events {
+  background-image: url('../img/b_events.svg');
+}
+
+.ic_b_export {
+  background-image: url('../img/b_export.svg');
+}
+
+.ic_b_favorite {
+  background-image: url('../img/b_favorite.svg');
+}
+
+.ic_b_find_replace {
+  background-image: url('../img/b_find_replace.svg');
+}
+
+.ic_b_firstpage {
+  background-image: url('../img/b_firstpage.svg');
+}
+
+.ic_b_ftext {
+  background-image: url('../img/b_ftext.svg');
+}
+
+.ic_b_globe {
+  background-image: url('../img/b_globe.svg');
+}
+
+.ic_b_group {
+  background-image: url('../img/b_group.svg');
+}
+
+.ic_b_help {
+  background-image: url('../img/b_help.svg');
+}
+
+.ic_b_home {
+  background-image: url('../img/b_home.svg');
+}
+
+.ic_b_import {
+  background-image: url('../img/b_import.svg');
+}
+
+.ic_b_index {
+  background-image: url('../img/b_index.svg');
+}
+
+.ic_b_index_add {
+  background-image: url('../img/b_index_add.svg');
+}
+
+.ic_b_inline_edit {
+  background-image: url('../img/b_inline_edit.svg');
+}
+
+.ic_b_insrow {
+  background-image: url('../img/b_insrow.svg');
+}
+
+.ic_b_lastpage {
+  background-image: url('../img/b_lastpage.svg');
+}
+
+.ic_b_minus {
+  background-image: url('../img/b_minus.svg');
+}
+
+.ic_b_more {
+  background-image: url('../img/b_more.svg');
+}
+
+.ic_b_move {
+  background-image: url('../img/b_move.svg');
+}
+
+.ic_b_newdb {
+  background-image: url('../img/b_newdb.svg');
+}
+
+.ic_b_newtbl {
+  background-image: url('../img/b_newtbl.svg');
+}
+
+.ic_b_nextpage {
+  background-image: url('../img/b_nextpage.svg');
+}
+
+.ic_b_no_favorite {
+  background-image: url('../img/b_no_favorite.svg');
+}
+
+.ic_b_pdfdoc {
+  background-image: url('../img/b_pdfdoc.svg');
+}
+
+.ic_b_plugin {
+  background-image: url('../img/b_plugin.svg');
+}
+
+.ic_b_plus {
+  background-image: url('../img/b_plus.svg');
+}
+
+.ic_b_prevpage {
+  background-image: url('../img/b_prevpage.svg');
+}
+
+.ic_b_primary {
+  background-image: url('../img/b_primary.svg');
+}
+
+.ic_b_print {
+  background-image: url('../img/b_print.svg');
+}
+
+.ic_b_props {
+  background-image: url('../img/b_props.svg');
+}
+
+.ic_b_relations {
+  background-image: url('../img/b_relations.svg');
+}
+
+.ic_b_report {
+  background-image: url('../img/b_report.svg');
+}
+
+.ic_b_routine_add {
+  background-image: url('../img/b_routine_add.svg');
+}
+
+.ic_b_routines {
+  background-image: url('../img/b_routines.svg');
+}
+
+.ic_b_save {
+  background-image: url('../img/b_save.svg');
+}
+
+.ic_b_saveimage {
+  background-image: url('../img/b_saveimage.svg');
+}
+
+.ic_b_sbrowse {
+  background-image: url('../img/b_sbrowse.svg');
+}
+
+.ic_b_sdb {
+  background-image: url('../img/b_sdb.png');
+  width: 10px;
+  height: 10px;
+}
+
+.ic_b_search {
+  background-image: url('../img/b_search.svg');
+}
+
+.ic_b_select {
+  background-image: url('../img/b_select.svg');
+}
+
+.ic_b_snewtbl {
+  background-image: url('../img/b_snewtbl.svg');
+}
+
+.ic_b_spatial {
+  background-image: url('../img/b_spatial.png');
+}
+
+.ic_b_sql {
+  background-image: url('../img/b_sql.svg');
+}
+
+.ic_b_sqldoc {
+  background-image: url('../img/b_sqldoc.svg');
+}
+
+.ic_b_sqlhelp {
+  background-image: url('../img/b_sqlhelp.svg');
+}
+
+.ic_b_table_add {
+  background-image: url('../img/b_table_add.svg');
+}
+
+.ic_b_tblanalyse {
+  background-image: url('../img/b_tblanalyse.png');
+}
+
+.ic_b_tblexport {
+  background-image: url('../img/b_tblexport.svg');
+}
+
+.ic_b_tblimport {
+  background-image: url('../img/b_tblimport.svg');
+}
+
+.ic_b_tblops {
+  background-image: url('../img/b_tblops.svg');
+}
+
+.ic_b_tbloptimize {
+  background-image: url('../img/b_tbloptimize.png');
+}
+
+.ic_b_tipp {
+  background-image: url('../img/b_tipp.svg');
+}
+
+.ic_b_trigger_add {
+  background-image: url('../img/b_trigger_add.svg');
+}
+
+.ic_b_triggers {
+  background-image: url('../img/b_triggers.svg');
+}
+
+.ic_b_undo {
+  background-image: url('../img/b_undo.svg');
+}
+
+.ic_b_unique {
+  background-image: url('../img/b_unique.png');
+}
+
+.ic_b_usradd {
+  background-image: url('../img/b_usradd.svg');
+}
+
+.ic_b_usrcheck {
+  background-image: url('../img/b_usrcheck.svg');
+}
+
+.ic_b_usrdrop {
+  background-image: url('../img/b_usrdrop.svg');
+}
+
+.ic_b_usredit {
+  background-image: url('../img/b_usredit.svg');
+}
+
+.ic_b_usrlist {
+  background-image: url('../img/b_usrlist.svg');
+}
+
+.ic_b_versions {
+  background-image: url('../img/b_versions.svg');
+}
+
+.ic_b_view {
+  background-image: url('../img/b_view.svg');
+}
+
+.ic_b_view_add {
+  background-image: url('../img/b_view_add.png');
+}
+
+.ic_b_views {
+  background-image: url('../img/b_views.svg');
+}
+
+.ic_bd_browse {
+  background-image: url('../img/bd_browse.svg');
+}
+
+.ic_bd_deltbl {
+  background-image: url('../img/bd_deltbl.svg');
+}
+
+.ic_bd_drop {
+  background-image: url('../img/bd_drop.svg');
+}
+
+.ic_bd_edit {
+  background-image: url('../img/bd_edit.svg');
+}
+
+.ic_bd_empty {
+  background-image: url('../img/bd_empty.svg');
+}
+
+.ic_bd_export {
+  background-image: url('../img/bd_export.svg');
+}
+
+.ic_bd_firstpage {
+  background-image: url('../img/bd_firstpage.svg');
+}
+
+.ic_bd_ftext {
+  background-image: url('../img/bd_ftext.svg');
+}
+
+.ic_bd_index {
+  background-image: url('../img/bd_index.svg');
+}
+
+.ic_bd_insrow {
+  background-image: url('../img/bd_insrow.svg');
+}
+
+.ic_bd_lastpage {
+  background-image: url('../img/bd_lastpage.svg');
+}
+
+.ic_bd_nextpage {
+  background-image: url('../img/bd_nextpage.svg');
+}
+
+.ic_bd_prevpage {
+  background-image: url('../img/bd_prevpage.svg');
+}
+
+.ic_bd_primary {
+  background-image: url('../img/bd_primary.svg');
+}
+
+.ic_bd_routine_add {
+  background-image: url('../img/bd_routine_add.png');
+}
+
+.ic_bd_sbrowse {
+  background-image: url('../img/bd_sbrowse.svg');
+}
+
+.ic_bd_select {
+  background-image: url('../img/bd_select.svg');
+}
+
+.ic_bd_spatial {
+  background-image: url('../img/bd_spatial.png');
+}
+
+.ic_bd_unique {
+  background-image: url('../img/bd_unique.png');
+}
+
+.ic_centralColumns {
+  background-image: url('../img/centralColumns.svg');
+}
+
+.ic_centralColumns_add {
+  background-image: url('../img/centralColumns_add.svg');
+}
+
+.ic_centralColumns_delete {
+  background-image: url('../img/centralColumns_delete.svg');
+}
+
+.ic_col_drop {
+  background-image: url('../img/col_drop.svg');
+}
+
+.ic_console {
+  background-image: url('../img/console.svg');
+}
+
+.ic_database {
+  background-image: url('../img/database.svg');
+}
+
+.ic_eye {
+  background-image: url('../img/eye.svg');
+}
+
+.ic_eye_grey {
+  background-image: url('../img/eye_grey.png');
+}
+
+.ic_hide {
+  background-image: url('../img/ic_hide.svg');
+}
+
+.ic_item {
+  background-image: url('../img/item.png');
+  width: 9px;
+  height: 9px;
+}
+
+.ic_lightbulb {
+  background-image: url('../img/lightbulb.svg');
+}
+
+.ic_lightbulb_off {
+  background-image: url('../img/lightbulb_off.svg');
+}
+
+.ic_more {
+  background-image: url('../img/more.svg');
+  width: 13px;
+}
+
+.ic_new_data {
+  background-image: url('../img/new_data.png');
+}
+
+.ic_new_data_hovered {
+  background-image: url('../img/new_data_hovered.png');
+}
+
+.ic_new_data_selected {
+  background-image: url('../img/new_data_selected.png');
+}
+
+.ic_new_data_selected_hovered {
+  background-image: url('../img/new_data_selected_hovered.png');
+}
+
+.ic_new_struct {
+  background-image: url('../img/new_struct.png');
+}
+
+.ic_new_struct_hovered {
+  background-image: url('../img/new_struct_hovered.png');
+}
+
+.ic_new_struct_selected {
+  background-image: url('../img/new_struct_selected.png');
+}
+
+.ic_new_struct_selected_hovered {
+  background-image: url('../img/new_struct_selected_hovered.png');
+}
+
+.ic_normalize {
+  background-image: url('../img/normalize.svg');
+}
+
+.ic_pause {
+  background-image: url('../img/pause.svg');
+}
+
+.ic_php_sym {
+  background-image: url('../img/php_sym.png');
+}
+
+.ic_play {
+  background-image: url('../img/play.svg');
+}
+
+.ic_s_asc {
+  background-image: url('../img/s_asc.svg');
+}
+
+.ic_s_asci {
+  background-image: url('../img/s_asci.svg');
+}
+
+.ic_s_attention {
+  background-image: url('../img/s_attention.svg');
+}
+
+.ic_s_cancel {
+  background-image: url('../img/s_cancel.svg');
+}
+
+.ic_s_cancel2 {
+  background-image: url('../img/s_cancel2.svg');
+}
+
+.ic_s_cog {
+  background-image: url('../img/s_cog.svg');
+}
+
+.ic_s_db {
+  background-image: url('../img/s_db.svg');
+}
+
+.ic_s_desc {
+  background-image: url('../img/s_desc.svg');
+}
+
+.ic_s_error {
+  background-image: url('../img/s_error.svg');
+}
+
+.ic_s_host {
+  background-image: url('../img/s_host.svg');
+}
+
+.ic_s_info {
+  background-image: url('../img/s_info.svg');
+}
+
+.ic_s_lang {
+  background-image: url('../img/s_lang.svg');
+}
+
+.ic_s_link {
+  background-image: url('../img/s_link.svg');
+}
+
+.ic_s_lock {
+  background-image: url('../img/s_lock.svg');
+}
+
+.ic_s_loggoff {
+  background-image: url('../img/s_loggoff.svg');
+}
+
+.ic_s_notice {
+  background-image: url('../img/s_notice.svg');
+}
+
+.ic_s_okay {
+  background-image: url('../img/s_okay.svg');
+}
+
+.ic_s_passwd {
+  background-image: url('../img/s_passwd.svg');
+}
+
+.ic_s_process {
+  background-image: url('../img/s_process.svg');
+}
+
+.ic_s_really {
+  background-image: url('../img/s_really.svg');
+  width: 11px;
+  height: 11px;
+}
+
+.ic_s_reload {
+  background-image: url('../img/s_reload.svg');
+}
+
+.ic_s_replication {
+  background-image: url('../img/s_replication.svg');
+}
+
+.ic_s_rights {
+  background-image: url('../img/s_rights.svg');
+}
+
+.ic_s_sortable {
+  background-image: url('../img/s_sortable.svg');
+}
+
+.ic_s_status {
+  background-image: url('../img/s_status.svg');
+}
+
+.ic_s_success {
+  background-image: url('../img/s_success.svg');
+}
+
+.ic_s_sync {
+  background-image: url('../img/s_sync.svg');
+}
+
+.ic_s_tbl {
+  background-image: url('../img/s_tbl.svg');
+}
+
+.ic_s_theme {
+  background-image: url('../img/s_theme.svg');
+}
+
+.ic_s_top {
+  background-image: url('../img/s_top.svg');
+}
+
+.ic_s_unlink {
+  background-image: url('../img/s_unlink.svg');
+}
+
+.ic_s_vars {
+  background-image: url('../img/s_vars.svg');
+}
+
+.ic_s_views {
+  background-image: url('../img/s_views.svg');
+}
+
+.ic_show {
+  background-image: url('../img/ic_show.svg');
+}
+
+.ic_window-new {
+  background-image: url('../img/window-new.svg');
+}
+
+.ic_ajax_clock_small {
+  background-image: url('../img/ajax_clock_small.gif');
+}
+
+.ic_s_partialtext {
+  background-image: url('../img/s_partialtext.png');
+}
+
+.ic_s_fulltext {
+  background-image: url('../img/s_fulltext.png');
+}
+
+.ic_s_collapseall {
+  background-image: url('../img/s_collapseall.svg');
+}

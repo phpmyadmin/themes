@@ -1,0 +1,73 @@
+// configures general layout for detailed layout configuration please refer to the css files
+
+$navi-width: 250px;
+$font-family: "Roboto",
+sans-serif;
+$font-family-light: "Roboto",
+sans-serif;
+$font-family-bold: "Roboto",
+sans-serif;
+$font-family-extra-bold: "Roboto",
+sans-serif;
+$font-family-fixed: "Roboto Mono",
+"Lucida Grande",
+monospace;
+
+// Theme color scheme
+
+$white: #c2c2c2;
+
+$navi-color: $white;
+$navi-background: color('surface', 'lighten-1');
+$navi-background-light: #428eb4;
+$navi-pointer-color: $white;
+$navi-pointer-background: #377796;
+$navi-database-name-color: $white;
+$navi-hover-background: #428eb4;
+
+$main-color: $white;
+$main-background: color('surface', 'base');
+
+$browse-pointer-color: #377796;
+$browse-marker-color: #000;
+$browse-warning-color: #d44a26;
+$browse-success-color: #01a31c;
+$browse-gray-color: color('surface', 'lighten-4');
+$browse-marker-background: color('surface', 'lighten-3');
+
+$border-color: #161616;
+$button-color: white;
+$button-background: #377796;
+$button-hover: #428eb4;
+
+$th-background: color('surface', 'lighten-2');
+$th-disabled-background: color('surface', 'lighten-1');
+$th-color: $white;
+$th-pointer-color: #000;
+
+$bg-one: color('surface', 'lighten-3');
+$bg-two: color('surface', 'base');
+
+$blue-header: $primary-color;
+
+// Materialize
+
+$button-font-size: 12px;
+$button-padding: 0 10px;
+$button-height: 30px;
+
+$input-height: 30px;
+$input-font-size: 12px;
+$input-padding: 0 5px;
+$input-margin: 0;
+$input-color: $white;
+
+$card-bg-color: color('surface', 'lighten-3');
+
+@mixin materialIcon($icon) {
+    content: '';
+    background-image: url('../img/#{$icon}.svg');
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+}

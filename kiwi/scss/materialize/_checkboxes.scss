@@ -1,0 +1,19 @@
+[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    background-image: url('../img/check_box_outline_blank.svg');
+    background-size: contain;
+    background-position: center;
+    display: inline-block;
+    appearance: none;
+    border: none;
+    vertical-align: middle;
+}
+
+[type="checkbox"]:checked {
+    background-image: url('../img/check_box.svg');
+
+    &:disabled {
+        opacity: 0.3;
+    }
+}

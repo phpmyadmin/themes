@@ -1,0 +1,25 @@
+$primary-color: #8bc34a;
+$secondary-color: #4a8bc3;
+
+@import "direction";
+@import "materialize/color-variables";
+
+@import "variables";
+
+@import "materialize/variables";
+@import "materialize/global";
+@import "materialize/checkboxes";
+@import "materialize/inputs";
+
+@import "reset";
+@import "common";
+@import "enum-editor";
+@import "gis";
+@import "navigation";
+@import "designer";
+@import "buttons";
+@import "rte";
+@import "codemirror";
+@import "jqplot";
+@import "resizable-menu";
+@import "icons";

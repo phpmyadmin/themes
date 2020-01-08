@@ -1,0 +1,8 @@
+{
+    "name": "Dark",
+    "version": "5.0",
+    "description": "Dark theme for phpMyAdmin",
+    "author": "CodingKiwi",
+    "url": "https://codingkiwi.de",
+    "supports": ["5.0"]
+}
