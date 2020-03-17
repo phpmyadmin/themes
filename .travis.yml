@@ -1,14 +1,11 @@
-# The Travis setup:
-# - run lint for every PHP version
-
 language: php
 
 php:
-  - "7.1"
   - "7.0"
-  - "5.6"
-  - "5.5"
-  - hhvm
+  - "7.1"
+  - "7.2"
+  - "7.3"
+  - "7.4"
 
 sudo: false
 
