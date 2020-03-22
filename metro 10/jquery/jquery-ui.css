@@ -755,7 +755,7 @@ button.ui-button::-moz-focus-inner {
 	height: .8em;
 }
 .ui-slider-horizontal .ui-slider-handle {
-	top: -3.3px;
+	top: -.3em;
 	margin-left: -.6em;
 }
 .ui-slider-horizontal .ui-slider-range {
@@ -898,11 +898,11 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 1px solid #bfbfbf;
+	border: 1px solid #d3d3d3;
 }
 .ui-widget-content {
-	border: 1px solid #c7c7c7;
-	background: #f7f7f7;
+	border: 1px solid #aaaaaa;
+	background: #ffffff;
 	color: #222222;
 }
 .ui-widget-content a {
@@ -929,10 +929,10 @@ body .ui-tooltip {
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-	border: 1px solid #b3b6b7;
-	background: #cdd8de;
+	border: 1px solid #d3d3d3;
+	background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
 	font-weight: normal;
-	color: #377796;
+	color: #555555;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -941,7 +941,7 @@ a.ui-button,
 a:link.ui-button,
 a:visited.ui-button,
 .ui-button {
-	color: #ffffff;
+	color: #555555;
 	text-decoration: none;
 }
 .ui-state-hover,
@@ -953,7 +953,7 @@ a:visited.ui-button,
 .ui-button:hover,
 .ui-button:focus {
 	border: 1px solid #999999;
-	/* background: #dadada url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x; */
+	background: #dadada url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
 	font-weight: normal;
 	color: #212121;
 }
