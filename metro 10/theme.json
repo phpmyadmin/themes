@@ -1,8 +1,8 @@
 {
     "name": "Metro 10",
     "version": "5.0",
-    "description": "Metro theme for phpMyAdmin",
+    "description": "Metro 10  theme for phpMyAdmin",
     "author": "phpMyAdmin developers and hplhu and Aminur",
-    "url": "https://www.phpmyadmin.net/",
+    "url": ["https://www.phpmyadmin.net/","https://github.com/aminur670/phpmyadmin_themes/"],
     "supports": ["5.0"]
 }
