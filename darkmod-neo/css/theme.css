@@ -1,50 +1,4 @@
-	﻿:root
-{
-	--blue: #007bff;
-	--indigo: #6610f2;
-	--purple: #6f42c1;
-	--pink: #e83e8c;
-	--red: #dc3545;
-	--orange: #fd7e14;
-	--yellow: #ffc107;
-	--green: #28a745;
-	--teal: #20c997;
-	--cyan: #17a2b8;
-	--white: #fff;
-	--gray: #6c757d;
-	--gray-dark: #343a40;
-	--primary: #ddd;
-	--secondary: #ddd;
-	--success: #28a745;
-	--info: #17a2b8;
-	--warning: #ffc107;
-	--danger: #dc3545;
-	--light: #f8f9fa;
-	--dark: #343a40;
-	--breakpoint-xs: 0;
-	--breakpoint-sm: 576px;
-	--breakpoint-md: 768px;
-	--breakpoint-lg: 992px;
-	--breakpoint-xl: 1200px;
-	--font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-	--font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
-}
-	*,*::before,*::after
-{
-	box-sizing:border-box
-}
-	html
-{
-	font-family:sans-serif;
-	line-height:1.15;
-	-webkit-text-size-adjust:100%;
-	-webkit-tap-highlight-color:rgba(0,0,0,0)
-}
-	article,aside,figcaption,figure,footer,header,hgroup,main,nav,section
-{
-	display:block
-}
-	body
+﻿﻿	body
 {
 	margin:0;
 	font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
@@ -53,7 +7,7 @@
 	line-height:1.5;
 	color:#212529;
 	text-align:left;
-	background-color:#fff
+	background-color:#1A1629
 }
 	[tabindex="-1"]:focus
 {
@@ -512,8 +466,8 @@
 .btn-warning
 {
 	color:#212529;
-	background:#ffc107 linear-gradient(180deg, #ffca2c, #ffc107) repeat-x;
-	border-color:#ffc107;
+	background:#E50CF5 linear-gradient(180deg, #ab2795, #E50CF5) repeat-x;
+	border-color:#ab2795;
 	box-shadow:inset 0 1px 0 rgba(255,255,255,.15),0 1px 1px rgba(0,0,0,.075)
 }
 .btn-warning:hover
@@ -529,8 +483,8 @@
 .btn-warning.disabled,.btn-warning:disabled
 {
 	color:#212529;
-	background-color:#ffc107;
-	border-color:#ffc107;
+	background-color:#E50CF5;
+	border-color:#E50CF5;
 	background-image:none
 }
 .btn-warning:not(:disabled):not(.disabled):active,.btn-warning:not(:disabled):not(.disabled).active,.show>.btn-warning.dropdown-toggle
@@ -771,14 +725,14 @@
 }
 .btn-outline-warning
 {
-	color:#ffc107;
-	border-color:#ffc107
+	color:#E50CF5;
+	border-color:#E50CF5
 }
 .btn-outline-warning:hover
 {
 	color:#212529;
-	background-color:#ffc107;
-	border-color:#ffc107
+	background-color:#E50CF5;
+	border-color:#E50CF5
 }
 .btn-outline-warning:focus,.btn-outline-warning.focus
 {
@@ -786,14 +740,14 @@
 }
 .btn-outline-warning.disabled,.btn-outline-warning:disabled
 {
-	color:#ffc107;
+	color:#E50CF5;
 	background-color:transparent
 }
 .btn-outline-warning:not(:disabled):not(.disabled):active,.btn-outline-warning:not(:disabled):not(.disabled).active,.show>.btn-outline-warning.dropdown-toggle
 {
 	color:#212529;
-	background-color:#ffc107;
-	border-color:#ffc107
+	background-color:#E50CF5;
+	border-color:#E50CF5
 }
 .btn-outline-warning:not(:disabled):not(.disabled):active:focus,.btn-outline-warning:not(:disabled):not(.disabled).active:focus,.show>.btn-outline-warning.dropdown-toggle:focus
 {
@@ -1044,7 +998,7 @@
 }
 	#page_content
 {
-	margin:0 .5em
+	margin:1em
 }
 .desktop50
 {
@@ -1073,7 +1027,7 @@
 }
 	h2
 {
-	font-size:2em;
+	font-size:1.2em;
 	font-weight:normal;
 	text-shadow:0 1px 0 #fff;
 	padding:10px 0 10px;
@@ -1545,18 +1499,12 @@
 {
 	background:#1a1e30
 }
-	table tbody:first-of-type tr:nth-child(odd),table tbody:first-of-type tr:nth-child(odd) th,#table_index tbody:nth-of-type(odd) tr,#table_index tbody:nth-of-type(odd) /* th
-{
-	background:#fff
-}
+	table tbody:first-of-type tr:nth-child(odd),table tbody:first-of-type tr:nth-child(odd) th,#table_index tbody:nth-of-type(odd) tr,#table_index tbody:nth-of-type(odd)
 	 */th
 {
 	background:#1a1e30
 }
-	table tbody:first-of-type tr:nth-child(even),table tbody:first-of-type tr:nth-child(even) th,#table_index tbody:nth-of-type(even) tr,#table_index tbody:nth-of-type(even) /* th
-{
-	background:#dfdfdf
-}
+	table tbody:first-of-type tr:nth-child(even),table tbody:first-of-type tr:nth-child(even) th,#table_index tbody:nth-of-type(even) tr,#table_index tbody:nth-of-type(even)
 	 */th
 {
 	background:#292c3e
@@ -1717,7 +1665,7 @@
 	div.success,div.notice,div.error
 {
 	margin:.5em 0 .5em;
-	border:1px solid;
+	border:2px solid;
 	background-repeat:no-repeat;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
@@ -1734,23 +1682,23 @@
 }
 .success
 {
-	color:#000;
-	background-color:#ebf8a4
+	color:#fff;
+	background-color:#222435
 }
 	h1.success,div.success
 {
-	border-color:#a2d246
+	border-color:#E50CF5
 }
 .success h1
 {
 	border-color:lime
 }
-	/* .notice
-{
-	color:#000;
-	background-color:#e8eef1
-}
-	 */.notice
+/*	 .notice*/
+/*{*/
+/*	color:#000;*/
+/*	background-color:#e8eef1*/
+/*}*/
+	 .notice
 {
 	color:#f0f0f0;
 	background-color:#222435
@@ -1761,30 +1709,26 @@
 }
 	 */h1.notice,div.notice
 {
-	border-color:#3a6c7e
+	border-color:#E50CF5
 }
-	/* .notice h1
+	.notice h1
 {
-	border-color:#ffb10a
-}
-	 */.notice h1
-{
-	border-color:#ffb10a
+	border-color:#E50CF5
 }
 .error
 {
-	border:1px solid maroon !important;
-	color:#000;
-	background:pink
+	border:2px solid #E50CF5 !important;
+	color:#E50CF5;
+	background:#222435
 }
 	h1.error
 {
-	border-color:#333
+	border-color:#E50CF5
 }
 	div.error
-{
-	border-color:#333
-}
+/*{*/
+/*	border-color:#333*/
+/*}*/
 	div.error h1
 {
 	border-color:red
@@ -1792,7 +1736,7 @@
 .confirmation
 {
 	color:#000;
-	background-color:pink
+	background-color:#222435
 }
 .new_central_col
 {
@@ -1804,13 +1748,7 @@
 	font-weight:normal;
 	color:#009
 }
-	/* .tblHeaders
-{
-	font-weight:bold;
-	color:#000;
-	background:#222435
-}
-	 */.tblHeaders
+	.tblHeaders
 {
 	font-weight:bold;
 	color:#f0f0f0;
@@ -1890,7 +1828,7 @@
 	margin:0 auto;
 	width:30em;
 	text-align:center;
-	background:#fff;
+	background:#1A1629;
 	z-index:999
 }
 	div#modalOverlay
@@ -1900,7 +1838,7 @@
 	left:0;
 	height:100%;
 	width:100%;
-	background:#fff;
+	background:#1A1629;
 	z-index:900
 }
 	form.login label
@@ -2214,12 +2152,12 @@
 }
 	#serverinfo
 {
-	background:#7c8ea0;
+	background:#0d0b14;
 	padding:.3em .9em .6em;
 	padding-left:2.2em;
 	text-shadow:0 1px 0 #000;
 	max-width:100%;
-	max-height:16px;
+	max-height:20px;
 	overflow:hidden;
 	box-sizing:content-box
 }
@@ -2243,13 +2181,14 @@
 }
 	#goto_pagetop,#lock_page_icon
 {
-	padding:.25em;
-	background:#7c8ea0
+	/*padding:.25em;*/
+	/*background:#7c8ea0*/
+		padding-right: .25em;
 }
 	#page_settings_icon
 {
 	padding:.25em;
-	background:#7c8ea0;
+	/*background:#7c8ea0;*/
 	cursor:pointer;
 	display:none
 }
@@ -2281,7 +2220,7 @@
 	height:auto;
 	overflow:visible;
 	visibility:hidden;
-	background-color:#ffc;
+	background-color:#29b5af;
 	color:#060;
 	border:.1em solid #000;
 	padding:.5em
@@ -2580,7 +2519,7 @@
 	p.notice
 {
 	margin:1.5em 0;
-	border:1px solid #000;
+	border:1px solid #E50CF5;
 	background-repeat:no-repeat;
 	background-position:10px 50%;
 	padding:10px 10px 10px 25px;
@@ -2590,8 +2529,8 @@
 	-moz-box-shadow:0 1px 2px #fff inset;
 	-webkit-box-shadow:0 1px 2px #fff inset;
 	box-shadow:0 1px 2px #fff inset;
-	background-color:#555;
-	color:#d4fb6a
+	background-color:#222435;
+	color:#fff
 }
 	p.notice a
 {
@@ -2882,7 +2821,7 @@
 	padding:.1em .3em;
 	margin-top:0;
 	color:#fff;
-	font-size:1.6em;
+	font-size:1.2em;
 	font-weight:normal;
 	text-shadow:0 1px 0 #777;
 	/* -moz-box-shadow:1px 1px 15px #999 inset;
@@ -2931,7 +2870,7 @@
 }
 	div.upload_progress_bar_inner
 {
-	background-color:#ddd;
+	background-color:#82b440;
 	width:0;
 	height:12px;
 	margin:1px;
@@ -2964,28 +2903,29 @@
 {
 	top:0;
 	position:fixed;
-	margin-top:200px;
+	margin-top:4px;
 	margin-right:auto;
 	margin-bottom:0;
 	margin-left:auto;
-	padding:5px;
+	padding:1px;
 	width:350px;
 	z-index:1100;
 	text-align:center;
 	display:inline;
 	left:0;
 	right:0;
+	font-size: 0.8em;
 	background-image:url("../img/ajax_clock_small.gif");
 	background-repeat:no-repeat;
 	background-position:2%;
-	border:1px solid #e2b709;
-	background-color:#ffe57e;
+	border:1px solid #29b5af;
+	background-color:#222435;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
-	box-shadow:0 5px 90px #888;
-	-moz-box-shadow:0 5px 90px #888;
-	-webkit-box-shadow:0 5px 90px #888
+	/*box-shadow:0 5px 90px #888;*/
+	/*-moz-box-shadow:0 5px 90px #888;*/
+	/*-webkit-box-shadow:0 5px 90px #888*/
 }
 	#loading_parent
 {
@@ -3033,11 +2973,11 @@
 .exportoptions ul,.importoptions ul,.format_specific_options ul
 {
 	list-style-type:none;
-	margin-bottom:15px
+	margin-bottom:10px
 }
 .exportoptions li,.importoptions li
 {
-	margin:7px
+	margin:5px
 }
 .exportoptions label,.importoptions label,.exportoptions p,.importoptions p
 {
@@ -3051,8 +2991,9 @@
 }
 .exportoptions,.importoptions
 {
-	margin:20px 30px 30px;
-	margin-left:10px
+	/*margin:10px 30px 30px;*/
+	/*margin-left:10px*/
+	margin: 0.5em;
 }
 .exportoptions #buttonGo,.importoptions #buttonGo
 {
@@ -5255,11 +5196,11 @@
 }
 	#pma_navigation_collapser
 {
-	width:20px;
-	height:22px;
-	line-height:22px;
-	background:#292c3e;
-	color:#555;
+	width:40px;
+	height:35px;
+	line-height:32px;
+	/*background:#292c3e;*/
+	color:#fff;
 	font-weight:bold;
 	position:fixed;
 	top:0;
@@ -5267,9 +5208,9 @@
 	text-align:center;
 	cursor:pointer;
 	z-index:800;
-	text-shadow:0 1px 0 #fff;
+	/*text-shadow:0 1px 0 #fff;*/
 	filter:dropshadow(color=#fff, offx=0, offy=1);
-	border:1px solid #888
+	/*border:2px solid #888*/
 }
 .pma_quick_warp
 {
@@ -6914,22 +6855,22 @@
 	background-image:url("../img/s_fulltext.png")
 }
 	/*# sourceMappingURL=theme.css.map */
-
-
-/*
+ 
+ 
+/* 
 ###########################################################
-DarkMode pmahomme by SQ
+DarkMode Neo by SQ
 ###########################################################
 
-body 
 background 1a1e30
 background darker and purple 171629
 background more darker and purple 1A1629
+
+body font color 212529
 text color 2f3247
+text color white f0f0f0
 link 29b5af
 link highlight ce504d
-
-.group h2
 
 dark alt1 222435
 light alt1 292c3e
@@ -6943,6 +6884,14 @@ accent2 bluegray 7c8ea0t
 accent3 purple 6e48aa
 accent4 lightpurple 9d50bb
 darker purple 6E48AA
+accent5 pink ab2795
+
+error font E50CF5
+error bg ab2795
+error border E50CF5
+notice
+notice bg 222435
+notice border
 
 input field
 background 484d69
@@ -6951,11 +6900,12 @@ hover ?
 
 button1 595c74
 button blue 228ae6
+button blue border 145791
 button green 82b440
 button lightgray cacaca
-
-*/
-
+ 
+*/ 
+ 
 body {
 	font-size:1.1rem;
 	background-color: #1A1629;
@@ -6971,12 +6921,9 @@ h2 {
     padding: 0.1em 0.3em;
     margin-top: 0;
     color: #fff;
-    font-size: 1.6em;
+    /*font-size: 1.2em;*/
     font-weight: normal;
     text-shadow: 0 1px 0 #777;
-    /* -moz-box-shadow: 1px 1px 15px #999 inset; */
-    /* -webkit-box-shadow: 1px 1px 15px #999 inset; */
-    /* box-shadow: 1px 1px 15px #999 inset; */
   }
   
   
@@ -6990,5 +6937,4 @@ h2 {
     direction: ltr;
 	background-color: #000;
 }
-
-
+ 
