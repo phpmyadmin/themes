@@ -6917,15 +6917,26 @@ ul.resizable-menu ul li
 DarkMode Neo by SQ
 ###########################################################
 
+body color 212529
 background 1a1e30
 background darker and purple 171629
-background more darker and purple 1A1629
+background more darker and purple 1A1629 (current)
 
-body font color 212529
-text color 2f3247
+text color darkblue 2f3247
+text color darkerblue 10121C
 text color white f0f0f0
+text color whiter f8f8f8
+
+text link 29b5af
+
+
+Nav
+bg 222435
 link 29b5af
-link highlight ce504d
+
+
+H2
+heading bg 9d50bb
 
 dark alt1 222435
 light alt1 292c3e
@@ -6935,11 +6946,15 @@ lighter 4A5071
 table alt1 2f3247
 
 accent1 light blue 29b5af
-accent2 bluegray 7c8ea0t
-accent3 purple 6e48aa
+accent2 bluegray 7c8ea0
+accent3 purpleroyal 6e48aa
+accent3b purple 973DBA
 accent4 lightpurple 9d50bb
+accent5 bluepurple 5A47BA
 darker purple 6E48AA
-accent5 pink ab2795
+accent6 pink ab2795
+accent pinkbright ED4EA1
+accent red ce504d
 
 error font E50CF5
 error bg ab2795
@@ -6948,16 +6963,36 @@ notice
 notice bg 222435
 notice border
 
-input field
-background 484d69
+Input field
+border BDBDBD
+background 1A1629
+backgroung hover 484d69
 color f2f2f2
 hover ?
+input border BDBDBD
 
-button1 595c74
+Button
+font fff
+bg 29b5af
+border 29b5af
+hover border 34E8E0
+
+// unused
 button blue 228ae6
 button blue border 145791
+button bg hover 145791
 button green 82b440
 button lightgray cacaca
+button text f0f0f0
+button hover text f8f8f8
+
+button bg 29b5af 222435
+button border BDBDBD 29b5af
+button border hover 47ADBA
+
+bright green 3DBA83
+green 2A6E4F
+teal 47ADBA
 
 */
 
@@ -6993,4 +7028,39 @@ code.sql {
 	background-color: #1A1629;
 }
 
+/*
+Name:       dracula
+Author:     Michael Kaminsky (http://github.com/mkaminsky11)
+Original dracula color scheme by Zeno Rocha (https://github.com/zenorocha/dracula-theme)
+*/
 
+.CodeMirror, .cm-s-default, .CodeMirror-gutters {
+	background: #1A1629 !important;
+	color: #f8f8f2 !important;
+	border: none;
+}
+.cm-s-default .CodeMirror-gutters { color: #282a36; }
+.cm-s-default .CodeMirror-cursor { border-left: solid thin #f8f8f0; }
+.cm-s-default .CodeMirror-linenumber { color: #6D8A88; }
+.cm-s-default .CodeMirror-selected { background: rgba(255, 255, 255, 0.10); }
+.cm-s-default .CodeMirror-line::selection, .cm-s-default .CodeMirror-line > span::selection, .cm-s-default .CodeMirror-line > span > span::selection { background: rgba(255, 255, 255, 0.10); }
+.cm-s-default .CodeMirror-line::-moz-selection, .cm-s-default .CodeMirror-line > span::-moz-selection, .cm-s-default .CodeMirror-line > span > span::-moz-selection { background: rgba(255, 255, 255, 0.10); }
+.cm-s-default span.cm-comment { color: #6272a4; }
+.cm-s-default span.cm-string, .cm-s-default span.cm-string-2 { color: #f1fa8c; }
+.cm-s-default span.cm-number { color: #bd93f9; }
+.cm-s-default span.cm-variable { color: #50fa7b; }
+.cm-s-default span.cm-variable-2 { color: white; }
+.cm-s-default span.cm-def { color: #50fa7b; }
+.cm-s-default span.cm-operator { color: #ff79c6; }
+.cm-s-default span.cm-keyword { color: #ff79c6; }
+.cm-s-default span.cm-atom { color: #bd93f9; }
+.cm-s-default span.cm-meta { color: #f8f8f2; }
+.cm-s-default span.cm-tag { color: #ff79c6; }
+.cm-s-default span.cm-attribute { color: #50fa7b; }
+.cm-s-default span.cm-qualifier { color: #50fa7b; }
+.cm-s-default span.cm-property { color: #66d9ef; }
+.cm-s-default span.cm-builtin { color: #50fa7b; }
+.cm-s-default span.cm-variable-3, .cm-s-default span.cm-type { color: #ffb86c; }
+
+.cm-s-default .CodeMirror-activeline-background { background: rgba(255,255,255,0.1); }
+.cm-s-default .CodeMirror-matchingbracket { text-decoration: underline; color: white !important; }
