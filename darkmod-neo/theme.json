@@ -1,0 +1,8 @@
+{
+    "name": "darkmod-neo",
+    "version": "5.0",
+    "description": "DarkMod Neo, A Dark Theme for phpMyAdmin",
+    "author": "Suprethreal",
+    "url": "https://github.com/suprethreal",
+    "supports": ["5.0"]
+}
