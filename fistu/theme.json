@@ -1,0 +1,8 @@
+{
+	"name": "Fistu",
+	"version": "1.0",
+	"description": "a clean makeup for phpMyAdmin",
+	"author": "Mohan Khadka",
+	"url": "https://www.mohankhadka.com.np/",
+	"supports": ["5.1","5.2"]
+}

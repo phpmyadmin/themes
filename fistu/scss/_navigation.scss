@@ -1,0 +1,558 @@
+#pmalogo {
+	position: relative;
+	color: $white;
+	height: $top-bar-height;
+	&:after {
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		font-size: 20px;
+		font-weight: 600;
+		position: absolute;
+		content: 'phpMyAdmin';
+		line-height: $top-bar-height;
+	}
+	img {
+		display: none;
+	}
+}
+#pma_navigation {
+	top: 0;
+	#{$left}: 0;
+	z-index: 800;
+	height: 100vh;
+	position: fixed;
+	width: $navi-width;
+	color: $navi-color;
+
+	ul {
+		margin: 0;
+	}
+
+	form {
+		margin: 0;
+		padding: 0;
+		display: inline;
+	}
+
+	select {
+		&#select_server,
+		&#lightm_db {
+			width: 100%;
+		}
+	}
+
+	div {
+		&.pageselector {
+			margin: 0;
+			text-align: center;
+			margin-#{$left}: 0.75em;
+			border-#{$left}: 1px solid $navi-tree-color;
+		}
+	}
+
+	#pmalogo,
+	#databaseList,
+	#serverChoice,
+	#navipanellinks,
+	#recentTableList,
+	#favoriteTableList,
+	div.pageselector.dbselector {
+		border: 0;
+		text-align: center;
+		padding: 5px 10px 0;
+	}
+
+	#navipanellinks {
+		background-color: $white;
+		a {
+			margin: 0 .35em;
+			display: inline-block;
+		}
+		.icon {
+			margin: 0;
+		}
+		.ic_b_home {
+			@include fistu-icon('home','#{$secondary}');
+			&:hover {
+				@include fistu-icon('home','#{$primary}');
+			}
+		}
+		.ic_s_loggoff {
+			@include fistu-icon('log-out','#{$secondary}');
+			&:hover {
+				@include fistu-icon('log-out','#{$primary}');
+			}
+		}
+		.ic_b_docs {
+			@include fistu-icon('help-circle','#{$secondary}');
+			&:hover {
+				@include fistu-icon('help-circle','#{$primary}');
+			}
+		}
+		.ic_b_sqlhelp {
+			@include fistu-icon('file-text','#{$secondary}');
+			&:hover {
+				@include fistu-icon('file-text','#{$primary}');
+			}
+		}
+		.ic_s_cog {
+			@include fistu-icon('settings','#{$secondary}');
+			&:hover {
+				@include fistu-icon('settings','#{$primary}');
+			}
+		}
+		.ic_s_reload {
+			@include fistu-icon('refresh-ccw','#{$secondary}');
+			&:hover {
+				@include fistu-icon('refresh-ccw','#{$primary}');
+			}
+		}
+	}
+
+	#recentTable,
+	#favoriteTable {
+		width: 200px;
+	}
+
+	#favoriteTableList select,
+	#serverChoice select {
+		width: 80%;
+	}
+}
+
+#pma_navigation_header {
+	overflow: hidden;
+}
+
+#pma_navigation_content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	#{$left}: 0;
+	z-index: 0;
+
+	> img.throbber {
+		display: none;
+		margin: 0.3em auto 0;
+	}
+}
+
+#pma_navigation_select_database {
+	text-align: $left;
+	padding: 0 0 0;
+	border: 0;
+	margin: 0;
+}
+
+#pma_navigation_db_select {
+	margin-top: 0.5em;
+	margin-#{$left}: 0.75em;
+
+	select {
+		background: url('../img/select_bg.png') repeat scroll 0 0;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		border: 1px solid #bbb;
+		border-top: 1px solid #bbb;
+		color: #333;
+		padding: 4px 6px;
+		margin: 0 0 0;
+		width: 92%;
+		font-size: 1.11em;
+	}
+}
+
+#pma_navigation_tree_content {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	position: absolute;
+	padding-#{$left}: 5px;
+
+	a.hover_show_full {
+		position: relative;
+		z-index: 100;
+		vertical-align: sub;
+	}
+}
+
+#pma_navigation_tree {
+	margin: 0;
+	color: #444;
+	height: 74%;
+	overflow: hidden;
+	position: relative;
+	//padding-#{$left}: 5px;
+	background-color: $white-smoke;
+
+	a {
+		color: $navi-color;
+		padding-left: 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	.pageselector .ajax {
+		padding: 4px 8px;
+		border-radius: 2px;
+		display: inline-block;
+		border: 1px solid #bbb;
+		background-color: #fff;
+	}
+
+	ul {
+		clear: both;
+		padding: 0;
+		list-style-type: none;
+		margin: 0;
+
+		ul {
+			position: relative;
+		}
+	}
+
+	li {
+		margin-bottom: 0;
+
+		&.activePointer,
+		&.selected {
+			color: $navi-pointer-color;
+			background-color: $navi-pointer-background;
+		}
+
+		.dbItemControls {
+			padding-#{$left}: 4px;
+		}
+
+		.navItemControls {
+			display: none;
+			padding-#{$left}: 4px;
+		}
+
+		&.activePointer .navItemControls {
+			opacity: 0.5;
+			display: inline;
+
+			&:hover {
+				opacity: 1;
+				display: inline;
+			}
+		}
+	}
+
+	li {
+		white-space: nowrap;
+		clear: both;
+		min-height: 16px;
+
+		&.fast_filter {
+			clear: both;
+			min-height: 16px;
+			white-space: nowrap;
+		}
+	}
+	img {
+		margin: 0;
+	}
+	i {
+		display: block;
+	}
+	div {
+		&.block {
+			float: $left;
+			width: 1.5em;
+			height: 1.5em;
+			min-width: 16px;
+			min-height: 16px;
+			position: relative;
+
+			&.double {
+				width: 2.5em;
+			}
+
+			i, b {
+				z-index: 0;
+				width: 1.5em;
+				height: 1.7em;
+				bottom: 0.72em;
+				min-width: 16px;
+				min-height: 8px;
+				#{$left}: 0.75em;
+				position: absolute;
+			}
+			// Top and right segments for the tree element connections
+			i {
+				display: block;
+				border-#{$left}: 1px solid $navi-tree-color;
+				border-bottom: 1px solid $navi-tree-color;
+				position: relative;
+				z-index: 0;
+
+				// Removes top segment
+				&.first {
+					border-#{$left}: 0;
+				}
+			}
+			// Bottom segment for the tree element connections
+			b {
+				display: block;
+				height: 0.75em;
+				bottom: 0;
+				#{$left}: 0.75em;
+				border-#{$left}: 1px solid $navi-tree-color;
+			}
+
+			a, u {
+				position: absolute;
+				#{$left}: 50%;
+				top: 50%;
+				z-index: 10;
+			}
+
+			a + a {
+				#{$left}: 100%;
+			}
+
+			&.double {
+				a, u {
+					#{$left}: 33%;
+				}
+
+				a + a {
+					#{$left}: 85%;
+				}
+			}
+
+			img {
+				position: relative;
+				top: -0.6em;
+				#{$left}: 0;
+				margin-#{$left}: -7px;
+			}
+		}
+
+		&.throbber img {
+			top: 2px;
+			#{$left}: 2px;
+		}
+	}
+
+	li {
+		&.last > ul {
+			background: none;
+		}
+		> {
+			a, i {
+				height: 1.5em;
+				line-height: 1.5em;
+				padding-#{$left}: 0.3em;
+			}
+		}
+	}
+
+	.list_container {
+		border-#{$left}: 1px solid $navi-tree-color;
+		margin-#{$left}: 0.75em;
+		padding-#{$left}: 0.75em;
+	}
+
+	.last > .list_container {
+		border-#{$left}: 0 solid $navi-tree-color;
+	}
+}
+
+// Fast filter
+li.fast_filter {
+	list-style: none;
+	margin-#{$left}: 0.75em;
+	padding-#{$right}: 15px;
+	padding-#{$left}: 0.65em;
+	border-#{$left}: 1px solid $navi-tree-color;
+
+	input {
+		width: 100%;
+		margin: 3px 0 0 0;
+		font-size: 0.7em;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-#{$left}: 4px;
+		padding-#{$right}: 2em;
+	}
+
+	span {
+		top: 4px;
+		width: 16px;
+		height: 16px;
+		color: #800;
+		font-size: 0;
+		padding: 0.2em;
+		cursor: pointer;
+		#{$right}: 17px;
+		position: absolute;
+		@include fistu-icon('x-square','#{$icon}');
+	}
+
+	&.db_fast_filter {
+		border: 0;
+		margin-#{$left}: 0;
+		margin-#{$right}: 10px;
+	}
+}
+
+// IE10+ has its own reset X
+html.ie {
+	li.fast_filter {
+		span {
+			display: none;
+		}
+
+		input {
+			padding-#{$right}: 0.2em;
+		}
+	}
+
+	&.ie9,
+	&.ie8 {
+		li.fast_filter {
+			span {
+				display: auto;
+			}
+			input {
+				padding-#{$right}: 1.7em;
+			}
+	}
+	}
+}
+
+#navigation_controls_outer {
+	min-height: 21px !important;
+	&.activePointer {
+		background-color: transparent !important;
+	}
+}
+
+#navigation_controls {
+	float: $right;
+	padding-#{$right}: 23px;
+	a {
+		margin: 4px;
+	}
+}
+
+// Resize handler
+#pma_navigation_resizer {
+	top: 0;
+	width: 3px;
+	height: 100%;
+	z-index: 801;
+	position: fixed;
+	#{$left}: 240px;
+	cursor: col-resize;
+	border-left: 1px solid fade-out($black,0.90);
+}
+
+#pma_navigation_collapser {
+	top: 0;
+	font-size: 0;
+	z-index: 800;
+	cursor: pointer;
+	position: fixed;
+	#{$left}: $navi-width;
+	width: $top-bar-height;
+	height: $top-bar-height;
+	line-height: $top-bar-height;
+	background-repeat: no-repeat;
+	background-position: center;
+	&[title="Hide panel"] {
+		@include fistu-icon('arrow-left','#{$white}');
+	}
+	&[title="Show panel"] {
+		@include fistu-icon('arrow-right','#{$white}');
+	}
+	&:hover {
+		background-color: fade-out($black,0.65);
+	}
+}
+
+// Quick warp links
+.pma_quick_warp {
+	margin-top: 5px;
+	margin-#{$left}: 2px;
+	position: relative;
+
+	.drop_list {
+		float: $left;
+		margin-#{$left}: 3px;
+		padding: 2px 0;
+
+		ul {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			overflow-y: auto;
+			list-style: none;
+			background: #fff;
+			border: 1px solid #ddd;
+			border-radius: 0.3em;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			box-shadow: 0 0 5px #ccc;
+			top: 100%;
+			#{$left}: 3px;
+			#{$right}: 0;
+			display: none;
+			z-index: 802;
+		}
+
+		li {
+			padding: 0;
+			border-radius: 0;
+			white-space: nowrap;
+
+			img {
+				vertical-align: sub;
+			}
+
+			&:hover {
+				background: #f2f2f2;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 0.2em 0.3em;
+
+			&.favorite_table_anchor {
+				clear: $left;
+				float: $left;
+				padding: 0.1em 0.3em 0;
+			}
+		}
+		&:hover {
+			ul {
+				display: block;
+			}
+			.drop_button {
+				background-color: $primary;
+			}
+		}
+	}
+
+	.drop_button {
+		margin: 0 2px;
+		color: $white;
+		padding: 0.3em;
+		cursor: pointer;
+		border-radius: 2px;
+		background-color: $secondary;
+		&:hover {
+			background-color: $primary;
+		}
+	}
+}
