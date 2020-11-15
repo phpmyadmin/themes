@@ -101,7 +101,8 @@ ul#topmenu ul a:hover, ul#topmenu ul .tabactive {
 }
 
 ul#topmenu2 a, ul#topmenu2 a:hover {
-  text-decoration: none
+  text-decoration: none;
+  line-height: 20px
 }
 
 ul#topmenu>li.active {
