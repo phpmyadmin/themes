@@ -1,0 +1,53 @@
+name: Laravel
+
+on:
+  push:
+    branches: [ medicalhome-aprn-patch-1 ]
+  pull_request:
+    branches: [ medicalhome-aprn-patch-1 ]
+
+jobs:
+  laravel-tests: 
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Copy .env
+      run: php -r "file_exists('.env') || copy('.env.example', '.env');"
+    - name: Install Dependencies
+      run: composer install -q --no-ansi --no-interaction --no-scripts --no-progress --prefer-dist
+    - name: Generate key
+      run: php artisan key:generate
+    - name: Directory Permissions
+      run: chmod -R 777 storage bootstrap/cache
+    - name: Create Database
+      run: |
+        mkdir -p database
+        touch database/database.sqlite
+    - name: Execute tests (Unit and Feature tests) via PHPUnit
+      env:
+        DB_CONNECTION: sqlite
+        DB_DATABASE: database/database.sqlite
+      run: vendor/bin/phpunit
+      - name: OpenShift Login
+  # You may pin to the exact commit or the version.
+  # uses: redhat-actions/oc-login@9748974b7829ede1e26342314b0fb07e9612d621
+  uses: redhat-actions/oc-login@v1.1
+  with:
+    # Openshift Server URL.
+    openshift_server_url: 
+    # Openshift Bearer Token. Store in a secret.
+    openshift_token: # optional
+    # Openshift Username. Must be used with openshift_password.
+    openshift_username: # optional
+    # Openshift Password. Store in a secret. Must be used with openshift_username.
+    openshift_password: # optional
+    # Skip TLS certificate verification when connecting to the cluster.
+    insecure_skip_tls_verify: # optional, default is false
+    # Contents of a Certificate Authority (.crt) file for your cluster's SSL certificate. Store in a secret.
+    certificate_authority_data: # optional
+    # Set current context's namespace to this, after logging in.
+    namespace: # optional
+    # By default, the cluster name is masked, since it can be used to derive the server URL. Set this to true to skip masking the cluster name.
+    reveal_cluster_name: # optional, default is false
