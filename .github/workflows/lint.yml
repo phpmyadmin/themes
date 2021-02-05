@@ -1,0 +1,27 @@
+name: Lint themes
+
+on:
+  push:
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - master
+
+jobs:
+  test-php:
+    name: Test on php ${{ matrix.php-version }} and ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        php-version: ["7.0", "7.1", "7.2", "7.3", "7.4", "8.0"]
+        os: [ubuntu-latest]
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use php ${{ matrix.php-version }}
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php-version }}
+      - name: Lint PHP files
+        run: find . -name '*.php' -print0 | xargs -0 -r -n1 php -l
+      - name: Lint all themes
+        run: ./lint-theme.sh --all
