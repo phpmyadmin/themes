@@ -922,8 +922,8 @@ h1 {
     
 }
 bdo{
-    font-style: italic;
-    display: none
+    font-style: italic; 
+	
 }
 
 h2 {
@@ -1397,7 +1397,7 @@ table tbody:first-of-type tr tr:not(.nopointer):hover, table tbody:first-of-type
   color: #999
 }
 #table_index tbody.row_span th{
-    background: #191919!important
+    background: #222!important
 }
 
 
@@ -1937,6 +1937,12 @@ tr.noclick th, tr.noclick td{
 .table_results tr.marked td {
     background: #444444!important    
 }
+.table_results tr.marked td:hover {
+    background: #444444!important    
+}
+.table_results tr.marked .center.print_ignore {
+    background: #444444!important    
+}
 
 #tablespecificuserrights tr.marked td{
 	color: #2BBBAD!important
@@ -1966,7 +1972,7 @@ tr.noclick th, tr.noclick td{
     background: #222!important
 }
 .responsivetable #tablestructure tbody td{
-    background: #222!important
+    background: #222!important; 
 }
 .responsivetable #tablestructure tr.marked td{
 	color: #2BBBAD!important
@@ -1999,9 +2005,22 @@ tr.noclick th, tr.noclick td{
 .table_results tbody td{
 	background: #222!important
 }
-.table_results tbody tr, td{
-	background: #141414!important;
+
+.table_results tbody tr, td.print_ignore{
+	background: #222!important;
 	
+}
+.table_results td.print_ignore:hover{
+	background: #222!important;	
+}
+.table_results tbody td.print_ignore:hover{
+	background: #222!important;	
+}
+table.table_results {
+	background: #222!important;	
+}
+table.table_results td:hover{
+	background: #222!important;	
 }
 
 
@@ -2015,6 +2034,7 @@ tr.noclick th, tr.noclick td{
 .responsivetable th{
     background: #141414!important
 }
+
 .responsivetable th, td:hover{
     color: #999!important
 }
