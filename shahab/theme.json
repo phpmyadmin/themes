@@ -1,0 +1,8 @@
+{
+    "name": "shahab",
+    "version": "0.1",
+    "description": "A Modern Dark theme for PhpMyAdmin",
+    "author": "Shahab Movahhedi",
+    "url": "https://shmovahhedi.com/",
+    "supports": ["5.0", "5.1"]
+}
