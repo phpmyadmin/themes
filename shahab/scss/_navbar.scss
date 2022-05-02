@@ -1,35 +1,35 @@
 .navbar.bg-light {
-  background: linear-gradient(#fff, #dcdcdc);
+	background: linear-gradient(#fff, #dcdcdc);
 }
 
 .navbar-nav {
-  font-weight: bold;
+	font-weight: bold;
 }
 
 .navbar-nav .icon {
-  width: 22px;
-  height: 22px;
-  margin-#{$direction-end}: 0.5em;
-  margin-top: -2px;
-  // vertical-align: -3px;
+	width: 22px;
+	height: 22px;
+	margin-#{$direction-end}: 0.5em;
+	margin-top: -2px;
+	// vertical-align: -3px;
 }
 
 .navbar-nav .nav-item {
-  background: linear-gradient(#fff, #dcdcdc);
-  border-#{$direction-end}: 1px solid #fff;
-  border-#{$direction-start}: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
+	background: linear-gradient(#fff, #dcdcdc);
+	border-#{$direction-end}: 1px solid #fff;
+	border-#{$direction-start}: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 
-  &:first-child {
-    border-#{$direction-start}: 0;
-  }
+	&:first-child {
+		border-#{$direction-start}: 0;
+	}
 
-  &:hover {
-    background: linear-gradient(#fff, #e5e5e5);
-  }
+	&:hover {
+		background: linear-gradient(#fff, #e5e5e5);
+	}
 
-  &.active {
-    background: #fff;
-    border-bottom: 0;
-  }
+	&.active {
+		background: #fff;
+		border-bottom: 0;
+	}
 }

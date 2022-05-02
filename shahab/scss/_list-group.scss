@@ -1,11 +1,11 @@
 .list-group {
-  padding-#{$direction-start}: 40px;
-  margin: 1rem 0;
+	padding-#{$direction-start}: 40px;
+	margin: 1rem 0;
 }
 
 .list-group-item {
-  display: list-item;
-  border: none;
+	display: list-item;
+	border: none;
 }
 
 #li_select_server,
@@ -14,8 +14,8 @@
 #li_user_preferences,
 #li_select_lang,
 #li_select_theme {
-  &.list-group-item {
-    display: block;
-    margin-#{$direction-start}: -20px;
-  }
+	&.list-group-item {
+		display: block;
+		margin-#{$direction-start}: -20px;
+	}
 }

@@ -1,25 +1,25 @@
 .breadcrumb {
-  padding-#{$direction-start}: 2.2em;
-  // text-shadow: 0 1px 0 #000;
+	padding-#{$direction-start}: 2.2em;
+	// text-shadow: 0 1px 0 #000;
 }
 
 .breadcrumb-item {
-  + .breadcrumb-comment {
-    padding-left: 0.5rem;
-  }
+	+ .breadcrumb-comment {
+		padding-left: 0.5rem;
+	}
 
-  .icon {
-    margin: 0;
-  }
+	.icon {
+		margin: 0;
+	}
 
-  a {
-    color: #fff;
-  }
+	a {
+		color: #fff;
+	}
 }
 
 .breadcrumb-comment {
-  color: #d6d6d6;
-  font-weight: bold;
-  font-style: italic;
-  text-shadow: none;
+	color: #d6d6d6;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: none;
 }
