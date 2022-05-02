@@ -7,8 +7,11 @@
 }
 
 .navbar-nav .icon {
+  width: 22px;
+  height: 22px;
   margin-#{$direction-end}: 0.5em;
-  vertical-align: -3px;
+  margin-top: -2px;
+  // vertical-align: -3px;
 }
 
 .navbar-nav .nav-item {

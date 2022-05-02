@@ -1,5 +1,5 @@
 #page_content {
-  margin: 0 0.5em;
+  margin: 0 2em;
 }
 
 .auth_config_tbl {
@@ -14,10 +14,9 @@ h1 {
 h2 {
   font-size: 2em;
   font-weight: normal;
-  text-shadow: 0 1px 0 #fff;
   padding: 10px 0 10px;
   padding-#{$direction-start}: 3px;
-  color: #777;
+  color: $Color-Tailwind-Title;
 
   // Hiding icons in the page titles
   img {
@@ -40,7 +39,7 @@ h3 {
 
 a {
   text-decoration: none;
-  color: #235a81;
+  color: $Color-Misc1;
   cursor: pointer;
   outline: none;
 
@@ -48,7 +47,7 @@ a {
   &:visited,
   &:active {
     text-decoration: none;
-    color: #235a81;
+    color: $Color-Misc1;
     cursor: pointer;
     outline: none;
   }
@@ -57,27 +56,27 @@ a {
 button.mult_submit,
 .checkall_box + label {
   text-decoration: none;
-  color: #235a81;
+  color: $Color-Misc1;
   cursor: pointer;
   outline: none;
 }
 
 a:hover {
   text-decoration: underline;
-  color: #235a81;
+  color: $Color-Misc1;
 }
 
 button.mult_submit {
   &:hover,
   &:focus {
     text-decoration: underline;
-    color: #235a81;
+    color: $Color-Misc1;
   }
 }
 
 .checkall_box + label:hover {
   text-decoration: underline;
-  color: #235a81;
+  color: $Color-Misc1;
 }
 
 #initials_table {
@@ -103,7 +102,7 @@ button.mult_submit {
 
     &.active {
       border: 1px solid #666;
-      box-shadow: 0 0 2px #999;
+      // box-shadow: 0 0 2px #999;
       background: linear-gradient(#bbb, #fff);
     }
   }
@@ -270,16 +269,16 @@ select:focus {
   background: #fff;
 }
 
-input {
-  &[type=text]:hover,
-  &[type=password]:hover,
-  &[type=number]:hover,
-  &[type=date]:hover {
-    box-shadow: 0 1px 3px #aaa;
-    -webkit-box-shadow: 0 1px 3px #aaa;
-    -moz-box-shadow: 0 1px 3px #aaa;
-  }
-}
+// input {
+//   &[type=text]:hover,
+//   &[type=password]:hover,
+//   &[type=number]:hover,
+//   &[type=date]:hover {
+//     box-shadow: 0 1px 3px #aaa;
+//     -webkit-box-shadow: 0 1px 3px #aaa;
+//     -moz-box-shadow: 0 1px 3px #aaa;
+//   }
+// }
 
 textarea {
   overflow: visible;
@@ -305,19 +304,19 @@ fieldset {
   -webkit-border-radius: 4px 4px 0 0;
   border: #aaa solid 1px;
   padding: 0.5em;
-  background: #eee;
+  background: $Color-Body-Light;
 
-  @if $direction == rtl {
-    text-shadow: -1px 1px 2px #fff inset;
-    -moz-box-shadow: -1px 1px 2px #fff inset;
-    -webkit-box-shadow: -1px 1px 2px #fff inset;
-    box-shadow: -1px 1px 2px #fff inset;
-  } @else {
-    text-shadow: 1px 1px 2px #fff inset;
-    -moz-box-shadow: 1px 1px 2px #fff inset;
-    -webkit-box-shadow: 1px 1px 2px #fff inset;
-    box-shadow: 1px 1px 2px #fff inset;
-  }
+  // @if $direction == rtl {
+  //   text-shadow: -1px 1px 2px #fff inset;
+  //   -moz-box-shadow: -1px 1px 2px #fff inset;
+  //   -webkit-box-shadow: -1px 1px 2px #fff inset;
+  //   box-shadow: -1px 1px 2px #fff inset;
+  // } @else {
+  //   text-shadow: 1px 1px 2px #fff inset;
+  //   -moz-box-shadow: 1px 1px 2px #fff inset;
+  //   -webkit-box-shadow: 1px 1px 2px #fff inset;
+  //   box-shadow: 1px 1px 2px #fff inset;
+  // }
 }
 
 fieldset {
@@ -329,17 +328,17 @@ fieldset {
 
   legend {
     font-weight: bold;
-    color: #444;
+    color: $Color-Tailwind-Title;
     padding: 5px 10px;
-    border-radius: 2px;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
+    border-radius: 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
     border: 1px solid #aaa;
-    background-color: #fff;
+    background-color: $Color-Body;
     max-width: 100%;
-    -moz-box-shadow: 3px 3px 15px #bbb;
-    -webkit-box-shadow: 3px 3px 15px #bbb;
-    box-shadow: 3px 3px 15px #bbb;
+    // -moz-box-shadow: 3px 3px 15px #bbb;
+    // -webkit-box-shadow: 3px 3px 15px #bbb;
+    // box-shadow: 3px 3px 15px #bbb;
     width: initial;
     font-size: 1em;
   }
@@ -368,13 +367,13 @@ button {
     padding: 0.1em 0.3em;
     margin: 0.1em;
     vertical-align: middle;
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 1px 0 #000;
     touch-action: manipulation;
   }
 }
 
 .pma-table thead th {
-  border-#{$direction-end}: 1px solid #fff;
+  border-#{$direction-end}: 1px solid #000;
 }
 
 .pma-table th {
@@ -559,17 +558,21 @@ button.mult_submit {
 // odd items 1,3,5,7...
 .pma-table tbody:first-of-type tr:nth-child(odd),
 .pma-table tbody:first-of-type tr:nth-child(odd) th,
+.table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody th:nth-of-type(odd),
 #table_index tbody:nth-of-type(odd) tr,
 #table_index tbody:nth-of-type(odd) th {
-  background: #fff;
+  background: $Color-Body;
 }
 
 // even items 2,4,6,8...
 .pma-table tbody:first-of-type tr:nth-child(even),
 .pma-table tbody:first-of-type tr:nth-child(even) th,
+.table-striped tbody tr:nth-of-type(even),
+.table-striped tbody th:nth-of-type(even),
 #table_index tbody:nth-of-type(even) tr,
 #table_index tbody:nth-of-type(even) th {
-  background: #dfdfdf;
+  background: $Color-Body-Light;
 }
 
 // only one item
@@ -590,25 +593,31 @@ button.mult_submit {
 .pma-table tr.marked:not(.nomarker) td,
 .pma-table tbody:first-of-type tr.marked:not(.nomarker) th,
 .pma-table tr.marked:not(.nomarker) {
-  background: linear-gradient(#ced6df, #b6c6d7);
-  color: $browse-marker-color;
+  // background: linear-gradient(#ced6df, #b6c6d7);
+  // color: $browse-pointer-color;
+  box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
 }
 
 // hovered items
 .pma-table tbody:first-of-type tr:not(.nopointer):hover,
 .pma-table tbody:first-of-type tr:not(.nopointer):hover th,
 .hover:not(.nopointer) {
-  background: linear-gradient(#ced6df, #b6c6d7);
-  color: $browse-pointer-color;
+  // background: linear-gradient(#ced6df, #b6c6d7);
+  // color: $browse-pointer-color;
+  box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
 }
 
 // hovered table rows
 #table_index tbody:hover tr,
 #table_index tbody:hover th,
 #table_index tbody:hover td,
+.table-striped tr:hover tr,
+.table-striped tr:hover th,
+.table-striped tr:hover td,
 .pma-table tr.hover:not(.nopointer) th {
-  background: linear-gradient(#ced6df, #b6c6d7);
-  color: $browse-pointer-color;
+  // background: linear-gradient(#ced6df, #b6c6d7);
+  // color: $browse-pointer-color;
+  box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
 }
 
 /**
@@ -1166,7 +1175,7 @@ div#tablestatistics table {
 
 .linkElem:hover {
   text-decoration: underline;
-  color: #235a81;
+  color: $Color-Misc1;
   cursor: pointer;
 }
 
@@ -1262,15 +1271,15 @@ div.tabLinks {
   background-color: #fff;
   z-index: 2;
 
-  @if $direction == rtl {
-    -moz-box-shadow: -2px 2px 3px #666;
-    -webkit-box-shadow: -2px 2px 3px #666;
-    box-shadow: -2px 2px 3px #666;
-  } @else {
-    -moz-box-shadow: 2px 2px 3px #666;
-    -webkit-box-shadow: 2px 2px 3px #666;
-    box-shadow: 2px 2px 3px #666;
-  }
+  // @if $direction == rtl {
+  //   -moz-box-shadow: -2px 2px 3px #666;
+  //   -webkit-box-shadow: -2px 2px 3px #666;
+  //   box-shadow: -2px 2px 3px #666;
+  // } @else {
+  //   -moz-box-shadow: 2px 2px 3px #666;
+  //   -webkit-box-shadow: 2px 2px 3px #666;
+  //   box-shadow: 2px 2px 3px #666;
+  // }
 }
 
 div {
@@ -1368,16 +1377,16 @@ div#profilingchart {
   border-radius: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
-  box-shadow: 0 1px 1px #fff inset;
-  -webkit-box-shadow: 0 1px 1px #fff inset;
-  -moz-box-shadow: 0 1px 1px #fff inset;
+  // box-shadow: 0 1px 1px #fff inset;
+  // -webkit-box-shadow: 0 1px 1px #fff inset;
+  // -moz-box-shadow: 0 1px 1px #fff inset;
 }
 
 #sectionlinks a,
 .buttonlinks a,
 a.button {
   font-weight: bold;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #000;
   margin-bottom: 7px;
   margin-#{$direction-start}: 7px;
   border: 1px solid #aaa;
@@ -1669,9 +1678,9 @@ select.invalid_value,
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  box-shadow: 0 5px 90px #888;
-  -moz-box-shadow: 0 5px 90px #888;
-  -webkit-box-shadow: 0 5px 90px #888;
+  // box-shadow: 0 5px 90px #888;
+  // -moz-box-shadow: 0 5px 90px #888;
+  // -webkit-box-shadow: 0 5px 90px #888;
 }
 
 #loading_parent {
@@ -2002,7 +2011,7 @@ table#index_columns {
         border-radius: 5px 5px 0 0;
         background: #f2f2f2;
         color: #555;
-        text-shadow: 0 1px 0 #fff;
+        text-shadow: 0 1px 0 #000;
 
         &:hover,
         &:active {
@@ -2480,12 +2489,12 @@ input#auto_increment_opt {
   margin: 0.1em;
   padding: 0.3em;
   position: absolute;
-  text-shadow: -1px -1px #000;
-  -moz-box-shadow: 0 0 0.7em #000;
-  -webkit-box-shadow: 0 0 0.7em #000;
-  box-shadow: 0 0 0.7em #000;
-  -moz-border-radius: 0.3em;
-  -webkit-border-radius: 0.3em;
+  // text-shadow: -1px -1px #000;
+  // -moz-box-shadow: 0 0 0.7em #000;
+  // -webkit-box-shadow: 0 0 0.7em #000;
+  // box-shadow: 0 0 0.7em #000;
+  // -moz-border-radius: 0.3em;
+  // -webkit-border-radius: 0.3em;
   border-radius: 0.3em;
 }
 
@@ -2495,8 +2504,8 @@ input#auto_increment_opt {
 
   height: $height;
   width: $width;
-  margin-top: $height / -2;
-  margin-#{$direction-start}: $width / -2;
+  margin-top: calc($height / -2);
+  margin-#{$direction-start}: calc($width / -2);
   background: url("../img/col_pointer.png");
   position: absolute;
 }
@@ -2546,9 +2555,9 @@ input#auto_increment_opt {
   background: #eee;
   border: solid 1px #999;
   position: absolute;
-  -moz-box-shadow: 0 0.2em 0.5em #333;
-  -webkit-box-shadow: 0 0.2em 0.5em #333;
-  box-shadow: 0 0.2em 0.5em #333;
+  // -moz-box-shadow: 0 0.2em 0.5em #333;
+  // -webkit-box-shadow: 0 0.2em 0.5em #333;
+  // box-shadow: 0 0.2em 0.5em #333;
   margin-#{$direction-start}: 75%;
   #{$direction-end}: 0;
   width: max-content;
@@ -2652,7 +2661,7 @@ input#auto_increment_opt {
   text-align: center;
   height: 1.4em;
   width: 1.2em;
-  text-shadow: 1px 0 #fff;
+  text-shadow: 1px 0 #000;
 }
 
 .cEdit {
@@ -2777,7 +2786,7 @@ body #ui-datepicker-div {
 }
 
 .ui-dialog fieldset legend a {
-  color: #235a81;
+  color: $Color-Misc1;
 }
 
 .ui-draggable {
@@ -3198,7 +3207,7 @@ textarea {
 
     &.show {
       #{$direction-start}: 6%;
-      box-shadow: -2px 1px 4px -1px #999;
+      // box-shadow: -2px 1px 4px -1px #999;
     }
   }
 
@@ -3361,15 +3370,15 @@ textarea {
   -webkit-border-radius: 4px;
   border-radius: 4px;
 
-  @if $direction == rtl {
-    -moz-box-shadow: -2px 2px 5px #ccc;
-    -webkit-box-shadow: -2px 2px 5px #ccc;
-    box-shadow: -2px 2px 5px #ccc;
-  } @else {
-    -moz-box-shadow: 2px 2px 5px #ccc;
-    -webkit-box-shadow: 2px 2px 5px #ccc;
-    box-shadow: 2px 2px 5px #ccc;
-  }
+  // @if $direction == rtl {
+  //   -moz-box-shadow: -2px 2px 5px #ccc;
+  //   -webkit-box-shadow: -2px 2px 5px #ccc;
+  //   box-shadow: -2px 2px 5px #ccc;
+  // } @else {
+  //   -moz-box-shadow: 2px 2px 5px #ccc;
+  //   -webkit-box-shadow: 2px 2px 5px #ccc;
+  //   box-shadow: 2px 2px 5px #ccc;
+  // }
 
   h2 {
     background-color: #bbb;
@@ -3379,17 +3388,17 @@ textarea {
     color: #fff;
     font-size: 1.6em;
     font-weight: normal;
-    text-shadow: 0 1px 0 #777;
+    // text-shadow: 0 1px 0 #777;
 
-    @if $direction == rtl {
-      -moz-box-shadow: -1px 1px 15px #999 inset;
-      -webkit-box-shadow: -1px 1px 15px #999 inset;
-      box-shadow: -1px 1px 15px #999 inset;
-    } @else {
-      -moz-box-shadow: 1px 1px 15px #999 inset;
-      -webkit-box-shadow: 1px 1px 15px #999 inset;
-      box-shadow: 1px 1px 15px #999 inset;
-    }
+    // @if $direction == rtl {
+    //   -moz-box-shadow: -1px 1px 15px #999 inset;
+    //   -webkit-box-shadow: -1px 1px 15px #999 inset;
+    //   box-shadow: -1px 1px 15px #999 inset;
+    // } @else {
+    //   -moz-box-shadow: 1px 1px 15px #999 inset;
+    //   -webkit-box-shadow: 1px 1px 15px #999 inset;
+    //   box-shadow: 1px 1px 15px #999 inset;
+    // }
   }
 }
 
@@ -3401,17 +3410,17 @@ textarea {
   color: #fff;
   font-size: 1.6em;
   font-weight: normal;
-  text-shadow: 0 1px 0 #777;
+  // text-shadow: 0 1px 0 #777;
 
-  @if $direction == rtl {
-    -moz-box-shadow: -1px 1px 15px #999 inset;
-    -webkit-box-shadow: -1px 1px 15px #999 inset;
-    box-shadow: -1px 1px 15px #999 inset;
-  } @else {
-    -moz-box-shadow: 1px 1px 15px #999 inset;
-    -webkit-box-shadow: 1px 1px 15px #999 inset;
-    box-shadow: 1px 1px 15px #999 inset;
-  }
+  // @if $direction == rtl {
+  //   -moz-box-shadow: -1px 1px 15px #999 inset;
+  //   -webkit-box-shadow: -1px 1px 15px #999 inset;
+  //   box-shadow: -1px 1px 15px #999 inset;
+  // } @else {
+  //   -moz-box-shadow: 1px 1px 15px #999 inset;
+  //   -webkit-box-shadow: 1px 1px 15px #999 inset;
+  //   box-shadow: 1px 1px 15px #999 inset;
+  // }
 }
 
 .pma_sql_import_status {
@@ -3461,7 +3470,7 @@ textarea {
 }
 
 .pma_drop_file_status {
-  color: #235a81;
+  color: $Color-Misc1;
 
   span.underline:hover {
     cursor: pointer;
@@ -3530,7 +3539,7 @@ meter {
 .pma-table th {
   &.header {
     cursor: pointer;
-    color: #235a81;
+    color: $Color-Misc1;
 
     &:hover {
       text-decoration: underline;

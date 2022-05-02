@@ -5,7 +5,7 @@
   top: 0;
   #{$direction-start}: 0;
   height: 100vh;
-  background: url('../img/left_nav_bg.png') repeat-y right 0 $navi-background;
+  // background: url('../img/left_nav_bg.png') repeat-y right 0 $navi-background;
   color: $navi-color;
   z-index: 800;
 
@@ -48,6 +48,8 @@
   }
 
   #navipanellinks .icon {
+    width: 22px;
+    height: 22px;
     margin: 0;
   }
 
@@ -123,12 +125,12 @@
   margin: 0;
   margin-#{$direction-start}: 5px;
   overflow: hidden;
-  color: #444;
+  // color: #444;
   height: 74%;
   position: relative;
 
   a {
-    color: $navi-color;
+    // color: $navi-color;
     padding-left: 0;
 
     &:hover {
@@ -384,9 +386,9 @@ html.ie {
 
 // Resize handler
 #pma_navigation_resizer {
-  width: 3px;
+  width: 1px;
   height: 100%;
-  background-color: #aaa;
+  background-color: $Color-Azure-900;
   cursor: col-resize;
   position: fixed;
   top: 0;
@@ -407,7 +409,7 @@ html.ie {
   text-align: center;
   cursor: pointer;
   z-index: 800;
-  text-shadow: 0 1px 0 #fff;
+  text-shadow: 0 1px 0 #000;
   filter: dropshadow(color = #fff, offx = 0, offy = 1);
   border: 1px solid #888;
 }
@@ -425,7 +427,7 @@ html.ie {
 
     &:hover {
       .drop_button {
-        background: #fff;
+        background: $Color-Body;
       }
 
       ul {
@@ -445,7 +447,7 @@ html.ie {
       border-radius: 0.3em;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
-      box-shadow: 0 0 5px #ccc;
+      // box-shadow: 0 0 5px #ccc;
       top: 100%;
       #{$direction-start}: 3px;
       #{$direction-end}: 0;
@@ -480,10 +482,12 @@ html.ie {
   }
 
   .drop_button {
+    font-size: 12px;
     padding: 0.3em;
-    border: 1px solid #ddd;
-    border-radius: 0.3em;
-    background: #f2f2f2;
+    border: .1px solid #ddd;
+    padding: 0.3em 0.5em;
+    border-radius: 0.8em;
+    background: $Color-Body-Light;
     cursor: pointer;
   }
 }

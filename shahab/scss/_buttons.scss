@@ -1,14 +1,46 @@
 .btn-primary {
-  font-weight: $font-weight-bold;
+	font-weight: $font-weight-bold;
 }
 
 .btn-primary,
 .btn-secondary {
-  border-color: #aaa;
-  text-shadow: 0 1px 0 #fff;
-  background-image: linear-gradient(#f8f8f8, #d8d8d8);
+	display: inline-block;
+	position: relative;
+	// font-size: 15px;
+	text-align: center;
+	padding: 0.5em 1.2em;
+	max-width: 100%;
+	min-width: 6vw;
+	background: $Color-Azure;
+	color: $Color-White;
+	border-radius: 3vw;
+	border: 1px solid $Color-Azure;
+	box-sizing: border-box;
+	cursor: pointer;
+	-webkit-appearance: none;
+	text-decoration: none;
+	outline: 0;
+	transition: all 0.25s cubic-bezier(0.53, 0.01, 0.35, 1.5);
 
-  &:hover {
-    background-image: linear-gradient(#fff, #ddd);
-  }
+	&:disabled {
+		// background-color: $Color-Text-Secondary-Dark;
+		// border-color: $Color-Text-Secondary-Dark;
+		opacity: 0.75;
+		cursor: default;
+	}
+	&:hover {
+		background: $Color-Azure;
+		color: $Color-White;
+		border: 1px solid $Color-Azure;
+		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
+	}
+	&:not(:disabled):not(.disabled):focus,
+	&:not(:disabled):not(.disabled):active,
+	&:not(:disabled):not(.disabled):active:focus {
+		background: $Color-White;
+		color: $Color-Azure;
+		border: 1px solid $Color-Azure;
+		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
+	}
 }
+

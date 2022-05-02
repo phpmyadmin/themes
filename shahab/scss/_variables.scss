@@ -1,36 +1,98 @@
 // configures general layout for detailed layout configuration please refer to the css files
 
+// Shahab Colors
+
+$Color-Azure: #007fff;
+$Color-Azure-50 : #f2f9ff;
+$Color-Azure-100: #e6f2ff;
+$Color-Azure-200: #bfdfff;
+$Color-Azure-300: #99ccff;
+$Color-Azure-400: #4da5ff;
+$Color-Azure-450: #2792fd;
+$Color-Azure-500: #007fff;
+$Color-Azure-600: #0072e6;
+$Color-Azure-700: #005fbf;
+$Color-Azure-800: #004c99;
+$Color-Azure-900: #003e7d;
+
+$Color-Secondary: #ff8000;
+$Color-Tertiary: #0ad5d5;
+
+$Color-White: #fff;
+$Color-Gray-50: #f9f9f9;
+$Color-Gray-100: #f2f2f2;
+$Color-Gray-200: #dfdfdf;
+$Color-Gray-300: #cccccc;
+$Color-Gray-400: #a5a5a5;
+$Color-Gray-500: #7f7f7f;
+$Color-Gray-600: #727272;
+$Color-Gray-700: #5f5f5f;
+$Color-Gray-800: #4c4c4c;
+$Color-Gray-900: #3e3e3e;
+$Color-Gray-950: #111111;
+$Color-Black: #000;
+
+$Color-Body: #1e1e2a;
+$Color-Body-Light: #2c2c3d;
+$Color-Body-Dark: #fafafa;
+
+$Color-OnBody: $Color-Gray-500;
+$Color-OnBody-Light-Shade: $Color-Gray-500;
+$Color-OnBody-Dark-Shade: $Color-Gray-500;
+
+$Color-Text-Main: #f9f7f7;
+$Color-Text-Secondary: #898989;
+$Color-Text-Secondary-Dark: #757575;
+$Color-Text-White: #f9f7f7;
+$Color-Text-Black: #111118;
+$Color-Text-OnAccent: #f9f7f7;
+$Color-Text-OnBody: #111118;
+
+$Color-Tailwind-Title: rgb(226, 232, 240);
+$Color-Tailwind-Text: rgb(148, 163, 184);
+$Color-Tailwind-Focus: rgb(56, 189, 248);
+
+$Color-Misc1: $Color-Tailwind-Text;
+
+$border-radius: 1rem;
+
+$Font-Persian: "Vazirmatn FD", "Vazirmatn", "Vazir FD", "Vazir", "Segoe UI", "Segoe Pro", sans-serif;
+$Font-Arabic: "Noto Kufi Arabic", "Vazirmatn FD", "Vazirmatn", "Vazir FD", "Vazir", "Segoe UI", "Segoe Pro", sans-serif;
+$Font-English: "Segoe UI", "Segoe Pro", sans-serif;
+$Font-Mono: "Consolas", monospace;
+
 // navi frame
 
 // navi frame width
 $navi-width: 240px;
 
 // foreground (text) color for the navi frame
-$navi-color: #000;
+$navi-color: rgb(148, 163, 184);
+// $navi-color: $Color-Gray-100;
 
 // background for the navi frame
-$navi-background: #f3f3f3;
+$navi-background: $Color-Body;
 
 // foreground (text) color of the pointer in navi frame
-$navi-pointer-color: #000;
+$navi-pointer-color: $Color-Tailwind-Focus;
 
 // background of the pointer in navi frame
-$navi-pointer-background: #ddd;
+$navi-pointer-background: $Color-Body;
 
 // main frame
 
 // foreground (text) color for the main frame
-$main-color: #444;
+$main-color: $Color-Gray-200;
 
 // foreground (text) color of the pointer in browse mode
-$browse-pointer-color: #000;
+$browse-pointer-color: $Color-White;
 
 // background of the pointer in browse mode
-$browse-pointer-background: #cfc;
+$browse-pointer-background: $Color-Gray-300;
 
 // foreground (text) color of the marker (visually marks row by clicking on it)
 // in browse mode
-$browse-marker-color: #000;
+$browse-marker-color: $Color-White;
 
 // background of the marker (visually marks row by clicking on it) in browse mode
 $browse-marker-background: #fc9;
@@ -40,13 +102,13 @@ $browse-marker-background: #fc9;
 // border
 $border: 0;
 // table header and footer color
-$th-background: #d3dce3;
+$th-background: $Color-Body-Light;
 // table header and footer background
-$th-color: #000;
+$th-color: $Color-White;
 // table data row background
-$bg-one: #e5e5e5;
+$bg-one: $Color-Azure-100;
 // table data row background, alternate
-$bg-two: #d5d5d5;
+$bg-two: $Color-Azure-50;
 
 // Bootstrap
 // ---------
@@ -101,10 +163,10 @@ $form-check-input-margin-y: 0.1rem;
 $enable-caret: false;
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
-$navbar-light-color: #235a81;
-$navbar-light-hover-color: #235a81;
-$navbar-light-active-color: #235a81;
-$navbar-light-disabled-color: #235a81;
+$navbar-light-color: $Color-Azure-800;
+$navbar-light-hover-color: $Color-Azure-800;
+$navbar-light-active-color: $Color-Azure-800;
+$navbar-light-disabled-color: $Color-Azure-800;
 
 // Card
 

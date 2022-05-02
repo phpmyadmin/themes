@@ -2,7 +2,7 @@ $header-img: '../img/designer/Header.png';
 $header-linked-img: '../img/designer/Header_Linked.png';
 $minus-img: '../img/designer/minus.png';
 $plus-img: '../img/designer/plus.png';
-$direction-start-panel-button-img: '../img/designer/left_panel_butt.png';
+$left-panel-button-img: '../img/designer/left_panel_butt.png';
 $top-panel-img: '../img/designer/top_panel.png';
 $small-tab-img: '../img/designer/small_tab.png';
 $frams1-img: '../img/designer/1.png';
@@ -133,7 +133,7 @@ canvas.designer {
   margin-#{$direction-start}: 2px;
   text-align: $direction-start;
   background-color: #fff;
-  background-image: url($direction-start-panel-button-img);
+  background-image: url($left-panel-button-img);
   border: #ccc solid 1px;
 
   &:hover {

@@ -1,8 +1,8 @@
 .alert {
   text-align: $direction-start;
-  -moz-box-shadow: 0 1px 1px #fff inset;
-  -webkit-box-shadow: 0 1px 1px #fff inset;
-  box-shadow: 0 1px 1px #fff inset;
+  // -moz-box-shadow: 0 1px 1px #fff inset;
+  // -webkit-box-shadow: 0 1px 1px #fff inset;
+  // box-shadow: 0 1px 1px #fff inset;
 
   @if $direction == rtl {
     background-position: 99% 50%;
@@ -22,8 +22,8 @@
 }
 
 .alert-primary {
-  color: #000;
-  background-color: #e8eef1;
+  color: $Color-White;
+  background-color: $Color-Body;
   background-image: none;
   border-color: #3a6c7e;
 
