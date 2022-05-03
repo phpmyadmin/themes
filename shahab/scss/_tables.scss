@@ -8,6 +8,7 @@
 		text-shadow: 0 1px 0 #000;
 		vertical-align: middle;
 		padding: 0.1em 0.6em;
+		border-#{$direction-end}: 1px solid $Color-Body;
 	}
 
 	th {
@@ -18,9 +19,22 @@
 		touch-action: manipulation;
 	}
 
-	thead th {
-		border-#{$direction-end}: 1px solid #fff;
-		background-image: linear-gradient(#fff, #ccc);
+	thead th,
+	.thead-light th {
+		color: $Color-Tailwind-Title;
+		background: $Color-Body-Special;
+		border-#{$direction-end}: 1px solid $Color-Body;
+		// border-bottom: 1px solid $Color-Azure-500;
+
+		* {
+			color: $Color-Tailwind-Title;
+		}
+	}
+
+	&.table-light {
+		// border-radius: 10px;
+		// overflow: hidden;
+		border: 1px double $Color-Body;
 	}
 }
 
@@ -31,4 +45,3 @@
 // 		}
 // 	}
 // }
-

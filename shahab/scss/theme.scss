@@ -168,7 +168,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-	width: .8rem;
+	width: 0.8rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -181,4 +181,8 @@ body {
 	&:active {
 		background: $Color-Azure;
 	}
+}
+
+.card-header + .list-group.list-group-flush {
+	margin-top: 0;
 }

@@ -1,5 +1,5 @@
 #page_content {
-	margin: 0 2em;
+	margin: 0 2vw;
 }
 
 .auth_config_tbl {
@@ -51,6 +51,11 @@ a {
 		cursor: pointer;
 		outline: none;
 	}
+}
+
+input[type="checkbox"],
+input[type="checkbox"] + label {
+	cursor: pointer;
 }
 
 button.mult_submit,
@@ -120,8 +125,7 @@ dfn {
 .pma-table th {
 	font-weight: bold;
 	color: $th-color;
-	background: #f3f3f3;
-	background: linear-gradient(#fff, #ccc);
+	background: $Color-Body-Special;
 }
 
 a img {
@@ -148,10 +152,10 @@ select {
 }
 
 input {
-	&[type=text],
-	&[type=password],
-	&[type=number],
-	&[type=date] {
+	&[type="text"],
+	&[type="password"],
+	&[type="number"],
+	&[type="date"] {
 		border-radius: 2px;
 		-moz-border-radius: 2px;
 		-webkit-border-radius: 2px;
@@ -161,11 +165,11 @@ input {
 		padding: 4px;
 	}
 
-	&:not(.form-control)[type=text],
-	&[type=password],
-	&:not(.form-control)[type=number],
-	&[type=date],
-	&:not(.form-check-input)[type=checkbox] {
+	&:not(.form-control)[type="text"],
+	&[type="password"],
+	&:not(.form-control)[type="number"],
+	&[type="date"],
+	&:not(.form-check-input)[type="checkbox"] {
 		margin: 6px;
 	}
 }
@@ -175,10 +179,10 @@ select:not(.form-control) {
 }
 
 input {
-	&[type=text],
-	&[type=password],
-	&[type=number],
-	&[type=date] {
+	&[type="text"],
+	&[type="password"],
+	&[type="number"],
+	&[type="date"] {
 		transition: all 0.2s;
 		-ms-transition: all 0.2s;
 		-webkit-transition: all 0.2s;
@@ -198,10 +202,10 @@ select {
 }
 
 input {
-	&[type=text][disabled],
-	&[type=password][disabled],
-	&[type=number][disabled],
-	&[type=date][disabled] {
+	&[type="text"][disabled],
+	&[type="password"][disabled],
+	&[type="number"][disabled],
+	&[type="date"][disabled] {
 		background: #e8e8e8;
 		box-shadow: none;
 		-webkit-box-shadow: none;
@@ -231,7 +235,7 @@ select[disabled] {
 }
 
 input {
-	&[type=text] {
+	&[type="text"] {
 		&:hover,
 		&:focus {
 			border: 1px solid #7c7c7c;
@@ -239,7 +243,7 @@ input {
 		}
 	}
 
-	&[type=password] {
+	&[type="password"] {
 		&:hover,
 		&:focus {
 			border: 1px solid #7c7c7c;
@@ -247,7 +251,7 @@ input {
 		}
 	}
 
-	&[type=number] {
+	&[type="number"] {
 		&:hover,
 		&:focus {
 			border: 1px solid #7c7c7c;
@@ -255,7 +259,7 @@ input {
 		}
 	}
 
-	&[type=date] {
+	&[type="date"] {
 		&:hover,
 		&:focus {
 			border: 1px solid #7c7c7c;
@@ -299,11 +303,12 @@ textarea {
 
 fieldset {
 	margin-top: 1em;
-	border-radius: 4px 4px 0 0;
-	-moz-border-radius: 4px 4px 0 0;
-	-webkit-border-radius: 4px 4px 0 0;
+	// -moz-border-radius: 10px 10px 0 0;
+	// -webkit-border-radius: 10px 10px 0 0;
+	// border-radius: 10px 10px 0 0;
+	border-radius: 10px;
 	border: #aaa solid 1px;
-	padding: 0.5em;
+	padding: 1em;
 	background: $Color-Body-Light;
 
 	// @if $direction == rtl {
@@ -317,13 +322,20 @@ fieldset {
 	//   -webkit-box-shadow: 1px 1px 2px #fff inset;
 	//   box-shadow: 1px 1px 2px #fff inset;
 	// }
+
+	+ fieldset,
+	+ :not(fieldset) {
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+	}
 }
 
 fieldset {
 	fieldset {
 		margin: 0.8em;
 		border: 1px solid #aaa;
-		background: #e8e8e8;
+		// background: #e8e8e8;
 	}
 
 	legend {
@@ -341,6 +353,7 @@ fieldset {
 		// box-shadow: 3px 3px 15px #bbb;
 		width: initial;
 		font-size: 1em;
+		margin-inline-start: 10px;
 	}
 }
 
@@ -386,8 +399,8 @@ button {
 }
 
 input {
-	&:not(.form-check-input)[type=checkbox],
-	&[type=radio] {
+	&:not(.form-check-input)[type="checkbox"],
+	&[type="radio"] {
 		vertical-align: -11%;
 	}
 }
@@ -405,9 +418,9 @@ select {
 		margin: 6px;
 	}
 
-	&[multiple] {
-		background: linear-gradient(#fff, #f2f2f2);
-	}
+	// &[multiple] {
+	// 	background: linear-gradient(#fff, #f2f2f2);
+	// }
 }
 
 /* classes */
@@ -497,15 +510,15 @@ select {
 	text-shadow: 0 1px 0 #000;
 }
 
+.result_query {
+	border: 1px solid $Color-Body-Special;
+	border-radius: 10px;
+	margin-bottom: 0.5em;
+}
+
 div.tools {
 	padding: 0.2em;
-
-	a {
-		color: #3a7ead !important;
-	}
-
-	margin-top: 0;
-	margin-bottom: 0.5em;
+	margin-block: 0;
 	// avoid a thick line since this should be used under another fieldset
 	border-top: 0;
 	text-align: $direction-end;
@@ -514,6 +527,14 @@ div.tools {
 	-webkit-border-radius: 0 0 4px 4px;
 	-moz-border-radius: 0 0 4px 4px;
 	border-radius: 0 0 4px 5px;
+
+	&.print_ignore {
+		border-radius: 0 0 10px 10px;
+	}
+
+	a {
+		color: #3a7ead !important;
+	}
 }
 
 fieldset.tblFooters {
@@ -524,9 +545,9 @@ fieldset.tblFooters {
 	text-align: $direction-end;
 	float: none;
 	clear: both;
-	-webkit-border-radius: 0 0 4px 4px;
-	-moz-border-radius: 0 0 4px 4px;
-	border-radius: 0 0 4px 4px;
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
 }
 
 div.null_div {
@@ -538,14 +559,16 @@ div.null_div {
 
 fieldset {
 	.formelement {
-		float: $direction-start;
+		display: inline-block;
+		vertical-align: middle;
+		// float: $direction-start;
 		margin-#{$direction-end}: 0.5em;
 		// IE
 		white-space: nowrap;
 	}
 
 	// revert for Gecko
-	div[class=formelement] {
+	div[class="formelement"] {
 		white-space: normal;
 	}
 }
@@ -599,13 +622,13 @@ button.mult_submit {
 }
 
 // hovered items
-.pma-table tbody:first-of-type tr:not(.nopointer):hover,
-.pma-table tbody:first-of-type tr:not(.nopointer):hover th,
-.hover:not(.nopointer) {
-	// background: linear-gradient(#ced6df, #b6c6d7);
-	// color: $browse-pointer-color;
-	box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
-}
+// .pma-table tbody:first-of-type tr:not(.nopointer):hover,
+// .pma-table tbody:first-of-type tr:not(.nopointer):hover th,
+// .hover:not(.nopointer) {
+// 	// background: linear-gradient(#ced6df, #b6c6d7);
+// 	// color: $browse-pointer-color;
+// 	box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
+// }
 
 // hovered table rows
 #table_index tbody:hover tr,
@@ -664,7 +687,7 @@ button.mult_submit {
 	}
 
 	// IE doesnt handles 'pre' right
-	[class=value] {
+	[class="value"] {
 		white-space: normal;
 	}
 }
@@ -905,8 +928,8 @@ div#userPermissionModal {
 
 form.login {
 	input {
-		&[type=text],
-		&[type=password] {
+		&[type="text"],
+		&[type="password"] {
 			box-sizing: border-box;
 			width: 14em;
 		}
@@ -1225,7 +1248,7 @@ div {
 	}
 }
 
-#addChartDialog input[type=text] {
+#addChartDialog input[type="text"] {
 	margin: 0;
 	padding: 3px;
 }
@@ -1519,9 +1542,15 @@ kbd {
 	box-shadow: none;
 }
 
+pre *,
+code * {
+	font-family: $Font-Mono;
+}
+
 code {
 	font-size: 1em;
 	color: $main-color;
+	background: $Color-Body;
 
 	&.php {
 		display: block;
@@ -1555,7 +1584,7 @@ div.sqlvalidate {
 }
 
 .result_query div.sqlOuter {
-	background: $bg-one;
+	// background: $bg-one;
 	text-align: $direction-start;
 }
 
@@ -1637,10 +1666,10 @@ table {
 	*  Validation error message styles
 	*/
 input {
-	&[type=text].invalid_value,
-	&[type=password].invalid_value,
-	&[type=number].invalid_value,
-	&[type=date].invalid_value {
+	&[type="text"].invalid_value,
+	&[type="password"].invalid_value,
+	&[type="number"].invalid_value,
+	&[type="date"].invalid_value {
 		background: #fcc;
 	}
 }
@@ -1675,6 +1704,7 @@ select.invalid_value,
 	background-position: 2%;
 	border: 1px solid #e2b709;
 	background-color: #ffe57e;
+	color: #000;
 	border-radius: 5px;
 	-moz-border-radius: 5px;
 	-webkit-border-radius: 5px;
@@ -1771,6 +1801,7 @@ select.invalid_value,
 
 	#buttonGo {
 		float: $direction-end;
+		margin-bottom: 10px;
 	}
 }
 
@@ -1900,7 +1931,7 @@ input#import_merge {
 	margin-#{$direction-end}: 1em;
 }
 
-#addColumns input[type=radio] {
+#addColumns input[type="radio"] {
 	margin: 3px 0 0;
 	margin-#{$direction-start}: 1em;
 }
@@ -1910,7 +1941,7 @@ input#import_merge {
  */
 #index_frm {
 	.index_info {
-		input[type=text],
+		input[type="text"],
 		select {
 			width: 100%;
 			margin: 0;
@@ -2143,9 +2174,9 @@ table#index_columns {
 	}
 
 	input {
-		&[type=text],
-		&[type=password],
-		&[type=number] {
+		&[type="text"],
+		&[type="password"],
+		&[type="number"] {
 			border: 1px #a7a6aa solid;
 			height: auto;
 
@@ -2357,9 +2388,9 @@ input#auto_increment_opt {
 	overflow: auto;
 
 	input {
-		&[type=text],
-		&[type=password],
-		&[type=number] {
+		&[type="text"],
+		&[type="password"],
+		&[type="number"] {
 			width: 10em;
 			box-sizing: border-box;
 			-ms-box-sizing: border-box;
@@ -2600,10 +2631,10 @@ input#auto_increment_opt {
 
 .navigation {
 	margin: 0.8em 0;
-	border-radius: 5px;
-	-webkit-border-radius: 5px;
-	-moz-border-radius: 5px;
-	background: linear-gradient(#eee, #ccc);
+	border-radius: 10px;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	background: $Color-Body-Light;
 
 	td {
 		margin: 0;
@@ -2613,7 +2644,7 @@ input#auto_increment_opt {
 	}
 
 	input {
-		&[type=submit] {
+		&[type="submit"] {
 			background: none;
 			border: 0;
 			filter: none;
@@ -2669,7 +2700,7 @@ input#auto_increment_opt {
 	padding: 0;
 	position: absolute;
 
-	input[type=text] {
+	input[type="text"] {
 		background: #fff;
 		height: 100%;
 		margin: 0;
@@ -2702,7 +2733,7 @@ input#auto_increment_opt {
 	}
 
 	.edit_box_posting {
-		background: #fff url('../img/ajax_clock_small.gif') no-repeat $direction-end center;
+		background: #fff url("../img/ajax_clock_small.gif") no-repeat $direction-end center;
 		padding-#{$direction-end}: 1.5em;
 	}
 
@@ -2719,7 +2750,7 @@ input#auto_increment_opt {
 }
 
 .saving_edited_data {
-	background: url('../img/ajax_clock_small.gif') no-repeat $direction-start;
+	background: url("../img/ajax_clock_small.gif") no-repeat $direction-start;
 	padding-#{$direction-start}: 20px;
 }
 
@@ -2822,9 +2853,9 @@ div#page_content div {
 	&#tableslistcontainer {
 		margin-top: 1em;
 
-		table.data {
-			border-top: 0.1px solid #eee;
-		}
+		// table.data {
+		// 	border-top: 0.1px solid #eee;
+		// }
 	}
 
 	&.result_query {
@@ -3235,7 +3266,7 @@ textarea {
 		}
 	}
 
-	input[type=text] {
+	input[type="text"] {
 		margin: 0;
 		padding: 2px 4px;
 	}

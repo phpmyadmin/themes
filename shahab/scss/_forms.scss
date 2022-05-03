@@ -1,3 +1,50 @@
+.input-group-text {
+	color: $Color-Text-Main;
+	background-color: $Color-Body-Light;
+	border: 1px solid $Color-Body-Special;
+}
+
+.form-control,
+input,
+select,
+optgroup,
+textarea,
+input:not([type="button"]):not([type="submit"]) {
+	padding: 5px 10px;
+	display: inline-block;
+	background-color: $Color-Body-Light;
+	border: 1px solid #686881;
+	color: $Color-Text-Main;
+	border-radius: 10px;
+	box-sizing: border-box;
+	line-height: normal;
+	vertical-align: middle;
+
+	// @include mobile() {
+	// 	width: 100%;
+	// 	padding: 1.8vw 3vw;
+	// 	border-radius: 6vw;
+	// }
+}
+
+.textfield {
+	width: 100%;
+}
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-inline-end: 0;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-inline-start: 0;
+}
+
 select#fieldsSelect,
 textarea#sqlquery {
 	margin: 0;

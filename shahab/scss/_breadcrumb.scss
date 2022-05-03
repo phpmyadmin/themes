@@ -1,5 +1,7 @@
 .breadcrumb {
+	background: $Color-Body-Light;
 	padding-#{$direction-start}: 2.2em;
+	padding-block: 0.3em;
 	// text-shadow: 0 1px 0 #000;
 }
 

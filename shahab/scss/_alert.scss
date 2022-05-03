@@ -1,5 +1,6 @@
 .alert {
 	text-align: $direction-start;
+	border-radius: 10px;
 	// -moz-box-shadow: 0 1px 1px #fff inset;
 	// -webkit-box-shadow: 0 1px 1px #fff inset;
 	// box-shadow: 0 1px 1px #fff inset;
@@ -23,8 +24,7 @@
 
 .alert-primary {
 	color: $Color-White;
-	background-color: $Color-Body;
-	background-image: none;
+	background: $Color-Body;
 	border-color: #3a6c7e;
 
 	h1 {
@@ -34,8 +34,7 @@
 
 .alert-success {
 	color: #000;
-	background-color: #ebf8a4;
-	background-image: none;
+	background: #8dde92;
 	border-color: #a2d246;
 
 	h1 {
@@ -45,8 +44,7 @@
 
 .alert-danger {
 	color: #000;
-	background-color: pink;
-	background-image: none;
+	background: rgb(247, 155, 170);
 	border-color: #333;
 
 	h1 {
@@ -59,5 +57,5 @@
 	border-bottom: none !important;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	padding-bottom: 5px;
+	// padding-bottom: 5px;
 }

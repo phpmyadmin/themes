@@ -2,8 +2,15 @@ $textarea-cols: 40;
 $textarea-rows: 15;
 
 .CodeMirror {
+	color: $Color-Text-Main;
+	background: #1e1e1e;
 	height: 20rem;
 	direction: ltr;
+}
+
+.CodeMirror-gutters {
+	border-right: 1px solid #7f7f7f;
+	background-color: #1e1e1e;
 }
 
 #inline_editor_outer .CodeMirror {
@@ -21,50 +28,78 @@ $textarea-rows: 15;
 	border: none;
 }
 
+.cm-s-default span,
 span {
+	&.cm-meta {
+		color: #569cd6;
+	}
 	&.cm-keyword,
 	&.cm-statement-verb {
-		color: #909;
+		color: #569cd6;
 	}
-
+	&.cm-def {
+		color: #9cdcfe;
+	}
 	&.cm-variable {
-		color: black;
+		color: #ddd6a3;
 	}
-
-	&.cm-comment {
-		color: #808000;
+	&.cm-variable-2 {
+		color: #9cdcfe;
 	}
-
+	&.cm-variable-3,
+	&.cm-type {
+		color: #a9b7c6;
+	}
+	&.cm-property {
+		color: #9cdcfe;
+	}
+	&.cm-operator {
+		color: #d4d4d4;
+	}
+	&.cm-string {
+		color: #ce9178;
+	}
+	&.cm-string-2 {
+		color: #6a8759;
+	}
 	&.cm-mysql-string {
 		color: #008000;
 	}
-
-	&.cm-operator {
-		color: fuchsia;
-	}
-
 	&.cm-mysql-word {
-		color: black;
+		color: white;
 	}
-
+	&.cm-comment {
+		color: #6a9955;
+	}
+	&.cm-link {
+		color: #287bde;
+	}
+	&.cm-atom {
+		color: #569cd6;
+	}
+	&.cm-error {
+		color: #bc3f3c;
+	}
+	&.cm-tag {
+		color: #569cd6;
+	}
+	&.cm-attribute {
+		color: #9cdcfe;
+	}
+	&.cm-qualifier {
+		color: #d7ba7d;
+	}
+	&.cm-bracket {
+		color: #808080;
+	}
+	&.cm-number {
+		color: #b5cea8;
+	}
 	&.cm-builtin {
 		color: #f00;
 	}
-
-	&.cm-variable-2 {
-		color: #f90;
-	}
-
-	&.cm-variable-3 {
-		color: #00f;
-	}
-
 	&.cm-separator {
 		color: fuchsia;
-	}
-
-	&.cm-number {
-		color: teal;
 	}
 }
 
@@ -74,7 +109,7 @@ span {
 
 .autocomplete-column-hint {
 	display: inline-block;
-	float: $direction-end;
+	// float: $direction-end;
 	color: #666;
 	margin-#{$direction-start}: 1em;
 }

@@ -5,7 +5,7 @@
 	top: 0;
 	#{$direction-start}: 0;
 	height: 100vh;
-	// background: url('../img/left_nav_bg.png') repeat-y right 0 $navi-background;
+	background: $Color-Body;
 	color: $navi-color;
 	z-index: 800;
 
