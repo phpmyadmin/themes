@@ -36,6 +36,7 @@ $Color-Body: #1e1e2a;
 $Color-Body-Light: #2c2c3d;
 $Color-Body-Dark: #fafafa;
 $Color-Body-Special: #3a3a56;
+$Color-Body-VSCode: #1e1e1e;
 
 $Color-OnBody: $Color-Gray-500;
 $Color-OnBody-Light-Shade: $Color-Gray-500;
@@ -49,9 +50,9 @@ $Color-Text-Black: #111118;
 $Color-Text-OnAccent: #f9f7f7;
 $Color-Text-OnBody: #111118;
 
-$Color-Tailwind-Title: rgb(226, 232, 240);
-$Color-Tailwind-Text: rgb(148, 163, 184);
-$Color-Tailwind-Focus: rgb(56, 189, 248);
+$Color-Tailwind-Title: #e2e8f0;
+$Color-Tailwind-Text: #94a3b8;
+$Color-Tailwind-Focus: #38bdf8;
 
 $Color-Misc1: $Color-Tailwind-Text;
 
@@ -59,7 +60,7 @@ $border-radius: 1rem;
 
 $Font-Persian: "Vazirmatn FD", "Vazirmatn", "Vazir FD", "Vazir", "Segoe UI", "Segoe Pro", sans-serif;
 $Font-Arabic: "Noto Kufi Arabic", "Vazirmatn FD", "Vazirmatn", "Vazir FD", "Vazir", "Segoe UI", "Segoe Pro", sans-serif;
-$Font-English: "Segoe UI", "Segoe Pro", sans-serif;
+$Font-English: "Segoe UI", "Segoe Pro", Roboto, Verdana, sans-serif;
 $Font-Mono: "Consolas", monospace;
 
 // navi frame
@@ -107,9 +108,9 @@ $th-background: $Color-Body-Light;
 // table header and footer background
 $th-color: $Color-White;
 // table data row background
-$bg-one: $Color-Azure-100;
+$bg-one: $Color-Body;
 // table data row background, alternate
-$bg-two: $Color-Azure-50;
+$bg-two: $Color-Body-Light;
 
 // Bootstrap
 // ---------
@@ -204,3 +205,8 @@ $list-group-item-padding-y: 0;
 // Forms
 
 $label-margin-bottom: 0;
+
+// Icons
+
+// $loading-icon-url: url("../img/ajax_clock_small.svg");
+$loading-icon-url: url("../img/loading.svg");

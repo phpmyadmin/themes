@@ -94,7 +94,7 @@
 	margin-#{$direction-start}: 0.75em;
 
 	select {
-		background: url('../img/select_bg.png') repeat scroll 0 0;
+		// background: url('../img/select_bg.png') repeat scroll 0 0;
 		-webkit-border-radius: 2px;
 		border-radius: 2px;
 		border: 1px solid #bbb;
@@ -119,6 +119,11 @@
 		z-index: 100;
 		vertical-align: sub;
 	}
+}
+
+.list_container .selected,
+.list_container .selected > .hover_show_full {
+	color: $Color-Tailwind-Focus;
 }
 
 #pma_navigation_tree {
@@ -293,7 +298,7 @@
 			a,
 			i {
 				line-height: 1.5em;
-				height: 1.5em;
+				// height: 1.5em;
 				padding-#{$direction-start}: 0.3em;
 			}
 		}
@@ -397,21 +402,24 @@ html.ie {
 }
 
 #pma_navigation_collapser {
-	width: 20px;
-	height: 22px;
-	line-height: 22px;
-	background: #eee;
-	color: #555;
-	font-weight: bold;
+	width: 30px;
+	height: 30px;
 	position: fixed;
 	top: 0;
 	#{$direction-start}: $navi-width;
-	text-align: center;
 	cursor: pointer;
 	z-index: 800;
-	text-shadow: 0 1px 0 #000;
-	filter: dropshadow(color = #fff, offx = 0, offy = 1);
-	border: 1px solid #888;
+	font-size: 0;
+	background-image: url('../img/left-square.png');
+	margin: 0;
+	margin-#{$direction-start}: 0.3em;
+	padding: 0 !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&[title="Show panel"] {
+		background-image: url('../img/right-square.png');
+	}
 }
 
 // Quick warp links
@@ -442,9 +450,9 @@ html.ie {
 			overflow: hidden;
 			overflow-y: auto;
 			list-style: none;
-			background: #fff;
-			border: 1px solid #ddd;
-			border-radius: 0.3em;
+			background: $Color-Body-Light;
+			border: 1px solid $Color-Body-Light;
+			border-radius: 0.8em;
 			border-top-right-radius: 0;
 			border-bottom-right-radius: 0;
 			// box-shadow: 0 0 5px #ccc;
@@ -465,7 +473,7 @@ html.ie {
 			}
 
 			&:hover {
-				background: #f2f2f2;
+				background: $Color-Body-Special;
 			}
 		}
 

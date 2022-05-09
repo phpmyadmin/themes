@@ -5,9 +5,17 @@
 	// text-shadow: 0 1px 0 #000;
 }
 
+
 .breadcrumb-item {
 	+ .breadcrumb-comment {
 		padding-left: 0.5rem;
+	}
+
+	+ .breadcrumb-item::before {
+		float: left;
+		padding-right: 0.5rem;
+		color: $Color-Azure-500;
+		content: "/";
 	}
 
 	.icon {

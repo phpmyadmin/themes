@@ -7,10 +7,17 @@ $textarea-rows: 15;
 	height: 20rem;
 	direction: ltr;
 }
-
 .CodeMirror-gutters {
 	border-right: 1px solid #7f7f7f;
 	background-color: #1e1e1e;
+}
+
+.CodeMirror::selection,
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+	background: $Color-Azure;
+	color: $Color-White;
 }
 
 #inline_editor_outer .CodeMirror {
@@ -26,6 +33,10 @@ $textarea-rows: 15;
 #pma_console .CodeMirror-gutters {
 	background-color: initial;
 	border: none;
+}
+
+.CodeMirror-cursor {
+	border-color: $Color-Text-Main;
 }
 
 .cm-s-default span,
@@ -114,7 +125,14 @@ span {
 	margin-#{$direction-start}: 1em;
 }
 
+.CodeMirror-hint {
+	color: $Color-Text-Main;
+	font-family: $Font-Mono;
+}
+
 .CodeMirror-hints {
+	color: $Color-Text-Main;
+	background: $Color-Body-Light;
 	z-index: 999;
 }
 

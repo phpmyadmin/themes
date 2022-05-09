@@ -33,9 +33,12 @@
 }
 
 .alert-success {
-	color: #000;
-	background: #8dde92;
-	border-color: #a2d246;
+	// color: #000;
+	// background: #8dde92;
+	// border-color: #a2d246;
+	color: $Color-Text-Main;
+	background: #265b2a;
+	border: none;
 
 	h1 {
 		border-color: #0f0;

@@ -1,7 +1,7 @@
 {
 	"name": "shahab",
-	"version": "0.1",
-	"description": "A Modern Dark theme for PhpMyAdmin",
+	"version": "1.0.0",
+	"description": "A Modern Dark theme for PHPMyAdmin",
 	"author": "Shahab Movahhedi",
 	"url": "https://shmovahhedi.com/",
 	"supports": [
@@ -12,7 +12,8 @@
 		"scss-compile-nomini": "sass scss:css",
 		"scss-compile": "sass scss:css --style=compressed",
 		"scss-watch": "sass --watch scss:css",
-		"scss-watch-direct": "sass --watch scss:F:\\xampp\\phpMyAdmin\\themes\\shahab\\css"
+		"scss-watch-direct": "sass --watch scss:F:\\xampp\\phpMyAdmin\\themes\\shahab\\css",
+		"scss-watch-direct-jq": "sass --watch jquery:F:\\xampp\\phpMyAdmin\\themes\\shahab\\jquery"
 	},
 	"dependencies": {
 		"bootstrap": "^4.6.1"

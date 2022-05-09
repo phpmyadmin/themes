@@ -3,6 +3,9 @@
 	margin-bottom: 0.5rem;
 	border-radius: 1rem;
 	background-color: $Color-Body-Light;
+	border: 1px solid #aaa;
+	border: none;
+	// padding: 1.25rem;
 
 	> .card-header + .card-body {
 		padding-top: 0;
@@ -27,21 +30,21 @@
 .card-header.card-header {
 	position: relative;
 	top: -1rem;
-	margin: 0 5px;
+	margin-inline-start: calc(5px + 1.25rem);
 	width: max-content;
 	max-width: 100%;
 	font-weight: bold;
 	padding: 5px 10px;
 	border: 1px solid #aaa;
 	font-size: 1em;
-	// -moz-box-shadow: 3px 3px 15px #bbb;
-	// -webkit-box-shadow: 3px 3px 15px #bbb;
-	// box-shadow: 3px 3px 15px #bbb;
 	color: $Color-Tailwind-Title;
 	border-radius: 10px;
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	background-color: $Color-Body;
+	// -moz-box-shadow: 3px 3px 15px #bbb;
+	// -webkit-box-shadow: 3px 3px 15px #bbb;
+	// box-shadow: 3px 3px 15px #bbb;
 
 	.icon {
 		width: 22px;
@@ -49,10 +52,58 @@
 	}
 }
 
+.card-body {
+	// padding: 1.25rem;
+	// padding: 0;
+}
+
 .card-footer {
 	color: $th-color;
 	background: $th-background;
 	padding: 0.5em;
+}
+
+fieldset {
+	margin-top: 2rem;
+	// margin-block: 1rem;
+	border-radius: 1rem;
+	border: #aaa solid 1px;
+	padding: 1.25rem;
+	background: $Color-Body-Light;
+	// -moz-border-radius: 10px 10px 0 0;
+	// -webkit-border-radius: 10px 10px 0 0;
+	// border-radius: 10px 10px 0 0;
+
+	// + fieldset,
+	// + :not(fieldset) {
+	// 	border-radius: 10px;
+	// 	-moz-border-radius: 10px;
+	// 	-webkit-border-radius: 10px;
+	// }
+
+	fieldset {
+		margin: 0.8em;
+		border: 1px solid #aaa;
+		// background: #e8e8e8;
+	}
+
+	legend {
+		font-weight: bold;
+		color: $Color-Tailwind-Title;
+		padding: 5px 10px;
+		border-radius: 10px;
+		-moz-border-radius: 10px;
+		-webkit-border-radius: 10px;
+		border: 1px solid #aaa;
+		background-color: $Color-Body;
+		max-width: 100%;
+		width: initial;
+		font-size: 1em;
+		margin-inline-start: 5px;
+		// -moz-box-shadow: 3px 3px 15px #bbb;
+		// -webkit-box-shadow: 3px 3px 15px #bbb;
+		// box-shadow: 3px 3px 15px #bbb;
+	}
 }
 
 #maincontainer .card-header,

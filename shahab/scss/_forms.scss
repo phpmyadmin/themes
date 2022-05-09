@@ -1,15 +1,30 @@
 .input-group-text {
 	color: $Color-Text-Main;
 	background-color: $Color-Body-Light;
-	border: 1px solid $Color-Body-Special;
+	border: 1px solid #686881;
 }
 
 .form-control,
-input,
 select,
 optgroup,
 textarea,
-input:not([type="button"]):not([type="submit"]) {
+// input,
+input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
 	padding: 5px 10px;
 	display: inline-block;
 	background-color: $Color-Body-Light;
@@ -27,9 +42,14 @@ input:not([type="button"]):not([type="submit"]) {
 	// }
 }
 
-.textfield {
-	width: 100%;
-}
+// .input-group-prepend,
+// .input-group-append {
+// 	border: 1px solid #686881;
+// }
+
+// .textfield {
+// 	width: 100%;
+// }
 
 .btn-group > .btn:not(:last-child):not(.dropdown-toggle),
 .btn-group > .btn-group:not(:last-child) > .btn {

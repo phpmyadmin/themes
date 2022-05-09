@@ -11,6 +11,10 @@
 	width: 100%;
 }
 
+.nav-pills.m-2 {
+	margin: 0 !important;
+}
+
 .navbar-nav .icon,
 .nav-pills .icon {
 	width: 22px;
@@ -59,6 +63,10 @@
 		color: $Color-Tailwind-Title;
 		// background: $Color-Body-Special;
 	}
+}
+
+.navbar-light .navbar-toggler {
+	border: none;
 }
 
 .navbar-light .navbar-nav .show > .nav-link,
