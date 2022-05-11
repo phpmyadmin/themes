@@ -29,3 +29,5 @@ locale
 sources
 # API documentation
 apidoc
+# Node Modules
+node_modules

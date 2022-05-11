@@ -314,7 +314,7 @@ button {
 		padding: 0.1em 0.3em;
 		margin: 0.1em;
 		vertical-align: middle;
-		text-shadow: 0 1px 0 #000;
+		// text-shadow: 0 1px 0 #000;
 		touch-action: manipulation;
 	}
 }
@@ -518,9 +518,9 @@ fieldset.tblFooters {
 	text-align: $direction-end;
 	float: none;
 	clear: both;
-	-webkit-border-radius: 0 0 10px 10px;
-	-moz-border-radius: 0 0 10px 10px;
-	border-radius: 0 0 10px 10px;
+	-webkit-border-radius: 0 0 1rem 1rem;
+	-moz-border-radius: 0 0 1rem 1rem;
+	border-radius: 0 0 1rem 1rem;
 }
 
 div.null_div {
@@ -857,6 +857,13 @@ body#loginform {
 
 #login_form fieldset.tblFooters {
 	text-align: #{$direction-end};
+}
+
+#login_form > fieldset:first-child {
+	border-bottom: none;
+	border-end-start-radius: 0;
+	border-end-end-radius: 0;
+	padding-bottom: 0;
 }
 
 div.container.modal_form {
@@ -2002,7 +2009,7 @@ table#index_columns {
 				border-radius: 5px 5px 0 0;
 				// background: #f2f2f2;
 				// color: #555;
-				text-shadow: 0 1px 0 #000;
+				// text-shadow: 0 1px 0 #000;
 
 				&:hover,
 				&:active {
@@ -2518,6 +2525,7 @@ input#auto_increment_opt {
 	* {
 		background: none !important;
 		color: #fff !important;
+		text-shadow: none !important;
 	}
 }
 
