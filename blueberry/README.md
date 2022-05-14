@@ -21,3 +21,6 @@ My custom [jQuery UI v1.13.1](http://jqueryui.com) CSS is also used. Check it ou
 ### Any Ideas?
 
 Tell me your ideas as an Issue at [https://github.com/movahhedi/blueberry-pma-theme/issues](https://github.com/movahhedi/blueberry-pma-theme/issues)
+
+### Screenshots
+![Screenshot](screen.png)
