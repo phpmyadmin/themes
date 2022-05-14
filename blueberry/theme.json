@@ -4,5 +4,5 @@
     "description": "A Modern Dark theme for PHPMyAdmin",
     "author": "Shahab Movahhedi",
     "url": "https://shmovahhedi.com/",
-    "supports": ["5.0", "5.1"]
+    "supports": ["5.0", "5.1", "5.2"]
 }
