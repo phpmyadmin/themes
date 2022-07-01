@@ -1,0 +1,8 @@
+{
+    "name": "MetroPlus",
+    "version": "5.0",
+    "description": "Metro plus theme for phpMyAdmin",
+    "author": "phpMyAdmin developers and hplhu and carbondev",
+    "url": "https://www.phpmyadmin.net/",
+    "supports": ["5.0", "5.1"]
+}

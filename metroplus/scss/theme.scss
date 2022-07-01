@@ -1,0 +1,80 @@
+@import "font";
+@import "../../pmahomme/scss/direction";
+@import "variables";
+@import "../../bootstrap/scss/bootstrap";
+@import "common";
+@import "enum-editor";
+@import "gis";
+@import "navigation";
+@import "designer";
+@import "rte";
+@import "codemirror";
+@import "jqplot";
+@import "resizable-menu";
+@import "icons";
+@import "reboot";
+@import "tables";
+@import "forms";
+@import "nav";
+@import "navbar";
+@import "card";
+@import "breadcrumbs";
+@import "alert";
+@import "list-group";
+@import "modal";
+
+@-webkit-keyframes rainbow {
+    0% {
+        background-position: 0% 82% !important;
+    }
+
+    50% {
+        background-position: 100% 19% !important;
+    }
+
+    100% {
+        background-position: 0% 82% !important;
+    }
+}
+
+@-moz-keyframes rainbow {
+    0% {
+        background-position: 0% 82% !important;
+    }
+
+    50% {
+        background-position: 100% 19% !important;
+    }
+
+    100% {
+        background-position: 0% 82% !important;
+    }
+}
+
+@-o-keyframes rainbow {
+    0% {
+        background-position: 0% 82% !important;
+    }
+
+    50% {
+        background-position: 100% 19% !important;
+    }
+
+    100% {
+        background-position: 0% 82% !important;
+    }
+}
+
+@keyframes rainbow {
+    0% {
+        background-position: 0% 82% !important;
+    }
+
+    50% {
+        background-position: 100% 19% !important;
+    }
+
+    100% {
+        background-position: 0% 82% !important;
+    }
+}
