@@ -1,0 +1,285 @@
+// Print
+
+@media print {
+  .hide {
+    display: none;
+  }
+
+  // Standard CSS
+  body,
+  table,
+  th,
+  td {
+    color: $black;
+    background-color: $white;
+  }
+
+  // To remove link text decoration
+  a {
+    color: $black;
+  }
+  table a, table .btn-link {
+    color: $black !important;
+  }
+
+  // To remove any image borders
+  img {
+    border: 0;
+  }
+
+  // Table specific
+  table,
+  th,
+  td {
+    border: .1em solid $black;
+    background-color: $white;
+  }
+
+  .table > :not(caption) > * > * {
+    background-color: $pma-gray-100;
+  }
+
+  .table-striped > tbody > tr:nth-of-type(odd) > *,
+  .table-active {
+    --bs-table-accent-bg: $pma-gray-100;
+    color: $black;
+  }
+
+  table {
+    border-collapse: collapse;
+    border-spacing: .2em;
+  }
+
+  thead {
+    border-collapse: collapse;
+    border-spacing: .2em;
+    border: .1em solid $black;
+    font-weight: 900;
+  }
+
+  table tbody:first-of-type tr {
+    // odd items 1,3,5,7...
+    &:nth-child(odd) {
+      background: $white;
+
+      th {
+        background: $white;
+      }
+    }
+
+    // even items 2,4,6,8...
+    &:nth-child(even) {
+      background: $pma-gray-200;
+
+      th {
+        background: $pma-gray-200;
+      }
+    }
+  }
+
+  th,
+  td {
+    padding: .2em;
+  }
+
+  thead th {
+    font-weight: bold;
+    background-color: #e5e5e5;
+    border: .1em solid $black;
+  }
+
+  // Position the main content
+  #page_content {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 95%;
+    float: none;
+  }
+
+  // Print Styles
+  .card {
+    background-color: $pma-gray-100;
+  }
+  .card-header,
+  .card-footer {
+    background-color: $pma-gray-200;
+  }
+  .list-group-item {
+    color: $black;
+    background-color: $pma-gray-100;
+  }
+  .form-select, select:not(.form-select) {
+    color: $black;
+    background-color: $pma-gray-100;
+    background-image: none;
+  }
+  .form-select,
+  select {
+    option:checked {
+      color: $black;
+      background-color: $pma-gray-400;
+    }
+  }
+  .form-control {
+    color: $black;
+    background-color: $pma-gray-100;
+  }
+  .input-group-text {
+    color: $black;
+    background-color: $pma-gray-100;
+  }
+  input {
+    &[type=checkbox],
+    &[type=radio],
+    &[type=number] {
+      background-color: $pma-gray-100 !important;
+      border-color: $black !important;
+    }
+    &[type=number] {
+      color: $black !important;
+    }
+    &[type=checkbox],
+    &[type=radio] {
+      &:checked {
+        background-color: $black !important;
+        // border-color: $black !important;
+      }
+    }
+    &[type=text] {
+      color: $black !important;
+      background-color: $pma-gray-100 !important;
+    }
+  }
+  textarea {
+    color: $black;
+    background-color: $pma-gray-100;
+  }
+  .nav-link {
+    color: $black;
+  }
+  .pma-fieldset {
+    background-color: $pma-gray-200;
+
+    legend {
+      color: $black;
+      background-color: $pma-gray-400;
+    }
+
+    .pma-fieldset {
+      background-color: $pma-gray-300;
+    }
+  }
+  button.mult_submit, .checkall_box + label {
+    color: $black;
+  }
+  .form-text,
+  .config-form fieldset th small,
+  .config-form fieldset th .small,
+  .text-muted {
+    color: $pma-gray-600 !important;
+  }
+  .text-dark {
+    color: $pma-gray-100 !important;
+  }
+
+  // Buttons
+  .btn-outline-secondary {
+    color: $black;
+    border-color: $black;
+  }
+
+  // Alert
+  .alert {
+    display: none;
+  }
+
+  // CodeMirror
+  .CodeMirror {
+    background-color: $pma-gray-300;
+
+    &-gutters {
+      background-color: $pma-gray-500;
+    }
+  }
+  .cm-s-default {
+    .cm-keyword, .cm-statement-verb { color: #909; }
+    .cm-variable { color: black; }
+    .cm-comment { color: #808000; }
+    .cm-mysql-string { color: #008000; }
+    .cm-operator { color: fuchsia; }
+    .cm-mysql-word { color: black; }
+    .cm-builtin { color: #f00; }
+    .cm-variable-2 { color: #f90; }
+    .cm-variable-3 { color: #00f; }
+    .cm-separator { color: fuchsia; }
+    .cm-number { color: teal; }
+  }
+
+  // Designer
+  #name-panel,
+  .side-menu {
+    background: $pma-gray-100;
+  }
+  canvas.designer {
+    background-color: $pma-gray-100 !important;
+  }
+
+  // Modal
+  .modal-content {
+    background-color: $pma-gray-100;
+  }
+  .modal-header,
+  .modal-footer {
+    background-image: linear-gradient($pma-gray-200, $pma-gray-300);
+  }
+
+  // Accordion
+  .accordion-item {
+    background-color: $pma-gray-100;
+  }
+  .accordion-button {
+    color: $black;
+    background-color: $pma-gray-300;
+  }
+  .accordion-button:not(.collapsed) {
+    color: $black;
+    background-color: $pma-gray-400;
+  }
+
+  .result_query .sqlOuter {
+    color: $black;
+    background-color: $pma-gray-200;
+  }
+
+  #serverstatusquerieschart.jqplot-series-canvas,
+  #profilingchart.jqplot-series-canvas,
+  .jqplot-series-shadowCanvas {
+    background-color: $pma-gray-100 !important;
+  }
+
+  table#chartGrid div.monitorChart {
+    color: $black;
+    background: $pma-gray-100;
+  }
+
+  // For hiding 'Open a New phpMyAdmin Window' button
+  // Hide extra menu on /table/structure
+  .cDrop,
+  .cEdit,
+  .cList,
+  .cCpy,
+  .cPointer {
+    display: none;
+  }
+
+  .column_attribute {
+    font-size: 100%;
+  }
+
+  .ui-widget-content {
+    color: $black;
+    background: none;
+    background-color: $pma-gray-100;
+  }
+}

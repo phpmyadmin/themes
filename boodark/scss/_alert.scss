@@ -1,0 +1,26 @@
+// stylelint-disable at-rule-empty-line-before
+// stylelint-disable scss/at-rule-conditional-no-parentheses
+// Alert
+
+.alert {
+  position: relative;
+  padding: $alert-padding-y $alert-padding-x;
+  margin-bottom: $alert-margin-bottom;
+  border: $alert-border-width solid transparent;
+  @include border-radius($alert-border-radius);
+}
+
+@each $state, $value in $theme-colors {
+  $alert-background: shift-color($value, $alert-bg-scale);
+  $alert-border: shift-color($value, $alert-border-scale);
+  $alert-color: shift-color($value, $alert-color-scale);
+  @if (contrast-ratio($alert-background, $alert-color) < $min-contrast-ratio) {
+    $alert-color: mix($value, color-contrast($alert-background), abs($alert-color-scale));
+  }
+  .alert-#{$state} {
+    // for dark mode, switch between $alert-color and $alert-background
+    // default bootstrap alert
+    // @include alert-variant($alert-background, $alert-border, $alert-color);
+    @include alert-variant($alert-color, $alert-border, $alert-background);
+  }
+}
