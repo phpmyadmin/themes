@@ -96,6 +96,7 @@
 }
 .ui-resizable {
 	position: relative;
+	
 }
 .ui-resizable-handle {
 	position: absolute;
@@ -103,6 +104,7 @@
 	display: block;
 	-ms-touch-action: none;
 	touch-action: none;
+	
 }
 .ui-resizable-disabled .ui-resizable-handle,
 .ui-resizable-autohide .ui-resizable-handle {
@@ -175,7 +177,7 @@
 }
 .ui-sortable-handle {
 	-ms-touch-action: none;
-	touch-action: none;
+	touch-action: none;	
 }
 .ui-accordion .ui-accordion-header {
 	display: block;
@@ -399,6 +401,8 @@ button.ui-button::-moz-focus-inner {
 .ui-checkboxradio-disabled {
 	pointer-events: none;
 }
+
+
 .ui-datepicker {
 	width: 17em;
 	padding: .2em .2em 0;
@@ -407,17 +411,41 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker .ui-datepicker-header {
 	position: relative;
 	padding: .2em 0;
+	background: none!important;
+	background-color: #212529!important;
+	border: 1px solid #444;
+	color: #999;
+	font-weight: normal;
+	text-transform: uppercase;
+	font-size: 14px
 }
 .ui-datepicker .ui-datepicker-prev,
 .ui-datepicker .ui-datepicker-next {
 	position: absolute;
-	top: 2px;
+	top: 8px;
 	width: 1.8em;
 	height: 1.8em;
+	background-color: none;
+	margin: 5px 5px
 }
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
-	top: 1px;
+	top: 8px;
+	background-color: none!important;
+	border: none!important;
+	cursor: pointer;
+	
+	
+}
+.ui-datepicker .ui-datepicker-prev-hover > span,
+.ui-datepicker .ui-datepicker-next-hover > span {
+	background-color: #327bab!important;
+	box-shadow: 2px 2px 2px black;
+	background-image: url("images/ui-icons_222222_256x240.png");
+	
+}
+.ui-widget-header a.ui-state-hover, .ui-datepicker-next-hover {
+	background: none!important
 }
 .ui-datepicker .ui-datepicker-prev {
 	left: 2px;
@@ -426,10 +454,10 @@ button.ui-button::-moz-focus-inner {
 	right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev-hover {
-	left: 1px;
+	left: 2px;
 }
 .ui-datepicker .ui-datepicker-next-hover {
-	right: 1px;
+	right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
@@ -439,6 +467,9 @@ button.ui-button::-moz-focus-inner {
 	margin-left: -8px;
 	top: 50%;
 	margin-top: -8px;
+	background-color: #196ba0;
+	border-radius: 50%
+		
 }
 .ui-datepicker .ui-datepicker-title {
 	margin: 0 2.3em;
@@ -448,6 +479,9 @@ button.ui-button::-moz-focus-inner {
 .ui-datepicker .ui-datepicker-title select {
 	font-size: 1em;
 	margin: 1px 0;
+}
+span.ui-datepicker-month {
+	color: #4c8cb5
 }
 .ui-datepicker select.ui-datepicker-month,
 .ui-datepicker select.ui-datepicker-year {
@@ -465,9 +499,11 @@ button.ui-button::-moz-focus-inner {
 	font-weight: bold;
 	border: 0;
 }
-.ui-datepicker td {
+td.ui-state-disabled {
 	border: 0;
 	padding: 1px;
+	background-color: #212529!important;
+	opacity: 1!important
 }
 .ui-datepicker td span,
 .ui-datepicker td a {
@@ -576,14 +612,19 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-dialog {
 	position: absolute;
-	top: 0;
+	top: 0px;
 	left: 0;
 	padding: .2em;
 	outline: 0;
+	background: #212529!important;
+	border:1px solid #444!important;
+	
 }
 .ui-dialog .ui-dialog-titlebar {
 	padding: .4em 1em;
 	position: relative;
+	background: #1B1E21!important;
+	border: 1px solid #444!important
 }
 .ui-dialog .ui-dialog-title {
 	float: left;
@@ -592,6 +633,7 @@ button.ui-button::-moz-focus-inner {
 	width: 90%;
 	overflow: hidden;
 	text-overflow: ellipsis;
+	color: #999
 }
 .ui-dialog .ui-dialog-titlebar-close {
 	position: absolute;
@@ -601,6 +643,7 @@ button.ui-button::-moz-focus-inner {
 	margin: -10px 0 0 0;
 	padding: 1px;
 	height: 20px;
+	display: none
 }
 .ui-dialog .ui-dialog-content {
 	position: relative;
@@ -608,13 +651,16 @@ button.ui-button::-moz-focus-inner {
 	padding: .5em 1em;
 	background: none;
 	overflow: auto;
+	color: #999
 }
 .ui-dialog .ui-dialog-buttonpane {
 	text-align: left;
 	border-width: 1px 0 0 0;
-	background-image: none;
+	background: #1B1E21!important;
+	border: 1px solid #444!important;
 	margin-top: .5em;
 	padding: .3em 1em .5em .4em;
+	border-radius: 4px
 }
 .ui-dialog .ui-dialog-buttonpane .ui-dialog-buttonset {
 	float: right;
@@ -735,6 +781,7 @@ button.ui-button::-moz-focus-inner {
 	cursor: default;
 	-ms-touch-action: none;
 	touch-action: none;
+	
 }
 .ui-slider .ui-slider-range {
 	position: absolute;
@@ -753,6 +800,7 @@ button.ui-button::-moz-focus-inner {
 
 .ui-slider-horizontal {
 	height: .8em;
+	background-color: #222
 }
 .ui-slider-horizontal .ui-slider-handle {
 	top: -.3em;
@@ -898,19 +946,19 @@ body .ui-tooltip {
 	font-size: 1em;
 }
 .ui-widget.ui-widget-content {
-	border: 1px solid #d3d3d3;
+	border: 1px solid #444;
 }
 .ui-widget-content {
-	border: 1px solid #aaaaaa;
-	background: #ffffff;
-	color: #222222;
+	border: 1px solid #444;
+	background: #1B1E21;
+	color: #999;
 }
 .ui-widget-content a {
-	color: #222222;
+	color: #bbb;
 }
 .ui-widget-header {
 	border: 1px solid #aaaaaa;
-	background: #cccccc url("images/ui-bg_highlight-soft_75_cccccc_1x100.png") 50% 50% repeat-x;
+	background: #1B1E21;
 	color: #222222;
 	font-weight: bold;
 }
@@ -929,10 +977,10 @@ body .ui-tooltip {
 works properly when clicked or hovered */
 html .ui-button.ui-state-disabled:hover,
 html .ui-button.ui-state-disabled:active {
-	border: 1px solid #d3d3d3;
-	background: #e6e6e6 url("images/ui-bg_glass_75_e6e6e6_1x400.png") 50% 50% repeat-x;
+	border: none;
+	background: #005b96;
 	font-weight: normal;
-	color: #555555;
+	color: #999;
 }
 .ui-state-default a,
 .ui-state-default a:link,
@@ -952,10 +1000,10 @@ a:visited.ui-button,
 .ui-widget-header .ui-state-focus,
 .ui-button:hover,
 .ui-button:focus {
-	border: 1px solid #999999;
-	background: #dadada url("images/ui-bg_glass_75_dadada_1x400.png") 50% 50% repeat-x;
+	border:none;
+	background: #005187!important;
 	font-weight: normal;
-	color: #212121;
+	color: #bbb;
 }
 .ui-state-hover a,
 .ui-state-hover a:hover,
@@ -967,7 +1015,7 @@ a:visited.ui-button,
 .ui-state-focus a:visited,
 a.ui-button:hover,
 a.ui-button:focus {
-	color: #212121;
+	color: #999;
 	text-decoration: none;
 }
 
@@ -978,12 +1026,18 @@ a.ui-button:focus {
 .ui-widget-content .ui-state-active,
 .ui-widget-header .ui-state-active,
 a.ui-button:active,
-.ui-button:active,
-.ui-button.ui-state-active:hover {
-	border: 1px solid #aaaaaa;
-	background: #ffffff url("images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+.ui-button:active
+ {
+	border: none;
+	background: #327bab;
 	font-weight: normal;
-	color: #212121;
+	color: #fff;
+}
+ .ui-state-active:hover, .ui-state-hover{
+	border: none;
+	background: #327bab!important;
+	font-weight: normal;
+	color: #fff;
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
@@ -1002,8 +1056,8 @@ a.ui-button:active,
 .ui-state-highlight,
 .ui-widget-content .ui-state-highlight,
 .ui-widget-header .ui-state-highlight {
-	border: 1px solid #fcefa1;
-	background: #fbf9ee url("images/ui-bg_glass_55_fbf9ee_1x400.png") 50% 50% repeat-x;
+	border:none;
+	background: none!important;
 	color: #363636;
 }
 .ui-state-checked {
@@ -1065,10 +1119,10 @@ a.ui-button:active,
 }
 .ui-icon,
 .ui-widget-content .ui-icon {
-	background-image: url("images/ui-icons_cd0a0a_256x240.png");
+	background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-widget-header .ui-icon {
-	background-image: url("images/ui-icons_cd0a0a_256x240.png");
+	background-image: url("images/ui-icons_222222_256x240.png");
 }
 .ui-state-hover .ui-icon,
 .ui-state-focus .ui-icon,
@@ -1302,9 +1356,9 @@ a.ui-button:active,
 
 /* Overlays */
 .ui-widget-overlay {
-	background: #aaaaaa;
-	opacity: .3;
-	filter: Alpha(Opacity=30); /* support: IE8 */
+	background: #121517;
+	opacity: .8;
+	filter: Alpha(Opacity=50); /* support: IE8 */
 }
 .ui-widget-shadow {
 	-webkit-box-shadow: -8px -8px 8px #aaaaaa;
