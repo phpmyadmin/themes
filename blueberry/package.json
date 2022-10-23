@@ -6,9 +6,9 @@
 	"url": "https://shmovahhedi.com/",
 	"supports": [
 		"5.0",
-		"5.1"
+		"5.1",
+		"5.2"
 	],
-	"themefolder": "F:\\xampp\\phpMyAdmin\\themes\\blueberry",
 	"scripts": {
 		"scss-compile-nomini": "sass scss:css",
 		"scss-compile": "sass scss:css --style=compressed",

@@ -10,7 +10,8 @@
 // fieldset table a,
 // .btn,
 .btn-primary,
-.btn-secondary {
+.btn-secondary,
+.btn-outline-secondary {
 	display: inline-block;
 	position: relative;
 	// font-size: 15px;
@@ -52,6 +53,12 @@
 		border: 1px solid $Color-Azure;
 		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 20%);
 	}
+}
+
+.btn-outline-secondary {
+	background: none;
+	color: $Color-White;
+	border: 1px solid $Color-White;
 }
 
 .btn-link {

@@ -551,6 +551,14 @@ button.mult_submit {
 	background-color: transparent;
 }
 
+td.null span em {
+	color: $Color-Tailwind-Text;
+}
+
+table tr.marked {
+	background-color: $Color-Body-Special2;
+}
+
 // odd items 1,3,5,7...
 .pma-table tbody:first-of-type tr:nth-child(odd),
 .pma-table tbody:first-of-type tr:nth-child(odd) th,
@@ -571,7 +579,7 @@ button.mult_submit {
 	background: $Color-Body-Light;
 }
 
-.column_action 
+.column_action
 
 // only one item
 .pma-table tbody:first-of-type tr:only-child {
@@ -2339,15 +2347,15 @@ input#auto_increment_opt {
 	}
 }
 
-#table_name_col_no_outer {
-	margin-top: 45px;
-}
+// #table_name_col_no_outer {
+// 	margin-top: 45px;
+// }
 
 #table_name_col_no {
 	position: fixed;
-	top: 55px;
+	top: unset !important;
 	width: 100%;
-	background: #fff;
+	background: $Color-Body;
 }
 
 #table_columns {

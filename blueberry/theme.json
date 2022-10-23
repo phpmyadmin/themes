@@ -1,7 +1,7 @@
 {
     "name": "blueberry",
     "version": "1.0.1",
-    "description": "A Modern Dark theme for PHPMyAdmin",
+    "description": "A modern dark theme for phpMyAdmin",
     "author": "Shahab Movahhedi",
     "url": "https://shmovahhedi.com/",
     "supports": ["5.0", "5.1", "5.2"]

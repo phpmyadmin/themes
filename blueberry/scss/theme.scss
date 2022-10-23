@@ -47,6 +47,8 @@
 // @import "jquery-ui";
 
 // select[name="set_theme"]::after {
+// select#themeSelect::after,
+#li_select_theme::after,
 form[name="setTheme"]::after {
 	content: "Theme Created by Shahab Movahhedi \A Visit shmovahhedi.com";
 	display: block;
