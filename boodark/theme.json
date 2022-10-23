@@ -1,0 +1,8 @@
+{
+    "name": "BooDark",
+    "version": "1.0.0",
+    "description": "Bootstrap Dark theme for phpMyAdmin",
+    "author": "adorade",
+    "url": "https://github.com/adorade/boodark",
+    "supports": ["5.1", "5.2"]
+}

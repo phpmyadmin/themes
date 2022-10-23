@@ -1,0 +1,13 @@
+// Reebot
+
+body {
+  accent-color: var(--bs-primary); // for checkboxes, radios, etc.
+  text-align: left;
+  scrollbar-color: var(--scrollbar-color) var(--scrollbar-bg);
+}
+
+.text-dark {
+  --bs-text-opacity: 1;
+  --pma-dark-color: $pma-gray-400-rgb;
+  color: rgba(var(--pma-dark-color), var(--bs-text-opacity)) !important;
+}
