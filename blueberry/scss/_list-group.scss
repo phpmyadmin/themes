@@ -3,9 +3,18 @@
 	margin: 1rem 0;
 }
 
+.list-group-flush > .list-group-item {
+	padding: 3px;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $Color-Body;
+	}
+}
+
 .list-group-item {
 	display: list-item;
 	border: none;
+	color: $Color-Text-Main;
 }
 
 #li_select_server,

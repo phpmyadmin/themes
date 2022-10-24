@@ -1,13 +1,15 @@
 {
 	"name": "blueberry",
-	"version": "1.0.1",
-	"description": "A Modern Dark theme for PHPMyAdmin",
+	"version": "1.1.0",
+	"description": "A modern dark theme for phpMyAdmin",
 	"author": "Shahab Movahhedi",
 	"url": "https://shmovahhedi.com/",
-	"supports": [
-		"5.0",
-		"5.1",
-		"5.2"
+	"contributors": [
+		{
+			"name": "Shahab Movahhedi",
+			"email": "dev@shmovahhedi.com",
+			"url": "https://shmovahhedi.com"
+		}
 	],
 	"scripts": {
 		"scss-compile-nomini": "sass scss:css",
@@ -21,6 +23,6 @@
 		"scss-watch-direct-jq": "sass --watch --style=compressed scss\\jquery-ui.scss:F:\\xampp\\phpMyAdmin\\themes\\blueberry\\jquery\\jquery-ui.css"
 	},
 	"dependencies": {
-		"bootstrap": "^4.6.1"
+		"bootstrap": "^5.2.2"
 	}
 }

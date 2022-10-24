@@ -204,6 +204,14 @@
 		display: block;
 	}
 
+	.navGroup {
+		div.fst-italic {
+			div.block.second {
+				margin-top: -4px;
+			}
+		}
+	}
+
 	div {
 		&.block {
 			position: relative;

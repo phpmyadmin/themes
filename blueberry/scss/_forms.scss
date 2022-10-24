@@ -5,6 +5,7 @@
 }
 
 .form-control,
+.form-select,
 select,
 optgroup,
 textarea,
@@ -40,6 +41,15 @@ input[type="week"] {
 	// 	padding: 1.8vw 3vw;
 	// 	border-radius: 6vw;
 	// }
+
+	&:focus {
+		box-shadow: unset;
+	}
+}
+
+.form-select,
+select.form-control {
+	appearance: auto;
 }
 
 // .input-group-prepend,

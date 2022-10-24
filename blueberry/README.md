@@ -1,18 +1,18 @@
-# Blueberry PHPMyAdmin Theme
+# Blueberry phpMyAdmin Theme
 
-[Blueberry](https://github.com/movahhedi/blueberry-pma-theme) is a modern dark theme for PHPMyAdmin, based on "pmahomme" theme (The default theme in PHPMyAdmin).
+[Blueberry](https://github.com/movahhedi/blueberry-pma-theme) is a modern dark theme for phpMyAdmin, based on "pmahomme" theme (The default theme in phpMyAdmin).
 
 Developed by **Shahab Movahhedi**
 - Site: [shmovahhedi.com](https://shmovahhedi.com)
 - Email: [dev@shmovahhedi.com](mailto:dev@shmovahhedi.com)
 - GitHub: [@movahhedi](https://github.com/movahhedi)
 
-### Developments and Copyrights
+### Development and Copyrights
 
 To build it for development, you need these:
 - [NPM](https://www.npmjs.com/)
 - [SASS](https://sass-lang.com/install)
-- [Bootstrap 4.6.1](https://www.npmjs.com/package/bootstrap/v/4.6.1) (PMA doesn't support Bootstrap 5)
+- [Bootstrap 5.2.2](https://www.npmjs.com/package/bootstrap/v/5.2.2)
 
 The icons used in Blueberry is from [Fluency (Fluent UI) icon set](https://github.com/microsoft/fluentui-system-icons) by Microsoft (Thanks to [Icons8](https://icons8.com/)).
 

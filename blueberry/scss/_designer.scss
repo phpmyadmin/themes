@@ -33,7 +33,7 @@ $resize-img: "../img/designer/resize.png";
 }
 
 #canvas {
-	background-color: #fff;
+	background-color: $Color-Body;
 	color: #000;
 }
 
@@ -308,7 +308,7 @@ canvas.designer {
 		float: $direction-start;
 		margin: 3px 1px 4px;
 		height: 20px;
-		border: 1px dotted #fff;
+		border: 1px solid transparent;
 	}
 
 	.M_bord {
@@ -467,7 +467,7 @@ a {
 	position: fixed;
 	width: auto;
 	height: auto;
-	background: #efefef;
+	background: $Color-Body;
 	border: 1px solid grey;
 	overflow: hidden;
 	z-index: 50;
@@ -498,7 +498,7 @@ a {
 #name-panel {
 	border-bottom: 1px solid grey;
 	text-align: center;
-	background: #efefef;
+	background: $Color-Body-Light;
 	width: 100%;
 	font-size: 1.2em;
 	padding: 5px;

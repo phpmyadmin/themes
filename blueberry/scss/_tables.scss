@@ -3,6 +3,11 @@
 	// border: 1px solid $Color-Azure-300;
 	// border-radius: 10px;
 
+	> :not(caption) > * > * {
+		background-color: unset;
+		box-shadow: unset;
+	}
+
 	th,
 	td {
 		// text-shadow: 0 1px 0 #000;
@@ -13,6 +18,13 @@
 
 	th {
 		text-align: $direction-start;
+		font-weight: 500;
+
+		.column_heading {
+			* {
+				color: $Color-Tailwind-Title;
+			}
+		}
 	}
 
 	td {

@@ -43,14 +43,31 @@ a {
 	cursor: pointer;
 	outline: none;
 
-	&:link,
-	&:visited,
-	&:active {
-		text-decoration: none;
-		color: $Color-Misc1;
-		cursor: pointer;
-		outline: none;
+	// &:link,
+	// &:visited,
+	// &:active {
+	&:where(:link, :visited, :active) {
+		&.btn-primary {
+			color: $Color-White;
+			cursor: pointer;
+			outline: none;
+
+			* {
+				color: $Color-White;
+			}
+		}
+		&:not(.btn) {
+			text-decoration: none;
+			color: $Color-Misc1;
+			cursor: pointer;
+			outline: none;
+		}
+
+		* {
+			color: $Color-Tailwind-Text;
+		}
 	}
+
 }
 
 input[type="checkbox"],
@@ -563,23 +580,27 @@ table tr.marked {
 .pma-table tbody:first-of-type tr:nth-child(odd),
 .pma-table tbody:first-of-type tr:nth-child(odd) th,
 .table-striped tbody tr:nth-of-type(odd),
+.table-striped tbody tr:nth-of-type(odd) > *,
 // .table-striped tbody th:nth-of-type(odd),
 #table_index tbody:nth-of-type(odd) tr,
 #table_index tbody:nth-of-type(odd) th {
 	background: $Color-Body;
+	color: $Color-Tailwind-Title;
 }
 
 // even items 2,4,6,8...
 .pma-table tbody:first-of-type tr:nth-child(even),
 .pma-table tbody:first-of-type tr:nth-child(even) th,
 .table-striped tbody tr:nth-of-type(even),
+.table-striped tbody tr:nth-of-type(even) > *,
 // .table-striped tbody th:nth-of-type(even),
 #table_index tbody:nth-of-type(even) tr,
 #table_index tbody:nth-of-type(even) th {
 	background: $Color-Body-Light;
+	color: $Color-Tailwind-Title;
 }
 
-.column_action
+// .column_action
 
 // only one item
 .pma-table tbody:first-of-type tr:only-child {
@@ -2688,7 +2709,7 @@ input#auto_increment_opt {
 	}
 
 	.edit_area {
-		background: #fff;
+		background: $Color-Body-Special;
 		border: 1px solid #999;
 		min-width: 10em;
 		padding: 0.3em 0.5em;
@@ -2700,7 +2721,7 @@ input#auto_increment_opt {
 	}
 
 	.cell_edit_hint {
-		color: #555;
+		color: $Color-Tailwind-Text;
 		font-size: 0.8em;
 		margin: 0.3em 0.2em;
 	}

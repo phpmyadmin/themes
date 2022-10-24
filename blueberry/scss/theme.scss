@@ -50,7 +50,7 @@
 // select#themeSelect::after,
 #li_select_theme::after,
 form[name="setTheme"]::after {
-	content: "Theme Created by Shahab Movahhedi \A Visit shmovahhedi.com";
+	content: "Theme Created by Shahab Movahhedi \A Visit  shmovahhedi.com";
 	display: block;
 	font-size: 12px;
 	font-weight: 400;
@@ -123,7 +123,10 @@ form[name="setTheme"]::after {
 // }
 
 * {
-	font-family: "Segoe UI";
+	color: $Color-Tailwind-Title;
+	// color: $Color-Tailwind-Text;
+	// color: $Color-Text-Main;
+	font-family: "Segoe UI", "Segoe Pro", sans-serif;
 }
 
 .ltr {
