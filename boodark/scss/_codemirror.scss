@@ -1,0 +1,85 @@
+// CodeMirror
+
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+  height: 20rem;
+  direction: ltr;
+  color: $codemirror-color;
+  background-color: $body-bg;
+  border: $card-border-width solid $card-border-color;
+
+  @include border-radius($card-border-radius);
+
+  &-cursor {
+    border-left: 1px solid $codemirror-color;
+  }
+
+  &-hint {
+    color: $codemirror-color;
+  }
+
+  &-hints {
+    color: $codemirror-color;
+    background: $codemirror-bg;
+    z-index: 1999;
+  }
+
+  &-lint-tooltip {
+    z-index: 200;
+    font-family: inherit;
+
+    code {
+      font-family: monospace;
+      font-weight: bold;
+    }
+  }
+
+  &-gutters {
+    border-right: 1px solid $codemirror-gutters;
+    background-color: $codemirror-gutters;
+  }
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * .4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-height: ceil($textarea-rows * .6em);
+  min-width: ceil($textarea-cols * .6em);
+  border: 1px solid #a9a9a9;
+}
+
+#pma_console .CodeMirror-gutters {
+  background-color: initial;
+  border: none;
+}
+
+// CodeMirror dracula theme
+// https://codemirror.net/5/theme/dracula.css
+.cm-s-default {
+  .cm-keyword, .cm-statement-verb { color: #ff79c6; }
+  .cm-variable { color: #50fa7b; }
+  .cm-comment { color: #6272a4; }
+  .cm-mysql-string { color: #008000; }
+  .cm-operator { color: #ff79c6; }
+  .cm-mysql-word { color: white; }
+  .cm-builtin { color: #50fa7b; }
+  .cm-variable-2 { color: white; }
+  .cm-variable-3 { color: #ffb86c; }
+  .cm-separator { color: fuchsia; }
+  .cm-number { color: #bd93f9; }
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  display: inline-block;
+  float: right;
+  color: #666;
+  margin-left: 1em;
+}

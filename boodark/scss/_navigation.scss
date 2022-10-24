@@ -1,0 +1,476 @@
+// Navigation
+
+#pma_navigation {
+  width: $navigation-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background-color: $navigation-bg;
+  z-index: 800;
+
+  ul {
+    margin: 0;
+  }
+
+  form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  select {
+    &#select_server,
+    &#lightm_db {
+      width: 100%;
+    }
+
+    &.pageselector {
+      // see forms.scs
+    }
+  }
+
+  div {
+    &.pageselector {
+      text-align: center;
+      margin: 0;
+      margin-left: .75em;
+      border-left: 1px solid $border-color;
+    }
+  }
+
+  #pmalogo,
+  #serverChoice,
+  #navipanellinks,
+  #recentTableList,
+  #favoriteTableList,
+  #databaseList,
+  div.pageselector.dbselector {
+    text-align: center;
+    padding: 5px 10px 0;
+    border: 0;
+  }
+
+  #pmalogo {
+    background-color: $navigation-bg;
+    padding: 6px 10px;
+    height: 40px;
+  }
+
+  #navipanellinks {
+    padding: 8px 10px;
+    background-color: darken($navigation-bg, 5%);
+
+    a {
+      display: inline-block;
+      padding: 8px;
+    }
+  }
+
+  #navipanellinks .icon {
+    margin: 0;
+  }
+
+  #recentTable,
+  #favoriteTable {
+    width: 200px;
+  }
+
+  #favoriteTableList select,
+  #serverChoice select {
+    width: 80%;
+  }
+}
+
+select {
+  &.pageselector {
+    display: inline-block;
+    width: auto;
+    margin: 5px;
+  }
+}
+
+#pma_navigation_header {
+  overflow: hidden;
+}
+
+#pma_navigation_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  > img.throbber {
+    display: none;
+    margin: .3em auto 0;
+  }
+}
+
+#pma_navigation_select_database {
+  text-align: left;
+  padding: 0 0 0;
+  border: 0;
+  margin: 0;
+}
+
+#pma_navigation_db_select {
+  margin-top: .5em;
+  margin-left: .75em;
+
+  select {
+    padding: 4px 6px;
+    margin: 0 0 0;
+    width: 92%;
+    font-size: 1.11em;
+  }
+}
+
+#pma_navigation_tree_content {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  height: 100%;
+
+  a.hover_show_full {
+    position: relative;
+    z-index: 100;
+    vertical-align: sub;
+  }
+}
+
+#pma_navigation_tree {
+  margin: 0;
+  margin-left: 5px;
+  overflow: hidden;
+  color: $navigation-color;
+  height: 74%;
+  position: relative;
+
+  a {
+    color: $link-color;
+    padding-left: 0;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ul {
+    clear: both;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    ul {
+      position: relative;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+    white-space: nowrap;
+    clear: both;
+    min-height: 16px;
+
+    &.activePointer,
+    &.selected {
+      color: $black;
+      background-color: $navigation-selected-bg;
+    }
+
+    .dbItemControls {
+      padding-right: 4px;
+      float: right;
+    }
+
+    .navItemControls {
+      display: none;
+      padding-right: 4px;
+      float: right;
+    }
+
+    &.activePointer .navItemControls {
+      display: block;
+      opacity: .5;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+
+    &.fast_filter {
+      white-space: nowrap;
+      clear: both;
+      min-height: 16px;
+    }
+
+    &.last > ul {
+      background: none;
+    }
+
+    > {
+      a,
+      i {
+        line-height: 1.5em;
+        height: 1.5em;
+        padding-left: .3em;
+      }
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+
+  i {
+    display: block;
+  }
+
+  div {
+    &.block {
+      position: relative;
+      width: 1.5em;
+      height: 1.5em;
+      min-width: 16px;
+      min-height: 16px;
+      float: left;
+
+      &.double {
+        width: 2.5em;
+      }
+
+      i,
+      b {
+        width: 1.5em;
+        height: 1.7em;
+        min-width: 16px;
+        min-height: 8px;
+        position: absolute;
+        bottom: .7em;
+        left: .75em;
+        z-index: 0;
+      }
+
+      // Top and right segments for the tree element connections
+      i {
+        display: block;
+        border-left: 1px solid $border-color;
+        border-bottom: 1px solid $border-color;
+        position: relative;
+        z-index: 0;
+
+        // Removes top segment
+        &.first {
+          border-left: 0;
+        }
+      }
+
+      // Bottom segment for the tree element connections
+      b {
+        display: block;
+        height: .75em;
+        bottom: 0;
+        left: .75em;
+        border-left: 1px solid $border-color;
+      }
+
+      a,
+      u {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+      }
+
+      a + a {
+        left: 100%;
+      }
+
+      &.double {
+        a,
+        u {
+          left: 33%;
+        }
+
+        a + a {
+          left: 85%;
+        }
+      }
+
+      img {
+        position: relative;
+        top: -.6em;
+        left: 0;
+        margin-left: -7px;
+      }
+    }
+
+    &.throbber img {
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  .list_container {
+    border-left: 1px solid $border-color;
+    margin-left: .75em;
+    padding-left: .75em;
+
+    li.last.database {
+      // Revert the effect of the rule that is applied on all the tree
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .last > .list_container {
+    border-left: 0 solid $border-color;
+  }
+}
+
+// Fast filter
+li.fast_filter {
+  padding-left: .75em;
+  margin-left: .75em;
+  padding-right: 35px;
+  border-left: 1px solid $border-color;
+  list-style: none;
+
+  input {
+    font-size: .7em;
+  }
+
+  .searchClauseClear {
+    font-weight: bold;
+    color: $danger;
+    font-size: .7em;
+    border-color: $input-border-color;
+  }
+
+  &.db_fast_filter {
+    border: 0;
+    margin-left: 0;
+  }
+}
+
+#navigation_controls_outer {
+  min-height: 21px !important;
+
+  &.activePointer {
+    background-color: transparent !important;
+  }
+}
+
+#navigation_controls {
+  float: right;
+  padding-right: 23px;
+}
+
+// Resize handler
+#pma_navigation_resizer {
+  width: 1px !important;
+  height: 100%;
+  background-color: rgba($black, .125);
+  cursor: col-resize;
+  position: fixed;
+  top: 0;
+  left: 240px;
+  z-index: 801;
+}
+
+#pma_navigation_collapser {
+  width: 24px;
+  height: 40px;
+  line-height: 36px;
+  background: #222;
+  color: #555;
+  font-weight: bold;
+  position: fixed;
+  top: 0;
+  left: $navigation-width;
+  text-align: center;
+  cursor: pointer;
+  z-index: 800;
+  text-shadow: 0 1px 0 $white;
+  filter: dropshadow(color = $white, offx = 0, offy = 1);
+  border: 1px solid rgba($black, .125);
+}
+
+// Quick warp links
+.pma_quick_warp {
+  margin-top: 5px;
+  margin-left: 2px;
+  position: relative;
+
+  .drop_list {
+    float: left;
+    margin-left: 3px;
+    padding: 2px 0;
+
+    &:hover {
+      .drop_button {
+        background: lighten($black, 20%);
+      }
+
+      ul {
+        display: block;
+      }
+    }
+
+    ul {
+      position: absolute;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overflow-y: auto;
+      list-style: none;
+      background: $navigation-bg;
+      border: 1px solid $navigation-border-color;
+      border-radius: .3em;
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      box-shadow: 0 0 5px $navigation-shadow-color;
+      top: 100%;
+      left: 3px;
+      right: 0;
+      display: none;
+      z-index: 802;
+    }
+
+    li {
+      white-space: nowrap;
+      padding: 0;
+      border-radius: 0;
+
+      img {
+        vertical-align: sub;
+      }
+
+      &:hover {
+        background: #f2f2f2;
+      }
+    }
+
+    a {
+      display: block;
+      padding: .2em .3em;
+
+      &.favorite_table_anchor {
+        clear: left;
+        float: left;
+        padding: .1em .3em 0;
+      }
+    }
+  }
+
+  .drop_button {
+    padding: .3em;
+    border: 1px solid $navigation-drop-button-bg;
+    border-radius: .3em;
+    background: $navigation-drop-button-bg;
+    color: $body-color;
+    cursor: pointer;
+  }
+}
