@@ -47,7 +47,7 @@
   #databaseList,
   div.pageselector.dbselector {
     text-align: center;
-    padding: 5px 10px 0;
+    padding: 8px 10px;
     border: 0;
   }
 
@@ -74,11 +74,6 @@
   #recentTable,
   #favoriteTable {
     width: 200px;
-  }
-
-  #favoriteTableList select,
-  #serverChoice select {
-    width: 80%;
   }
 }
 
@@ -356,7 +351,7 @@ li.fast_filter {
 }
 
 #navigation_controls_outer {
-  min-height: 21px !important;
+  min-height: 24px !important;
 
   &.activePointer {
     background-color: transparent !important;
@@ -365,7 +360,7 @@ li.fast_filter {
 
 #navigation_controls {
   float: right;
-  padding-right: 23px;
+  padding-right: 1.5rem;
 }
 
 // Resize handler
@@ -378,6 +373,10 @@ li.fast_filter {
   top: 0;
   left: 240px;
   z-index: 801;
+
+  &:hover {
+    background-color: $navigation-resizer-hover-bg;
+  }
 }
 
 #pma_navigation_collapser {

@@ -23,8 +23,7 @@ $pma-gray-600-rgb: 108, 117, 125;
 $pma-gray-700-rgb: 73, 80, 87;
 $pma-gray-800-rgb: 52, 58, 64;
 $pma-gray-900-rgb: 33, 37, 41;
-
-// $blue:    #0d6efd;
+$pma-blue:    #0d6efd;
 $pma-indigo:  #6610f2;
 $pma-purple:  #6f42c1;
 $pma-pink:    #d63384;
@@ -110,6 +109,18 @@ $dropdown-link-color:         $dropdown-color;
 $dropdown-link-hover-color:   $pma-body-color;
 $dropdown-link-hover-bg:      rgba($pma-body-color, .15);
 // Pagination
+$pagination-bg:                    $pma-body-bg;
+$pagination-border-color:          $pma-border-color;
+$pagination-focus-bg:              $pma-body-bg;
+$pagination-hover-color:           $white;
+$pagination-hover-bg:              $pma-blue;
+$pagination-hover-border-color:    $pagination-hover-bg;
+$pagination-active-color:          $white;
+$pagination-active-bg:             $pma-blue;
+$pagination-active-border-color:   $pagination-active-bg;
+$pagination-disabled-color:        $pma-disable-color;
+$pagination-disabled-bg:           $pma-component-bg;
+$pagination-disabled-border-color: $pma-border-color;
 // Placeholders
 // Cards
 $card-border-color:           rgba($pma-body-bg, .5);
@@ -161,6 +172,7 @@ $navigation-selected-bg:      $pma-selected-bg;
 $navigation-border-color:     $pma-border-color;
 $navigation-shadow-color:     $pma-border-color;
 $navigation-drop-button-bg:   $pma-border-color;
+$navigation-resizer-hover-bg: $pma-button-color;
 
 // Breadcrumbs
 $breadcrumb-navbar-padding-y:     .5rem;
