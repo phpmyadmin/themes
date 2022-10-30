@@ -1,0 +1,28 @@
+{
+	"name": "blueberry",
+	"version": "1.1.0",
+	"description": "A modern dark theme for phpMyAdmin",
+	"author": "Shahab Movahhedi",
+	"url": "https://shmovahhedi.com/",
+	"contributors": [
+		{
+			"name": "Shahab Movahhedi",
+			"email": "dev@shmovahhedi.com",
+			"url": "https://shmovahhedi.com"
+		}
+	],
+	"scripts": {
+		"scss-compile-nomini": "sass scss:css",
+		"scss-compile": "sass scss:css --style=compressed",
+		"scss-compile-direct": "sass --style=compressed scss:F:\\xampp\\phpMyAdmin\\themes\\blueberry\\css",
+		"scss-compile-jq": "sass --style=compressed scss\\jquery-ui.scss:jquery\\jquery-ui.css",
+		"scss-compile-direct-jq": "sass --style=compressed scss\\jquery-ui.scss:F:\\xampp\\phpMyAdmin\\themes\\blueberry\\jquery\\jquery-ui.css",
+		"scss-watch": "sass --watch --style=compressed scss:css",
+		"scss-watch-direct": "sass --watch --style=compressed scss:F:\\xampp\\phpMyAdmin\\themes\\blueberry\\css",
+		"scss-watch-jq": "sass --watch --style=compressed scss\\jquery-ui.scss:jquery\\jquery-ui.css",
+		"scss-watch-direct-jq": "sass --watch --style=compressed scss\\jquery-ui.scss:F:\\xampp\\phpMyAdmin\\themes\\blueberry\\jquery\\jquery-ui.css"
+	},
+	"dependencies": {
+		"bootstrap": "^5.2.2"
+	}
+}

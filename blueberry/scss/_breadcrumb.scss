@@ -1,0 +1,35 @@
+.breadcrumb {
+	background: $Color-Body-Light;
+	padding-#{$direction-start}: 2.2em;
+	padding-block: 0.3em;
+	// text-shadow: 0 1px 0 #000;
+}
+
+
+.breadcrumb-item {
+	+ .breadcrumb-comment {
+		padding-left: 0.5rem;
+	}
+
+	+ .breadcrumb-item::before {
+		float: left;
+		padding-right: 0.5rem;
+		color: $Color-Azure-500;
+		content: "/";
+	}
+
+	.icon {
+		margin: 0;
+	}
+
+	a {
+		color: #fff;
+	}
+}
+
+.breadcrumb-comment {
+	color: #d6d6d6;
+	font-weight: bold;
+	font-style: italic;
+	text-shadow: none;
+}

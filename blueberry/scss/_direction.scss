@@ -1,0 +1,13 @@
+$direction: ltr !default;
+
+@if $direction != ltr and $direction != rtl {
+	$direction: ltr;
+}
+
+$direction-start: left;
+$direction-end: right;
+
+@if $direction == rtl {
+	$direction-start: right;
+	$direction-end: left;
+}

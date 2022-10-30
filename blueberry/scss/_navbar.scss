@@ -1,0 +1,78 @@
+.navbar.bg-light {
+	background: none !important;
+}
+
+.navbar-nav,
+.nav-pills {
+	font-weight: bold;
+	padding: 8px 10px;
+	background: $Color-Body;
+	border-bottom: 1px solid $Color-Azure-600;
+	width: 100%;
+}
+
+.nav-pills.m-2 {
+	margin: 0 !important;
+}
+
+.navbar-nav .icon,
+.nav-pills .icon {
+	width: 22px;
+	height: 22px;
+	margin-#{$direction-end}: 0.5em;
+	margin-top: -2px;
+	// vertical-align: -3px;
+}
+
+.navbar-nav .nav-item,
+.nav-pills .nav-item {
+	color: $Color-Tailwind-Title;
+	background: $Color-Body;
+	// background: linear-gradient(#fff, #dcdcdc);
+	// border-#{$direction-end}: 1px solid #fff;
+	// border-#{$direction-start}: 1px solid #ccc;
+	border-bottom: 1px solid $Color-Body;
+	border-radius: 10px;
+	margin-inline-end: 0.5em;
+
+	// &:first-child {
+	// 	border-#{$direction-start}: 0;
+	// }
+
+	.nav-link {
+		padding: 0.5rem;
+		border-radius: 10px;
+	}
+
+	&.active,
+	.nav-link.active {
+		background: $Color-Body-Special;
+		border-bottom: 1px solid $Color-Body;
+	}
+
+	&:hover {
+		color: $Color-Tailwind-Title;
+		background: $Color-Body-Light;
+	}
+}
+
+.navbar-light .navbar-nav .nav-link {
+	color: $Color-Tailwind-Title;
+
+	&:hover {
+		color: $Color-Tailwind-Title;
+		// background: $Color-Body-Special;
+	}
+}
+
+.navbar-light .navbar-toggler {
+	border: none;
+}
+
+.navbar-light .navbar-nav .show > .nav-link,
+.navbar-light .navbar-nav .active > .nav-link,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .nav-link.active,
+.nav-pills .nav-link.active {
+	color: $Color-Tailwind-Focus;
+}

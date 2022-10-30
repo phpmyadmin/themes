@@ -1,0 +1,82 @@
+.input-group-text {
+	color: $Color-Text-Main;
+	background-color: $Color-Body-Light;
+	border: 1px solid #686881;
+}
+
+.form-control,
+.form-select,
+select,
+optgroup,
+textarea,
+// input,
+input[type="text"],
+input[type="color"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="file"],
+input[type="image"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="range"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+input[type="week"] {
+	padding: 5px 10px;
+	display: inline-block;
+	background-color: $Color-Body-Light;
+	border: 1px solid #686881;
+	color: $Color-Text-Main;
+	border-radius: 10px;
+	box-sizing: border-box;
+	line-height: normal;
+	vertical-align: middle;
+
+	// @include mobile() {
+	// 	width: 100%;
+	// 	padding: 1.8vw 3vw;
+	// 	border-radius: 6vw;
+	// }
+
+	&:focus {
+		box-shadow: unset;
+	}
+}
+
+.form-select,
+select.form-control {
+	appearance: auto;
+}
+
+// .input-group-prepend,
+// .input-group-append {
+// 	border: 1px solid #686881;
+// }
+
+// .textfield {
+// 	width: 100%;
+// }
+
+.btn-group > .btn:not(:last-child):not(.dropdown-toggle),
+.btn-group > .btn-group:not(:last-child) > .btn {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	margin-inline-end: 0;
+}
+
+.btn-group > .btn:not(:first-child),
+.btn-group > .btn-group:not(:first-child) > .btn {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	margin-inline-start: 0;
+}
+
+select#fieldsSelect,
+textarea#sqlquery {
+	margin: 0;
+	height: 20rem;
+}

@@ -1,0 +1,147 @@
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+	color: $Color-Text-Main;
+	background: #1e1e1e;
+	height: 20rem;
+	direction: ltr;
+}
+.CodeMirror-gutters {
+	border-right: 1px solid #7f7f7f;
+	background-color: #1e1e1e;
+}
+
+.CodeMirror::selection,
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection {
+	background: $Color-Azure;
+	color: $Color-White;
+}
+
+#inline_editor_outer .CodeMirror {
+	height: ceil($textarea-rows * 0.4em);
+}
+
+.insertRowTable .CodeMirror {
+	min-height: ceil($textarea-rows * 0.6em);
+	min-width: ceil($textarea-cols * 0.6em);
+	border: 1px solid #a9a9a9;
+}
+
+#pma_console .CodeMirror-gutters {
+	background-color: initial;
+	border: none;
+}
+
+.CodeMirror-cursor {
+	border-color: $Color-Text-Main;
+}
+
+.cm-s-default span,
+span {
+	&.cm-meta {
+		color: #569cd6;
+	}
+	&.cm-keyword,
+	&.cm-statement-verb {
+		color: #569cd6;
+	}
+	&.cm-def {
+		color: #9cdcfe;
+	}
+	&.cm-variable {
+		color: #ddd6a3;
+	}
+	&.cm-variable-2 {
+		color: #9cdcfe;
+	}
+	&.cm-variable-3,
+	&.cm-type {
+		color: #a9b7c6;
+	}
+	&.cm-property {
+		color: #9cdcfe;
+	}
+	&.cm-operator {
+		color: #d4d4d4;
+	}
+	&.cm-string {
+		color: #ce9178;
+	}
+	&.cm-string-2 {
+		color: #6a8759;
+	}
+	&.cm-mysql-string {
+		color: #008000;
+	}
+	&.cm-mysql-word {
+		color: white;
+	}
+	&.cm-comment {
+		color: #6a9955;
+	}
+	&.cm-link {
+		color: #287bde;
+	}
+	&.cm-atom {
+		color: #569cd6;
+	}
+	&.cm-error {
+		color: #bc3f3c;
+	}
+	&.cm-tag {
+		color: #569cd6;
+	}
+	&.cm-attribute {
+		color: #9cdcfe;
+	}
+	&.cm-qualifier {
+		color: #d7ba7d;
+	}
+	&.cm-bracket {
+		color: #d4d4d4;
+	}
+	&.cm-number {
+		color: #b5cea8;
+	}
+	&.cm-builtin {
+		color: #569cd6;
+	}
+	&.cm-separator {
+		color: fuchsia;
+	}
+}
+
+.autocomplete-column-name {
+	display: inline-block;
+}
+
+.autocomplete-column-hint {
+	display: inline-block;
+	// float: $direction-end;
+	color: #666;
+	margin-#{$direction-start}: 1em;
+}
+
+.CodeMirror-hint {
+	color: $Color-Text-Main;
+	font-family: $Font-Mono;
+}
+
+.CodeMirror-hints {
+	color: $Color-Text-Main;
+	background: $Color-Body-Light;
+	z-index: 999;
+}
+
+.CodeMirror-lint-tooltip {
+	z-index: 200;
+	font-family: inherit;
+
+	code {
+		font-family: monospace;
+		font-weight: bold;
+	}
+}

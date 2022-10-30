@@ -1,0 +1,509 @@
+// Navigation styles for the pmahomme theme
+#pma_navigation {
+	width: $navi-width;
+	position: fixed;
+	top: 0;
+	#{$direction-start}: 0;
+	height: 100vh;
+	background: $Color-Body;
+	color: $navi-color;
+	z-index: 800;
+
+	ul {
+		margin: 0;
+	}
+
+	form {
+		margin: 0;
+		padding: 0;
+		display: inline;
+	}
+
+	select {
+		&#select_server,
+		&#lightm_db {
+			width: 100%;
+		}
+	}
+
+	div {
+		&.pageselector {
+			text-align: center;
+			margin: 0;
+			margin-#{$direction-start}: 0.75em;
+			border-#{$direction-start}: 1px solid #666;
+		}
+	}
+
+	#pmalogo,
+	#serverChoice,
+	#navipanellinks,
+	#recentTableList,
+	#favoriteTableList,
+	#databaseList,
+	div.pageselector.dbselector {
+		text-align: center;
+		padding: 5px 10px 0;
+		border: 0;
+	}
+
+	#navipanellinks .icon {
+		width: 22px;
+		height: 22px;
+		margin: 0;
+	}
+
+	#recentTable,
+	#favoriteTable {
+		width: 200px;
+	}
+
+	#favoriteTableList select,
+	#serverChoice select {
+		width: 80%;
+	}
+}
+
+#pma_navigation_header {
+	overflow: hidden;
+}
+
+#pma_navigation_content {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	#{$direction-start}: 0;
+	z-index: 0;
+
+	> img.throbber {
+		display: none;
+		margin: 0.3em auto 0;
+	}
+}
+
+#pma_navigation_select_database {
+	text-align: $direction-start;
+	padding: 0 0 0;
+	border: 0;
+	margin: 0;
+}
+
+#pma_navigation_db_select {
+	margin-top: 0.5em;
+	margin-#{$direction-start}: 0.75em;
+
+	select {
+		// background: url('../img/select_bg.png') repeat scroll 0 0;
+		-webkit-border-radius: 2px;
+		border-radius: 2px;
+		border: 1px solid #bbb;
+		border-top: 1px solid #bbb;
+		color: #333;
+		padding: 4px 6px;
+		margin: 0 0 0;
+		width: 92%;
+		font-size: 1.11em;
+	}
+}
+
+#pma_navigation_tree_content {
+	width: 100%;
+	overflow: hidden;
+	overflow-y: auto;
+	position: absolute;
+	height: 100%;
+
+	a.hover_show_full {
+		position: relative;
+		z-index: 100;
+		vertical-align: sub;
+	}
+}
+
+.list_container .selected,
+.list_container .selected > .hover_show_full {
+	color: $Color-Tailwind-Focus;
+}
+
+#pma_navigation_tree {
+	margin: 0;
+	margin-#{$direction-start}: 5px;
+	overflow: hidden;
+	// color: #444;
+	height: 74%;
+	position: relative;
+
+	a {
+		// color: $navi-color;
+		padding-left: 0;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+
+	ul {
+		clear: both;
+		padding: 0;
+		list-style-type: none;
+		margin: 0;
+
+		ul {
+			position: relative;
+		}
+	}
+
+	li {
+		margin-bottom: 0;
+
+		&.activePointer,
+		&.selected {
+			color: $navi-pointer-color;
+			background-color: $navi-pointer-background;
+		}
+
+		.dbItemControls {
+			padding-#{$direction-end}: 4px;
+			float: right;
+		}
+
+		.navItemControls {
+			display: none;
+			padding-#{$direction-end}: 4px;
+			float: right;
+		}
+
+		&.activePointer .navItemControls {
+			display: block;
+			opacity: 0.5;
+
+			&:hover {
+				opacity: 1;
+			}
+		}
+	}
+
+	li {
+		white-space: nowrap;
+		clear: both;
+		min-height: 16px;
+
+		&.fast_filter {
+			white-space: nowrap;
+			clear: both;
+			min-height: 16px;
+		}
+	}
+
+	img {
+		margin: 0;
+	}
+
+	i {
+		display: block;
+	}
+
+	.navGroup {
+		div.fst-italic {
+			div.block.second {
+				margin-top: -4px;
+			}
+		}
+	}
+
+	div {
+		&.block {
+			position: relative;
+			width: 1.5em;
+			height: 1.5em;
+			min-width: 16px;
+			min-height: 16px;
+			float: $direction-start;
+
+			&.double {
+				width: 2.5em;
+			}
+
+			i,
+			b {
+				width: 1.5em;
+				height: 1.7em;
+				min-width: 16px;
+				min-height: 8px;
+				position: absolute;
+				bottom: 0.7em;
+				#{$direction-start}: 0.75em;
+				z-index: 0;
+			}
+
+			// Top and right segments for the tree element connections
+			i {
+				display: block;
+				border-#{$direction-start}: 1px solid #666;
+				border-bottom: 1px solid #666;
+				position: relative;
+				z-index: 0;
+
+				// Removes top segment
+				&.first {
+					border-#{$direction-start}: 0;
+				}
+			}
+
+			// Bottom segment for the tree element connections
+			b {
+				display: block;
+				height: 0.75em;
+				bottom: 0;
+				#{$direction-start}: 0.75em;
+				border-#{$direction-start}: 1px solid #666;
+			}
+
+			a,
+			u {
+				position: absolute;
+				#{$direction-start}: 50%;
+				top: 50%;
+				z-index: 10;
+			}
+
+			a + a {
+				#{$direction-start}: 100%;
+			}
+
+			&.double {
+				a,
+				u {
+					#{$direction-start}: 33%;
+				}
+
+				a + a {
+					#{$direction-start}: 85%;
+				}
+			}
+
+			img {
+				position: relative;
+				top: -0.6em;
+				#{$direction-start}: 0;
+				margin-#{$direction-start}: -7px;
+			}
+		}
+
+		&.throbber img {
+			top: 2px;
+			#{$direction-start}: 2px;
+		}
+	}
+
+	li {
+		&.last > ul {
+			background: none;
+		}
+
+		> {
+			a,
+			i {
+				line-height: 1.5em;
+				// height: 1.5em;
+				padding-#{$direction-start}: 0.3em;
+			}
+		}
+	}
+
+	.list_container {
+		border-#{$direction-start}: 1px solid #666;
+		margin-#{$direction-start}: 0.75em;
+		padding-#{$direction-start}: 0.75em;
+	}
+
+	.last > .list_container {
+		border-#{$direction-start}: 0 solid #666;
+	}
+}
+
+// Fast filter
+li.fast_filter {
+	padding-#{$direction-start}: 0.75em;
+	margin-#{$direction-start}: 0.75em;
+	padding-#{$direction-end}: 35px;
+	border-#{$direction-start}: 1px solid #666;
+	list-style: none;
+
+	input {
+		margin: 3px 0 0 0;
+		font-size: 0.7em;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		padding-#{$direction-start}: 4px;
+		padding-#{$direction-end}: 1.7em;
+		width: 100%;
+	}
+
+	span {
+		position: relative;
+		#{$direction-end}: 2.5em;
+		padding: 0.2em;
+		cursor: pointer;
+		font-weight: bold;
+		color: #800;
+		font-size: 0.7em;
+	}
+
+	&.db_fast_filter {
+		border: 0;
+		margin-#{$direction-start}: 0;
+		margin-#{$direction-end}: 10px;
+	}
+}
+
+// IE10+ has its own reset X
+html.ie {
+	li.fast_filter {
+		span {
+			display: none;
+		}
+
+		input {
+			padding-#{$direction-end}: 0.2em;
+		}
+	}
+
+	&.ie9,
+	&.ie8 {
+		li.fast_filter {
+			span {
+				display: auto;
+			}
+
+			input {
+				padding-#{$direction-end}: 1.7em;
+			}
+		}
+	}
+}
+
+#navigation_controls_outer {
+	min-height: 21px !important;
+
+	&.activePointer {
+		background-color: transparent !important;
+	}
+}
+
+#navigation_controls {
+	float: $direction-end;
+	padding-#{$direction-end}: 23px;
+}
+
+// Resize handler
+#pma_navigation_resizer {
+	width: 1px;
+	height: 100%;
+	background-color: $Color-Azure-900;
+	cursor: col-resize;
+	position: fixed;
+	top: 0;
+	#{$direction-start}: 240px;
+	z-index: 801;
+}
+
+#pma_navigation_collapser {
+	width: 30px;
+	height: 30px;
+	position: fixed;
+	top: 0;
+	#{$direction-start}: $navi-width;
+	cursor: pointer;
+	z-index: 800;
+	font-size: 0;
+	background-image: url('../img/left-square.png');
+	margin: 0;
+	margin-#{$direction-start}: 0.3em;
+	padding: 0 !important;
+	background-size: contain;
+	background-repeat: no-repeat;
+
+	&[title="Show panel"] {
+		background-image: url('../img/right-square.png');
+	}
+}
+
+// Quick warp links
+.pma_quick_warp {
+	margin-top: 5px;
+	margin-#{$direction-start}: 2px;
+	position: relative;
+
+	.drop_list {
+		float: $direction-start;
+		margin-#{$direction-start}: 3px;
+		padding: 2px 0;
+
+		&:hover {
+			.drop_button {
+				background: $Color-Body;
+			}
+
+			ul {
+				display: block;
+			}
+		}
+
+		ul {
+			position: absolute;
+			margin: 0;
+			padding: 0;
+			overflow: hidden;
+			overflow-y: auto;
+			list-style: none;
+			background: $Color-Body-Light;
+			border: 1px solid $Color-Body-Light;
+			border-radius: 0.8em;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
+			// box-shadow: 0 0 5px #ccc;
+			top: 100%;
+			#{$direction-start}: 3px;
+			#{$direction-end}: 0;
+			display: none;
+			z-index: 802;
+		}
+
+		li {
+			white-space: nowrap;
+			padding: 0;
+			border-radius: 0;
+
+			img {
+				vertical-align: sub;
+			}
+
+			&:hover {
+				background: $Color-Body-Special;
+			}
+		}
+
+		a {
+			display: block;
+			padding: 0.2em 0.3em;
+
+			&.favorite_table_anchor {
+				clear: $direction-start;
+				float: $direction-start;
+				padding: 0.1em 0.3em 0;
+			}
+		}
+	}
+
+	.drop_button {
+		font-size: 12px;
+		padding: 0.3em;
+		border: .1px solid #ddd;
+		padding: 0.3em 0.5em;
+		border-radius: 0.8em;
+		background: $Color-Body-Light;
+		cursor: pointer;
+	}
+}

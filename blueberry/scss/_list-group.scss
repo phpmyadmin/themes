@@ -1,0 +1,30 @@
+.list-group {
+	padding-#{$direction-start}: 40px;
+	margin: 1rem 0;
+}
+
+.list-group-flush > .list-group-item {
+	padding: 3px;
+
+	&:not(:last-child) {
+		border-bottom: 1px solid $Color-Body;
+	}
+}
+
+.list-group-item {
+	display: list-item;
+	border: none;
+	color: $Color-Text-Main;
+}
+
+#li_select_server,
+#li_change_password,
+#li_select_mysql_collation,
+#li_user_preferences,
+#li_select_lang,
+#li_select_theme {
+	&.list-group-item {
+		display: block;
+		margin-#{$direction-start}: -20px;
+	}
+}

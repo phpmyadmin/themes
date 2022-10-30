@@ -1,0 +1,195 @@
+@import "direction";
+@import "variables";
+// @import "../node_modules/bootstrap/scss/functions";
+// @import "../node_modules/bootstrap/scss/variables";
+// @import "../node_modules/bootstrap/scss/mixins";
+// @import "../node_modules/bootstrap/scss/maps";
+// @import "../node_modules/bootstrap/scss/utilities";
+
+// $utilities: map-merge(
+// 	$utilities,
+// 	(
+// 		"button-radius": (
+// 			property: border-radius,
+// 			class: buttuuon,
+// 			values: (
+// 				null: 20px,
+// 			),
+// 		),
+// 	)
+// );
+
+// @import "../node_modules/bootstrap/scss/utilities/api";
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+@import "common";
+@import "enum-editor";
+@import "gis";
+@import "navigation";
+@import "designer";
+@import "rte";
+@import "codemirror";
+@import "jqplot";
+@import "resizable-menu";
+@import "icons";
+@import "reboot";
+@import "tables";
+@import "forms";
+@import "buttons";
+@import "nav";
+@import "navbar";
+@import "dropdown";
+@import "card";
+@import "breadcrumb";
+@import "alert";
+@import "list-group";
+@import "modal";
+// @import "jquery-ui";
+
+// select[name="set_theme"]::after {
+// select#themeSelect::after,
+#li_select_theme::after,
+form[name="setTheme"]::after {
+	content: "Theme Created by Shahab Movahhedi \A Visit  shmovahhedi.com";
+	display: block;
+	font-size: 12px;
+	font-weight: 400;
+	color: #7f7f7f;
+	font-style: italic;
+	white-space: pre;
+	user-select: text;
+}
+
+// .sr-only {
+// 	@include visually-hidden();
+// }
+
+// legend {
+// 	float: none;
+// }
+
+// .table-light,
+// .table-light > th,
+// .table-light > td {
+// 	background-color: #fdfdfe;
+// }
+
+// .form-check-input {
+// 	appearance: unset;
+// }
+
+// .form-row {
+// 	display: flex;
+// 	flex-wrap: wrap;
+// 	margin-right: -5px;
+// 	margin-left: -5px;
+// }
+// .form-inline {
+// 	display: flex;
+// 	flex-flow: row wrap;
+// 	align-items: center;
+// }
+
+// .form-group {
+// 	margin-bottom: 1rem;
+// }
+
+// @media (min-width: 576px) {
+// 	.form-inline label {
+// 		display: flex;
+// 		align-items: center;
+// 		justify-content: center;
+// 		margin-bottom: 0;
+// 	}
+// 	.form-inline .form-group {
+// 		display: flex;
+// 		flex: 0 0 auto;
+// 		flex-flow: row wrap;
+// 		align-items: center;
+// 		margin-bottom: 0;
+// 	}
+// 	.form-inline .form-control {
+// 		display: inline-block;
+// 		width: auto;
+// 		vertical-align: middle;
+// 	}
+// }
+
+// .text-right {
+// 	text-align: right;
+// }
+// .text-left {
+// 	text-align: left;
+// }
+
+* {
+	color: $Color-Tailwind-Title;
+	// color: $Color-Tailwind-Text;
+	// color: $Color-Text-Main;
+	font-family: "Segoe UI", "Segoe Pro", sans-serif;
+}
+
+.ltr {
+	direction: ltr;
+	text-align: start;
+}
+
+.rtl {
+	direction: rtl;
+	text-align: start;
+}
+
+.english {
+	font-family: $Font-English;
+	direction: ltr;
+	text-align: start;
+}
+
+.persian {
+	font-family: $Font-Persian;
+	direction: rtl;
+	text-align: start;
+}
+
+.arabic {
+	font-family: $Font-Arabic;
+	direction: rtl;
+	text-align: start;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+code,
+code *,
+.english-mono,
+.mono {
+	font-family: $Font-Mono;
+	direction: ltr;
+	text-align: left;
+}
+
+body {
+	background-color: #1e1e2a;
+}
+
+::-webkit-scrollbar {
+	width: 0.8rem;
+}
+
+::-webkit-scrollbar-thumb {
+	min-height: 10vh;
+	background: #005ab4;
+	border-radius: 13px;
+	&:hover {
+		background: #006ad3;
+	}
+	&:active {
+		background: $Color-Azure;
+	}
+}
+
+// .card-header + .list-group.list-group-flush {
+// 	margin-top: 0;
+// }

@@ -1,0 +1,21 @@
+.dropdown-item {
+	color: $Color-Tailwind-Title;
+	background: $Color-Body-Light;
+
+	&:hover {
+		background: $Color-Body-Light;
+		color: $Color-Text-Main;
+		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 6%);
+	}
+	&.active,
+	&:active {
+		background: $Color-Body-Light;
+		color: $Color-Text-Main;
+		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 10%);
+	}
+	&:focus {
+		background: $Color-Body-Light;
+		color: $Color-Text-Main;
+		box-shadow: inset 0 0 10vw 10vw rgb(255 255 255 / 12%);
+	}
+}
