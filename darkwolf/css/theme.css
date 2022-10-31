@@ -1551,7 +1551,7 @@ progress {
     color: #666;
     vertical-align: top;
     border-color: #dee2e6;
-	
+
 }
 .table > :not(caption) > * > * {
     padding: .5rem .5rem;
@@ -1560,7 +1560,7 @@ progress {
     box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg)
 }
 .table > tbody {
-    vertical-align: inherit;	
+    vertical-align: inherit;
 }
 .table > thead {
     vertical-align: bottom;
@@ -2501,7 +2501,7 @@ input[type=checkbox]:checked {
     background-color: #00365a;
     border-color: none;
     padding: 6px 10px;
-	
+
 }
 .mb-3 .btn-secondary:hover {
     color: #ccc;
@@ -2525,11 +2525,11 @@ input[type=checkbox]:checked {
 .mb-3 .pma-fieldset.tblFooters {
     border: 1px solid #444 !important;
     border-top: 1px solid #444 !important;
-    border-radius: 4px !important;    
+    border-radius: 4px !important;
 }
 .mb-3 .pma-fieldset {
-    border: 1px solid #444 !important;   
-    border-radius: 4px;    
+    border: 1px solid #444 !important;
+    border-radius: 4px;
 }
 fieldset.tblFooters {
 	margin-top: 10px!important
@@ -2787,11 +2787,11 @@ input#text_dbname {
 }
 #enumEditorModal tbody {
 	border: none!important;
-	background-color: transparent!important;	
+	background-color: transparent!important;
 }
 #enumEditorModal td {
 	border: none!important;
-	background-color: transparent!important;	
+	background-color: transparent!important;
 }
 #enumEditorModal .tblFooters {
 	padding-bottom: 0px
@@ -3370,7 +3370,7 @@ select.pageselector {
     -moz-appearance: none;
     appearance: none;
     outline: none;
-    margin-top: 10px !important;    
+    margin-top: 10px !important;
 }
 select.pageselector:hover {
     border: 1px solid #444;
@@ -5502,7 +5502,7 @@ ul#topmenu > li.active a:hover {
     z-index: 2;
     color: #999;
     background-color: #00365a;
-    
+
 	text-decoration: none
 }
 .page-link:focus {
@@ -5510,7 +5510,7 @@ ul#topmenu > li.active a:hover {
     color: #999;
     background-color: #00365a;
     outline: 0;
-    
+
 }
 .page-item:not(:first-child) .page-link {
     margin-left: -1px
@@ -5519,17 +5519,17 @@ ul#topmenu > li.active a:hover {
     z-index: 3;
     color: #ccc;
     background-color: #00365a;
-   
+
 }
 .page-item.disabled .page-link {
     color: #444;
     pointer-events: none;
     background-color: #1B1E21;
-    
+
 }
 .page-item:last-child .page-link{
 	background-color: #004940;
-	color:#999;	
+	color:#999;
 	margin-left: 5px;
 	border: none;
 	border-radius: 4px;
@@ -5538,7 +5538,7 @@ ul#topmenu > li.active a:hover {
 .page-item:last-child:hover .page-link{
 	background-color: #005e52;
 	color:#ccc;
-	
+
 }
 .page-link {
     padding: .375rem .75rem
@@ -6174,7 +6174,7 @@ div#ajaxError {
 }
 .modal-header .btn-close {
     padding: .5rem .5rem;
-    margin: -0.5rem -0.5rem -0.5rem auto;	
+    margin: -0.5rem -0.5rem -0.5rem auto;
 }
 .modal-title {
     margin-bottom: 0;
@@ -10207,7 +10207,7 @@ textarea.charField {
 .pma-fieldset label {
     color: #999;
     text-align: left !important
-} 
+}
 .pma-fieldset label:hover {
     color: #ccc;
     text-decoration: none
@@ -10257,7 +10257,7 @@ textarea.charField {
     max-width: 100%;
     box-shadow: none;
     width: initial;
-    font-size: 1em;	
+    font-size: 1em;
 }
 .pma-fieldset p {
     color: #999
@@ -11497,7 +11497,7 @@ input#auto_increment_opt {
     font-size: .8em !important;
     font-weight: normal !important;
     padding: 1px 3px !important;
-    box-shadow: none;	
+    box-shadow: none;
 }
 .tooltip * {
     background: none !important;
@@ -12108,7 +12108,7 @@ table.show_create td {
 .cm-s-pma .CodeMirror-code pre {
     font-family: Monaco, Consolas, monospace;
     background-color: #212529;
-	
+
 }
 .cm-s-pma .CodeMirror-measure > pre, .cm-s-pma .CodeMirror-code > pre, .cm-s-pma .CodeMirror-lines {
     padding: 0;
@@ -13422,11 +13422,11 @@ a.trigger:hover {
     background-color: #005e52;
     border: none
 }
-a.active.trigger {	
+a.active.trigger {
     color: #bbb !important;
     background: url("../img/designer/minus.png") 95% 55% no-repeat;
     background-color: #005e52;
-    z-index: 999;	
+    z-index: 999;
 }
 a.active.trigger:hover {
     color: #fff !important;
@@ -13613,10 +13613,10 @@ span.cm-string {
 }
  .CodeMirror-lint-tooltip {
     z-index: 200;
-    font-family: inherit; 
+    font-family: inherit;
 	background-color: #1B1E21;
 	border: 1px solid #444;
-	color: #999;	
+	color: #999;
 }
 .CodeMirror-lint-tooltip code {
     font-family: monospace;
@@ -13734,7 +13734,7 @@ td.jqplot-table-legend {
 .float-start {
     color: #666;
     margin-left: 5px;
-	
+
 }
 table.jqplot-cursor-legend {
     background-color: #212529;
@@ -14450,7 +14450,7 @@ ul.list-group {
     margin-left: 0px
 }
 ul.list-group input:disabled {
-    opacity: 0.4;	
+    opacity: 0.4;
 }
 ul.list-group input#text_sql_header_comment:disabled {
 	opacity: 1
@@ -14639,7 +14639,7 @@ dt.ui_tpicker_timezone_label {
 }
 .w-50 {
 	width: 100%!important;
-	
+
 }
 #formQBE .tblFooters {
 	background-color: #212529!important
