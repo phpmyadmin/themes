@@ -23,7 +23,6 @@
   .toolbar {
     position: relative;
     background: $console-toolbar-bg;
-    border-top: solid 1px #aaa;
     cursor: n-resize;
 
     .text {
@@ -51,8 +50,6 @@
 
       &:not(:hover) {
         display: inline-block;
-        border-top-right-radius: 3px;
-        border-right: solid 1px #aaa;
       }
 
       > .button {
@@ -70,7 +67,7 @@
   }
 
   .switch_button {
-    padding: 0 3px;
+    padding: .15rem .5rem;
     display: inline-block;
   }
 

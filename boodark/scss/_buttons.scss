@@ -1,7 +1,7 @@
 // Buttons
 
 .btn-outline-secondary {
-  @include button-outline-variant($btn-outline-secondary);
+  @include button-variant($dark, $dark);
 }
 
 .btn-link {
@@ -10,13 +10,16 @@
 
 button.mult_submit,
 .checkall_box + label {
-  text-decoration: none;
   color: $pma-button-color;
   cursor: pointer;
   outline: none;
 }
 
 button.mult_submit {
+  border: none;
+  background-color: transparent;
+  padding-top: 0;
+
   &:hover,
   &:focus {
     text-decoration: underline;
@@ -24,7 +27,16 @@ button.mult_submit {
   }
 }
 
-.checkall_box + label:hover {
-  text-decoration: underline;
-  color: $pma-button-color;
+.checkall_box + label {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+    color: $pma-button-color;
+  }
+}
+
+#bulkActionDropButton,
+#bulkActionExportButton {
+  background-color: #111519;
 }

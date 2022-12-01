@@ -1,0 +1,26 @@
+// Navbar
+
+.navbar-toggler {
+  border: none;
+  transition: none;
+
+  &:focus {
+    box-shadow: none;
+    background-color: $navbar-light-toggler-focus-bg;
+  }
+}
+
+.navbar-light {
+  .navbar-nav {
+    .nav-item.active {
+      color: $component-active-color;
+      background-color: $component-active-bg;
+    }
+  }
+}
+
+@include media-breakpoint-only(md) {
+  .navbar-collapse {
+    overflow: hidden !important;
+  }
+}

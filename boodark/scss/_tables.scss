@@ -4,6 +4,10 @@
   a {
     color: $pma-link-color;
   }
+
+  .favorite_table_anchor {
+    text-decoration: none;
+  }
 }
 
 @media only screen and (min-width: 768px) {

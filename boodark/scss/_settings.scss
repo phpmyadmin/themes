@@ -1,0 +1,160 @@
+// stylelint-disable scss/at-extend-no-missing-placeholder
+// Settings - config forms
+.config-form {
+  background-color: $card-bg;
+
+  fieldset {
+    margin-top: 0;
+    padding: 0;
+    clear: both;
+    border-radius: 0;
+
+    p {
+      margin: 0;
+      padding: .5em;
+      background: $body-color;
+      border-top: 0;
+    }
+
+    // form error list
+    .errors {
+      margin: 0 -2px 1em;
+      padding: .5em 1.5em;
+      background: #fbead9;
+      border-color: #c83838;
+      border-style: solid;
+      border-width: 1px 0;
+      list-style: none;
+      font-family: $font-family-base;
+      font-size: small;
+    }
+
+    // field error list
+    .inline_errors {
+      margin: .3em .3em .3em;
+      margin-left: 0;
+      padding: 0;
+      list-style: none;
+      color: $red;
+      font-size: small;
+    }
+
+    .doc {
+      margin-left: 1em;
+    }
+
+    .disabled-notice {
+      margin-left: 1em;
+      font-size: 80%;
+      text-transform: uppercase;
+      color: #e00;
+      cursor: help;
+    }
+
+    th {
+      padding: .3em .3em .3em;
+      padding-left: .5em;
+      text-align: left;
+      vertical-align: top;
+      background: transparent;
+      filter: none;
+      border-top: 1px solid $table-border-color;
+      border-right: none;
+
+      small {
+        display: block;
+        font-weight: normal;
+        font-family: $font-family-base;
+        font-size: x-small;
+        color: $text-muted;
+      }
+    }
+
+    td {
+      padding-top: .3em;
+      padding-bottom: .3em;
+      vertical-align: top;
+      border-top: 1px solid $table-border-color;
+      border-right: none;
+    }
+  }
+
+  legend {
+    display: none;
+  }
+
+  input {
+    // see forms.scss
+  }
+
+  select {
+    // see forms.scss
+    display: inline-block;
+  }
+
+  textarea {
+    // see forms.scss
+  }
+
+  span.checkbox {
+    padding: 2px;
+    display: inline-block;
+
+    &.custom {
+      input[type=checkbox] {
+        border-color: $pma-custom-color;
+        &:checked {
+          background-color: $pma-custom-color;
+        }
+      }
+    }
+  }
+
+  // customized field
+  input.custom,
+  .custom {
+    border-color: $pma-custom-color;
+  }
+
+  .field-error {
+    border-color: #a11 !important;
+  }
+
+  .field-comment-mark {
+    font-family: serif;
+    color: #007;
+    cursor: help;
+    padding: 0 .2em;
+    font-weight: bold;
+    font-style: italic;
+  }
+
+  .field-comment-warning {
+    color: #a00;
+  }
+
+  // error list
+  dd {
+    margin-left: .5em;
+
+    &::before {
+      content: "\25B8  ";
+    }
+  }
+}
+
+// Prefers form
+.prefsmanage_opts {
+  margin-left: 2em;
+
+  label {
+    padding-right: .5rem;
+    margin-bottom: .5rem;
+  }
+
+  input {
+    @extend .form-control;
+    display: inline-block;
+    width: auto;
+  }
+}
