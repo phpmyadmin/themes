@@ -1,0 +1,18 @@
+{
+  "name": "eyedtheme",
+  "version": "1.0.0",
+  "license": "MIT",
+  "scripts": {
+    "sass-compile-nomini": "sass scss:css",
+    "sass-compile": "sass scss:css --style=compressed",
+    "sass-compile-jq": "sass --style=compressed scss\\jquery-ui.scss:jquery\\jquery-ui.css",
+    "sass-watch": "sass --watch --style=compressed scss:css",
+    "sass-watch-jq": "sass --watch --style=compressed scss\\jquery-ui.scss:jquery\\jquery-ui.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.2.3"
+  },
+  "devDependencies": {
+    "sass": "^1.56.1"
+  }
+}

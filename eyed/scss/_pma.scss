@@ -1,0 +1,19 @@
+#topmenu.navbar-nav .nav-item.active {
+  font-weight: bold;
+}
+
+#topmenu.navbar-nav .nav-item .nav-link {
+  border-radius: $border-radius;
+}
+
+#topmenu.navbar-nav .nav-item .nav-link:hover {
+  background-color: $gray-300;
+}
+
+#navbarNav {
+  margin-left: 10px;
+}
+
+img.ui-datepicker-trigger {
+  width: 35px;
+}
