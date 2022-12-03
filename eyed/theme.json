@@ -1,0 +1,10 @@
+{
+    "name": "Eyed",
+    "version": "1.0.0",
+    "description": "Eyed theme for phpMyAdmin",
+    "author": "Febriansyah Riki Setiadi",
+    "url": "https://github.com/febryars33/eyed-phpmyadmin-theme/",
+    "supports": [
+        "5.2"
+    ]
+}
