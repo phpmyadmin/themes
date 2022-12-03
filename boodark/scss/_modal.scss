@@ -2,5 +2,6 @@
 
 .modal-header,
 .modal-footer {
-  background-image: linear-gradient($pma-component-bg, $body-bg);
+  border: none;
+  background-color: $modal-cap-bg;
 }

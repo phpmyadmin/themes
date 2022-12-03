@@ -1,3 +1,5 @@
+// stylelint-disable at-rule-empty-line-before
+// stylelint-disable scss/at-extend-no-missing-placeholder
 // Navigation
 
 #pma_navigation {
@@ -14,9 +16,7 @@
   }
 
   form {
-    margin: 0;
-    padding: 0;
-    display: inline;
+    // see `.pageselector` below
   }
 
   select {
@@ -67,13 +67,15 @@
     }
   }
 
-  #navipanellinks .icon {
-    margin: 0;
-  }
-
   #recentTable,
   #favoriteTable {
     width: 200px;
+  }
+}
+
+.pageselector {
+  form {
+    display: inline;
   }
 }
 
@@ -214,10 +216,6 @@ select {
         padding-left: .3em;
       }
     }
-  }
-
-  img {
-    margin: 0;
   }
 
   i {
@@ -380,21 +378,24 @@ li.fast_filter {
 }
 
 #pma_navigation_collapser {
-  width: 24px;
-  height: 40px;
-  line-height: 36px;
-  background: #222;
-  color: #555;
-  font-weight: bold;
   position: fixed;
   top: 0;
   left: $navigation-width;
-  text-align: center;
-  cursor: pointer;
   z-index: 800;
-  text-shadow: 0 1px 0 $white;
-  filter: dropshadow(color = $white, offx = 0, offy = 1);
-  border: 1px solid rgba($black, .125);
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: $pma-body-bg;
+  background-size: 50%;
+  background-position: center 55%;
+  background-repeat: no-repeat;
+  color: $pma-link-color;
+  font-size: 0;
+  cursor: pointer;
+  @extend .ic_chevron-left;
+
+  &[title="Show panel"] {
+    @extend .ic_chevron-right;
+  }
 }
 
 // Quick warp links
@@ -409,10 +410,6 @@ li.fast_filter {
     padding: 2px 0;
 
     &:hover {
-      .drop_button {
-        background: lighten($black, 20%);
-      }
-
       ul {
         display: block;
       }
@@ -420,6 +417,11 @@ li.fast_filter {
 
     ul {
       position: absolute;
+      top: 100%;
+      left: 3px;
+      right: 0;
+      z-index: 802;
+      display: none;
       margin: 0;
       padding: 0;
       overflow: hidden;
@@ -431,25 +433,12 @@ li.fast_filter {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       box-shadow: 0 0 5px $navigation-shadow-color;
-      top: 100%;
-      left: 3px;
-      right: 0;
-      display: none;
-      z-index: 802;
     }
 
     li {
       white-space: nowrap;
       padding: 0;
       border-radius: 0;
-
-      img {
-        vertical-align: sub;
-      }
-
-      &:hover {
-        background: #f2f2f2;
-      }
     }
 
     a {
@@ -465,11 +454,6 @@ li.fast_filter {
   }
 
   .drop_button {
-    padding: .3em;
-    border: 1px solid $navigation-drop-button-bg;
-    border-radius: .3em;
-    background: $navigation-drop-button-bg;
-    color: $body-color;
-    cursor: pointer;
+    @include button-variant($secondary, $secondary);
   }
 }

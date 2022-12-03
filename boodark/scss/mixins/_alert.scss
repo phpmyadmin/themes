@@ -1,0 +1,16 @@
+// stylelint-disable at-rule-empty-line-before
+// Alert mixins
+
+// for dark mode, switch between $color and $background
+// default bootstrap alert mixin
+// @mixin alert-variant($background, $border, $color)
+
+@mixin alert-variant($color, $border, $background) {
+  color: $color;
+  @include gradient-bg($background);
+  border-color: $border !important;
+
+  .alert-link {
+    color: shade-color($color, 20%);
+  }
+}

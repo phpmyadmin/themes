@@ -4,7 +4,7 @@
 
 Bootstrap Dark theme for phpMyAdmin
 
-- Supported versions: 5.1, 5.2
+- Supported versions: 5.2
 - Bootstrap v5.1.3
 
 ## Changes

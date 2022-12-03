@@ -1,0 +1,130 @@
+// stylelint-disable scss/at-extend-no-missing-placeholder
+// jQuery-ui custom style
+
+.ui-dialog {
+  padding: 0;
+
+  .ui-dialog-titlebar {
+    padding: 1rem 1rem;
+    border: none;
+    background: $modal-cap-bg;
+  }
+
+  .ui-dialog-titlebar-close {
+    @extend .btn-close;
+    right: .8rem;
+    left: initial;
+  }
+
+  .ui-dialog-buttonpane {
+    border: none;
+    background-color: $modal-cap-bg;
+
+    .ui-dialog-buttonset {
+      float: right;
+
+      button {
+        @extend .btn;
+        &:first-child {
+          @extend .btn-primary;
+        }
+
+        &:last-child {
+          @extend .btn-secondary;
+        }
+      }
+    }
+  }
+
+  .pma-fieldset legend a {
+    color: $pma-link-color;
+  }
+}
+
+.ui-widget {
+  font-size: 1em;
+
+  &.ui-widget-content {
+    border: 0 solid transparent;
+  }
+}
+
+.ui-widget-content {
+  background: $modal-content-bg;
+}
+
+.ui-draggable {
+  z-index: 801;
+}
+
+.ui-widget-overlay {
+  background: $modal-backdrop-bg;
+  opacity: $modal-backdrop-opacity;
+}
+
+.ui-timepicker-div {
+  .ui-widget-header {
+    margin-bottom: 8px;
+  }
+
+  dl {
+    text-align: left;
+
+    dt {
+      height: 25px;
+      margin-bottom: -25px;
+    }
+
+    dd {
+      margin: 0 10px 10px 85px;
+    }
+  }
+
+  td {
+    font-size: 90%;
+  }
+}
+
+.ui-tpicker-grid-label {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-timepicker-rtl {
+  direction: rtl;
+
+  dl {
+    text-align: right;
+
+    dd {
+      margin: 0 65px 10px 10px;
+    }
+  }
+}
+
+.ui_tpicker_hour_slider,
+.ui_tpicker_minute_slider,
+.ui_tpicker_second_slider,
+.ui_tpicker_millisec_slider,
+.ui_tpicker_microsec_slider {
+  margin-left: 40px;
+  margin-top: 4px;
+  height: .75rem;
+}
+
+.ui-timepicker-div dl .ui_tpicker_timezone select {
+  margin-left: 50px;
+}
+
+.ui_tpicker_time_input {
+  width: 100%;
+}
+
+@media only screen and (max-width: 768px) {
+  .ui-dialog {
+    margin: 1%;
+    width: 95% !important;
+  }
+}

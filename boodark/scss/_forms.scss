@@ -1,11 +1,10 @@
+// stylelint-disable selector-not-notation
 // stylelint-disable at-rule-empty-line-before
 // stylelint-disable scss/at-extend-no-missing-placeholder
 // Forms
 
 form {
-  padding: 0;
-  margin: 0;
-  display: inline;
+  // code here
 }
 
 input {
@@ -105,6 +104,17 @@ input {
       }
     }
   }
+
+  &[type=file]::file-selector-button {
+    @extend .btn-dark;
+    border-width: 1px;
+    border-style: solid;
+  }
+
+  &:hover:not(:disabled):not([readonly])::file-selector-button {
+    background-color: $pma-blue !important;
+    border-color: $pma-blue !important;
+  }
 }
 
 select:not(.form-select) {
@@ -144,4 +154,52 @@ textarea {
   &.charField {
     width: 95%;
   }
+}
+
+fieldset {
+  .group-header {
+    th {
+      background: $pma-fieldset-bg;
+    }
+
+    + tr th {
+      padding-top: .6em;
+    }
+  }
+
+  .group-field-1 th,
+  .group-header-2 th {
+    padding-left: 1.5em;
+  }
+
+  .group-field-2 th,
+  .group-header-3 th {
+    padding-left: 3em;
+  }
+
+  .group-field-3 th {
+    padding-left: 4.5em;
+  }
+
+  .disabled-field {
+    th, th small, td {
+      color: $pma-fieldset-color;
+      background-color: $pma-fieldset-bg;
+    }
+  }
+}
+
+// Validation error message styles
+input {
+  &[type=text].invalid_value,
+  &[type=password].invalid_value,
+  &[type=number].invalid_value,
+  &[type=date].invalid_value {
+    background: #fcc;
+  }
+}
+
+select.invalid_value,
+.invalid_value {
+  background: #fcc;
 }
