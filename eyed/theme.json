@@ -5,7 +5,6 @@
     "author": "Febriansyah Riki Setiadi",
     "url": "https://github.com/febryars33/eyed-phpmyadmin-theme/",
     "supports": [
-        "5.1",
         "5.2"
     ]
 }
