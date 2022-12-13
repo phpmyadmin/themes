@@ -44,12 +44,10 @@ textarea {
 
 .pma-fieldset {
   margin-top: 1em;
-  border-radius: 4px 4px 0 0;
-  border: #aaa solid 1px;
+  border-radius: $border-radius $border-radius 0 0;
+  border: $border-width solid $border-color;
   padding: 0.5em;
-  background: #eee;
-  text-shadow: 1px 1px 2px $white;
-  box-shadow: 1px 1px 2px $white inset;
+  background: $light;
 }
 
 .pma-fieldset {
@@ -62,13 +60,13 @@ textarea {
   legend {
     float: none;
     font-weight: bold;
-    color: #444;
-    padding: 5px 10px;
-    border-radius: 2px;
-    border: 1px solid #aaa;
+    color: $card-cap-color;
+    padding: 5px 12px;
+    border-radius: $border-radius;
+    border: 1px solid $card-border-color;
     background-color: $white;
     max-width: 100%;
-    box-shadow: 3px 3px 15px #bbb;
+    box-shadow: $box-shadow-sm;
     width: initial;
     font-size: 1em;
   }
@@ -118,7 +116,8 @@ div.tools {
   text-align: right;
   float: none;
   clear: both;
-  border-radius: 0 0 4px 4px;
+  border-radius: 0 0 $border-radius $border-radius;
+  background-color: $card-cap-bg !important;
 }
 
 div.null_div {
@@ -279,42 +278,10 @@ td .icon {
 
 div.tools,
 .tblFooters {
-  font-weight: normal;
-  color: $black;
-  background: #d3dce3;
-}
-
-.tblHeaders a {
-
-  &:link,
-  &:active,
-  &:visited {
-    color: #00f;
-  }
-}
-
-div.tools a {
-
-  &:link,
-  &:visited,
-  &:active {
-    color: #00f;
-  }
-}
-
-.tblFooters a {
-
-  &:link,
-  &:active,
-  &:visited {
-    color: #00f;
-  }
-}
-
-.tblHeaders a:hover,
-div.tools a:hover,
-.tblFooters a:hover {
-  color: #f00;
+  background-color: rgba($black, .03);
+  border: 1px solid $border-color;
+  border-bottom-left-radius: $border-radius;
+  border-bottom-right-radius: $border-radius;
 }
 
 .error {
@@ -856,7 +823,6 @@ code {
 
   &.sql {
     display: block;
-    padding: 1em;
     margin-top: 0;
     margin-bottom: 0;
     max-height: 10em;
@@ -875,11 +841,13 @@ div.sqlvalidate {
   direction: ltr;
 }
 
-.result_query {
-  div.sqlOuter {
-    background: #e5e5e5;
-    text-align: left;
-  }
+.result_query div.sqlOuter {
+  text-align: left;
+  border: 1px solid $border-color;
+  border-top-left-radius: $border-radius;
+  border-top-right-radius: $border-radius;
+  padding: $spacer;
+  border-bottom: none;
 }
 
 #PMA_slidingMessage code.sql,
@@ -1636,8 +1604,9 @@ input#auto_increment_opt {
 
 .navigation {
   margin: 0.8em 0;
-  border-radius: 5px;
-  background: linear-gradient(#eee, #ccc);
+  border-radius: $border-radius;
+  background-color: $card-cap-bg;
+
 
   td {
     margin: 0;
@@ -2812,4 +2781,8 @@ body .ui-dialog {
 
 .resize-vertical {
   resize: vertical;
+}
+
+.tools.d-print-none form {
+  display: initial;
 }
