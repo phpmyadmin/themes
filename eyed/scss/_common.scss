@@ -272,8 +272,9 @@ td .icon {
 
 .tblHeaders {
   font-weight: bold;
-  color: $black;
-  background: #d3dce3;
+  color: $primary;
+  background-color: shift-color($primary, $alert-bg-scale);
+  padding: $card-cap-padding-y $card-cap-padding-x;
 }
 
 div.tools,
@@ -502,11 +503,11 @@ div#tablestatistics table {
     margin-bottom: 0;
   }
 
-  input {
-    width: 12em;
-    clear: right;
-    max-width: 100%;
-  }
+  // input {
+  //   width: 12em;
+  //   clear: right;
+  //   max-width: 100%;
+  // }
 
   span.options {
     float: left;
@@ -1376,7 +1377,7 @@ input#auto_increment_opt {
 
 #table_name_col_no {
   position: fixed;
-  top: 100px !important;
+  top: 85px !important;
   width: 100%;
   background: $white;
 }
@@ -1384,21 +1385,6 @@ input#auto_increment_opt {
 #table_columns {
   display: block;
   overflow: auto;
-
-  input {
-
-    &[type=text],
-    &[type=password],
-    &[type=number] {
-      width: 10em;
-      box-sizing: border-box;
-    }
-  }
-
-  select {
-    width: 10em;
-    box-sizing: border-box;
-  }
 }
 
 #openlayersmap {
