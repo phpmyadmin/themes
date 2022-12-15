@@ -32,16 +32,6 @@ button.mult_submit {
   display: none;
 }
 
-textarea {
-  &.char {
-    margin: 6px;
-  }
-
-  &.charField {
-    width: 95%;
-  }
-}
-
 .pma-fieldset {
   margin-top: 1em;
   border-radius: $border-radius $border-radius 0 0;
@@ -333,7 +323,13 @@ body#loginform {
   margin: 1em 0 0 0;
   text-align: center;
 
-  h1,
+  h1 {
+    display: block;
+    text-align: center;
+    font-size: medium;
+    font-weight: bold;
+  }
+
   a.logo {
     display: block;
     text-align: center;
@@ -343,6 +339,10 @@ body#loginform {
     text-align: left;
     width: 30em;
     margin: 0 auto;
+  }
+
+  .btn#input_go {
+    width: 100%;
   }
 }
 

@@ -221,6 +221,7 @@ textarea#sqlquery {
 }
 
 .textfield,
+.charField,
 #table_name_col_no #added_fields,
 #fieldset_add_user_login select {
   padding: $input-padding-y $input-padding-x;
@@ -263,7 +264,8 @@ textarea#sqlquery {
  * Forms does not have class / id
  */
 select[name=tbl_collation],
-select[name=partition_by] {
+select[name=partition_by],
+tr.noclick select {
   padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
   -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
   font-family: $form-select-font-family;
