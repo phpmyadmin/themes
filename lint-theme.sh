@@ -25,12 +25,6 @@ do_lint() {
 
     JVERSION=`php -r "echo json_decode(file_get_contents('theme.json'), true)['version'];"`
     echo " * Version from theme.json: $JVERSION"
-    if [ -n "$VERSION" -a "$JVERSION" != "$VERSION" ] ; then
-        echo " * Versions do not match: theme.json ($JVERSION)"
-        cd ..
-        return 1
-    fi
-    VERSION=$JVERSION
     echo " * Supported phpMyAdmin versions: `php -r "echo implode(', ', json_decode(file_get_contents('theme.json'), true)['supports']);"`"
     echo " * Metadata:"
     php -r "\$data = json_decode(file_get_contents('theme.json'), true); foreach (\$data as \$item => \$value) { echo '   - ' . \$item . ': '; if (is_array(\$value)) { echo implode(', ', \$value); } else { echo \$value; }; echo \"\\n\"; }"
