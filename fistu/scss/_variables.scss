@@ -1,0 +1,138 @@
+// fistu - variables
+$top-bar-height: 38px;
+$font-path: '../fonts/';
+
+// fistu - theme
+//Simple: 'black' | 'orange' | 'brown' | 'blue' | 'teal' | 'red' | 'indigo' | 'grey' | 'purple'
+//Gradient: 'amber-orange' | 'wineberry-amber' | 'pink-indigo' | 'green-lime' | 'red-blue' | 'black-red'
+//Dark Mode: 'dark-mode'
+$theme: 'amber-orange' !default;
+
+// navi frame width
+$navi-width: 240px;
+$navi-color: #000;
+$navi-tree-color: ptn(grey,400);
+
+// foreground (text) color of the pointer in navi frame
+$navi-pointer-color: #000;
+
+// background of the pointer in navi frame
+$navi-pointer-background: #ddd;
+
+// main frame
+
+// foreground (text) color for the main frame
+$main-color: #444;
+
+// foreground (text) color of the pointer in browse mode
+$browse-pointer-color: #000;
+
+// background of the pointer in browse mode
+$browse-pointer-background: #cfc;
+
+// foreground (text) color of the marker (visually marks row by clicking on it)
+// in browse mode
+$browse-marker-color: #000;
+
+// background of the marker (visually marks row by clicking on it) in browse mode
+$browse-marker-background: #fc9;
+
+// fonts
+
+$font-family: 'Roboto','Open Sans', 'Segoe UI Light', 'Segoe UI', sans-serif;
+$font-family-fixed: monospace;
+
+// tables
+
+// border
+$border: 0;
+// table header and footer color
+$th-background: #d3dce3;
+// table header and footer background
+$th-color: #000;
+// table data row background
+$bg-one: #e5e5e5;
+// table data row background, alternate
+$bg-two: #d5d5d5;
+
+// Bootstrap
+$enable-gradients: false;
+$enable-shadows: true;
+$enable-transitions: false;
+$btn-border-radius: 0;
+$btn-line-height: 1.15;
+
+// Colors
+$white: #fff !default;
+$black: #000 !default;
+$white-smoke: #f5f5f5 !default;
+
+$primary: ptn(amber,600);
+$secondary: ptn(orange,800);
+$icon: ptn(deep-orange,800);
+
+@if ($theme=='black'){
+	$primary: ptn(grey,900);
+	$secondary: ptn(grey,900);
+	$icon: ptn(grey,900);
+} @else if($theme=='orange'){
+	$primary: ptn(orange,600);
+	$secondary: ptn(orange,800);
+	$icon: ptn(orange,600);
+} @else if($theme=='brown'){
+	$primary: ptn(brown,600);
+	$secondary: ptn(brown,700);
+	$icon: ptn(brown,600);
+} @else if($theme=='blue'){
+	$primary: ptn(blue,500);
+	$secondary: ptn(blue,700);
+	$icon: ptn(blue,500);
+} @else if($theme=='teal'){
+	$primary: ptn(teal,500);
+	$secondary: ptn(teal,700);
+	$icon: ptn(teal,500);
+} @else if($theme=='red'){
+	$primary: ptn(red,800);
+	$secondary: ptn(red,900);
+	$icon: ptn(red,800);
+} @else if($theme=='indigo'){
+	$primary: ptn(indigo,600);
+	$secondary: ptn(indigo,800);
+	$icon: ptn(indigo,600);
+} @else if($theme=='grey'){
+	$primary: ptn(grey,600);
+	$secondary: ptn(grey,700);
+	$icon: ptn(grey,600);
+} @else if($theme=='purple'){
+	$primary: ptn(purple,600);
+	$secondary: ptn(purple,700);
+	$icon: ptn(purple,600);
+} @else if($theme=='amber-orange'){
+	$primary: ptn(amber,600);
+	$secondary: ptn(orange,800);
+	$icon: ptn(deep-orange,800);
+} @else if($theme=='wineberry-amber'){
+	$primary: ptn(pink,900);
+	$secondary: ptn(amber,600);
+	$icon: ptn(pink,900);
+} @else if($theme=='pink-indigo'){
+	$primary: ptn(pink,600);
+	$secondary: ptn(indigo,600);
+	$icon: ptn(pink,600);
+} @else if($theme=='green-lime'){
+	$primary: ptn(green,600);
+	$secondary: ptn(lime,600);
+	$icon: ptn(green,600);
+} @else if($theme=='red-blue'){
+	$primary: ptn(red,600);
+	$secondary: ptn(blue,600);
+	$icon: ptn(red,600);
+} @else if($theme=='black-red'){
+	$primary: ptn(grey,900);
+	$secondary: ptn(red,600);
+	$icon: ptn(grey,900);
+} @else if($theme=='dark-mode'){
+	$primary: #35363a;
+	$secondary: #202124;
+	$icon: $white;
+}
