@@ -85,7 +85,7 @@ div.tools {
   padding: 0.2em;
 
   a {
-    color: #3a7ead !important;
+    color: $link-color !important;
   }
 
   margin-top: 0;
@@ -478,7 +478,7 @@ div#tablestatistics table {
   overflow: visible;
   visibility: hidden;
   background-color: #ffc;
-  color: #060;
+  color: $success;
   border: 0.1em solid $black;
   padding: 0.5em;
 }
@@ -562,7 +562,7 @@ div#tablestatistics table {
 
 .linkElem:hover {
   text-decoration: underline;
-  color: #235a81;
+  color: $link-color;
   cursor: pointer;
 }
 

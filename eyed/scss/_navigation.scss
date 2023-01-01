@@ -153,10 +153,6 @@
   a {
     color: $black;
     padding-left: 0;
-
-    &:hover {
-      text-decoration: underline;
-    }
   }
 
   ul {
@@ -164,6 +160,7 @@
     padding: 0;
     list-style-type: none;
     margin: 0;
+    padding: 0 8px;
 
     ul {
       position: relative;
@@ -175,8 +172,10 @@
 
     &.activePointer,
     &.selected {
-      color: $black;
-      background-color: #ddd;
+      color: $primary;
+      background-color: $gray-200;
+      border-radius: $border-radius-sm;
+      font-weight: bold;
     }
 
     .dbItemControls {
@@ -201,7 +200,6 @@
   }
 
   li {
-    white-space: nowrap;
     clear: both;
     min-height: 16px;
 
@@ -315,9 +313,7 @@
 
       a,
       i {
-        line-height: 1.5em;
-        height: 1.5em;
-        padding-left: 0.3em;
+        padding: 0.3em;
       }
     }
   }
@@ -389,30 +385,26 @@ li.fast_filter {
 
 #pma_navigation_collapser {
   width: 20px;
-  height: 22px;
-  line-height: 22px;
-  background: #eee;
-  color: #555;
-  font-weight: bold;
+  height: 20px;
   position: fixed;
   top: 0;
-  left: $navigation-width;
-  text-align: center;
   cursor: pointer;
   z-index: 800;
-  text-shadow: 0 1px 0 $white;
-  filter: dropshadow(color=$white, offx=0, offy=1);
-  border: 1px solid rgba($black, 0.125);
+  font-size: 0;
+  background-image: url(../img/b_prevpage.png);
+  background-size: contain;
+  margin-top: 8px;
+  margin-left: 6px;
 }
 
 // Quick warp links
 .pma_quick_warp {
   position: relative;
-  margin: 10px 0;
+  margin-top: 10px;
 
   .drop_list {
-    padding: 2px 20px;
-    display: block;
+    // padding: 2px 20px;
+    display: inline;
 
     &:hover {
       .drop_button {
@@ -471,10 +463,9 @@ li.fast_filter {
   }
 
   .drop_button {
-    border: $border-width solid lightgray;
+    border: $border-width solid $border-color;
     border-radius: $border-radius;
     background-color: #f2f2f2;
     cursor: pointer;
-    width: 100%;
   }
 }

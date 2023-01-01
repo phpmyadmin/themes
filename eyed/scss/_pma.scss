@@ -2,12 +2,18 @@
   font-weight: bold;
 }
 
+#topmenu.navbar-nav .nav-item.active>.nav-link {
+  background-color: tint-color($primary, 90%);
+  color: $primary;
+}
+
 #topmenu.navbar-nav .nav-item .nav-link {
   border-radius: $border-radius;
+  color: $dark;
 }
 
 #topmenu.navbar-nav .nav-item .nav-link:hover {
-  background-color: $gray-300;
+  background-color: tint-color($primary, 90%);
 }
 
 #navbarNav {

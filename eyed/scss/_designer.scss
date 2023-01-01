@@ -48,12 +48,13 @@ canvas.designer {
   background-color: $white;
   color: $black;
   border-collapse: collapse;
-  border: 1px solid #aaa;
   z-index: 1;
   user-select: none;
+  box-shadow: $box-shadow;
+  border-radius: $border-radius;
 
   .header {
-    background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
+    background-color: tint-color($primary, 80%) !important;
   }
 }
 
@@ -62,14 +63,16 @@ canvas.designer {
   cursor: move;
   padding: 1px;
   font-weight: bold;
+  border-top-right-radius: $border-radius;
 }
 
 .tab_zag_2 {
-  background: linear-gradient(#fffa96 0%, #fffa96 39%, #ffe796 40%, #ffe796 100%);
+  background-color: tint-color($primary, 60%) !important;
   text-align: center;
   cursor: move;
   padding: 1px;
   font-weight: bold;
+  border-top-right-radius: $border-radius;
 }
 
 .tab_field {
@@ -78,7 +81,7 @@ canvas.designer {
   cursor: default;
 
   &:hover {
-    background-color: #cfc;
+    background-color: $blue-100;
     color: $black;
     background-repeat: repeat-x;
     cursor: default;
@@ -86,12 +89,12 @@ canvas.designer {
 }
 
 .tab_field_3 {
-  background-color: #ffe6e6;
+  background-color: $pink-100;
   color: $black;
   cursor: default;
 
   &:hover {
-    background-color: #cfc;
+    background-color: $blue-100;
     color: $black;
     background-repeat: repeat-x;
     cursor: default;
@@ -118,28 +121,27 @@ canvas.designer {
   height: 500px;
 }
 
-.designer_Tabs {
+.designer_Tabs,
+.L_butt2_1 {
   cursor: default;
-  color: #05b;
+  color: $blue;
   white-space: nowrap;
   text-decoration: none;
   text-indent: 3px;
   font-weight: bold;
   margin-left: 2px;
   text-align: left;
-  background: linear-gradient($white, #dfe5e7 70%, $white 70%, $white 100%);
-  border: #ccc solid 1px;
+  padding: 0px 4px;
 
   &:hover {
     cursor: default;
-    color: #05b;
-    background: #fe9;
+    background-color: $blue-100;
     text-indent: 3px;
     font-weight: bold;
     white-space: nowrap;
     text-decoration: none;
-    border: #99f solid 1px;
     text-align: left;
+    border-radius: $border-radius-sm;
   }
 }
 
@@ -165,47 +167,53 @@ canvas.designer {
 }
 
 .small_tab {
-  vertical-align: top;
-  background-color: #0064ea;
-  color: $white;
-  background-image: url($small-tab-img);
-  cursor: default;
+  vertical-align: middle;
+  background-color: tint-color($primary, 80%) !important;
+  cursor: pointer;
   text-align: center;
   font-weight: bold;
-  padding-left: 2px;
-  padding-right: 2px;
+  padding: 0 6px !important;
   width: 1px;
   text-decoration: none;
+  border-top-left-radius: $border-radius;
 
   &:hover {
-    vertical-align: top;
-    color: $white;
-    background-color: #f96;
-    cursor: default;
-    padding-left: 2px;
-    padding-right: 2px;
+    vertical-align: middle;
+    background-color: tint-color($primary, 60%) !important;
+    cursor: pointer;
     text-align: center;
     font-weight: bold;
+    padding: 0 6px !important;
     width: 1px;
     text-decoration: none;
   }
 }
 
 .small_tab_pref {
-  background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
+  vertical-align: middle;
+  background-color: tint-color($primary, 80%) !important;
+  cursor: pointer;
   text-align: center;
+  font-weight: bold;
+  padding: 0 6px !important;
   width: 1px;
+  text-decoration: none;
 
   &:hover {
-    vertical-align: top;
-    color: $white;
-    background-color: #f96;
-    cursor: default;
+    vertical-align: middle;
+    background-color: tint-color($primary, 60%) !important;
+    cursor: pointer;
     text-align: center;
     font-weight: bold;
+    padding: 0 6px !important;
     width: 1px;
     text-decoration: none;
   }
+}
+
+.small_tab_pref>img {
+  width: 20px;
+  height: 20px;
 }
 
 .butt {
@@ -216,22 +224,22 @@ canvas.designer {
   vertical-align: baseline;
 }
 
-.L_butt2_1 {
-  padding: 1px;
-  text-decoration: none;
-  vertical-align: middle;
-  cursor: default;
+// .L_butt2_1 {
+//   padding: 1px;
+//   text-decoration: none;
+//   vertical-align: middle;
+//   cursor: default;
 
-  &:hover {
-    padding: 0;
-    border: #09c solid 1px;
-    background: #fe9;
-    color: $black;
-    text-decoration: none;
-    vertical-align: middle;
-    cursor: default;
-  }
-}
+//   &:hover {
+//     padding: 0;
+//     border: #09c solid 1px;
+//     background: #fe9;
+//     color: $black;
+//     text-decoration: none;
+//     vertical-align: middle;
+//     cursor: default;
+//   }
+// }
 
 /* --------------------------------------------------------------------------- */
 .bor {
@@ -278,17 +286,16 @@ canvas.designer {
 }
 
 .designer_header {
-  background-color: #eaeef0;
   color: $black;
   text-align: center;
   font-weight: bold;
   margin: 0;
   padding: 0;
-  background-image: url($top-panel-img);
   background-position: top;
   background-repeat: repeat-x;
-  border-right: #999 solid 1px;
-  border-left: #999 solid 1px;
+  border-right: $border-color solid 1px;
+  border-left: $border-color solid 1px;
+  border-bottom: $border-color solid 1px;
   height: 28px;
   z-index: 101;
   width: 100%;
@@ -298,9 +305,6 @@ canvas.designer {
   span {
     display: block;
     float: left;
-    margin: 3px 1px 4px;
-    height: 20px;
-    border: 1px dotted $white;
   }
 
   .M_bord {
@@ -323,32 +327,46 @@ canvas.designer {
 }
 
 a {
+
   &.M_butt_Selected_down_IE,
   &.M_butt_Selected_down {
-    border: 1px solid #c0c0bb;
-    background-color: #9f9;
-    color: $black;
+    background-color: tint-color($primary, 90%);
+    color: $primary;
+    padding: 4px 10px;
+    border-radius: $border-radius-sm;
+  }
 
-    &:hover {
-      border: 1px solid #09c;
-      background-color: #fe9;
-      color: $black;
-    }
+  &.M_butt {
+    padding: 4px 10px;
+    color: $dark;
+    font-weight: normal;
   }
 
   &.M_butt:hover {
-    border: 1px solid #09c;
-    background-color: #fe9;
-    color: $black;
+    background-color: $gray-300;
+    color: $dark;
+    border-radius: $border-radius-sm;
   }
+}
+
+.M_butt>img {
+  width: 20px;
+  height: 20px;
+}
+
+.L_butt2_1>img {
+  width: 30px;
+  height: 30px;
 }
 
 #layer_menu {
   z-index: 98;
   position: relative;
   float: right;
-  background-color: #eaeef0;
-  border: #999 solid 1px;
+  background-color: $light;
+  box-shadow: $box-shadow-lg;
+  border-radius: $border-radius-2xl 0 0 $border-radius-2xl;
+  padding: 2px;
 }
 
 #layer_upd_relation {
@@ -450,12 +468,14 @@ a {
   float: left;
   position: fixed;
   width: auto;
-  height: auto;
-  background: #efefef;
-  border: 1px solid grey;
+  height: 80%;
   overflow: hidden;
   z-index: 50;
   padding: 2px;
+  overflow-y: scroll;
+  background-color: $light;
+  top: 86px;
+  box-shadow: $box-shadow;
 
   &.right {
     float: right;
@@ -464,25 +484,27 @@ a {
 
   .hide {
     display: none;
+    margin-left: 4px;
   }
 
   a {
-    display: block;
+    display: flex;
     float: none;
-    overflow: hidden;
-    line-height: 1em;
+    align-items: center;
   }
 
   img,
   .text {
     float: left;
+    height: 20px;
+    width: 20px;
   }
 }
 
 #name-panel {
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid $border-color;
   text-align: center;
-  background: #efefef;
+  background-color: $gray-200;
   width: 100%;
   font-size: 1.2em;
   padding: 5px;
@@ -493,4 +515,11 @@ a {
   width: 100%;
   position: absolute;
   left: 0;
+}
+
+// small icons
+.tab_field img,
+.tab_field_3 img {
+  width: 15px;
+  height: 15px;
 }
