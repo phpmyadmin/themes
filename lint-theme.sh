@@ -28,6 +28,13 @@ do_lint() {
         cd ..
         return 0
     fi
+
+    if [ ! -f screen.png ] ; then
+        echo " * Missing screen.png, skipping further checks!"
+        cd ..
+        return 1
+    fi
+
     JVERSION=`php -r "echo json_decode(file_get_contents('theme.json'), true)['version'];"`
     echo " * Version from theme.json: $JVERSION"
     if [ -n "$VERSION" -a "$JVERSION" != "$VERSION" ] ; then
