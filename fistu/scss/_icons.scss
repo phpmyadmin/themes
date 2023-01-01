@@ -1,0 +1,457 @@
+.icon {
+	margin: 0;
+	width: 16px;
+	height: 16px;
+	padding: 0 !important;
+	margin-#{$left}: 0.3em;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.icon_fulltext {
+  width: 50px;
+  height: 19px;
+}
+.ic_b_bookmark {
+	@include fistu-icon('bookmark','#{$icon}');
+}
+.ic_b_calendar, .ui-datepicker-trigger {
+	@include fistu-icon('calendar','#{$icon}');
+}
+.ic_b_chart {
+	@include fistu-icon('bar-chart-2','#{$icon}');
+}
+.ic_b_close {
+	@include fistu-icon('x','#{$icon}');
+}
+.ic_b_column_add {
+	@include fistu-icon('columns-add','#{$icon}');
+}
+.ic_b_comment {
+	@include fistu-icon('message-square','#{$icon}');
+}
+.ic_b_docs, .ic_b_help, .ic_s_really {
+	@include fistu-icon('help-circle','#{$icon}');
+}
+.ic_b_drop, .ic_b_deltbl, .ic_bd_deltbl, .ic_bd_drop {
+	@include fistu-icon('delete','#{$icon}');
+}
+.ic_b_edit, .ic_bd_edit, .ic_b_inline_edit {
+	@include fistu-icon('edit','#{$icon}');
+}
+
+.ic_b_empty, .ic_s_cancel, .ic_s_cancel2 {
+	@include fistu-icon('x-octagon','#{$icon}');
+}
+
+.ic_b_engine, .ic_s_process {
+	@include fistu-icon('cpu','#{$icon}');
+}
+.ic_b_events {
+	@include fistu-icon('clock','#{$icon}');
+}
+
+.ic_b_export, .ic_b_tblexport, .ic_bd_export {
+	@include fistu-icon('export','#{$icon}');
+}
+
+.ic_b_favorite {
+	@include fistu-icon('star','#{ptn(amber,A200)}');
+}
+
+.ic_b_find_replace {
+	@include fistu-icon('find','#{$icon}');
+}
+
+.ic_b_firstpage, .ic_bd_firstpage {
+	@include fistu-icon('chevrons-left','#{$icon}');
+}
+
+.ic_b_ftext, .ic_bd_ftext {
+	@include fistu-icon('letter','#{$icon}','T');
+}
+
+.ic_b_group {
+	@include fistu-icon('archive','#{$icon}');
+}
+
+.ic_b_home {
+	@include fistu-icon('home','#{$icon}');
+}
+
+.ic_b_import, .ic_b_tblimport {
+	@include fistu-icon('import','#{$icon}');
+}
+
+.ic_b_index, .ic_b_relations, .ic_bd_index {
+	@include fistu-icon('git-pull-request','#{$icon}');
+}
+
+.ic_b_index_add {
+	@include fistu-icon('index-add','#{$icon}');
+}
+
+.ic_b_insrow, .ic_bd_insrow {
+	@include fistu-icon('copy','#{$icon}');
+}
+
+.ic_b_lastpage, .ic_bd_lastpage {
+	@include fistu-icon('chevrons-right','#{$icon}');
+}
+
+.ic_b_minus, .ic_s_collapseall {
+	@include fistu-icon('minus-circle','#{$icon}');
+}
+
+.ic_b_more {
+	@include fistu-icon('more-vertical','#{$icon}');
+}
+
+.ic_b_move {
+	@include fistu-icon('move','#{$icon}');
+}
+
+.ic_b_newdb {
+	@include fistu-icon('database-add','#{$icon}');
+}
+
+.ic_b_no_favorite {
+	@include fistu-icon('star','#{ptn(grey,500)}');
+}
+
+.ic_b_pdfdoc {
+	@include fistu-icon('file','#{$icon}');
+}
+
+.ic_b_plugin {
+	@include fistu-icon('box','#{$icon}');
+}
+
+.ic_b_plus {
+	@include fistu-icon('plus-circle','#{$icon}');
+}
+
+.ic_b_primary, .ic_bd_primary {
+	@include fistu-icon('key-2','#{$icon}');
+}
+
+.ic_b_print {
+	@include fistu-icon('print','#{$icon}');
+}
+
+.ic_b_props, .ic_b_tblanalyse {
+	@include fistu-icon('structure','#{$icon}');
+}
+
+.ic_b_report {
+	@include fistu-icon('clipboard','#{$icon}');
+}
+
+.ic_b_routines {
+	@include fistu-icon('speaker','#{$icon}');
+}
+
+.ic_b_save {
+	@include fistu-icon('save','#{$icon}');
+}
+
+.ic_b_saveimage {
+	@include fistu-icon('image','#{$icon}');
+}
+
+.ic_b_sdb {
+	//width: 10px;
+	//height: 10px;
+	@include fistu-icon('layers','#{$icon}');
+}
+
+.ic_b_search, .ic_b_view, .ic_b_select, .ic_bd_select {
+	@include fistu-icon('search','#{$icon}');
+}
+
+.ic_b_spatial,.ic_bd_spatial {
+	@include fistu-icon('letter','#{$icon}','S');
+}
+
+.ic_b_sql, .ic_b_docsql {
+	@include fistu-icon('sql','#{$icon}');
+}
+
+.ic_b_sqldoc {
+	@include fistu-icon('life-buoy','#{$icon}');
+}
+
+.ic_b_sqlhelp, .ic_b_browse, .ic_bd_browse {
+	@include fistu-icon('file-text','#{$icon}');
+}
+
+.ic_s_tbl {
+	@include fistu-icon('table-add','#{$white}');
+}
+.ic_b_table_add, .ic_b_tbloptimize, .ic_centralColumns, .ic_b_newtbl {
+	@include fistu-icon('table-add','#{$icon}');
+}
+
+.ic_b_tblops {
+	@include fistu-icon('sliders','#{$icon}');
+}
+
+.ic_b_trigger_add, .ic_s_sync {
+	@include fistu-icon('repeat','#{$icon}');
+}
+.ic_b_triggers {
+	@include fistu-icon('shuffle','#{$icon}');
+}
+
+.ic_b_undo {
+	@include fistu-icon('corner-left-up','#{$icon}');
+}
+
+.ic_b_unique {
+	@include fistu-icon('letter','#{$icon}','U');
+}
+
+.ic_b_usradd {
+	@include fistu-icon('user-plus','#{$icon}');
+}
+
+.ic_b_usrdrop {
+	@include fistu-icon('user-x','#{$icon}');
+}
+
+.ic_b_usredit, .ic_b_usrcheck {
+	@include fistu-icon('user-check','#{$icon}');
+}
+
+.ic_b_usrlist {
+	@include fistu-icon('users','#{$icon}');
+}
+
+.ic_b_versions {
+	@include fistu-icon('layers','#{$icon}');
+}
+
+.ic_b_left, .ic_b_prevpage, .ic_bd_prevpage {
+	@include fistu-icon('angle-left','#{$icon}');
+}
+
+.ic_b_right, .ic_b_nextpage, .ic_bd_nextpage {
+	@include fistu-icon('angle-right','#{$icon}');
+}
+
+.ic_bd_empty {
+	@include fistu-icon('octagon','#{$icon}');
+}
+
+.ic_bd_sbrowse, .ic_b_sbrowse {
+	@include fistu-icon('browse','#{$icon}');
+}
+
+.ic_bd_unique {
+	@include fistu-icon('letter','#{$icon}','U');
+}
+
+.ic_centralColumns_add, .ic_b_event_add, .ic_b_routine_add, .ic_b_snewtbl, .ic_bd_routine_add {
+	@include fistu-icon('plus-square','#{$icon}');
+}
+
+.ic_centralColumns_delete {
+	@include fistu-icon('x-square','#{$icon}');
+}
+
+.ic_console {
+	@include fistu-icon('terminal','#{$icon}');
+}
+
+.ic_eye, .ic_eye_grey, .ic_b_views, .ic_b_view_add, .ic_s_views, .ic_show {
+	@include fistu-icon('eye','#{$icon}');
+}
+
+.ic_hide {
+	@include fistu-icon('eye-off','#{$icon}');
+}
+
+.ic_item {
+	width: 13px;
+	height: 10px;
+	@include fistu-icon('git-commit','#{$icon}');
+}
+
+.ic_lightbulb, .ic_b_tipp {
+	@include fistu-icon('bulb','#{$icon}');
+}
+
+.ic_new_data, .ic_new_data_hovered, .ic_new_data_selected, .ic_new_data_selected_hovered {
+	@include fistu-icon('letter-2','#{$white}','D');
+	background-color: ptn(green,400);
+}
+
+.ic_new_data_hovered {
+	background-color: ptn(green,300);
+}
+
+.ic_new_data_selected {
+	background-color: ptn(gray,400);
+}
+
+.ic_new_data_selected_hovered {
+	background-color: ptn(gray,300);
+}
+
+.ic_new_struct, .ic_new_struct_hovered, .ic_new_struct_selected, .ic_new_struct_selected_hovered {
+	@include fistu-icon('letter-2','#{$white}','S');
+	background-color: ptn(red,400);
+}
+.ic_new_struct_hovered {
+	background-color: ptn(red,300);
+}
+.ic_new_struct_selected {
+	background-color: ptn(gray,400);
+}
+.ic_new_struct_selected_hovered {
+	background-color: ptn(gray,300);
+}
+
+.ic_normalize {
+	@include fistu-icon('tool','#{$icon}');
+}
+
+.ic_pause {
+	@include fistu-icon('pause','#{$icon}');
+}
+
+.ic_php_sym {
+	background-image: url('../img/php_sym.png');
+}
+
+.ic_play {
+	@include fistu-icon('play','#{$icon}');
+}
+
+.ic_s_asc {
+	@include fistu-icon('angle-up','#{$icon}');
+}
+
+.ic_s_asci {
+	@include fistu-icon('align-justify','#{$icon}');
+}
+.ic_s_cog {
+	@include fistu-icon('settings','#{$icon}');
+}
+.ic_s_db, .ic_database {
+	@include fistu-icon('database','#{$icon}');
+}
+.ic_more, .ic_s_desc, .ic_asc_order, .ic_asc_order, .ic_col_drop {
+	@include fistu-icon('angle-down','#{$icon}');
+}
+.coldrop {
+	@include fistu-icon('more-vertical','#{$icon}');
+}
+.ic_s_error {
+	@include fistu-icon('alert-circle','#{$icon}');
+}
+.ic_s_host {
+	@include fistu-icon('server','#{$white}');
+}
+.ic_s_info {
+	@include fistu-icon('info','#{$icon}');
+}
+.ic_s_lang, .ic_b_globe {
+	@include fistu-icon('globe','#{$icon}');
+}
+.ic_s_link {
+	@include fistu-icon('link-2','#{$icon}');
+}
+.ic_s_loggoff {
+	@include fistu-icon('log-out','#{$icon}');
+}
+.ic_s_notice, .ic_s_attention {
+	@include fistu-icon('alert-triangle','#{$icon}');
+}
+.ic_s_okay {
+	@include fistu-icon('check-circle','#{ptn(green,400)}');
+}
+.ic_s_passwd, .ic_s_lock {
+	@include fistu-icon('lock','#{$icon}');
+}
+
+.ic_s_really {
+	width: 11px;
+	height: 11px;
+	background-size: cover;
+}
+
+.ic_s_reload {
+	@include fistu-icon('refresh-ccw','#{$icon}');
+}
+
+.ic_s_replication {
+	@include fistu-icon('grid','#{$icon}');
+}
+
+.ic_s_rights {
+	@include fistu-icon('users','#{$icon}');
+}
+
+.ic_s_sortable {
+	@include fistu-icon('sortable','#{$icon}');
+}
+
+.ic_s_status, .ic_b_dbstatistics {
+	@include fistu-icon('bar-graph-3','#{$icon}');
+}
+
+.ic_s_success {
+	@include fistu-icon('check','#{$icon}');
+}
+
+.ic_s_theme {
+	@include fistu-icon('feather','#{$icon}');
+}
+
+.ic_s_top {
+	@include fistu-icon('go-top','#{$white}');
+}
+
+.ic_s_unlink {
+	@include fistu-icon('link-3','#{$icon}');
+}
+
+.ic_s_vars {
+	@include fistu-icon('code','#{$icon}');
+}
+.ic_window-new {
+	@include fistu-icon('external-link','#{$icon}');
+}
+.ic_ajax_clock_small {
+	@include fistu-icon('loader','#{$icon}');
+	animation: fistu-spin 2500ms linear infinite;
+	//background-image: url('../img/ajax_clock_small.gif');
+}
+.selectallarrow {
+	@include fistu-icon('corner-left-up','#{$icon}');
+}
+.ic_s_fulltext,
+.column_action .fulltext[title="Full texts"] {
+	@include fistu-icon('wide','#{$icon}');
+}
+.ic_s_partialtext,
+.column_action .fulltext[title="Partial texts"] {
+	@include fistu-icon('narrow','#{$icon}');
+}
+
+.ic_bd_drop,
+.ic_eye_grey,
+.ic_bd_ftext,
+.ic_bd_index,
+.ic_bd_unique,
+.ic_bd_select,
+.ic_bd_spatial,
+.ic_bd_sbrowse,
+.ic_bd_lastpage,
+.ic_bd_prevpage,
+.ic_bd_nextpage,
+.ic_bd_firstpage,
+.ic_lightbulb_off {
+	opacity: .65;
+}

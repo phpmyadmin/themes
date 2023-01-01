@@ -1,0 +1,188 @@
+ul.resizable-menu {
+	a, span {
+		margin: 0;
+		padding: 0;
+		display: block;
+		white-space: nowrap;
+	}
+
+	.submenu {
+		display: none;
+		position: relative;
+	}
+
+	.shown {
+		display: inline-block;
+	}
+
+	ul {
+		margin: 0;
+		padding: 0;
+		z-index: 2;
+		#{$right}: 0;
+		display: none;
+		position: absolute;
+		list-style-type: none;
+		border: 1px #ddd solid;
+	}
+
+	li:hover {
+		ul {
+			display: block;
+			background-color: #fff;
+		}
+	}
+	.tabactive, .tabactive:hover {
+		.ic_s_db {
+			@include fistu-icon('database','#{$secondary}');
+		}
+		.ic_b_sql {
+			@include fistu-icon('sql','#{$secondary}');
+		}
+		.ic_s_status {
+			@include fistu-icon('bar-graph-3','#{$secondary}');
+		}
+		.ic_s_rights {
+			@include fistu-icon('users','#{$secondary}');
+		}
+		.ic_b_export, .ic_b_tblexport {
+			@include fistu-icon('export','#{$secondary}');
+		}
+		.ic_b_import, .ic_b_tblimport {
+			@include fistu-icon('import','#{$secondary}');
+		}
+		.ic_b_tblops {
+			@include fistu-icon('sliders','#{$secondary}');
+		}
+		.ic_s_replication {
+			@include fistu-icon('grid','#{$secondary}');
+		}
+		.ic_s_vars {
+			@include fistu-icon('code','#{$secondary}');
+		}
+		.ic_s_asci {
+			@include fistu-icon('align-justify','#{$secondary}');
+		}
+		.ic_b_engine {
+			@include fistu-icon('cpu','#{$secondary}');
+		}
+		.ic_b_plugin {
+			@include fistu-icon('box','#{$secondary}');
+		}
+		.ic_b_browse {
+			@include fistu-icon('file-text','#{$secondary}');
+		}
+		.ic_b_props {
+			@include fistu-icon('structure','#{$secondary}');
+		}
+		.ic_b_search {
+			@include fistu-icon('search','#{$secondary}');
+		}
+		.ic_b_routines {
+			@include fistu-icon('speaker','#{$secondary}');
+		}
+		.ic_b_events {
+			@include fistu-icon('clock','#{$secondary}');
+		}
+		.ic_b_triggers {
+			@include fistu-icon('shuffle','#{$secondary}');
+		}
+		.ic_eye {
+			@include fistu-icon('eye','#{$secondary}');
+		}
+		.ic_b_relations {
+			@include fistu-icon('git-pull-request','#{$secondary}');
+		}
+		.ic_centralColumns {
+			@include fistu-icon('table-add','#{$secondary}');
+		}
+	}
+	.submenuhover ul {
+		display: block;
+		background-color: #fff;
+	}
+
+	ul li {
+		width: 100%;
+	}
+}
+.menucontainer {
+	li.submenuhover {
+		&>.tabactive,&>.tabactive:hover {
+			.ic_b_more {
+				@include fistu-icon('more-vertical','#{$white}');
+			}
+			color: $white!important;
+			background-color: darken($primary,10%)!important;
+		}
+	}
+	li:hover {
+		&>a {
+			color: $white;
+			background-color: darken($primary,10%);
+			.ic_s_db {
+				@include fistu-icon('database','#{$white}');
+			}
+			.ic_b_sql {
+				@include fistu-icon('sql','#{$white}');
+			}
+			.ic_s_status {
+				@include fistu-icon('bar-graph-3','#{$white}');
+			}
+			.ic_s_rights {
+				@include fistu-icon('users','#{$white}');
+			}
+			.ic_b_export, .ic_b_tblexport {
+				@include fistu-icon('export','#{$white}');
+			}
+			.ic_b_import, .ic_b_tblimport {
+				@include fistu-icon('import','#{$white}');
+			}
+			.ic_b_tblops {
+				@include fistu-icon('sliders','#{$white}');
+			}
+			.ic_s_replication {
+				@include fistu-icon('grid','#{$white}');
+			}
+			.ic_s_vars {
+				@include fistu-icon('code','#{$white}');
+			}
+			.ic_s_asci {
+				@include fistu-icon('align-justify','#{$white}');
+			}
+			.ic_b_engine {
+				@include fistu-icon('cpu','#{$white}');
+			}
+			.ic_b_plugin {
+				@include fistu-icon('box','#{$white}');
+			}
+			.ic_b_browse {
+				@include fistu-icon('file-text','#{$white}');
+			}
+			.ic_b_props {
+				@include fistu-icon('structure','#{$white}');
+			}
+			.ic_b_search {
+				@include fistu-icon('search','#{$white}');
+			}
+			.ic_b_routines {
+				@include fistu-icon('speaker','#{$white}');
+			}
+			.ic_b_events {
+				@include fistu-icon('clock','#{$white}');
+			}
+			.ic_b_triggers {
+				@include fistu-icon('shuffle','#{$white}');
+			}
+			.ic_eye {
+				@include fistu-icon('eye','#{$white}');
+			}
+			.ic_b_relations {
+				@include fistu-icon('git-pull-request','#{$white}');
+			}
+			.ic_centralColumns {
+				@include fistu-icon('table-add','#{$white}');
+			}
+		}
+	}
+}
