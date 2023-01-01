@@ -39,7 +39,7 @@ fi
 
 if [ "x$1" = "x--all" ] ; then
     EXIT_CODE=0
-    for dir in `find . -mindepth 1 -maxdepth 1 -type d` ; do
+    for dir in `find . -mindepth 1 -maxdepth 1 -type d -not -name archived -not -name '.*'` ; do
         do_lint $dir
         if [ $? -ne 0 ] ; then
             EXIT_CODE=1
