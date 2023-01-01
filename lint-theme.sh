@@ -26,7 +26,7 @@ do_lint() {
     JVERSION=`php -r "echo json_decode(file_get_contents('theme.json'), true)['version'];"`
     echo " * Version from theme.json: $JVERSION"
     if [ -n "$VERSION" -a "$JVERSION" != "$VERSION" ] ; then
-        echo " * Versions do not match: theme.json ($JVERSION), info.inc.php ($VERSION)"
+        echo " * Versions do not match: theme.json ($JVERSION)"
         cd ..
         return 1
     fi
@@ -44,12 +44,14 @@ if [ -z "$1" ] ; then
 fi
 
 if [ "x$1" = "x--all" ] ; then
+    EXIT_CODE=0
     for dir in `find . -mindepth 1 -maxdepth 1 -type d` ; do
         do_lint $dir
         if [ $? -ne 0 ] ; then
-            exit 0
+            EXIT_CODE=1
         fi
     done
+    exit $EXIT_CODE
 else
     do_lint $1
     exit $?
