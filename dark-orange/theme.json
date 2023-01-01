@@ -1,0 +1,8 @@
+{
+    "name": "DarkOrange",
+    "version": "1.0",
+    "description": "DarkOrange theme for phpMyAdmin",
+    "author": "Abolfazlr",
+    "url": "https://www.phpmyadmin.net/",
+    "supports": ["5.1", "5.2"]
+}
