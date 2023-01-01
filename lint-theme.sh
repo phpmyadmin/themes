@@ -11,22 +11,10 @@ do_lint() {
 
     cd $1
 
-    VERSION=
-    if [ -f info.inc.php ] ; then
-        if grep -q theme_full_version info.inc.php ; then
-            VERSION=`php -r "include './info.inc.php'; echo \\\$theme_full_version;"`
-            echo " * Version from info.inc.php: $VERSION"
-        else
-            echo " * Old theme, no version available!"
-        fi
-    else
-        echo " * Missing info.inc.php!"
-    fi
-
     if [ ! -f theme.json ] ; then
         echo " * Missing theme.json, skipping further checks!"
         cd ..
-        return 0
+        return 1
     fi
 
     if [ ! -f screen.png ] ; then
