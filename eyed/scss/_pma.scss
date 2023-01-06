@@ -1,0 +1,25 @@
+#topmenu.navbar-nav .nav-item.active {
+  font-weight: bold;
+}
+
+#topmenu.navbar-nav .nav-item.active>.nav-link {
+  background-color: tint-color($primary, 90%);
+  color: $primary;
+}
+
+#topmenu.navbar-nav .nav-item .nav-link {
+  border-radius: $border-radius;
+  color: $dark;
+}
+
+#topmenu.navbar-nav .nav-item .nav-link:hover {
+  background-color: tint-color($primary, 90%);
+}
+
+#navbarNav {
+  margin-left: 10px;
+}
+
+img.ui-datepicker-trigger {
+  width: 35px;
+}
