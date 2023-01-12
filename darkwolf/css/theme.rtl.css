@@ -5429,7 +5429,8 @@ ul#topmenu > li.active a:hover {
     border-bottom-right-radius: .25rem
 }
 .accordion-body {
-    padding: 1rem 1.25rem background-color: #121517;
+    padding: 1rem 1.25rem;
+    background-color: #121517;
     color: #999;
     border: 1px dashed #555;
     border-top: none
@@ -6158,7 +6159,8 @@ div#ajaxError {
     padding: 1rem 1rem;
     border-bottom: 1px solid #333;
     border-top-right-radius: calc(0.3rem - 1px);
-    border-top-left-radius: calc(0.3rem - 1px) background-color: #1B1E21;
+    border-top-left-radius: calc(0.3rem - 1px);
+    background-color: #1B1E21;
     border-top: none !important
 }
 .modal-header .btn-close {
