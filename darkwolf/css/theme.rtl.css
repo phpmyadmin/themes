@@ -1562,7 +1562,8 @@ progress {
     vertical-align: inherit
 }
 .table > thead {
-    vertical-align: bottom --bs-table-bg: #1B1E21;
+    vertical-align: bottom;
+    --bs-table-bg: #1B1E21;
 }
 .table > :not(:first-child) {
     border-top: 0px solid currentColor
@@ -12043,7 +12044,7 @@ table.show_create td {
 }
 #pma_bookmarks .content.add_bookmark .options button {
     margin: 0 7px;
-    vertical-align: bottom
+    vertical-align: bottom;
 }
 #pma_bookmarks .content.add_bookmark input[type=text] {
     margin: 0;
@@ -13651,7 +13652,7 @@ span.cm-string {
 .jqplot-x2axis-tick {
     bottom: 0;
     right: 15px;
-    vertical-align: bottom
+    vertical-align: bottom;
 }
 .jqplot-yaxis-tick {
     left: 0;

@@ -12050,7 +12050,7 @@ table.show_create td {
 }
 #pma_bookmarks .content.add_bookmark .options button {
     margin: 0 7px;
-    vertical-align: bottom
+    vertical-align: bottom;
 }
 #pma_bookmarks .content.add_bookmark input[type=text] {
     margin: 0;
@@ -13656,7 +13656,7 @@ span.cm-string {
 .jqplot-x2axis-tick {
     bottom: 0;
     left: 15px;
-    vertical-align: bottom
+    vertical-align: bottom;
 }
 .jqplot-yaxis-tick {
     right: 0;
