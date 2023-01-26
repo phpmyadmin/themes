@@ -1207,15 +1207,18 @@ input#auto_increment_opt {
   }
 }
 
+.create_table_form {
+  background-color: $pma-component-bg;
+}
+
 #table_name_col_no_outer {
-  margin-top: 45px;
+  margin-top: 87px;
 }
 
 #table_name_col_no {
   position: fixed;
-  top: 100px !important;
-  width: 100%;
-  background: $white;
+  top: 111px !important;
+  width: auto;
 }
 
 #table_columns {
@@ -1234,6 +1237,10 @@ input#auto_increment_opt {
   select {
     width: 10em;
     box-sizing: border-box;
+  }
+
+  caption {
+    padding-left: 0.5rem;
   }
 }
 
