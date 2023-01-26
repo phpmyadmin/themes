@@ -294,7 +294,7 @@ canvas {
 #serverstatusquerieschart.jqplot-series-canvas,
 #profilingchart.jqplot-series-canvas,
 .jqplot-series-shadowCanvas {
-  background-color: #1b1e21 !important;
+  background-color: lighten($pma-body-bg, 2.5%) !important;
   border: 1px solid $border-color !important
 }
 
