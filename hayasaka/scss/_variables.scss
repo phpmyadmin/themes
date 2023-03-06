@@ -1,0 +1,184 @@
+// stylelint-disable scss/dollar-variable-colon-space-after
+// Variables
+// =============================================================================
+
+// PMA color system
+$white: #fff;
+$black: #000;
+$pma-gray-100: #f8f9fa;
+$pma-gray-200: #e9ecef;
+$pma-gray-300: #dee2e6;
+$pma-gray-400: #ced4da;
+$pma-gray-500: #adb5bd;
+$pma-gray-600: #6c757d;
+$pma-gray-700: #495057;
+$pma-gray-800: #343a40;
+$pma-gray-900: #212529;
+$pma-gray-100-rgb: 248, 249, 250;
+$pma-gray-200-rgb: 233, 236, 239;
+$pma-gray-300-rgb: 222, 226, 230;
+$pma-gray-400-rgb: 206, 212, 218;
+$pma-gray-500-rgb: 173, 181, 189;
+$pma-gray-600-rgb: 108, 117, 125;
+$pma-gray-700-rgb: 73, 80, 87;
+$pma-gray-800-rgb: 52, 58, 64;
+$pma-gray-900-rgb: 33, 37, 41;
+
+// $blue:    #0d6efd;
+$pma-indigo:  #6610f2;
+$pma-purple:  #6f42c1;
+$pma-pink:    #d63384;
+$pma-red:     #dc3545;
+$pma-orange:  #fd7e14;
+// $pma-yellow:  #ffc107;
+// $pma-green:   #198754;
+// $pma-teal:    #20c997;
+$pma-cyan:    #0dcaf0;
+
+// PMA Base Style
+$pma-body-color:              $white;
+$pma-body-bg:                 $pma-gray-900;
+$pma-component-bg:            $pma-gray-800;
+$pma-table-bg:                $pma-gray-700;
+$pma-selected-bg:             $pma-gray-700;
+$pma-fieldset-bg:             $pma-gray-600;
+$pma-border-color:            $pma-gray-600;
+$pma-disable-color:           $pma-gray-500;
+$pma-fieldset-color:          $pma-gray-300;
+$pma-cond-border-color:       $black;
+$pma-button-color:            $pma-cyan;
+$pma-link-color:              $pma-cyan;
+$pma-link-hover-color:        $pma-red;
+$pma-custom-color:            $pma-orange;
+
+// Bootstrap variables
+// -----------------------------------------------------------------------------
+// Color system
+$secondary:                   $pma-gray-700;
+$light:                       $pma-gray-800;
+// Options
+// Gradient
+// Spacing
+// Position
+// Body
+$body-color:                  $pma-body-color;
+$body-bg:                     $pma-body-bg;
+// Utilities maps
+// Links
+$link-color:                  $pma-body-color;
+// Paragraphs
+// Grid breakpoints
+// Grid containers
+// Grid columns
+// Container padding
+// Components
+$border-color:                $pma-border-color;
+// Typography
+$text-muted:                  $pma-gray-400;
+// Tables
+$table-color:                 $pma-body-color;
+$table-bg:                    $pma-component-bg;
+$table-accent-bg:             transparent;
+$table-striped-color:         $table-color;
+$table-striped-bg:            rgba($pma-body-bg, .6);
+$table-active-color:          $table-color;
+$table-active-bg:             rgba($pma-body-bg, .7);
+$table-hover-color:           $table-color;
+$table-hover-bg:              rgba($pma-body-bg, .8);
+$table-border-color:          $border-color;
+$table-group-separator-color: $pma-border-color;
+// Buttons + Forms
+// Buttons
+// Forms
+$input-bg:                    darken($pma-component-bg, 2.5%);
+$input-disabled-bg:           $pma-gray-600;
+$input-border-color:          $pma-body-bg;
+$input-placeholder-color:     $pma-gray-400;
+$input-group-addon-bg:        $pma-component-bg;
+$form-check-input-border:     1px solid rgba($pma-body-color, .4);
+$form-select-indicator-color: $pma-body-color;
+$form-switch-color:           rgba($pma-body-color, .75);
+// Form validation
+// Z-index master list
+// Navs
+$nav-tabs-link-active-color:  $pma-gray-200;
+// Navbar
+// Dropdowns
+$dropdown-color:              $pma-body-color;
+$dropdown-bg:                 $pma-body-bg;
+$dropdown-link-color:         $dropdown-color;
+$dropdown-link-hover-color:   $pma-body-color;
+$dropdown-link-hover-bg:      rgba($pma-body-color, .15);
+// Pagination
+// Placeholders
+// Cards
+$card-border-color:           rgba($pma-body-bg, .5);
+$card-cap-bg:                 rgba($pma-body-bg, .5);
+$card-bg:                     $pma-component-bg;
+// Accordion
+$accordion-bg:                  $pma-component-bg;
+$accordion-button-bg:           darken($pma-component-bg, 2.5%);
+$accordion-button-active-bg:    darken($pma-component-bg, 3.5%);
+$accordion-button-active-color: $pma-body-color;
+// Tooltips
+// Popovers
+// Toasts
+// Badges
+// Modals
+$modal-content-bg:            $pma-gray-700;
+// Alerts
+// Progress bars
+// List group
+$list-group-color:            $pma-body-color;
+$list-group-bg:               $pma-component-bg;
+$list-group-border-color:     rgba($black, .25);
+// Image thumbnails
+// Figures
+// Breadcrumbs
+// Carousel
+// Spinners
+// Close
+$btn-close-color:             $pma-body-color;
+// Offcanvas
+// Code
+
+// PMA variables
+// -----------------------------------------------------------------------------
+
+// Common
+$pma-ajax-bg:                 mix(black, $pma-orange, 80%);
+$pma-ajax-border-color:       #e2b709;
+$pma-ajax-shadow:             #888;
+$pma-confirmation-color:      $black;
+$pma-confirmation-bg:         $pma-pink;
+$selflink-border-color:       $pma-border-color;
+
+// Navigation
+$navigation-width:            240px;
+$navigation-color:            $pma-body-color;
+$navigation-bg:               $pma-component-bg;
+$navigation-selected-bg:      $pma-selected-bg;
+$navigation-border-color:     $pma-border-color;
+$navigation-shadow-color:     $pma-border-color;
+$navigation-drop-button-bg:   $pma-border-color;
+
+// Breadcrumbs
+$breadcrumb-navbar-padding-y:     .5rem;
+$breadcrumb-navbar-padding-x:     1.8rem;
+$breadcrumb-navbar-margin-bottom: 0;
+$breadcrumb-navbar-bg:            $pma-component-bg;
+
+// Buttons
+$btn-outline-secondary:       $pma-gray-400;
+
+// Console
+$console-color:               $pma-body-color;
+$console-toolbar-bg:          $pma-component-bg;
+$console-content-bg:          $pma-body-bg;
+$console-message-bg:          $pma-component-bg;
+$console-message-text-bg:     $pma-gray-700;
+
+// CodeMirror
+$codemirror-bg:               $pma-component-bg;
+$codemirror-color:            $pma-body-color;
+$codemirror-gutters:          $pma-gray-700;

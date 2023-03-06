@@ -1,0 +1,30 @@
+// Buttons
+
+.btn-outline-secondary {
+  @include button-outline-variant($btn-outline-secondary);
+}
+
+.btn-link {
+  color: $pma-button-color;
+}
+
+button.mult_submit,
+.checkall_box + label {
+  text-decoration: none;
+  color: $pma-button-color;
+  cursor: pointer;
+  outline: none;
+}
+
+button.mult_submit {
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+    color: $pma-button-color;
+  }
+}
+
+.checkall_box + label:hover {
+  text-decoration: underline;
+  color: $pma-button-color;
+}

@@ -1,0 +1,9 @@
+// Root
+
+:root {
+  @media (prefers-color-scheme: dark) {
+    --scrollbar-bg: transparent;
+    --scrollbar-color: rgba(255, 255, 255, .25);
+    color-scheme: dark;
+  }
+}

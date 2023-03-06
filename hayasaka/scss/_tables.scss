@@ -1,0 +1,13 @@
+// Tables
+
+.table {
+  a {
+    color: $pma-link-color;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .table th.position-sticky {
+    top: 96px;
+  }
+}

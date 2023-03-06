@@ -1,0 +1,8 @@
+{
+    "name": "Hayasaka",
+    "version": "1.0.0",
+    "description": "Hayasaka theme for phpMyAdmin",
+    "author": "arie",
+    "url": "https://github.com/ariear/hayasaka-theme",
+    "supports": ["5.1", "5.2"]
+}

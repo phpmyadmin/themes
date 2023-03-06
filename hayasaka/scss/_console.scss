@@ -1,0 +1,472 @@
+// Console
+
+#pma_console_container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+}
+
+#pma_console {
+  position: relative;
+  margin-left: $navigation-width;
+
+  .templates {
+    display: none;
+  }
+
+  .mid_text {
+    vertical-align: middle;
+  }
+
+  .toolbar {
+    position: relative;
+    background: $console-toolbar-bg;
+    border-top: solid 1px #aaa;
+    cursor: n-resize;
+
+    .text {
+      font-weight: bold;
+    }
+
+    .button,
+    .text {
+      margin-right: .4em;
+      float: right;
+      padding: 0 3px;
+      display: inline-block;
+    }
+
+    .button.active {
+      background: darken($console-toolbar-bg, 5%);
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &.collapsed {
+      cursor: default;
+
+      &:not(:hover) {
+        display: inline-block;
+        border-top-right-radius: 3px;
+        border-right: solid 1px #aaa;
+      }
+
+      > .button {
+        display: none;
+      }
+    }
+  }
+
+  .message span {
+    &.text,
+    &.action {
+      padding: 0 3px;
+      display: inline-block;
+    }
+  }
+
+  .switch_button {
+    padding: 0 3px;
+    display: inline-block;
+  }
+
+  .message span.action,
+  .toolbar .button,
+  .switch_button {
+    cursor: pointer;
+  }
+
+  .message span.action:hover,
+  .toolbar .button:hover,
+  .switch_button:hover {
+    background: darken($console-toolbar-bg, 5%);
+  }
+
+  .content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: -65px;
+    border-top: solid 1px #aaa;
+    background: $console-content-bg;
+    padding-top: .4em;
+
+    .message {
+      border-color: #373b41;
+    }
+
+    .CodeMirror-wrap {
+      background: $console-content-bg;
+      color: $console-color;
+    }
+
+    .CodeMirror-cursor {
+      border-color: $console-color;
+    }
+
+    .cm-keyword {
+      color: #de935f;
+    }
+
+    &.console_dark_theme {
+      background: $console-content-bg;
+      color: $console-color;
+
+      .message {
+        border-color: #373b41;
+
+        .action_content {
+          color: $console-color;
+        }
+      }
+
+      .CodeMirror-wrap {
+        background: $console-content-bg;
+        color: $console-color;
+      }
+
+      .CodeMirror-cursor {
+        border-color: $console-color;
+      }
+
+      .cm-keyword {
+        color: #de935f;
+      }
+    }
+  }
+
+  .message,
+  .query_input {
+    position: relative;
+    font-family: Monaco, Consolas, monospace;
+    cursor: text;
+    margin: 0 10px .2em 1.4em;
+  }
+
+  .message {
+    border-bottom: solid 1px #ccc;
+    padding-bottom: .2em;
+
+    &.expanded > .action_content {
+      position: relative;
+    }
+
+    &::before {
+      left: -.7em;
+      position: absolute;
+      content: ">";
+    }
+  }
+
+  .query_input {
+    &::before {
+      left: -.7em;
+      position: absolute;
+      content: ">";
+      top: -2px;
+    }
+
+    textarea {
+      width: 100%;
+      height: 4em;
+      resize: vertical;
+    }
+  }
+
+  .message {
+    &:hover::before {
+      color: #7cf;
+      font-weight: bold;
+    }
+
+    &.expanded::before {
+      content: "]";
+    }
+
+    &.welcome::before {
+      display: none;
+    }
+
+    &.failed {
+      &::before,
+      &.expanded::before,
+      &:hover::before {
+        content: "=";
+        color: #944;
+      }
+    }
+
+    &.pending::before {
+      opacity: .3;
+    }
+
+    &.collapsed > .query {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &.expanded > .query {
+      display: block;
+      white-space: pre;
+      word-wrap: break-word;
+    }
+
+    .text.targetdb,
+    &.collapsed .action.collapse,
+    &.expanded .action.expand {
+      display: none;
+    }
+
+    .action {
+      &.requery,
+      &.profiling,
+      &.explain,
+      &.bookmark {
+        display: none;
+      }
+    }
+
+    &.select .action {
+      &.profiling,
+      &.explain {
+        display: inline-block;
+      }
+    }
+
+    &.history .text.targetdb,
+    &.successed .text.targetdb {
+      display: inline-block;
+    }
+
+    &.history,
+    &.bookmark,
+    &.successed {
+      .action {
+        &.requery,
+        &.bookmark {
+          display: inline-block;
+        }
+      }
+    }
+
+    .action_content {
+      position: absolute;
+      bottom: 100%;
+      color: $white;
+      background: $console-message-bg;
+      border: solid 1px #aaa;
+      border-top-left-radius: 3px;
+    }
+
+    &.bookmark .text.targetdb,
+    .text.query_time {
+      margin: 0;
+      display: inline-block;
+    }
+
+    &.failed .text.query_time,
+    .text.failed {
+      display: none;
+    }
+
+    &.failed .text.failed {
+      display: inline-block;
+    }
+
+    .text {
+      background: $console-message-text-bg;
+    }
+
+    &.collapsed {
+      > .action_content {
+        display: none;
+      }
+
+      &:hover > .action_content {
+        display: block;
+      }
+    }
+
+    .bookmark_label {
+      padding: 0 4px;
+      top: 0;
+      background: #369;
+      color: $white;
+      border-radius: 3px;
+
+      &.shared {
+        background: #396;
+      }
+    }
+
+    &.expanded .bookmark_label {
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
+  }
+
+  .query_input {
+    position: relative;
+  }
+
+  .mid_layer {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background: #666;
+    display: none;
+    cursor: pointer;
+    z-index: 200;
+  }
+
+  .card {
+    position: absolute;
+    width: 94%;
+    height: 100%;
+    min-height: 48px;
+    left: 100%;
+    top: 0;
+    border-left: solid 1px #999;
+    z-index: 300;
+    transition: left .2s;
+
+    &.show {
+      left: 6%;
+      box-shadow: -2px 1px 4px -1px #999;
+    }
+  }
+
+  .button.hide,
+  .message span.text.hide {
+    display: none;
+  }
+}
+
+#pma_bookmarks .content.add_bookmark,
+#pma_console_options .content {
+  padding: 4px 6px;
+}
+
+#pma_bookmarks .content.add_bookmark {
+  .options {
+    margin-left: 1.4em;
+    padding-bottom: .4em;
+    margin-bottom: .4em;
+    border-bottom: solid 1px #ccc;
+
+    button {
+      margin: 0 7px;
+      vertical-align: bottom;
+    }
+  }
+
+  input[type=text] {
+    margin: 0;
+    padding: 2px 4px;
+  }
+}
+
+#debug_console {
+  &.grouped .ungroup_queries {
+    display: inline-block;
+  }
+
+  &.ungrouped {
+    .group_queries {
+      display: inline-block;
+    }
+
+    .ungroup_queries,
+    .sort_count {
+      display: none;
+    }
+  }
+
+  &.grouped .group_queries {
+    display: none;
+  }
+
+  .count {
+    margin-right: 8px;
+  }
+
+  .show_trace .trace,
+  .show_args .args {
+    display: block;
+  }
+
+  .hide_trace .trace,
+  .hide_args .args,
+  .show_trace .action.dbg_show_trace,
+  .hide_trace .action.dbg_hide_trace {
+    display: none;
+  }
+
+  .traceStep {
+    &.hide_args .action.dbg_hide_args,
+    &.show_args .action.dbg_show_args {
+      display: none;
+    }
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+  }
+
+  .trace.welcome::after,
+  .debug > .welcome::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .debug_summary {
+    float: left;
+  }
+
+  .trace.welcome .time,
+  .traceStep .file,
+  .script_name {
+    float: right;
+  }
+
+  .traceStep .args pre {
+    margin: 0;
+  }
+}
+
+// Code mirror console style
+.cm-s-pma {
+  .CodeMirror-code {
+    font-family: Monaco, Consolas, monospace;
+
+    pre {
+      font-family: Monaco, Consolas, monospace;
+    }
+  }
+
+  .CodeMirror-measure > pre,
+  .CodeMirror-code > pre,
+  .CodeMirror-lines {
+    padding: 0;
+  }
+
+  &.CodeMirror {
+    resize: none;
+    height: auto;
+    width: 100%;
+    min-height: initial;
+    max-height: initial;
+  }
+
+  .CodeMirror-scroll {
+    cursor: text;
+  }
+}
