@@ -174,7 +174,7 @@ select {
 
     &.activePointer,
     &.selected {
-      color: $black;
+      color: $pma-body-color;
       background-color: $navigation-selected-bg;
     }
 
