@@ -1,0 +1,14 @@
+// List group
+
+#li_select_theme {
+  form::after {
+    padding-top: 0.325rem;
+    padding-left: calc(var(--bs-gutter-x) * .5);
+    content: "Scheme: #{$color-scheme} / Version: #{$pma-theme-version}";
+    color: $pma-link-color;
+
+    @include media-breakpoint-up(lg) {
+      padding-top: 0;
+    }
+  }
+}

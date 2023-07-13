@@ -13,8 +13,23 @@
 .navbar-light {
   .navbar-nav {
     .nav-item.active {
-      color: $component-active-color;
-      background-color: $component-active-bg;
+      @include button-variant($component-active-bg, $component-active-bg);
+      color: var(--bs-btn-color);
+      background-color: var(--bs-btn-bg);
+      border-top-left-radius: $nav-item-border-radius;
+      border-top-right-radius: $nav-item-border-radius;
+
+      &:first-child {
+        border-top-left-radius: 0;
+      }
+
+      .nav-link {
+        color: var(--bs-btn-color);
+      }
+
+      .icon {
+        filter: brightness(0) invert(0);
+      }
     }
   }
 }

@@ -2,6 +2,9 @@
 // Variables
 // =============================================================================
 
+// Theme version
+$pma-theme-version: "1.1.0";
+
 // PMA color system
 // -----------------------------------------------------------------------------
 $white:             #fff;
@@ -34,6 +37,7 @@ $pma-yellow:        #ffc107;
 $pma-green:         #198754;
 $pma-teal:          #20c997;
 $pma-cyan:          #0dcaf0;
+$pma-nord:          #88c0d0;
 
 // Theme Colors
 $pma-theme-colors: (
@@ -57,17 +61,34 @@ $pma-theme-colors: (
   "yellow":   $pma-yellow,
   "green":    $pma-green,
   "teal":     $pma-teal,
-  "cyan":     $pma-cyan
+  "cyan":     $pma-cyan,
+  "nord":     $pma-nord
 );
+
+// Theme color scheme
+// Values: "cyan", "teal", "nord", "orange"
+// Default: "cyan"
+// Set this value for the desired color scheme
+$color-scheme: cyan !default;
+$pma-color-scheme: $pma-cyan;
+
+@if $color-scheme == teal {
+  $pma-color-scheme: $pma-teal;
+} @else if $color-scheme == nord {
+  $pma-color-scheme: $pma-nord;
+} @else if $color-scheme == orange {
+  $pma-color-scheme: $pma-orange;
+}
 
 // PMA Base Style
 // -----------------------------------------------------------------------------
+$pma-primary:                 $pma-color-scheme;
 $pma-body-color:              $white;
 $pma-body-bg:                 $pma-gray-900;
 $pma-component-bg:            $pma-gray-800;
 $pma-component-hover-bg:      $pma-gray-600;
-$pma-component-active-color:  $white;
-$pma-component-active-bg:     $pma-blue;
+$pma-component-active-color:  $black;
+$pma-component-active-bg:     $pma-primary;
 $pma-table-bg:                $pma-gray-700;
 $pma-form-border-color:       $pma-gray-900;
 $pma-selected-bg:             $pma-gray-700;
@@ -76,14 +97,15 @@ $pma-fieldset-bg:             $pma-gray-600;
 $pma-border-color:            $pma-gray-600;
 $pma-disable-color:           $pma-gray-500;
 $pma-cond-border-color:       $black;
-$pma-button-color:            $pma-cyan;
-$pma-link-color:              $pma-cyan;
+$pma-button-color:            $pma-primary;
+$pma-link-color:              $pma-primary;
 $pma-link-hover-color:        $pma-red;
 $pma-custom-color:            $pma-orange;
 
 // Bootstrap variables
 // -----------------------------------------------------------------------------
 // Color system
+$primary:                     $pma-primary;
 $secondary:                   $pma-gray-700;
 $light:                       $pma-gray-800;
 // Options
@@ -128,9 +150,12 @@ $input-group-addon-bg:        $pma-component-bg;
 $form-check-input-border:     1px solid rgba($pma-body-color, .4);
 $form-select-indicator-color: $pma-body-color;
 $form-switch-color:           rgba($pma-body-color, .75);
+$form-file-button-color:      color-contrast($pma-gray-900);
+$form-file-button-bg:         $pma-gray-900;
+$form-file-button-hover-bg:   $pma-primary;
 // Form validation
 // Z-index master list
-// Navs
+// Nav Tabs
 $nav-tabs-bg:                       rgba($pma-body-bg, .5);
 $nav-tabs-border-color:             rgba($pma-body-bg, .5);
 $nav-tabs-border-width:             0;
@@ -138,7 +163,10 @@ $nav-tabs-link-hover-border-color:  transparent;
 $nav-tabs-link-active-color:        $pma-component-active-color;
 $nav-tabs-link-active-bg:           $pma-component-active-bg;
 $nav-tabs-link-active-border-color: rgba($pma-body-bg, .5);
+// Nav Pills
 $nav-pills-bg:                      $pma-body-bg;
+$nav-pills-link-active-color:       $pma-component-active-color;
+$nav-pills-link-active-bg:          $pma-component-active-bg;
 // Navbar
 $navbar-light-color:                $white;
 $navbar-light-hover-color:          rgba($white, .65);
@@ -158,6 +186,7 @@ $navbar-dark-toggler-icon-bg:       url("data:image/svg+xml,<svg xmlns='http://w
 $navbar-dark-toggler-border-color:  rgba($white, .1);
 $navbar-dark-brand-color:           $navbar-dark-active-color;
 $navbar-dark-brand-hover-color:     $navbar-dark-active-color;
+$nav-item-border-radius:            .375rem;
 // Dropdowns
 $dropdown-color:              $pma-body-color;
 $dropdown-bg:                 $pma-body-bg;
@@ -187,6 +216,7 @@ $accordion-bg:                  $pma-component-bg;
 $accordion-button-bg:           darken($pma-component-bg, 2.5%);
 $accordion-button-active-bg:    darken($pma-component-bg, 3.5%);
 $accordion-button-active-color: $pma-body-color;
+$accordion-border-color:        $pma-form-border-color;
 // Tooltips
 // Popovers
 // Toasts
