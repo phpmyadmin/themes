@@ -1,0 +1,8 @@
+{
+    "name": "VsDark",
+    "version": "1.0",
+    "description": "VsCode Dark Theme like for PhpMyAdmin",
+    "author": "Miumo",
+    "url": "https://github.com/MrMiumo",
+    "supports": ["5.0", "5.1", "5.2"]
+}
