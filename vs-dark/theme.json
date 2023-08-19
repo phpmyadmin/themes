@@ -3,6 +3,6 @@
     "version": "1.0",
     "description": "VsCode Dark Theme like for PhpMyAdmin",
     "author": "Miumo",
-    "url": "https://github.com/MrMiumo",
+    "url": "https://github.com/MrMiumo/VsDark",
     "supports": ["5.0", "5.1", "5.2"]
 }
