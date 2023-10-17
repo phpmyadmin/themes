@@ -1,6 +1,6 @@
-# BooDark v1.1.0
+# BooDark v1.1.1
 
-![Screenshot](screen.png)
+![Screenshot](screen-animated.png)
 
 Bootstrap Dark theme for phpMyAdmin
 

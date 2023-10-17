@@ -57,7 +57,7 @@ input {
     background-size: contain;
     border: $form-check-input-border;
     appearance: none;
-    color-adjust: exact; // Keep themed appearance for print
+    print-color-adjust: exact; // Keep themed appearance for print
 
     &:active {
       filter: $form-check-input-active-filter;
@@ -170,6 +170,7 @@ select {
 textarea {
   background-color: $input-bg;
   border: $input-border-width solid $input-border-color;
+  resize: both;
 
   &:focus {
     color: $input-focus-color;
