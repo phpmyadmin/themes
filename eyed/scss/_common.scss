@@ -7,7 +7,7 @@
 }
 
 button.mult_submit,
-.checkall_box+label {
+.checkall_box + label {
   text-decoration: none;
   color: #235a81;
   cursor: pointer;
@@ -15,7 +15,6 @@ button.mult_submit,
 }
 
 button.mult_submit {
-
   &:hover,
   &:focus {
     text-decoration: underline;
@@ -23,12 +22,12 @@ button.mult_submit {
   }
 }
 
-.checkall_box+label:hover {
+.checkall_box + label:hover {
   text-decoration: underline;
   color: #235a81;
 }
 
-#navbarDropdown>img {
+#navbarDropdown > img {
   display: none;
 }
 
@@ -126,7 +125,7 @@ div.null_div {
   }
 
   // revert for Gecko
-  div[class=formelement] {
+  div[class='formelement'] {
     white-space: normal;
   }
 }
@@ -174,7 +173,6 @@ td.null {
 }
 
 table {
-
   .valueHeader,
   .value {
     text-align: right;
@@ -269,7 +267,7 @@ td .icon {
 
 div.tools,
 .tblFooters {
-  background-color: rgba($black, .03);
+  background-color: rgba($black, 0.03);
   border: 1px solid $border-color;
   border-bottom-left-radius: $border-radius;
   border-bottom-right-radius: $border-radius;
@@ -288,7 +286,6 @@ div.tools,
   color: #666;
 
   a {
-
     &:link,
     &:active,
     &:visited {
@@ -408,7 +405,6 @@ li.last.database {
 
 // zoom search
 div#dataDisplay {
-
   input,
   select {
     margin: 0;
@@ -466,7 +462,7 @@ div#tablestatistics table {
 #textSQLDUMP {
   width: 95%;
   height: 95%;
-  font-family: Consolas, "Courier New", Courier, monospace;
+  font-family: Consolas, 'Courier New', Courier, monospace;
   font-size: 110%;
 }
 
@@ -552,7 +548,7 @@ div#tablestatistics table {
   float: left;
 }
 
-#fieldset_user_global_rights>legend input {
+#fieldset_user_global_rights > legend input {
   margin-left: 2em;
 }
 
@@ -588,7 +584,6 @@ div#serverstatusquerieschart {
 
 div {
   &#serverstatus table {
-
     tbody td.descr a,
     .tblFooters a {
       white-space: nowrap;
@@ -917,7 +912,6 @@ div {
 }
 
 table {
-
   &#serverconnection_src_remote,
   &#serverconnection_trg_remote,
   &#serverconnection_src_local,
@@ -930,11 +924,10 @@ table {
   *  Validation error message styles
   */
 input {
-
-  &[type=text].invalid_value,
-  &[type=password].invalid_value,
-  &[type=number].invalid_value,
-  &[type=date].invalid_value {
+  &[type='text'].invalid_value,
+  &[type='password'].invalid_value,
+  &[type='number'].invalid_value,
+  &[type='date'].invalid_value {
     background: #fcc;
   }
 }
@@ -997,7 +990,7 @@ select.invalid_value,
   margin-right: 1em;
 }
 
-#addColumns input[type=radio] {
+#addColumns input[type='radio'] {
   margin: 3px 0 0;
   margin-left: 1em;
 }
@@ -1007,8 +1000,7 @@ select.invalid_value,
  */
 #index_frm {
   .index_info {
-
-    input[type=text],
+    input[type='text'],
     select {
       width: 100%;
       margin: 0;
@@ -1182,10 +1174,9 @@ table#index_columns {
   }
 
   input {
-
-    &[type=text],
-    &[type=password],
-    &[type=number] {
+    &[type='text'],
+    &[type='password'],
+    &[type='number'] {
       border: 1px #a7a6aa solid;
       height: auto;
 
@@ -1225,7 +1216,7 @@ table#index_columns {
     margin-left: 0.5em;
 
     &::before {
-      content: "\25B8  ";
+      content: '\25B8  ';
     }
   }
 }
@@ -1236,7 +1227,7 @@ fieldset {
       background: #d5d5d5;
     }
 
-    +tr th {
+    + tr th {
       padding-top: 0.6em;
     }
   }
@@ -1502,7 +1493,7 @@ input#auto_increment_opt {
   width: $width;
   margin-top: $height * -0.5;
   margin-left: $width * -0.5;
-  background: url("../img/col_pointer.png");
+  background: url('../img/col_pointer.png');
   position: absolute;
 }
 
@@ -1530,7 +1521,10 @@ input#auto_increment_opt {
 }
 
 .coldrop {
-  background: url("../img/col_drop.png");
+  background-image: url('../img/col_drop.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
   cursor: pointer;
   height: 16px;
   margin-top: 0.3em;
@@ -1593,7 +1587,6 @@ input#auto_increment_opt {
   border-radius: $border-radius;
   background-color: $card-cap-bg;
 
-
   td {
     margin: 0;
     padding: 0;
@@ -1602,7 +1595,7 @@ input#auto_increment_opt {
   }
 
   input {
-    &[type=submit] {
+    &[type='submit'] {
       background: none;
       border: 0;
       filter: none;
@@ -1637,8 +1630,12 @@ input#auto_increment_opt {
   }
 
   select {
-    padding: $form-select-padding-y $form-select-indicator-padding $form-select-padding-y $form-select-padding-x;
-    -moz-padding-start: subtract($form-select-padding-x, 3px); // See https://github.com/twbs/bootstrap/issues/32636
+    padding: $form-select-padding-y $form-select-indicator-padding
+      $form-select-padding-y $form-select-padding-x;
+    -moz-padding-start: subtract(
+      $form-select-padding-x,
+      3px
+    ); // See https://github.com/twbs/bootstrap/issues/32636
     font-family: $form-select-font-family;
     @include font-size($form-select-font-size);
     font-weight: $form-select-font-weight;
@@ -1706,7 +1703,7 @@ input#auto_increment_opt {
   padding: 0;
   position: absolute;
 
-  input[type=text] {
+  input[type='text'] {
     background: $white;
     height: 100%;
     margin: 0;
@@ -1750,13 +1747,17 @@ input#auto_increment_opt {
     }
   }
 
+  textarea.edit_box {
+    resize: auto;
+  }
+
   .edit_box_posting {
     background: $white url('../img/ajax_clock_small.svg') no-repeat right center;
     padding-right: 1.5em;
   }
 
   .edit_area_loading {
-    background: $white url("../img/ajax_clock_small.svg") no-repeat center;
+    background: $white url('../img/ajax_clock_small.svg') no-repeat center;
     height: 10em;
   }
 
@@ -1929,14 +1930,13 @@ table.show_create {
         border-right: solid 1px #aaa;
       }
 
-      >.button {
+      > .button {
         display: none;
       }
     }
   }
 
   .message span {
-
     &.text,
     &.action {
       padding: 0 3px;
@@ -1945,7 +1945,6 @@ table.show_create {
   }
 
   .toolbar {
-
     .button,
     .text {
       padding: 0 3px;
@@ -2037,14 +2036,14 @@ table.show_create {
     border-bottom: solid 1px #ccc;
     padding-bottom: 0.2em;
 
-    &.expanded>.action_content {
+    &.expanded > .action_content {
       position: relative;
     }
 
     &::before {
       left: -0.7em;
       position: absolute;
-      content: ">";
+      content: '>';
     }
   }
 
@@ -2052,7 +2051,7 @@ table.show_create {
     &::before {
       left: -0.7em;
       position: absolute;
-      content: ">";
+      content: '>';
       top: -2px;
     }
 
@@ -2070,7 +2069,7 @@ table.show_create {
     }
 
     &.expanded::before {
-      content: "]";
+      content: ']';
     }
 
     &.welcome::before {
@@ -2078,11 +2077,10 @@ table.show_create {
     }
 
     &.failed {
-
       &::before,
       &.expanded::before,
       &:hover::before {
-        content: "=";
+        content: '=';
         color: #944;
       }
     }
@@ -2091,13 +2089,13 @@ table.show_create {
       opacity: 0.3;
     }
 
-    &.collapsed>.query {
+    &.collapsed > .query {
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
     }
 
-    &.expanded>.query {
+    &.expanded > .query {
       display: block;
       white-space: pre;
       word-wrap: break-word;
@@ -2110,7 +2108,6 @@ table.show_create {
     }
 
     .action {
-
       &.requery,
       &.profiling,
       &.explain,
@@ -2120,7 +2117,6 @@ table.show_create {
     }
 
     &.select .action {
-
       &.profiling,
       &.explain {
         display: inline-block;
@@ -2133,7 +2129,6 @@ table.show_create {
     }
 
     &.history .action {
-
       &.requery,
       &.bookmark {
         display: inline-block;
@@ -2141,7 +2136,6 @@ table.show_create {
     }
 
     &.bookmark .action {
-
       &.requery,
       &.bookmark {
         display: inline-block;
@@ -2149,7 +2143,6 @@ table.show_create {
     }
 
     &.successed .action {
-
       &.requery,
       &.bookmark {
         display: inline-block;
@@ -2184,11 +2177,11 @@ table.show_create {
     }
 
     &.collapsed {
-      >.action_content {
+      > .action_content {
         display: none;
       }
 
-      &:hover>.action_content {
+      &:hover > .action_content {
         display: block;
       }
     }
@@ -2267,7 +2260,7 @@ table.show_create {
     }
   }
 
-  input[type=text] {
+  input[type='text'] {
     margin: 0;
     padding: 2px 4px;
   }
@@ -2310,22 +2303,21 @@ table.show_create {
   }
 
   .traceStep {
-
     &.hide_args .action.dbg_hide_args,
     &.show_args .action.dbg_show_args {
       display: none;
     }
 
     &::after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }
   }
 
   .trace.welcome::after,
-  .debug>.welcome::after {
-    content: "";
+  .debug > .welcome::after {
+    content: '';
     display: table;
     clear: both;
   }
@@ -2355,8 +2347,8 @@ table.show_create {
     }
   }
 
-  .CodeMirror-measure>pre,
-  .CodeMirror-code>pre,
+  .CodeMirror-measure > pre,
+  .CodeMirror-code > pre,
   .CodeMirror-lines {
     padding: 0;
   }
@@ -2513,7 +2505,7 @@ table.show_create {
 
 span.drag_icon {
   display: inline-block;
-  background-image: url("../img/s_sortable.png");
+  background-image: url('../img/s_sortable.png');
   background-position: center center;
   background-repeat: no-repeat;
   width: 1em;
@@ -2526,15 +2518,15 @@ span.drag_icon {
 }
 
 meter {
-  &[value="1"]::-webkit-meter-optimum-value {
+  &[value='1']::-webkit-meter-optimum-value {
     background: linear-gradient(white 3%, #e32929 5%, transparent 10%, #e32929);
   }
 
-  &[value="2"]::-webkit-meter-optimum-value {
+  &[value='2']::-webkit-meter-optimum-value {
     background: linear-gradient(white 3%, #f60 5%, transparent 10%, #f60);
   }
 
-  &[value="3"]::-webkit-meter-optimum-value {
+  &[value='3']::-webkit-meter-optimum-value {
     background: linear-gradient(white 3%, #ffd700 5%, transparent 10%, #ffd700);
   }
 }
@@ -2561,21 +2553,21 @@ th {
   }
 
   &.headerSortUp .sorticon {
-    background-image: url("../img/sort-desc.svg");
+    background-image: url('../img/sort-desc.svg');
   }
 
   &.headerSortDown {
     &:hover .sorticon {
-      background-image: url("../img/sort-desc.svg");
+      background-image: url('../img/sort-desc.svg');
     }
 
     .sorticon {
-      background-image: url("../img/sort-asc.svg");
+      background-image: url('../img/sort-asc.svg');
     }
   }
 
   &.headerSortUp:hover .sorticon {
-    background-image: url("../img/sort-asc.svg");
+    background-image: url('../img/sort-asc.svg');
   }
 }
 

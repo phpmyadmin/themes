@@ -7,3 +7,8 @@
 .table {
   vertical-align: middle;
 }
+
+th.draggable.position-sticky.column_heading.marker.pointer,
+th.column_action.position-sticky.d-print-none {
+  background-color: $white;
+}
