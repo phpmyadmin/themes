@@ -1408,14 +1408,12 @@ input#auto_increment_opt {
   border: 1px solid $pma-border-color;
   position: absolute;
   box-shadow: 0 .2em .5em #333;
-  margin-left: 75%;
   right: 0;
   max-width: 100%;
   overflow-wrap: break-word;
 
   .lDiv div {
-    padding: .2em .5em .2em;
-    padding-left: .2em;
+    padding: .2em .5em;
 
     &:hover {
       background: $pma-component-hover-bg;
@@ -1536,26 +1534,24 @@ div.navigation_separator {
   position: absolute;
 
   input[type=text] {
-    background: $white;
+    background: $pma-component-bg;
     height: 100%;
     margin: 0;
     padding: 0;
   }
 
+  input {
+    @extend .form-control;
+  }
+
   .edit_area {
-    background: $white;
-    border: 1px solid #999;
+    background: $pma-component-bg;
+    border: 1px solid $pma-border-color;
     min-width: 10em;
     padding: .3em .5em;
-
-    select,
-    textarea {
-      width: 97%;
-    }
   }
 
   .cell_edit_hint {
-    color: #555;
     font-size: .8em;
     margin: .3em .2em;
   }
@@ -1563,36 +1559,42 @@ div.navigation_separator {
   .edit_box {
     overflow-x: hidden;
     overflow-y: scroll;
-    padding: 0;
-    margin: 0;
   }
 
   .edit_box_posting {
-    background: $white url('../img/ajax_clock_small.gif') no-repeat right center;
-    padding-right: 1.5em;
-    // background-size: $pma-ajax-bg-zise;
-    // @extend .ic_ajax_spinner;
+    padding-right: 1.5rem;
+    background-color: $pma-component-bg;
+    background-size: $pma-ajax-bg-zise;
+    background-repeat: no-repeat;
+    background-position: right center;
+    @extend .ic_ajax_spinner;
   }
 
   .edit_area_loading {
-    background: $white url("../img/ajax_clock_small.gif") no-repeat center;
-    height: 10em;
-    // background-size: $pma-ajax-bg-zise;
-    // @extend .ic_ajax_spinner;
+    height: 6rem;
+    border: 1px solid #6c757d;
+    background-color: $pma-component-bg;
+    background-size: $pma-ajax-bg-zise;
+    background-repeat: no-repeat;
+    background-position: center;
+    @extend .ic_ajax_spinner;
   }
 
   .goto_link {
-    background: #eee;
-    color: #555;
     padding: .2em .3em;
+
+    a {
+      color: $pma-link-color;
+    }
   }
 }
 
 .saving_edited_data {
-  background: url('../img/ajax_clock_small.gif') no-repeat left;
   padding-left: 20px;
-  // background-size: $pma-ajax-bg-zise;
-  // @extend .ic_ajax_spinner;
+  background-size: $pma-ajax-bg-zise;
+  background-repeat: no-repeat;
+  background-position: left;
+  @extend .ic_ajax_spinner;
 }
 
 .relationalTable {
