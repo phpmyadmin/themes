@@ -31,3 +31,5 @@ sources
 apidoc
 # Node Modules
 node_modules
+# For macOS
+.DS_Store
