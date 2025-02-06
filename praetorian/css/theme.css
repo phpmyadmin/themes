@@ -13927,7 +13927,7 @@ input#auto_increment_opt {
 }
 
 .cList {
-  background: #eee;
+  background: #444;
   border: solid 1px #999;
   position: absolute;
   box-shadow: 0 0.2em 0.5em #333;
