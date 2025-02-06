@@ -15424,7 +15424,7 @@ canvas.designer * {
 }
 
 .tab_field_3 {
-  background-color: black; /*#ffe6e6 */ !important;
+  background-color: black !important;
   color: pink;
   cursor: default;
 }
