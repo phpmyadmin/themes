@@ -13927,7 +13927,7 @@ input#auto_increment_opt {
 }
 
 .cList {
-  background: #444;
+  background: #444; /* RG: */
   border: solid 1px #999;
   position: absolute;
   box-shadow: 0 0.2em 0.5em #333;
@@ -13944,7 +13944,7 @@ input#auto_increment_opt {
 }
 
 .cList .lDiv div:hover {
-  background: #ddd;
+  background: grey; /* RG: */
   cursor: pointer;
 }
 
