@@ -13963,7 +13963,7 @@ input#auto_increment_opt {
 }
 
 .showAllColBtn:hover {
-  background: #ddd;
+  background: grey; /* RG: */
 }
 
 .turnOffSelect {
