@@ -8039,6 +8039,9 @@ fieldset:disabled .btn {
 
 .text-center {
   text-align: center !important;
+  /* color: white; RG: voor text in Databases > replication */
+}
+#canvas_outer .text-center { /* RG: voor text in Designer > tables list bottom */
   color: black;
 }
 
