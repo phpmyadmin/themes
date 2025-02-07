@@ -12610,12 +12610,12 @@ input[type=date][disabled]:hover {
 }
 
 select[disabled] {
-  background: #e8e8e8;
+  /* background: #e8e8e8; */
   box-shadow: none;
 }
 
 select[disabled]:hover {
-  background: #e8e8e8;
+  /* background: #e8e8e8; */
   box-shadow: none;
 }
 
