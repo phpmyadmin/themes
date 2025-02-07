@@ -902,11 +902,11 @@ body .ui-tooltip {
 }
 .ui-widget-content {
 	border: 1px solid #aaaaaa;
-	background: #ffffff;
-	color: #222222;
+	background: #555; /* RG: */
+	color: #ccc;
 }
 .ui-widget-content a {
-	color: #222222;
+	color: #eee; /* RG: */
 }
 .ui-widget-header {
 	border: 1px solid #aaaaaa;

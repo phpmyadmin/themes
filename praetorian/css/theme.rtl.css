@@ -13095,7 +13095,7 @@ div.liveChart {
 
 div#chartVariableSettings {
   border: 1px solid #ddd;
-  background-color: #e6e6e6;
+  background-color: #333; /* RG: */
   margin-right: 10px;
 }
 
@@ -13515,7 +13515,7 @@ table#index_columns select {
   vertical-align: top;
   background: transparent;
   filter: none;
-  border-top: 1px #d5d5d5 solid;
+  border-top: 1px #999999 solid; /* RG: */
   border-left: none;
 }
 
@@ -13532,7 +13532,7 @@ table#index_columns select {
   padding-top: 0.3em;
   padding-bottom: 0.3em;
   vertical-align: top;
-  border-top: 1px #d5d5d5 solid;
+  border-top: 1px #999999 solid; /* RG: */
   border-left: none;
 }
 
@@ -13608,7 +13608,7 @@ table#index_columns select {
 }
 
 fieldset .group-header th {
-  background:rgb(55, 55, 55);
+  background:#666; /* RG: */
 }
 
 fieldset .group-header+tr th {
