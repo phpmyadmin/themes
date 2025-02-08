@@ -13988,7 +13988,7 @@ input#auto_increment_opt {
 }
 
 .navigation .btn-link {
-  color: #444;
+  /* color: #444; RG: */
 }
 
 .navigation .btn-link:hover {
