@@ -4003,7 +4003,7 @@ fieldset:disabled .btn {
 .dropdown-item:focus {
   color: var(--bs-dropdown-link-hover-color);
   text-decoration: none;
-  background-color: white;
+  background-color: grey; /* RG: */
   /* var(--bs-dropdown-link-hover-bg); RG: */
   background-image: var(--bs-gradient);
 }
