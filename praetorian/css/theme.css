@@ -14257,7 +14257,7 @@ textarea {
 #pma_console .toolbar .button,
 #pma_console .switch_button {
   cursor: pointer;
-  color: black; /* RG: */
+  /* color: black; */ /* RG: */
 }
 
 #pma_console .message span.action:hover,
