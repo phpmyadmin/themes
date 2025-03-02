@@ -14239,6 +14239,7 @@ textarea {
 #pma_console .message span.action {
   padding: 0 3px;
   display: inline-block;
+  color: black; /* RG: */
 }
 
 #pma_console .toolbar .button,
@@ -14256,6 +14257,7 @@ textarea {
 #pma_console .toolbar .button,
 #pma_console .switch_button {
   cursor: pointer;
+  color: black; /* RG: */
 }
 
 #pma_console .message span.action:hover,
@@ -14413,6 +14415,7 @@ textarea {
 #pma_console .message.history .text.targetdb,
 #pma_console .message.successed .text.targetdb {
   display: inline-block;
+  color: black; /* RG: */
 }
 
 #pma_console .message.history .action.requery,
@@ -14442,6 +14445,7 @@ textarea {
 #pma_console .message .text.query_time {
   margin: 0;
   display: inline-block;
+  color: black; /* RG: */
 }
 
 #pma_console .message.failed .text.query_time,
