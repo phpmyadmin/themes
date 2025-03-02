@@ -13695,7 +13695,7 @@ input#auto_increment_opt {
 
 .toggleButton .toggle-container td,
 .toggleButton .toggle-container tr {
-  background: none !important;
+  /* background: none !important; RG: */
 }
 
 .toggleButton .toggleOn {
@@ -13706,6 +13706,7 @@ input#auto_increment_opt {
 
 .toggleButton .toggleOff {
   padding: 0 1em;
+  background: grey; /* RG: */
 }
 
 #table_name_col_no_outer {
