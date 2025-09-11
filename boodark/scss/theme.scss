@@ -1,35 +1,45 @@
 // Theme: boodark
 
 // 1. Include any default variable overrides here
-@import "variables";
+@import "core/colors";
+@import "core/variables";
 
 // 2. Include Bootstrap
-@import "bootstrap";
+@import "vendors/bootstrap";
 
-// 3. Include "phpMyAdmin" custom code
-@import "root";
-@import "tables";
-@import "forms";
-@import "common";
-@import "ui-custom";
-@import "enum-editor";
-@import "gis";
-@import "navigation";
-@import "designer";
-@import "codemirror";
-@import "jqplot";
-@import "icons";
-@import "reboot";
-@import "buttons";
-@import "nav";
-@import "navbar";
-// @import "card";
-@import "breadcrumb";
-// @import "pagination";
-// @import "alert";
-@import "list-group";
-@import "modal";
-@import "console";
-@import "settings";
-@import "helpers";
-@import "print";
+// 3. Include "phpMyAdmin" base code
+@import "base/root";
+@import "base/reboot";
+@import "base/common";
+
+// 4. Include "phpMyAdmin" layout code
+@import "layout/navigation";
+@import "layout/forms";
+@import "layout/console";
+
+// 5. Include "phpMyAdmin" components code
+@import "components/tables";
+@import "components/buttons";
+@import "components/icons";
+@import "components/nav";
+@import "components/navbar";
+@import "components/breadcrumb";
+@import "components/list-group";
+@import "components/modal";
+@import "components/text";
+
+// 6. Include "phpMyAdmin" modules code
+@import "modules/ui-custom";
+@import "modules/enum-editor";
+@import "modules/gis";
+@import "modules/designer";
+@import "modules/codemirror";
+@import "modules/jqplot";
+
+// 7. Include "phpMyAdmin" pages/specific code
+@import "pages/settings";
+@import "pages/print";
+
+// DEBUG
+// stylelint-disable-next-line scss/at-import-no-partial-leading-underscore
+// @import "_debug";

@@ -3,7 +3,7 @@
 // Common
 
 #page_content {
-  margin: 0 .5em;
+  margin: 0 .75em;
 }
 
 #navbarDropdown > img {
@@ -11,16 +11,16 @@
 }
 
 .pma-fieldset {
-  margin-top: 1em;
-  border-radius: 4px 4px 0 0;
-  border: 1px solid $body-bg;
   padding: .5em;
+  margin-top: 1em;
   background: $pma-component-bg;
+  border: 1px solid $body-bg;
+  border-radius: 4px 4px 0 0;
 
   .pma-fieldset {
     margin: .8em;
-    border: 1px solid $body-bg;
     background: shade-color($pma-component-bg, 24%);
+    border: 1px solid $body-bg;
 
     &.column_details {
       padding-top: 2rem;
@@ -29,15 +29,15 @@
 
   legend {
     float: none;
+    width: initial;
+    max-width: 100%;
+    padding: 5px 10px;
+    font-size: 1em;
     font-weight: bold;
     color: $body-color;
-    padding: 5px 10px;
-    border-radius: 2px;
-    border: 1px solid #333;
     background-color: $body-bg;
-    max-width: 100%;
-    width: initial;
-    font-size: 1em;
+    border: 1px solid #333;
+    border-radius: 2px;
   }
 
   a {
@@ -56,13 +56,13 @@
   }
 
   &.tblFooters {
-    margin-top: 0;
-    margin-bottom: .5em;
-    // avoid a thick line since this should be used under another fieldset
-    border-top: 0;
-    text-align: right;
     float: none;
     clear: both;
+    margin-top: 0;
+    margin-bottom: .5em;
+    text-align: right;
+    // avoid a thick line since this should be used under another fieldset
+    border-top: 0;
     border-radius: 0 0 4px 4px;
   }
 }
@@ -86,17 +86,17 @@
 }
 
 div.tools {
-  margin-top: 0;
-  margin-bottom: .5em;
-  padding: .2em;
-  border-top: 0;
-  text-align: right;
   float: none;
   clear: both;
-  border-radius: 0 0 4px 4px;
+  padding: .2em;
+  margin-top: 0;
+  margin-bottom: .5em;
   font-weight: normal;
   color: $body-color;
+  text-align: right;
   background: $pma-component-bg;
+  border-top: 0;
+  border-radius: 0 0 4px 4px;
 
   a {
     &:link,
@@ -112,10 +112,10 @@ div.tools {
 }
 
 div.null_div {
-  height: 20px;
-  text-align: center;
-  font-style: normal;
   min-width: 50px;
+  height: 20px;
+  font-style: normal;
+  text-align: center;
 }
 
 .pma-fieldset {
@@ -138,13 +138,13 @@ div.null_div {
 }
 
 th.condition {
-  border-width: 1px 1px 0 1px;
   border-style: solid;
+  border-width: 1px 1px 0 1px;
 }
 
 td.condition {
-  border-width: 0 1px 0 1px;
   border-style: solid;
+  border-width: 0 1px 0 1px;
 }
 
 tr:last-child td.condition {
@@ -181,26 +181,26 @@ img.lightbulb {
 }
 
 .pdflayout {
-  overflow: hidden;
-  clip: inherit;
-  background-color: $white;
-  display: none;
-  border: 1px solid $black;
   position: relative;
+  display: none;
+  overflow: hidden;
+  background-color: $white;
+  border: 1px solid $black;
+  clip: inherit;
 }
 
 .pdflayout_table {
-  background: #d3dce3;
-  color: $black;
-  overflow: hidden;
-  clip: inherit;
+  position: absolute;
   z-index: 2;
   display: inline;
   visibility: inherit;
-  cursor: move;
-  position: absolute;
+  overflow: hidden;
   font-size: 80%;
+  color: $black;
+  cursor: move;
+  background: #d3dce3;
   border: 1px dashed $black;
+  clip: inherit;
 }
 
 // Doc links in SQL
@@ -242,8 +242,8 @@ td .icon {
 
 // Database > SQL Form
 #sqlqueryform {
-  padding-left: .75rem;
   padding-right: .75rem;
+  padding-left: .75rem;
   margin-top: 1rem;
 }
 
@@ -318,11 +318,11 @@ td .icon {
 }
 
 .error {
-  border: 1px solid maroon !important;
-  margin-left: 2px;
   padding: 1px 2px;
+  margin-left: 2px;
   color: $black;
   background: pink;
+  border: 1px solid maroon !important;
 }
 
 // disabled text
@@ -345,8 +345,8 @@ td .icon {
 
 tr.disabled td,
 td.disabled {
-  background-color: $pma-component-bg;
   color: $pma-disable-color;
+  background-color: $pma-component-bg;
 }
 
 .pre_wrap {
@@ -369,28 +369,28 @@ body#loginform {
   }
 
   div.container {
-    text-align: left;
     width: 30em;
     margin: 0 auto;
+    text-align: left;
   }
 }
 
 div.container.modal_form {
-  margin: 0 auto;
+  z-index: 999;
   width: 30em;
+  margin: 0 auto;
   text-align: center;
   background: $modal-content-bg;
-  z-index: 999;
 }
 
 div#modalOverlay {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100%;
-  width: 100%;
-  background: $modal-content-bg;
   z-index: 900;
+  width: 100%;
+  height: 100%;
+  background: $modal-content-bg;
 }
 
 label.col-3.d-flex.align-items-center {
@@ -406,8 +406,8 @@ label.col-3.d-flex.align-items-center {
 }
 
 .column_name {
-  font-size: 80%;
   margin: 5px 2px;
+  font-size: 80%;
 }
 
 .message_errors_found {
@@ -455,10 +455,10 @@ form.clock {
 // table stats
 div#tablestatistics table {
   float: left;
-  margin-bottom: .5em;
-  margin-right: 1.5em;
-  margin-top: .5em;
   min-width: 16em;
+  margin-top: .5em;
+  margin-right: 1.5em;
+  margin-bottom: .5em;
 }
 // end table stats
 
@@ -489,8 +489,8 @@ div#tablestatistics table {
 }
 
 #page_settings_icon {
-  cursor: pointer;
   display: none;
+  cursor: pointer;
 }
 
 #page_settings_modal,
@@ -508,14 +508,14 @@ div#tablestatistics table {
 #TooltipContainer {
   position: absolute;
   z-index: 99;
+  visibility: hidden;
   width: 20em;
   height: auto;
-  overflow: visible;
-  visibility: hidden;
-  background-color: $pma-component-bg;
-  color: #060;
-  border: .1em solid $pma-border-color;
   padding: .5em;
+  overflow: visible;
+  color: #060;
+  background-color: $pma-component-bg;
+  border: .1em solid $pma-border-color;
 }
 
 // User privileges
@@ -523,9 +523,9 @@ div#tablestatistics table {
   div.item {
     display: flex;
     align-items: center;
-    border-bottom: 1px solid silver;
     padding-bottom: .3em;
     margin-bottom: .3em;
+    border-bottom: 1px solid silver;
   }
 
   label {
@@ -533,14 +533,14 @@ div#tablestatistics table {
     display: block;
     width: 10em;
     max-width: 100%;
-    text-align: right;
     padding-right: .5em;
     margin-bottom: 0;
+    text-align: right;
   }
 
   input {
-    width: 12em;
     clear: right;
+    width: 12em;
     max-width: 100%;
   }
 
@@ -601,14 +601,14 @@ div#tablestatistics table {
 
 // Server status
 .linkElem:hover {
-  text-decoration: underline;
   color: #235a81;
+  text-decoration: underline;
   cursor: pointer;
 }
 
 h3#serverstatusqueries span {
-  font-size: 60%;
   display: inline;
+  font-size: 60%;
 }
 
 div#serverStatusTabs {
@@ -645,9 +645,9 @@ div {
 }
 
 div#chartVariableSettings {
-  border: 1px solid #ddd;
-  background-color: #e6e6e6;
   margin-left: 10px;
+  background-color: #e6e6e6;
+  border: 1px solid #ddd;
 }
 
 table#chartGrid {
@@ -657,14 +657,14 @@ table#chartGrid {
   }
 
   div.monitorChart {
+    min-width: 1px;
     background: $pma-component-bg;
     border: none;
-    min-width: 1px;
   }
 
   .float-start {
-    line-height: 1;
     margin-right: .5rem;
+    line-height: 1;
   }
 }
 
@@ -688,13 +688,13 @@ div.tabLinks {
 }
 
 .popupContent {
-  display: none;
   position: absolute;
-  border: 1px solid $pma-border-color;
-  margin: 0;
-  padding: 3px;
-  background-color: $body-bg;
   z-index: 2;
+  display: none;
+  padding: 3px;
+  margin: 0;
+  background-color: $body-bg;
+  border: 1px solid $pma-border-color;
   box-shadow: 2px 2px 3px $pma-border-color;
 
   .float-start > select {
@@ -704,8 +704,8 @@ div.tabLinks {
 
 div {
   &#logTable {
-    padding-top: 10px;
     clear: both;
+    padding-top: 10px;
 
     table {
       width: 100%;
@@ -731,8 +731,8 @@ div {
 
     table.queryNums {
       display: none;
-      border: 0;
       text-align: left;
+      border: 0;
     }
   }
 }
@@ -744,15 +744,15 @@ div {
 
 // profiling
 div#profilingchart {
+  float: left;
   width: 850px;
   height: 370px;
-  float: left;
 }
 
 #profilingchart .jqplot-highlighter-tooltip {
   top: auto !important;
-  left: 11px;
   bottom: 24px;
+  left: 11px;
 }
 // end profiling
 
@@ -773,24 +773,24 @@ div#profilingchart {
 
 #serverstatus h3 {
   margin: 15px 0;
+  font-size: 1.7em;
   font-weight: normal;
   color: #999;
-  font-size: 1.7em;
 }
 
 textarea {
   &#sqlquery {
     width: 100%;
     padding: 5px;
-    border-radius: 4px;
-    border: 1px solid #aaa;
     font-family: inherit;
+    border: 1px solid #aaa;
+    border-radius: 4px;
   }
 
   &#sql_query_edit {
-    height: 7em;
-    width: 95%;
     display: block;
+    width: 95%;
+    height: 7em;
   }
 }
 
@@ -809,8 +809,8 @@ textarea#sqlquery {
 
 #maincontainer {
   ul {
-    list-style-type: disc;
     vertical-align: middle;
+    list-style-type: disc;
   }
 
   li {
@@ -820,17 +820,17 @@ textarea#sqlquery {
 
 #full_name_layer {
   position: absolute;
+  z-index: 801;
   padding: 2px;
   margin-top: -3px;
-  z-index: 801;
-  border-radius: 3px;
-  border: solid 1px $pma-border-color;
   background: $body-bg;
+  border: solid 1px $pma-border-color;
+  border-radius: 3px;
 }
 
 #body_browse_foreigners {
-  background: #f3f3f3;
   margin: .5em .5em 0 .5em;
+  background: #f3f3f3;
 }
 
 #bodythemes {
@@ -850,9 +850,9 @@ textarea#sqlquery {
 #selflink {
   clear: both;
   display: block;
+  width: 98%;
   margin-top: 1rem;
   margin-bottom: 1rem;
-  width: 98%;
   margin-left: 1%;
   text-align: right;
   border-top: .1rem solid $selflink-border-color;
@@ -868,20 +868,20 @@ code {
 
   &.php {
     display: block;
+    max-height: 10em;
     padding-left: 1em;
     margin-top: 0;
     margin-bottom: 0;
-    max-height: 10em;
     overflow: auto;
     direction: ltr;
   }
 
   &.sql {
     display: block;
+    max-height: 10em;
     padding: 1em;
     margin-top: 0;
     margin-bottom: 0;
-    max-height: 10em;
     overflow: auto;
     direction: ltr;
   }
@@ -889,10 +889,10 @@ code {
 
 div.sqlvalidate {
   display: block;
+  max-height: 10em;
   padding: 1em;
   margin-top: 0;
   margin-bottom: 0;
-  max-height: 10em;
   overflow: auto;
   direction: ltr;
 }
@@ -901,8 +901,8 @@ div.sqlvalidate {
   margin-top: 1em;
 
   .sqlOuter {
-    background: darken($pma-component-bg, 2%);
     text-align: left;
+    background: darken($pma-component-bg, 2%);
   }
 }
 
@@ -921,8 +921,8 @@ textarea#partitiondefinition {
 }
 
 #list_server {
-  list-style-type: none;
   padding: 0;
+  list-style-type: none;
 }
 
 // Progress bar styles
@@ -934,11 +934,11 @@ div {
   }
 
   &.upload_progress_bar_outer {
-    border: 1px solid $black;
-    width: 202px;
     position: relative;
+    width: 202px;
     margin: 0 auto 1em;
     color: $body-color;
+    border: 1px solid $black;
 
     div.percentage {
       position: absolute;
@@ -949,13 +949,13 @@ div {
   }
 
   &.upload_progress_bar_inner {
-    background-color: #ddd;
+    position: relative;
     width: 0;
     height: 12px;
     margin: 1px;
     overflow: hidden;
     color: $black;
-    position: relative;
+    background-color: #ddd;
 
     div.percentage {
       top: -1px;
@@ -988,35 +988,36 @@ table {
   // The notification needs to be shown on the top of the page
   position: fixed;
   top: 0;
-  left: 0;
   right: 0;
-  display: inline;
+  left: 0;
   z-index: 1100;
+  display: inline;
   width: $pma-ajax-width;
   padding: $pma-ajax-spacer;
   margin: 200px auto 0;
+  color: $pma-ajax-color;
   text-align: center;
-  background-size: $pma-ajax-bg-zise;
+  background-color: $pma-ajax-bg;
   background-repeat: no-repeat;
   background-position: $pma-ajax-spacer;
-  border: $alert-border-width solid transparent;
+  background-size: $pma-ajax-bg-zise;
+  border: $alert-border-width solid $pma-ajax-border-color;
   border-radius: 5px;
-  box-shadow: 0 5px 90px $pma-ajax-shadow;
+  box-shadow: 0 5px 90px $pma-ajax-shadow-color;
 
-  @extend .alert-info;
   @extend .ic_ajax_spinner;
 }
 
 #popup_background {
-  display: none;
   position: fixed;
-  width: 100%;
-  height: 100%;
   top: 0;
   left: 0;
-  background: $black;
   z-index: 1000;
+  display: none;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
+  background: $black;
 }
 
 #tablestructure tbody label {
@@ -1048,9 +1049,9 @@ table {
   .index_info {
     input[type=text],
     select {
+      box-sizing: border-box;
       width: 100%;
       margin: 0;
-      box-sizing: border-box;
     }
 
     div {
@@ -1064,9 +1065,9 @@ table {
   }
 
   .slider {
+    float: left;
     width: 10em;
     margin: .6em;
-    float: left;
   }
 
   .add_fields {
@@ -1090,8 +1091,8 @@ table#index_columns {
   width: 100%;
 
   select {
-    width: 85%;
     float: left;
+    width: 85%;
   }
 }
 
@@ -1101,18 +1102,18 @@ table#index_columns {
   }
 
   ul {
-    list-style: none;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    list-style: none;
   }
 
   li {
+    padding: .2em;
+    margin: .4em;
+    font-weight: bold;
+    color: $black;
     background: #d3dce3;
     border: 1px solid #aaa;
-    color: $black;
-    font-weight: bold;
-    margin: .4em;
-    padding: .2em;
     border-radius: 2px;
   }
 }
@@ -1132,11 +1133,11 @@ input#auto_increment_opt {
 
 #placeholder {
   position: relative;
-  border: 1px solid #aaa;
   float: right;
-  overflow: hidden;
   width: 450px;
   height: 300px;
+  overflow: hidden;
+  border: 1px solid #aaa;
 
   .button {
     position: absolute;
@@ -1144,10 +1145,10 @@ input#auto_increment_opt {
   }
 
   div.button {
+    padding: 2px;
     font-size: smaller;
     color: #999;
     background-color: #eee;
-    padding: 2px;
   }
 }
 
@@ -1158,12 +1159,12 @@ input#auto_increment_opt {
 
 .toggleButton {
   position: relative;
-  cursor: pointer;
-  font-size: .8em;
-  text-align: center;
-  line-height: 1.4em;
   height: 1.55em;
   overflow: hidden;
+  font-size: .8em;
+  line-height: 1.4em;
+  text-align: center;
+  cursor: pointer;
   border-right: .1em solid #888;
   border-left: .1em solid #888;
   border-radius: .3em;
@@ -1171,8 +1172,8 @@ input#auto_increment_opt {
   table,
   td,
   img {
-    padding: 0;
     position: relative;
+    padding: 0;
   }
 
   .container {
@@ -1185,8 +1186,8 @@ input#auto_increment_opt {
   }
 
   .toggleOn {
-    color: $body-color;
     padding: 0 1em;
+    color: $body-color;
     text-shadow: 0 0 .2em $black;
   }
 
@@ -1197,8 +1198,8 @@ input#auto_increment_opt {
 
 .doubleFieldset {
   .pma-fieldset {
-    width: 48%;
     float: left;
+    width: 48%;
     padding: 0;
   }
 
@@ -1233,18 +1234,18 @@ input#auto_increment_opt {
     &[type=text],
     &[type=password],
     &[type=number] {
-      width: 10em;
       box-sizing: border-box;
+      width: 10em;
     }
   }
 
   select {
-    width: 10em;
     box-sizing: border-box;
+    width: 10em;
   }
 
   caption {
-    padding-left: 0.5rem;
+    padding-left: .5rem;
   }
 }
 
@@ -1258,46 +1259,46 @@ input#auto_increment_opt {
 }
 
 #left_arrow {
-  left: 8px;
   top: 26px;
+  left: 8px;
 }
 
 #right_arrow {
-  left: 26px;
   top: 26px;
+  left: 26px;
 }
 
 #up_arrow {
-  left: 17px;
   top: 8px;
+  left: 17px;
 }
 
 #down_arrow {
-  left: 17px;
   top: 44px;
+  left: 17px;
 }
 
 #zoom_in {
-  left: 17px;
   top: 67px;
+  left: 17px;
 }
 
 #zoom_world {
-  left: 17px;
   top: 85px;
+  left: 17px;
 }
 
 #zoom_out {
-  left: 17px;
   top: 103px;
+  left: 17px;
 }
 
 .colborder {
-  cursor: col-resize;
-  height: 100%;
-  margin-left: -6px;
   position: absolute;
   width: 5px;
+  height: 100%;
+  margin-left: -6px;
+  cursor: col-resize;
 }
 
 .colborder_active {
@@ -1308,8 +1309,8 @@ input#auto_increment_opt {
   th.draggable {
     span {
       display: block;
-      overflow: hidden;
       margin-right: 10px;
+      overflow: hidden;
     }
   }
 
@@ -1330,8 +1331,8 @@ input#auto_increment_opt {
 .modal-copy input {
   display: block;
   width: 100%;
-  margin-top: 1.5em;
   padding: .3em 0;
+  margin-top: 1.5em;
 }
 
 // Column visibility
@@ -1340,58 +1341,58 @@ input#auto_increment_opt {
 }
 
 .cCpy {
-  background: #333;
-  color: $white;
-  font-weight: bold;
-  margin: .1em;
-  padding: .3em;
   position: absolute;
+  padding: .3em;
+  margin: .1em;
+  font-weight: bold;
+  color: $white;
   text-shadow: -1px -1px $black;
-  box-shadow: 0 0 .7em $black;
+  background: #333;
   border-radius: .3em;
+  box-shadow: 0 0 .7em $black;
 }
 
 .cPointer {
   $height: 20px;
   $width: 10px;
+  position: absolute;
+  width: $width;
 
   height: $height;
-  width: $width;
   margin-top: $height * -.5;
   margin-left: $width * -.5;
   background: url("../img/col_pointer.png");
-  position: absolute;
 }
 
 .tooltip {
-  background: #333 !important;
-  opacity: .9 !important;
   z-index: 9999;
+  padding: 3px 5px !important;
+  font-size: .8em !important;
+  font-weight: bold !important;
+  text-shadow: -1px -1px $black !important;
+  background: #333 !important;
   border: 1px solid $black !important;
   border-radius: .3em !important;
   box-shadow: none !important;
-  text-shadow: -1px -1px $black !important;
-  font-size: .8em !important;
-  font-weight: bold !important;
-  padding: 3px 5px !important;
+  opacity: .9 !important;
 
   * {
-    background: none !important;
     color: $white !important;
+    background: none !important;
   }
 }
 
 .cDrop {
-  right: 0;
   position: absolute;
   top: 0;
+  right: 0;
 }
 
 .coldrop {
-  cursor: pointer;
+  width: 16px;
   height: 16px;
   margin-top: .5em;
-  width: 16px;
+  cursor: pointer;
   @extend .ic_b_more;
 
   &:hover {
@@ -1404,20 +1405,20 @@ input#auto_increment_opt {
 }
 
 .cList {
-  background: $pma-component-bg;
-  border: 1px solid $pma-border-color;
   position: absolute;
-  box-shadow: 0 .2em .5em #333;
   right: 0;
   max-width: 100%;
   overflow-wrap: break-word;
+  background: $pma-component-bg;
+  border: 1px solid $pma-border-color;
+  box-shadow: 0 .2em .5em #333;
 
   .lDiv div {
     padding: .2em .5em;
 
     &:hover {
-      background: $pma-component-hover-bg;
       cursor: pointer;
+      background: $pma-component-hover-bg;
     }
 
     input {
@@ -1427,13 +1428,13 @@ input#auto_increment_opt {
 }
 
 .showAllColBtn {
-  border-bottom: 1px solid $pma-border-color;
-  border-top: 1px solid $pma-border-color;
-  cursor: pointer;
+  padding: .35em 1em;
   font-size: .9em;
   font-weight: bold;
-  padding: .35em 1em;
   text-align: center;
+  cursor: pointer;
+  border-top: 1px solid $pma-border-color;
+  border-bottom: 1px solid $pma-border-color;
 
   &:hover {
     background: $pma-component-hover-bg;
@@ -1447,16 +1448,16 @@ input#auto_increment_opt {
 // Table navigation
 .navigation {
   margin: .8em 0;
-  border-radius: 5px;
   background: $pma-component-bg;
+  border-radius: 5px;
 
   tr {
     padding: .5rem 0;
   }
 
   td {
-    margin: 0;
     padding: 0;
+    margin: 0;
     vertical-align: middle;
     white-space: nowrap;
   }
@@ -1467,8 +1468,8 @@ input#auto_increment_opt {
     }
 
     &[type=submit]:not(.btn-primary) {
-      border: none;
       background: none;
+      border: none;
 
       &:hover {
         color: $pma-link-color;
@@ -1478,8 +1479,8 @@ input#auto_increment_opt {
 
     &.edit_mode_active {
       color: $body-color;
-      cursor: pointer;
       text-shadow: none;
+      cursor: pointer;
       background: linear-gradient(#333, #555);
     }
   }
@@ -1489,8 +1490,8 @@ input#auto_increment_opt {
 
     &:hover {
       color: $body-color;
-      background-image: linear-gradient(#333, #555);
       text-decoration: none;
+      background-image: linear-gradient(#333, #555);
     }
   }
 
@@ -1503,8 +1504,8 @@ input#auto_increment_opt {
 
 .navigation_separator {
   display: inline-block;
-  height: 3em;
   width: .5em;
+  height: 3em;
 
   &:last-child {
     width: 0;
@@ -1529,15 +1530,15 @@ div.navigation_separator {
 // end Table navigation
 
 .cEdit {
-  margin: 0;
-  padding: 0;
   position: absolute;
+  padding: 0;
+  margin: 0;
 
   input[type=text] {
-    background: $pma-component-bg;
     height: 100%;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    background: $pma-component-bg;
   }
 
   input {
@@ -1545,15 +1546,15 @@ div.navigation_separator {
   }
 
   .edit_area {
-    background: $pma-component-bg;
-    border: 1px solid $pma-border-color;
     min-width: 10em;
     padding: .3em .5em;
+    background: $pma-component-bg;
+    border: 1px solid $pma-border-color;
   }
 
   .cell_edit_hint {
-    font-size: .8em;
     margin: .3em .2em;
+    font-size: .8em;
   }
 
   .edit_box {
@@ -1564,19 +1565,19 @@ div.navigation_separator {
   .edit_box_posting {
     padding-right: 1.5rem;
     background-color: $pma-component-bg;
-    background-size: $pma-ajax-bg-zise;
     background-repeat: no-repeat;
     background-position: right center;
+    background-size: $pma-ajax-bg-zise;
     @extend .ic_ajax_spinner;
   }
 
   .edit_area_loading {
     height: 6rem;
-    border: 1px solid #6c757d;
     background-color: $pma-component-bg;
-    background-size: $pma-ajax-bg-zise;
     background-repeat: no-repeat;
     background-position: center;
+    background-size: $pma-ajax-bg-zise;
+    border: 1px solid #6c757d;
     @extend .ic_ajax_spinner;
   }
 
@@ -1591,9 +1592,9 @@ div.navigation_separator {
 
 .saving_edited_data {
   padding-left: 20px;
-  background-size: $pma-ajax-bg-zise;
   background-repeat: no-repeat;
   background-position: left;
+  background-size: $pma-ajax-bg-zise;
   @extend .ic_ajax_spinner;
 }
 
@@ -1611,8 +1612,8 @@ div.navigation_separator {
 // over-riding jqplot-yaxis class
 .jqplot-yaxis {
   left: 0 !important;
-  min-width: 25px;
   width: auto;
+  min-width: 25px;
 }
 
 .jqplot-axis {
@@ -1689,8 +1690,8 @@ table.show_create {
 
 #importFileTab {
   width: fit-content;
-  border-radius: 0.25rem;
   background-color: #212329;
+  border-radius: .25rem;
 
   .nav-item:first-child {
     .nav-link {
@@ -1707,37 +1708,37 @@ table.show_create {
 
 // PMA drop-import style
 .pma_drop_handler {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  background: rgba($pma-body-bg, .8);
-  height: 100%;
   z-index: 999;
-  color: $pma-link-color;
-  font-size: 30pt;
-  text-align: center;
+  display: none;
+  width: 100%;
+  height: 100%;
   padding-top: 20%;
+  font-size: 30pt;
+  color: $pma-link-color;
+  text-align: center;
+  background: rgba($pma-body-bg, .8);
 }
 
 .pma_sql_import_status {
-  display: none;
   position: fixed;
-  bottom: 0;
   right: 25px;
+  bottom: 0;
+  display: none;
   width: 400px;
-  border: 1px solid rgba($pma-body-bg, .5);
   background: $pma-component-bg;
+  border: 1px solid rgba($pma-body-bg, .5);
   border-radius: .25rem .25rem 0 0;
 
   h2 {
-    background-color: rgba($pma-body-bg, .5);
     padding: .5rem 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    color: $white;
     font-size: 1.5rem;
+    color: $white;
+    background-color: rgba($pma-body-bg, .5);
 
     .minimize {
       margin-right: .5rem;
@@ -1755,22 +1756,22 @@ table.show_create {
 
     .minimize:hover,
     .close:hover {
-      background: rgba($pma-component-hover-bg, .8);
       cursor: pointer;
+      background: rgba($pma-component-hover-bg, .8);
     }
   }
 
   div {
     height: 270px;
-    overflow-y: auto;
     overflow-x: hidden;
+    overflow-y: auto;
     list-style-type: none;
 
     li {
       padding: 8px 10px;
-      border-bottom: 1px solid rgba($pma-body-bg, .5);
       color: $pma-green;
       background: rgba($pma-body-bg, .15);
+      border-bottom: 1px solid rgba($pma-body-bg, .5);
 
       .filesize {
         float: right;
@@ -1783,28 +1784,28 @@ table.show_create {
   position: fixed;
   top: 10%;
   left: 20%;
-  width: 60%;
-  background: $pma-component-bg;
-  min-height: 300px;
   z-index: 800;
-  border-radius: .5rem;
+  width: 60%;
+  min-height: 300px;
   cursor: move;
+  background: $pma-component-bg;
+  border-radius: .5rem;
 
   h2 {
-    background-color: rgba($pma-body-bg, .5);
     padding: .5rem 1rem;
     margin-top: 0;
     margin-bottom: 0;
-    color: $white;
     font-size: 1.5rem;
+    color: $white;
+    background-color: rgba($pma-body-bg, .5);
 
     .close {
       float: right;
       padding: 0 .5rem;
 
       &:hover {
-        background: rgba($pma-component-hover-bg, .8);
         cursor: pointer;
+        background: rgba($pma-component-hover-bg, .8);
       }
     }
   }
@@ -1814,8 +1815,8 @@ table.show_create {
   color: $pma-teal;
 
   span.underline:hover {
-    cursor: pointer;
     text-decoration: underline;
+    cursor: pointer;
   }
 }
 // end PMA drop-import
@@ -1826,18 +1827,18 @@ table.show_create {
 }
 
 #composite_index_list {
-  list-style-type: none;
   list-style-position: inside;
+  list-style-type: none;
 }
 
 span.drag_icon {
   display: inline-block;
-  background-image: url("../img/s_sortable.png");
-  background-position: center center;
-  background-repeat: no-repeat;
   width: 1em;
   height: 3em;
   cursor: move;
+  background-image: url("../img/s_sortable.png");
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .topmargin {
@@ -1861,21 +1862,21 @@ meter {
 // styles for sortable tables created with tablesorter jquery plugin
 th {
   &.header {
-    cursor: pointer;
     color: #235a81;
+    cursor: pointer;
 
     &:hover {
       text-decoration: underline;
     }
 
     .sorticon {
+      float: right;
+      display: inline-table;
       width: 16px;
       height: 16px;
+      vertical-align: middle;
       background-repeat: no-repeat;
       background-position: right center;
-      display: inline-table;
-      vertical-align: middle;
-      float: right;
     }
   }
 
@@ -1983,11 +1984,11 @@ th {
 }
 
 #tooltip_editor {
+  padding: 5px;
   font-size: 12px;
   background-color: $white;
   opacity: .95;
   filter: alpha(opacity=95);
-  padding: 5px;
 }
 
 #tooltip_font {
@@ -1995,13 +1996,13 @@ th {
 }
 
 #selection_box {
+  position: absolute;
   z-index: 1000;
   height: 205px;
-  position: absolute;
+  pointer-events: none;
   background-color: #87ceeb;
   opacity: .4;
   filter: alpha(opacity=40);
-  pointer-events: none;
 }
 
 #filterQueryText {

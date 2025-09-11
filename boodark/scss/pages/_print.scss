@@ -31,8 +31,8 @@
   table,
   th,
   td {
-    border: .1em solid $black;
     background-color: $white;
+    border: .1em solid $black;
   }
 
   .table > :not(caption) > * > * {
@@ -46,15 +46,15 @@
   }
 
   table {
-    border-collapse: collapse;
     border-spacing: .2em;
+    border-collapse: collapse;
   }
 
   thead {
-    border-collapse: collapse;
-    border-spacing: .2em;
-    border: .1em solid $black;
     font-weight: 900;
+    border-spacing: .2em;
+    border-collapse: collapse;
+    border: .1em solid $black;
   }
 
   table tbody:first-of-type tr {
@@ -91,10 +91,10 @@
   // Position the main content
   #page_content {
     position: absolute;
-    left: 0;
     top: 0;
-    width: 95%;
+    left: 0;
     float: none;
+    width: 95%;
   }
 
   // Print Styles

@@ -4,39 +4,39 @@
   background-color: $card-bg;
 
   fieldset {
-    margin-top: 0;
-    padding: 0;
     clear: both;
+    padding: 0;
+    margin-top: 0;
     border-radius: 0;
 
     p {
-      margin: 0;
       padding: .5em;
+      margin: 0;
       background: $body-color;
       border-top: 0;
     }
 
     // form error list
     .errors {
-      margin: 0 -2px 1em;
       padding: .5em 1.5em;
+      margin: 0 -2px 1em;
+      font-family: $font-family-base;
+      font-size: small;
+      list-style: none;
       background: #fbead9;
       border-color: #c83838;
       border-style: solid;
       border-width: 1px 0;
-      list-style: none;
-      font-family: $font-family-base;
-      font-size: small;
     }
 
     // field error list
     .inline_errors {
+      padding: 0;
       margin: .3em .3em .3em;
       margin-left: 0;
-      padding: 0;
-      list-style: none;
-      color: $red;
       font-size: small;
+      color: $red;
+      list-style: none;
     }
 
     .doc {
@@ -46,26 +46,26 @@
     .disabled-notice {
       margin-left: 1em;
       font-size: 80%;
-      text-transform: uppercase;
       color: #e00;
+      text-transform: uppercase;
       cursor: help;
     }
 
     th {
       padding: .3em .3em .3em;
       padding-left: .5em;
-      text-align: left;
       vertical-align: top;
+      text-align: left;
       background: transparent;
-      filter: none;
       border-top: 1px solid $table-border-color;
       border-right: none;
+      filter: none;
 
       small {
         display: block;
-        font-weight: normal;
         font-family: $font-family-base;
         font-size: x-small;
+        font-weight: normal;
         color: $text-muted;
       }
     }
@@ -97,8 +97,8 @@
   }
 
   span.checkbox {
-    padding: 2px;
     display: inline-block;
+    padding: 2px;
 
     &.custom {
       input[type=checkbox] {
@@ -121,12 +121,12 @@
   }
 
   .field-comment-mark {
+    padding: 0 .2em;
     font-family: serif;
+    font-style: italic;
+    font-weight: bold;
     color: #007;
     cursor: help;
-    padding: 0 .2em;
-    font-weight: bold;
-    font-style: italic;
   }
 
   .field-comment-warning {

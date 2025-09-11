@@ -5,11 +5,11 @@ a.close_gis_editor {
 }
 
 #gis_editor {
-  display: none;
   position: fixed;
   z-index: 1001;
-  overflow-y: auto;
+  display: none;
   overflow-x: hidden;
+  overflow-y: auto;
 }
 
 #gis_data {
@@ -21,9 +21,9 @@ a.close_gis_editor {
 }
 
 #gis_data_editor {
-  background: #d0dce0;
-  padding: 15px;
   min-height: 500px;
+  padding: 15px;
+  background: #d0dce0;
 
   .choice {
     display: none;

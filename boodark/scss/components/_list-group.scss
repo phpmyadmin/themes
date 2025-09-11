@@ -2,10 +2,10 @@
 
 #li_select_theme {
   form::after {
-    padding-top: 0.325rem;
+    padding-top: .325rem;
     padding-left: calc(var(--bs-gutter-x) * .5);
-    content: "Scheme: #{$color-scheme} / Version: #{$pma-theme-version}";
     color: $pma-link-color;
+    content: "Scheme: #{$color-scheme} / Version: #{$pma-theme-version}";
 
     @include media-breakpoint-up(lg) {
       padding-top: 0;
