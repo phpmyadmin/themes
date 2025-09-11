@@ -1,11 +1,11 @@
-# BooDark v1.1.1
+# BooDark v1.2.0
 
 ![Screenshot](screen-animated.png)
 
 Bootstrap Dark theme for phpMyAdmin
 
 - Supported versions: 5.2
-- Bootstrap v5.2.3
+- Bootstrap v5.3.8
 
 ## Changes
 
@@ -57,7 +57,7 @@ If your problem or idea is not addressed yet, [please open a new issue](https://
 ## License
 
 BooDark Theme is licensed under MIT.  
-Copyright (c) 2022-23 [Adorade](https://github.com/adorade)
+Copyright (c) 2022-25 [Adorade](https://github.com/adorade)
 
 ## Thanks for use
 

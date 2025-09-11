@@ -5,8 +5,8 @@
   transition: none;
 
   &:focus {
-    box-shadow: none;
     background-color: $navbar-light-toggler-focus-bg;
+    box-shadow: none;
   }
 }
 

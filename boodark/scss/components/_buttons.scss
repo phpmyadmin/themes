@@ -16,14 +16,14 @@ button.mult_submit,
 }
 
 button.mult_submit {
-  border: none;
-  background-color: transparent;
   padding-top: 0;
+  background-color: transparent;
+  border: none;
 
   &:hover,
   &:focus {
-    text-decoration: underline;
     color: $pma-button-color;
+    text-decoration: underline;
   }
 }
 
@@ -31,8 +31,8 @@ button.mult_submit {
   text-decoration: none;
 
   &:hover {
-    text-decoration: underline;
     color: $pma-button-color;
+    text-decoration: underline;
   }
 }
 

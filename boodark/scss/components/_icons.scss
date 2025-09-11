@@ -1,5 +1,6 @@
 // stylelint-disable scss/at-extend-no-missing-placeholder
 // stylelint-disable scss/dollar-variable-colon-space-after
+// stylelint-disable @stylistic/string-quotes
 // Icons
 
 // Icon Colors
@@ -123,9 +124,9 @@ $icons: (
 
 // Icons
 .icon {
-  margin: 0;
   width: 16px;
   height: 16px;
+  margin: 0;
 }
 
 .icon_fulltext {
@@ -143,7 +144,7 @@ $icons: (
 // Extended SVGs
 .ic_ajax_clock_small {
   @extend .ic_ajax_spinner;
-  top: -0.3em !important;
+  top: -.3em !important;
 }
 
 .ic_b_column_add {
@@ -224,9 +225,9 @@ $icons: (
 }
 
 .ic_b_sdb {
-  background-image: url('../img/b_sdb.png');
   width: 10px;
   height: 10px;
+  background-image: url('../img/b_sdb.png');
 }
 
 .ic_b_snewtbl {
@@ -326,9 +327,9 @@ $icons: (
 }
 
 .ic_item {
-  background-image: url('../img/item.png');
   width: 9px;
   height: 9px;
+  background-image: url('../img/item.png');
 }
 
 .ic_lightbulb {
@@ -340,8 +341,8 @@ $icons: (
 }
 
 .ic_more {
-  background-image: url('../img/more.png');
   width: 13px;
+  background-image: url('../img/more.png');
 }
 
 .ic_new_data {
@@ -401,9 +402,9 @@ $icons: (
 }
 
 .ic_s_really {
-  background-image: url('../img/s_really.png');
   width: 11px;
   height: 11px;
+  background-image: url('../img/s_really.png');
 }
 
 .ic_s_sortable {

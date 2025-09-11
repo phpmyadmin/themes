@@ -1,22 +1,22 @@
 // Designer
 
-$minus-img: '../img/designer/minus.png';
-$plus-img: '../img/designer/plus.png';
-$top-panel-img: '../img/designer/top_panel.png';
-$small-tab-img: '../img/designer/small_tab.png';
-$frams1-img: '../img/designer/1.png';
-$frams2-img: '../img/designer/2.png';
-$frams3-img: '../img/designer/3.png';
-$frams4-img: '../img/designer/4.png';
-$frams5-img: '../img/designer/5.png';
-$frams6-img: '../img/designer/6.png';
-$frams7-img: '../img/designer/7.png';
-$frams8-img: '../img/designer/8.png';
-$resize-img: '../img/designer/resize.png';
+$minus-img: "../img/designer/minus.png";
+$plus-img: "../img/designer/plus.png";
+$top-panel-img: "../img/designer/top_panel.png";
+$small-tab-img: "../img/designer/small_tab.png";
+$frams1-img: "../img/designer/1.png";
+$frams2-img: "../img/designer/2.png";
+$frams3-img: "../img/designer/3.png";
+$frams4-img: "../img/designer/4.png";
+$frams5-img: "../img/designer/5.png";
+$frams6-img: "../img/designer/6.png";
+$frams7-img: "../img/designer/7.png";
+$frams8-img: "../img/designer/8.png";
+$resize-img: "../img/designer/resize.png";
 
 .input_tab {
-  background-color: #a6c7e1;
   color: $black;
+  background-color: #a6c7e1;
 }
 
 .content_fullscreen {
@@ -26,13 +26,13 @@ $resize-img: '../img/designer/resize.png';
 
 #canvas_outer {
   position: relative;
-  width: 100%;
   display: block;
+  width: 100%;
 }
 
 #canvas {
-  background-color: transparent;
   color: $black;
+  background-color: transparent;
 }
 
 canvas.designer {
@@ -47,12 +47,12 @@ canvas.designer {
 }
 
 .designer_tab {
-  background-color: $body-bg;
-  color: $body-color;
-  border-collapse: collapse;
-  border: 1px solid #aaa;
   z-index: 1;
+  color: $body-color;
   user-select: none;
+  border-collapse: collapse;
+  background-color: $body-bg;
+  border: 1px solid #aaa;
 
   .header {
     background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
@@ -60,54 +60,54 @@ canvas.designer {
 }
 
 .tab_zag {
-  text-align: center;
-  cursor: move;
   padding: 1px;
   font-weight: bold;
+  text-align: center;
+  cursor: move;
 }
 
 .tab_zag_2 {
-  background: linear-gradient(#fffa96 0%, #fffa96 39%, #ffe796 40%, #ffe796 100%);
-  text-align: center;
-  cursor: move;
   padding: 1px;
   font-weight: bold;
+  text-align: center;
+  cursor: move;
+  background: linear-gradient(#fffa96 0%, #fffa96 39%, #ffe796 40%, #ffe796 100%);
 }
 
 .tab_field {
-  background: $body-bg;
   color: $body-color;
   cursor: default;
+  background: $body-bg;
 
   &:hover {
-    background-color: #cfc;
     color: $black;
-    background-repeat: repeat-x;
     cursor: default;
+    background-color: #cfc;
+    background-repeat: repeat-x;
   }
 }
 
 .tab_field_3 {
-  background-color: #ffe6e6;
   color: $body-color;
   cursor: default;
+  background-color: #ffe6e6;
 
   &:hover {
-    background-color: #cfc;
     color: $black;
-    background-repeat: repeat-x;
     cursor: default;
+    background-color: #cfc;
+    background-repeat: repeat-x;
   }
 }
 
 #designer_hint {
-  white-space: nowrap;
   position: absolute;
-  background-color: #9f9;
-  color: $black;
   z-index: 3;
-  border: #0c6 solid 1px;
   display: none;
+  color: $black;
+  white-space: nowrap;
+  background-color: #9f9;
+  border: #0c6 solid 1px;
 }
 
 #designer_body #page_content {
@@ -115,33 +115,33 @@ canvas.designer {
 }
 
 .scroll_tab {
-  overflow: auto;
   width: 100%;
   height: 500px;
+  overflow: auto;
 }
 
 .designer_Tabs {
-  cursor: default;
+  margin-left: 2px;
+  font-weight: bold;
   color: #05b;
+  text-align: left;
+  text-indent: 3px;
   white-space: nowrap;
   text-decoration: none;
-  text-indent: 3px;
-  font-weight: bold;
-  margin-left: 2px;
-  text-align: left;
+  cursor: default;
   background: linear-gradient($white, #dfe5e7 70%, $white 70%, $white 100%);
   border: 1px solid #ccc;
 
   &:hover {
-    cursor: default;
-    color: #05b;
-    background: #fe9;
-    text-indent: 3px;
     font-weight: bold;
+    color: #05b;
+    text-align: left;
+    text-indent: 3px;
     white-space: nowrap;
     text-decoration: none;
+    cursor: default;
+    background: #fe9;
     border: 1px solid #99f;
-    text-align: left;
   }
 }
 
@@ -151,87 +151,87 @@ canvas.designer {
 }
 
 .option_tab {
-  padding-left: 2px;
-  padding-right: 2px;
   width: 5px;
+  padding-right: 2px;
+  padding-left: 2px;
 }
 
 .select_all {
-  vertical-align: top;
-  padding-left: 2px;
-  padding-right: 2px;
-  cursor: default;
   width: 1px;
+  padding-right: 2px;
+  padding-left: 2px;
+  vertical-align: top;
   color: $black;
+  cursor: default;
   background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
 }
 
 .small_tab {
-  vertical-align: top;
-  background-color: #0064ea;
-  color: $white;
-  background-image: url($small-tab-img);
-  cursor: default;
-  text-align: center;
-  font-weight: bold;
-  padding-left: 2px;
-  padding-right: 2px;
   width: 1px;
+  padding-right: 2px;
+  padding-left: 2px;
+  font-weight: bold;
+  vertical-align: top;
+  color: $white;
+  text-align: center;
   text-decoration: none;
+  cursor: default;
+  background-color: #0064ea;
+  background-image: url($small-tab-img);
 
   &:hover {
+    width: 1px;
+    padding-right: 2px;
+    padding-left: 2px;
+    font-weight: bold;
     vertical-align: top;
     color: $white;
-    background-color: #f96;
-    cursor: default;
-    padding-left: 2px;
-    padding-right: 2px;
     text-align: center;
-    font-weight: bold;
-    width: 1px;
     text-decoration: none;
+    cursor: default;
+    background-color: #f96;
   }
 }
 
 .small_tab_pref {
-  background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
-  text-align: center;
   width: 1px;
+  text-align: center;
+  background: linear-gradient(#b8e6fa, #b8e6fa 6%, #cdf5fd 10%, #dbffff 10%, #9bd2f6 50%, #9bd2f6 100%);
 
   &:hover {
+    width: 1px;
+    font-weight: bold;
     vertical-align: top;
     color: $white;
-    background-color: #f96;
-    cursor: default;
     text-align: center;
-    font-weight: bold;
-    width: 1px;
     text-decoration: none;
+    cursor: default;
+    background-color: #f96;
   }
 }
 
 .butt {
-  border: #47a solid 1px;
   font-weight: bold;
-  background-color: $white;
-  color: $black;
   vertical-align: baseline;
+  color: $black;
+  background-color: $white;
+  border: #47a solid 1px;
 }
 
 .L_butt2_1 {
   padding: 1px;
-  text-decoration: none;
   vertical-align: middle;
+  text-decoration: none;
   cursor: default;
 
   &:hover {
     padding: 0;
-    border: #09c solid 1px;
-    background: #fe9;
+    vertical-align: middle;
     color: $black;
     text-decoration: none;
-    vertical-align: middle;
     cursor: default;
+    background: #fe9;
+    border: #09c solid 1px;
   }
 }
 
@@ -275,41 +275,41 @@ canvas.designer {
 
 #osn_tab {
   position: absolute;
-  background-color: $white;
   color: $black;
+  background-color: $white;
 }
 
 .designer_header {
-  background-color: #eaeef0;
-  color: $black;
-  text-align: center;
-  font-weight: bold;
-  margin: 0;
-  padding: 0;
-  background-image: url($top-panel-img);
-  background-position: top;
-  background-repeat: repeat-x;
-  border-right: #999 solid 1px;
-  border-left: #999 solid 1px;
-  height: 28px;
+  position: fixed;
   z-index: 101;
   width: 100%;
-  position: fixed;
+  height: 28px;
+  padding: 0;
+  margin: 0;
+  font-weight: bold;
+  color: $black;
+  text-align: center;
+  background-color: #eaeef0;
+  background-image: url($top-panel-img);
+  background-repeat: repeat-x;
+  background-position: top;
+  border-right: #999 solid 1px;
+  border-left: #999 solid 1px;
 
   a,
   span {
-    display: block;
     float: left;
-    margin: 3px 1px 4px;
+    display: block;
     height: 20px;
+    margin: 3px 1px 4px;
   }
 
   .M_bord {
-    display: block;
     float: left;
-    margin: 4px;
-    height: 20px;
+    display: block;
     width: 2px;
+    height: 20px;
+    margin: 4px;
   }
 
   a {
@@ -326,27 +326,27 @@ canvas.designer {
 a {
   &.M_butt_Selected_down_IE,
   &.M_butt_Selected_down {
-    border: 1px solid #c0c0bb;
-    background-color: #9f9;
     color: $black;
+    background-color: #9f9;
+    border: 1px solid #c0c0bb;
 
     &:hover {
-      border: 1px solid #09c;
-      background-color: #fe9;
       color: $black;
+      background-color: #fe9;
+      border: 1px solid #09c;
     }
   }
 
   &.M_butt:hover {
-    border: 1px solid #09c;
-    background-color: #fe9;
     color: $black;
+    background-color: #fe9;
+    border: 1px solid #09c;
   }
 }
 
 #layer_menu {
-  z-index: 98;
   position: relative;
+  z-index: 98;
   float: right;
   background-color: #eaeef0;
   border: #999 solid 1px;
@@ -354,23 +354,23 @@ a {
 
 #layer_upd_relation {
   position: absolute;
-  left: 637px;
   top: 224px;
+  left: 637px;
   z-index: 100;
 }
 
 #layer_new_relation,
 #designer_optionse {
   position: absolute;
-  left: 636px;
   top: 85px;
+  left: 636px;
   z-index: 100;
   width: 153px;
 }
 
 #layer_menu_sizer {
-  background-image: url($resize-img);
   cursor: ew-resize;
+  background-image: url($resize-img);
 
   .icon {
     margin: 0;
@@ -381,26 +381,26 @@ a {
   position: fixed;
   top: 60px;
   right: 0;
+  z-index: 102;
+  display: none;
   width: 350px;
   max-height: 500px;
-  display: none;
-  overflow: auto;
   padding-top: 34px;
-  z-index: 102;
+  overflow: auto;
 }
 
 a {
   &.trigger {
     position: fixed;
-    text-decoration: none;
     top: 60px;
     right: 0;
-    color: $white;
+    z-index: 102;
+    display: block;
     padding: 10px 40px 10px 15px;
+    color: $white;
+    text-decoration: none;
     background: #333 url($plus-img) 85% 55% no-repeat;
     border: 1px solid #444;
-    display: block;
-    z-index: 102;
 
     &:hover {
       color: #080808;
@@ -410,8 +410,8 @@ a {
   }
 
   &.active.trigger {
-    background: #222 url($minus-img) 85% 55% no-repeat;
     z-index: 999;
+    background: #222 url($minus-img) 85% 55% no-repeat;
 
     &:hover {
       background: #fff696 url($minus-img) 85% 55% no-repeat;
@@ -448,19 +448,19 @@ a {
 }
 
 .side-menu {
-  float: left;
   position: fixed;
+  z-index: 50;
+  float: left;
   width: auto;
   height: auto;
+  padding: 2px;
+  overflow: hidden;
   background: $body-bg;
   border: 1px solid grey;
-  overflow: hidden;
-  z-index: 50;
-  padding: 2px;
 
   &.right {
-    float: right;
     right: 0;
+    float: right;
   }
 
   .hide {
@@ -468,8 +468,8 @@ a {
   }
 
   a {
-    display: block;
     float: none;
+    display: block;
     overflow: hidden;
     line-height: 1em;
   }
@@ -481,17 +481,17 @@ a {
 }
 
 #name-panel {
-  border-bottom: 1px solid grey;
+  width: 100%;
+  padding: 5px;
+  font-size: 1.2em;
+  font-weight: bold;
   text-align: center;
   background: $body-bg;
-  width: 100%;
-  font-size: 1.2em;
-  padding: 5px;
-  font-weight: bold;
+  border-bottom: 1px solid grey;
 }
 
 #container-form {
-  width: 100%;
   position: absolute;
   left: 0;
+  width: 100%;
 }

@@ -1,0 +1,114 @@
+// CodeMirror
+
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+  height: 20rem;
+  color: $codemirror-color;
+  background-color: $body-bg;
+  border: $card-border-width solid $pma-component-bg;
+  direction: ltr;
+
+  @include border-radius($card-border-radius);
+
+  &-lines { background-color: #20272b; }
+
+  &-gutters {
+    background-color: $codemirror-gutters;
+    border-right: 1px solid $codemirror-gutters;
+  }
+  &-linenumber { color: #6d8a88; }
+  &-guttermarker { color: white; }
+  &-guttermarker-subtle { color: #d0d0d0; }
+
+  &-cursor { border-left: 1px solid $codemirror-color; }
+
+  &-selected { background: rgba(255, 255, 255, .1); }
+  .CodeMirror-line::selection,
+  .CodeMirror-line > span::selection,
+  .CodeMirror-line > span > span::selection {
+    background: rgba(255, 255, 255, .1);
+  }
+
+  &-hint { color: $codemirror-color; }
+
+  &-hints {
+    z-index: 1999;
+    color: $codemirror-color;
+    background: $codemirror-bg;
+  }
+
+  &-lint-tooltip {
+    z-index: 200;
+    font-family: inherit;
+
+    code {
+      font-family: monospace;
+      font-weight: bold;
+    }
+  }
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * .4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-width: ceil($textarea-cols * .6em);
+  min-height: ceil($textarea-rows * .6em);
+  border: 1px solid #a9a9a9;
+}
+
+#pma_console .CodeMirror-gutters {
+  background-color: initial;
+  border: none;
+}
+
+// Inspired by CodeMirror dracula theme
+// https://codemirror.net/5/theme/dracula.css
+.cm-s-default {
+  .cm-keyword { color: #c678dd; }
+  .cm-atom { color: #d19a66; }
+  .cm-number { color: #bd93f9; }
+  .cm-def { color: #50fa7b; }
+  .cm-variable,
+  .cm-punctuation { color: #50fa7b; }
+  .cm-property { color: #66d9ef; }
+  .cm-operator { color: #ff79c6; }
+  .cm-variable-2 { color: #fff; }
+  .cm-variable-3,
+  .cm-type { color: #ffb86c; }
+  .cm-comment { color: #7d8799; }
+  .cm-string { color: #a11; }
+  .cm-string-2 { color: #f50; }
+  .cm-mysql-string { color: #98c379; }
+  .cm-mysql-word { color: #fff; }
+  .cm-meta { color: #f8f8f2; }
+  .cm-qualifier { color: #50fa7b; }
+  .cm-builtin { color: #50fa7b; }
+  .cm-bracket { color: #997; }
+  .cm-tag { color: #ff79c6; }
+  .cm-attribute { color: #50fa7b; }
+  .cm-separator { color: #abb2bf; }
+  .cm-hr { color: #999; }
+  .cm-link { color: #00c; }
+  .cm-error { color: #f00; }
+
+  .CodeMirror-activeline-background { background: rgba(255, 255, 255, .1); }
+  .CodeMirror-matchingbracket {
+    color: #fff !important;
+    text-decoration: underline;
+  }
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  float: right;
+  display: inline-block;
+  margin-left: 1em;
+  color: #666;
+}
