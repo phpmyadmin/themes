@@ -1,0 +1,9 @@
+{
+    "name": "Praetorian",
+    "version": "1.0",
+    "description": "Default phpMyAdmin theme darkmode",
+    "author": "RG",
+    "url": "https://github.com/whiteout2/praetorian",
+    "supports": ["6.0"],
+    "colorModes": ["dark"]
+}
