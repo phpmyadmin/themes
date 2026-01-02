@@ -1,0 +1,227 @@
+// configures general layout for detailed layout configuration please refer to the css files
+
+// navi frame
+
+// navi frame width
+$navi-width: 240px;
+
+// foreground (text) color for the navi frame
+$navi-color: #e0e0e0;
+
+// background for the navi frame
+$navi-background: #1e1e1e;
+$navi-right-gradient: #2a2a2a;
+
+// foreground (text) color of the pointer in navi frame
+$navi-pointer-color: #ffffff;
+
+// background of the pointer in navi frame
+$navi-pointer-background: #3a3a3a;
+
+// main frame
+
+// foreground (text) color for the main frame
+$main-color: #e8e8e8;
+
+// foreground (text) color of the pointer in browse mode
+$browse-pointer-color: #ffffff;
+
+// background of the pointer in browse mode
+$browse-pointer-background: #2d5016;
+
+// foreground (text) color of the marker (visually marks row by clicking on it)
+// in browse mode
+$browse-marker-color: #ffffff;
+
+// background of the marker (visually marks row by clicking on it) in browse mode
+$browse-marker-background: #8b5a00;
+
+// tables
+
+// border
+$border: 0;
+// table header and footer color
+$th-background: #2a4a5e;
+// table header and footer background
+$th-color: #f0f0f0;
+// table data row background
+$bg-one: #282828;
+// table data row background, alternate
+$bg-two: #323232;
+
+// Bootstrap
+// ---------
+
+// Body
+
+$body-bg: #1a1a1a;
+$body-color: $main-color;
+$text-muted: #888;
+
+// Links
+
+$link-color: #5dade2;
+$link-decoration: none;
+$link-hover-color: #85c1e9;
+$link-hover-decoration: underline;
+
+// Components
+
+$border-radius: 0.25rem;
+
+// Typography
+
+$font-family-base: sans-serif;
+$font-family-monospace: monospace;
+
+$font-size-base: 0.82rem;
+
+$h1-font-size: 140%;
+$h2-font-size: 2em;
+$h3-font-size: 1rem;
+
+// Tables
+
+$table-cell-padding-y: 0.1em;
+$table-cell-padding-x: 0.3em;
+$table-cell-padding-y-sm: $table-cell-padding-y;
+$table-cell-padding-x-sm: $table-cell-padding-x;
+$table-bg: #1a1a1a;
+$table-head-bg: #2d3e50;
+$table-head-color: $th-color;
+$table-striped-order: even;
+$table-striped-bg: #2d2d2d;
+$table-hover-color: $browse-pointer-color;
+$table-border-color: #3a3a3a;
+$table-border-width: 1px;
+$table-caption-color: $table-head-color;
+
+// Buttons
+
+$enable-gradients: true;
+$enable-shadows: false;
+$enable-transitions: false;
+
+$primary: #3a3a3a;
+$secondary: #4a4a4a;
+
+$btn-border-radius: 0.85rem;
+$btn-line-height: 1.15;
+
+// Dropdowns
+
+$dropdown-padding-y: 0;
+$dropdown-item-padding-y: 0;
+$dropdown-item-padding-x: 0;
+
+// Forms
+
+$form-check-input-margin-y: 0.1rem;
+$form-check-input-checked-bg-color: #0075ff;
+
+// Form controls (Bootstrap .form-control, .form-select)
+$input-bg: #2d2d2d;
+$input-color: #e8e8e8;
+$input-border-color: #555;
+$input-disabled-bg: #1a1a1a;
+$input-disabled-color: #888;
+$input-placeholder-color: #888;
+
+$form-select-bg: #2d2d2d;
+$form-select-color: #e8e8e8;
+$form-select-border-color: #555;
+$form-select-disabled-bg: #1a1a1a;
+$form-select-disabled-color: #888;
+
+$dropdown-bg: #2a2a2a;
+$dropdown-color: #e8e8e8;
+$dropdown-border-color: #555;
+$dropdown-link-color: #e8e8e8;
+$dropdown-link-hover-color: #ffffff;
+$dropdown-link-hover-bg: #3a3a3a;
+
+// Input groups
+$input-group-addon-bg: #2a2a2a;
+$input-group-addon-color: #e8e8e8;
+$input-group-addon-border-color: #555;
+
+// Navs
+
+$nav-tabs-border-color: #555;
+$nav-tabs-link-active-border-color: #555 #555 #1a1a1a;
+$nav-tabs-link-hover-border-color: $bg-two $bg-two #555;
+$nav-tabs-link-active-color: #e0e0e0;
+
+// Navbar
+
+$enable-caret: false;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$navbar-light-color: #5dade2;
+$navbar-light-hover-color: #85c1e9;
+$navbar-light-active-color: #5dade2;
+$navbar-light-disabled-color: #6c757d;
+
+// Pagination
+
+$pagination-active-color: #5dade2;
+$pagination-border-color: #555;
+$pagination-hover-border-color: #666;
+$pagination-active-border-color: #555;
+$pagination-disabled-border-color: #444;
+
+// Card
+
+$card-border-color: #444;
+$card-bg: #252525;
+$card-cap-bg: #2d2d2d;
+
+// Accordion
+
+$accordion-button-padding-y: 0.375rem;
+$accordion-button-padding-x: 0.75rem;
+$accordion-button-active-color: #5dade2;
+$accordion-button-active-bg: $navi-background;
+
+// Breadcrumbs
+
+$breadcrumb-navbar-padding-y: 0.1rem;
+$breadcrumb-navbar-padding-x: 2.2em;
+$breadcrumb-navbar-margin-bottom: 0;
+$breadcrumb-navbar-bg: #3a3a3a;
+$breadcrumb-divider-color: #d0d0d0;
+$breadcrumb-divider: quote("»");
+
+// Modals
+
+$modal-content-bg: #2a2a2a;
+$modal-content-color: #e8e8e8;
+$modal-content-border-color: #555;
+$modal-header-border-color: #555;
+$modal-footer-border-color: #555;
+$modal-backdrop-bg: #000;
+$modal-backdrop-opacity: 0.7;
+$modal-inner-padding: 0.75rem;
+$modal-footer-margin-between: 0.1rem;
+$modal-header-padding-y: 0.4rem;
+
+// Alert
+
+$alert-margin-bottom: 0.5em;
+$alert-border-radius: 5px;
+
+// List group
+
+$list-group-bg: inherit;
+$list-group-color: #e8e8e8;
+$list-group-border-color: #555;
+$list-group-hover-bg: #3a3a3a;
+$list-group-active-color: #ffffff;
+$list-group-active-bg: #2a4a5e;
+$list-group-active-border-color: #555;
+$list-group-item-padding-x: 0.75rem;
+$list-group-item-padding-y: 0.375rem;
+
+// Forms
+
+$label-margin-bottom: 0;

@@ -1,0 +1,115 @@
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+  height: 20rem;
+  direction: ltr;
+  background-color: #1e1e1e;
+  color: #e8e8e8;
+}
+
+// Code mirror default style (do not affect the console style)
+.CodeMirror.cm-s-default {
+  // @see: issue #17705
+  div.CodeMirror-scroll {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * 0.4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-height: ceil($textarea-rows * 0.6em);
+  min-width: ceil($textarea-cols * 0.6em);
+  border: 1px solid #a9a9a9;
+}
+
+#pma_console .CodeMirror-gutters {
+  background-color: #1e1e1e;
+  color: #e8e8e8;
+  border: none;
+}
+
+.CodeMirror-gutters {
+  background-color: #1e1e1e;
+  border-right: 1px solid #555;
+}
+
+.CodeMirror-linenumber {
+  color: #858585;
+}
+
+span {
+  &.cm-keyword,
+  &.cm-statement-verb {
+    color: #c586c0;
+  }
+
+  &.cm-variable {
+    color: #9cdcfe;
+  }
+
+  &.cm-comment {
+    color: #6a9955;
+  }
+
+  &.cm-mysql-string {
+    color: #ce9178;
+  }
+
+  &.cm-operator {
+    color: #d4d4d4;
+  }
+
+  &.cm-mysql-word {
+    color: #e8e8e8;
+  }
+
+  &.cm-builtin {
+    color: #4ec9b0;
+  }
+
+  &.cm-variable-2 {
+    color: #4fc1ff;
+  }
+
+  &.cm-variable-3 {
+    color: #9cdcfe;
+  }
+
+  &.cm-separator {
+    color: #d4d4d4;
+  }
+
+  &.cm-number {
+    color: #b5cea8;
+  }
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  display: inline-block;
+  float: right;
+  color: #666;
+  margin-left: 1em;
+}
+
+.CodeMirror-hints {
+  z-index: 1999;
+}
+
+.CodeMirror-lint-tooltip {
+  z-index: 200;
+  font-family: inherit;
+
+  code {
+    font-family: monospace;
+    font-weight: bold;
+  }
+}

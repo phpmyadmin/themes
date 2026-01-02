@@ -1,0 +1,22 @@
+@import "../../bootstrap/scss/breadcrumb";
+
+.breadcrumb-navbar {
+  text-shadow: none;
+
+  .breadcrumb-item {
+    + .breadcrumb-comment {
+      padding-left: 0.5rem;
+    }
+
+    a {
+      color: #5dade2;
+    }
+  }
+
+  .breadcrumb-comment {
+    color: #e0e0e0;
+    font-weight: bold;
+    font-style: italic;
+    text-shadow: none;
+  }
+}

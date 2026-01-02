@@ -1,0 +1,8 @@
+{
+    "name": "pmadarkhomme",
+    "version": "1.0",
+    "description": "Dark mode phpMyAdmin theme based on pmahomme",
+    "author": "tarikmanoar",
+    "url": "https://github.com/tarikmanoar",
+    "supports": ["5.0", "5.1", "5.2"]
+}
