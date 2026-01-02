@@ -1,0 +1,41 @@
+// Body
+
+body {
+  text-align: left;
+  background-color: #1a1a1a;
+  color: #e8e8e8;
+}
+
+// Typography
+
+h1 {
+  font-weight: bold;
+  color: #e0e0e0;
+}
+
+h2 {
+  font-weight: normal;
+  text-shadow: none;
+  padding: 10px 0 10px 3px;
+  color: #e0e0e0;
+}
+
+h3 {
+  font-weight: bold;
+  color: #d0d0d0;
+}
+
+// Forms
+
+input,
+select {
+  font-size: 1em;
+}
+
+textarea {
+  font-family: $font-family-monospace;
+  font-size: 1.2em;
+  background-color: #2d2d2d;
+  color: #e0e0e0;
+  border: 1px solid #555;
+}
