@@ -5,7 +5,7 @@ A dark mode variant of the default phpMyAdmin theme (pmahomme), featuring a comf
 ## Theme Details
 
 - **Name**: pmadarkhomme
-- **Version**: 1.0
+- **Version**: 5.0
 - **Based On**: pmahomme (Default phpMyAdmin Theme)
 - **Supports**: phpMyAdmin 5.0, 5.1, 5.2
 
