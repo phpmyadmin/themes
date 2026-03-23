@@ -1,0 +1,8 @@
+{
+    "name": "cyberpunk",
+    "version": "1.0.0",
+    "description": "Cyberpunk theme for phpMyAdmin",
+    "author": "tejasashinde",
+    "url": "https://github.com/tejasashinde/themes/tree/cyberpunk-version-1.0.0",
+    "supports": ["5.2"]
+}
