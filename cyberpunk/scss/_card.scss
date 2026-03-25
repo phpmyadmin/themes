@@ -1,6 +1,7 @@
 .card {
   margin-top: 2rem;
   margin-bottom: 0.5rem;
+  background-color: #1c0029;
 
   > .card-header + .card-body {
     padding-top: 0;
@@ -9,7 +10,7 @@
 
 .card,
 .card-footer {
-  text-shadow: 1px 1px 2px #fff;
+  text-shadow: 0px 0px 1px #fff;
   box-shadow: 1px 1px 2px #fff inset;
 }
 
@@ -28,6 +29,7 @@
   &,
   &:first-child {
     border-radius: 2px;
+    background-color: #680060;
   }
 }
 
@@ -61,11 +63,11 @@
 
   .card-header {
     padding: 0.1em $card-spacer-x;
-    background-color: #bbb;
+    background-color: #1d002e;
     color: #fff;
     font-size: 1.6em;
     font-weight: normal;
     text-shadow: 0 1px 0 #777;
-    box-shadow: 1px 1px 15px #999 inset;
+    box-shadow: 1px 1px 5px #999 inset;
   }
 }

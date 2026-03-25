@@ -302,6 +302,7 @@ canvas.designer {
     margin: 3px 1px 4px;
     height: 20px;
     border: 1px dotted #fff;
+    color: #000;
   }
 
   .M_bord {
@@ -452,7 +453,7 @@ a {
   position: fixed;
   width: auto;
   height: auto;
-  background: #efefef;
+  background: #fff;
   border: 1px solid grey;
   overflow: hidden;
   z-index: 50;
@@ -483,7 +484,7 @@ a {
 #name-panel {
   border-bottom: 1px solid grey;
   text-align: center;
-  background: #efefef;
+  background: #000;
   width: 100%;
   font-size: 1.2em;
   padding: 5px;

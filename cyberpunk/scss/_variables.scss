@@ -6,22 +6,22 @@
 $navi-width: 240px;
 
 // foreground (text) color for the navi frame
-$navi-color: #000;
+$navi-color: #fff;
 
 // background for the navi frame
-$navi-background: #f3f3f3;
+$navi-background: #0a0010;
 $navi-right-gradient: #dadcde;
 
 // foreground (text) color of the pointer in navi frame
-$navi-pointer-color: #000;
+$navi-pointer-color: #fff;
 
 // background of the pointer in navi frame
-$navi-pointer-background: #ddd;
+$navi-pointer-background: #3d0032;
 
 // main frame
 
 // foreground (text) color for the main frame
-$main-color: #444;
+$main-color: #ddd;
 
 // foreground (text) color of the pointer in browse mode
 $browse-pointer-color: #000;
@@ -41,9 +41,9 @@ $browse-marker-background: #fc9;
 // border
 $border: 0;
 // table header and footer color
-$th-background: #d3dce3;
+$th-background: #000;
 // table header and footer background
-$th-color: #000;
+$th-color: #ddd;
 // table data row background
 $bg-one: #e5e5e5;
 // table data row background, alternate
@@ -129,9 +129,9 @@ $nav-tabs-link-active-color: #000;
 $enable-caret: false;
 $navbar-padding-y: 0;
 $navbar-padding-x: 0;
-$navbar-light-color: #235a81;
-$navbar-light-hover-color: #235a81;
-$navbar-light-active-color: #235a81;
+$navbar-light-color: #ddd;
+$navbar-light-hover-color: #00f3ff;
+$navbar-light-active-color: #fff;
 $navbar-light-disabled-color: #235a81;
 
 // Pagination

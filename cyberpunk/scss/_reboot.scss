@@ -2,6 +2,7 @@
 
 body {
   text-align: left;
+  color: rgb(0, 156, 104);
 }
 
 // Typography
@@ -14,7 +15,7 @@ h2 {
   font-weight: normal;
   text-shadow: 0 1px 0 #fff;
   padding: 10px 0 10px 3px;
-  color: #777;
+  color: #00fff5;
 }
 
 h3 {
@@ -31,4 +32,12 @@ select {
 textarea {
   font-family: $font-family-monospace;
   font-size: 1.2em;
+}
+
+a {
+  color: #c7c7c7;
+
+  &:hover {
+    color: #00f3ff;
+  }
 }

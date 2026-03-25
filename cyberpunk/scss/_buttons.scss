@@ -18,4 +18,9 @@
 .btn-outline-secondary {
   color: $body-color;
   border-color: #aaa;
+  background-color: #000;
+}
+
+.btn {
+  --bs-btn-color: #444;
 }

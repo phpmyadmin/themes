@@ -1,5 +1,5 @@
 .navbar.bg-light {
-  background: linear-gradient(#fff, #dcdcdc);
+  background: linear-gradient(#02040a,#2a0b4a);
 }
 
 .navbar-nav {
@@ -12,7 +12,7 @@
 }
 
 .navbar-nav .nav-item {
-  background: linear-gradient(#fff, #dcdcdc);
+  background: linear-gradient(#02040a,#2a0b4a);
   border-right: 1px solid #fff;
   border-left: 1px solid #ccc;
   border-bottom: 1px solid #ccc;
@@ -22,11 +22,11 @@
   }
 
   &:hover {
-    background: linear-gradient(#fff, #e5e5e5);
+    background: linear-gradient(rgb(0, 0, 0), rgb(91, 0, 231));
   }
 
   &.active {
-    background: #fff;
+    background: #680060;
     border-bottom: 0;
   }
 }

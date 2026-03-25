@@ -76,9 +76,9 @@ input {
   &[type=number],
   &[type=date] {
     border-radius: 2px;
-    background: white;
+    background: #02040a;
     border: 1px solid #aaa;
-    color: #555;
+    color: #ddd;
     padding: 4px;
   }
 
@@ -137,15 +137,15 @@ input {
   &[type=text] {
     &:hover,
     &:focus {
-      border: 1px solid #7c7c7c;
-      background: #fff;
+      border: 1px solid #ff00ff;
+      background: #02040a;
     }
   }
 
   &[type=password] {
     &:hover,
     &:focus {
-      border: 1px solid #7c7c7c;
+      border: 1px solid #ff00ff;
       background: #fff;
     }
   }
@@ -153,22 +153,23 @@ input {
   &[type=number] {
     &:hover,
     &:focus {
-      border: 1px solid #7c7c7c;
+      border: 1px solid #ff00ff;
       background: #fff;
+      color: #444;
     }
   }
 
   &[type=date] {
     &:hover,
     &:focus {
-      border: 1px solid #7c7c7c;
+      border: 1px solid #ff00ff;
       background: #fff;
     }
   }
 }
 
 select:focus {
-  border: 1px solid #7c7c7c;
+  border: 1px solid #ff00ff;
   background: #fff;
 }
 
@@ -202,13 +203,14 @@ textarea {
   background: #eee;
   text-shadow: 1px 1px 2px #fff inset;
   box-shadow: 1px 1px 2px #fff inset;
+  color: #707070;
 }
 
 .pma-fieldset {
   .pma-fieldset {
     margin: 0.8em;
     border: 1px solid #aaa;
-    background: #e8e8e8;
+    background: #000;
   }
 
   legend {
@@ -282,7 +284,7 @@ div.tools {
   padding: 0.2em;
 
   a {
-    color: #3a7ead !important;
+    color: #a6daff !important;
   }
 
   margin-top: 0;
@@ -412,7 +414,7 @@ img.lightbulb {
 .cm-sql-doc {
   text-decoration: none;
   border-bottom: 1px dotted #000;
-  color: inherit !important;
+  color: #555;
 }
 
 .selectallarrow {
@@ -1167,7 +1169,7 @@ select.invalid_value,
   background-repeat: no-repeat;
   background-position: 2%;
   border: 1px solid #e2b709;
-  background-color: #ffe57e;
+  background-color: #ffe785;
   border-radius: 5px;
   box-shadow: 0 5px 90px #888;
 }
@@ -1348,7 +1350,7 @@ table#index_columns {
         font-weight: normal;
         font-family: $font-family-base;
         font-size: x-small;
-        color: #444;
+        color: #ddd;
       }
     }
 
@@ -2075,7 +2077,7 @@ textarea {
 
   .toolbar {
     position: relative;
-    background: #ccc;
+    background: #040048;
     border-top: solid 1px #aaa;
     cursor: n-resize;
 
@@ -2156,7 +2158,7 @@ textarea {
     overflow-y: auto;
     margin-bottom: -65px;
     border-top: solid 1px #aaa;
-    background: #fff;
+    background: #000;
     padding-top: 0.4em;
 
     &.console_dark_theme {
@@ -2872,4 +2874,39 @@ body .ui-dialog {
 
 .bg-secondary {
   color: #333;
+}
+
+$main-bg: radial-gradient(circle at top right, #2a0b4a, #02040a 90%);
+
+body {
+  background: $main-bg;
+}
+
+#page_content,
+.container-fluid {
+  background: transparent;
+}
+
+img {
+  filter: drop-shadow(0 0 2px #ff00ff) brightness(0.8);
+}
+
+.form-select {
+  // background-color: #000;
+  color: #000;
+}
+
+.form-control {
+  color: #444;
+}
+
+.input-group-text {
+  color: #000;
+}
+
+.accordion-item, .accordion-button {
+  color: #000;
+}
+.accordion-button:not(.collapsed) {
+  color: #ddd;
 }

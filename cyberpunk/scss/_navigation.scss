@@ -5,8 +5,9 @@
   top: 0;
   left: 0;
   height: 100vh;
-  background: linear-gradient(to right, $navi-background, $navi-right-gradient);
+  background: linear-gradient(to right, #2b002b 0%, #1a001a 50%, #050505 100%);
   color: $navi-color;
+  border-top: 2px solid #ff00ff;
   z-index: 800;
 
   ul {
@@ -123,7 +124,7 @@
   margin: 0;
   margin-left: 5px;
   overflow: hidden;
-  color: #444;
+  color: #ddd;
   height: 74%;
   position: relative;
 
@@ -347,7 +348,7 @@ li.fast_filter {
   min-height: 21px !important;
 
   &.activePointer {
-    background-color: transparent !important;
+    background-color: #3d0032;
   }
 }
 
@@ -399,7 +400,7 @@ li.fast_filter {
 
     &:hover {
       .drop_button {
-        background: #fff;
+        background: #000;
       }
 
       ul {
@@ -414,7 +415,8 @@ li.fast_filter {
       overflow: hidden;
       overflow-y: auto;
       list-style: none;
-      background: #fff;
+      background: #000;
+      color: #fff;
       border: 1px solid #ddd;
       border-radius: 0.3em;
       border-top-right-radius: 0;
@@ -437,7 +439,8 @@ li.fast_filter {
       }
 
       &:hover {
-        background: #f2f2f2;
+        background: #000;
+        color: #fff;
       }
     }
 
@@ -457,7 +460,8 @@ li.fast_filter {
     padding: 0.3em;
     border: 1px solid #ddd;
     border-radius: 0.3em;
-    background: #f2f2f2;
+    background: #2a0b4a;
     cursor: pointer;
+    color: aquamarine;
   }
 }

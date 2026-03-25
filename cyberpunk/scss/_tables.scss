@@ -3,7 +3,7 @@
 
   th,
   td {
-    text-shadow: 0 1px 0 #fff;
+    text-shadow: 0 0 1px #fff;
     vertical-align: middle;
 
     > span:empty::before {
@@ -21,7 +21,7 @@
 
   thead th {
     border-right: 1px solid #fff;
-    background-image: linear-gradient(#fff, #ccc);
+    background-image: linear-gradient(180deg,#930081,#2a0b4a)!important;
   }
 
   caption {
@@ -49,4 +49,13 @@
   .table th.position-sticky {
     top: 60px;
   }
+}
+
+.table>:not(caption)>*>* {
+  background-color: #460048;
+  color: #fff;
+}
+.table-striped > tbody > tr:nth-of-type(even) > * {
+  --bs-table-color-state: #fff;
+  --bs-table-bg-type: #58386c;
 }
