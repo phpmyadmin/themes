@@ -1,0 +1,16 @@
+{
+  "name": "pma-pirulug-theme",
+  "version": "0.0.2",
+  "description": "A modern dark and light theme for phpMyAdmin",
+  "author": "Pirulug",
+  "license": "MIT",
+  "scripts": {
+    "build": "sass scss:css && sass scss:../../public/themes/pma-pirulug-theme/css",
+    "build:compile": "sass scss:css --style=compressed && sass scss:../../public/themes/pma-pirulug-theme/css --style=compressed",
+    "watch": "sass --watch --style=compressed scss:css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3",
+    "sass": "^1.80.2"
+  }
+}

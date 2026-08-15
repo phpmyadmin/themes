@@ -1,0 +1,18 @@
+body {
+  background: $body-bg-alt;
+  color: $body-color;
+  font-size: $font-size-base;
+}
+
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    body {
+      background: $body-bg-alt-dark;
+      color: $body-color-dark;
+    }
+  }
+}
+
+.active .pr-check {
+  display: block !important;
+}

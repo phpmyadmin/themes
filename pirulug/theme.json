@@ -1,0 +1,10 @@
+{
+  "name": "Pirulug",
+  "version": "1.0.0",
+  "description": "A modern dark and light theme for phpMyAdmin",
+  "author": "Pirulug",
+  "url": "https://github.com/pirulug",
+  "supports": ["5.0", "5.1", "5.2", "6.0"],
+  "colorModes": ["dark", "light"]
+}
+

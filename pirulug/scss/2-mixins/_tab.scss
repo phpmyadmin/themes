@@ -1,0 +1,8 @@
+@mixin tab-color($color) {
+  // --#{$prefix}tab-color: #{$white};
+  --#{$prefix}tab-bg: #{$color};
+  // --#{$prefix}tab-active-color: #{$color};
+  --#{$prefix}tab-active-bg: #{$color};
+  --#{$prefix}tab-hover-color: #{$color};
+  // --#{$prefix}tab-hover-bg: #{$color};
+}

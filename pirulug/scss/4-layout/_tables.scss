@@ -1,0 +1,18 @@
+// table {
+//   background-color: $body-bg;
+// }
+
+@media only screen and (min-width: 768px) {
+  .table th.position-sticky {
+    top: 96px;
+  }
+}
+
+// Dark Mode
+// @if $enable-dark-mode {
+//   @include color-mode(dark) {
+//     table {
+//       background-color: $body-bg-dark;
+//     }
+//   }
+// }
