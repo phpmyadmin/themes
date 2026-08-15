@@ -1,0 +1,28 @@
+.breadcrumb-navbar {
+  padding: $breadcrumb-navbar-padding-y $breadcrumb-navbar-padding-x;
+  margin-bottom: $breadcrumb-navbar-margin-bottom;
+  background-color: var(--#{$prefix}tertiary-bg);
+  border-bottom: 1px solid var(--#{$prefix}border-color);
+
+  .breadcrumb-item {
+    font-size: $font-size-base;
+
+    + .breadcrumb-comment {
+      padding-left: $breadcrumb-item-padding-x;
+    }
+
+    .icon {
+      margin: 0;
+    }
+  }
+}
+
+// Dark Mode
+@if $enable-dark-mode {
+  @include color-mode(dark) {
+    .breadcrumb-navbar {
+      background-color: var(--#{$prefix}tertiary-bg);
+      border-bottom: 1px solid var(--#{$prefix}border-color);
+    }
+  }
+}

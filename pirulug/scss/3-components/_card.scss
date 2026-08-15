@@ -1,0 +1,10 @@
+.card {
+  @extend .mb-3;
+  border: $border-width solid var(--#{$prefix}border-color);
+}
+
+.card-header {
+  font-size: 1rem;
+  font-weight: bold;
+  border-bottom: $border-width solid var(--#{$prefix}border-color);
+}
