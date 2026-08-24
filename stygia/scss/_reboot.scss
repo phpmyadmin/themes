@@ -1,0 +1,182 @@
+// ============================================================
+// Stygia — Reboot / Base Element Overrides
+// ============================================================
+
+body {
+  text-align: left;
+  background: var(--stygia-bg-body, #{$bg-body});
+  color: var(--stygia-text-primary, #{$text-primary});
+  color-scheme: dark;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p,
+.card-text,
+.form-text,
+small,
+.small {
+  font-weight: 300;
+  color: $text-secondary;
+}
+
+label,
+.form-label,
+.col-form-label {
+  font-weight: 400;
+}
+
+h1 {
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  color: $text-primary;
+  margin: 0.5rem 0 0.75rem;
+}
+
+h2 {
+  font-weight: 500;
+  color: $text-primary;
+  padding: 0.35rem 0;
+  font-size: $h2-font-size;
+  letter-spacing: -0.015em;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+strong,
+b {
+  font-weight: 500;
+}
+
+input,
+select {
+  font-size: 1em;
+}
+
+textarea {
+  font-family: $font-family-monospace;
+  font-size: 1em;
+}
+
+a {
+  color: var(--stygia-accent, #{$accent-green});
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: var(--stygia-accent-light, #{$accent-green-light});
+  }
+}
+
+code {
+  color: $accent-green-light;
+  background: rgba($accent-green, 0.1);
+  padding: 0.15em 0.3em;
+  border-radius: 4px;
+  font-size: 0.875em;
+}
+
+hr {
+  color: $border-default;
+  background-color: $border-default;
+  border: 0;
+  height: 1px;
+  margin: 1rem 0;
+}
+
+::selection {
+  background: rgba($accent-green, 0.25);
+  color: $text-primary;
+}
+
+::placeholder {
+  color: $text-muted;
+}
+
+:focus-visible {
+  outline: 2px solid var(--stygia-accent, #{$accent-green});
+  outline-offset: 2px;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  #pma_console_container {
+    transition: none !important;
+
+    &.expanded {
+      max-height: 60vh;
+    }
+  }
+}
+
+@media (prefers-contrast: more) {
+  :focus-visible {
+    outline-width: 3px;
+  }
+
+  .table,
+  .table th,
+  .table td {
+    border-color: $border-stronger;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+}
+
+@media (forced-colors: active) {
+  :focus-visible {
+    outline: 3px solid Highlight;
+  }
+
+  .icon {
+    forced-color-adjust: auto;
+  }
+}
+
+.dropdown-menu {
+  box-shadow: $shadow-md, $shadow-green;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: $accent-green-deep;
+  color: $text-white;
+  padding: 8px 16px;
+  z-index: 10000;
+  text-decoration: none;
+  border-radius: 0 0 $border-radius-sm 0;
+  font-weight: 500;
+
+  &:focus {
+    top: 0;
+  }
+}
+
+@keyframes stygia-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

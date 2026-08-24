@@ -1,0 +1,95 @@
+// ============================================================
+// Stygia — Alerts
+// ============================================================
+
+.alert {
+  text-align: left;
+  border-width: 0;
+  border-left-width: 3px;
+  border-style: solid;
+  border-radius: $alert-border-radius;
+  padding: 10px 10px 10px 14px;
+  background-position: 10px 50%;
+  max-width: 100%;
+  box-sizing: border-box;
+  line-height: 1.45;
+
+  a {
+    text-decoration: underline;
+  }
+
+  h1 {
+    border-bottom: 2px solid;
+  }
+}
+
+.alert-primary {
+  color: $accent-green-light;
+  background-color: rgba($accent-green, 0.14);
+  border-left-color: $accent-green;
+
+  h1 {
+    border-color: $accent-green;
+  }
+}
+
+.alert-success {
+  color: $color-success;
+  background-color: rgba($color-success, 0.14);
+  border-left-color: $color-success;
+
+  h1 {
+    border-color: $color-success;
+  }
+}
+
+.alert-danger {
+  color: $color-danger;
+  background-color: rgba($color-danger, 0.14);
+  border-left-color: $color-danger;
+
+  h1 {
+    border-color: $color-danger;
+  }
+}
+
+.alert-warning {
+  color: $color-warning;
+  background-color: rgba($color-warning, 0.16);
+  border-left-color: $color-warning;
+
+  h1 {
+    border-color: $color-warning;
+  }
+}
+
+.alert-info {
+  color: $color-info;
+  background-color: rgba($color-info, 0.14);
+  border-left-color: $color-info;
+
+  h1 {
+    border-color: $color-info;
+  }
+}
+
+.alert-dismissible {
+  padding-right: 2.5rem;
+}
+
+.alert-link {
+  color: inherit;
+  font-weight: 500;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.toast {
+  max-width: min(350px, calc(100vw - 2rem));
+  background: $bg-popover;
+  border: 1px solid $border-default;
+  color: $text-primary;
+  box-shadow: $shadow-md;
+}

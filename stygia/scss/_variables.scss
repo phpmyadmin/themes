@@ -1,0 +1,401 @@
+// ============================================================
+// Stygia Theme — Design Tokens
+// Dark theme with deep green accent palette
+// ============================================================
+
+// --- Accent color palette (Stygia deep green) ---
+$accent-green: #3ecf8e;
+$accent-green-dark: #2db87a;
+$accent-green-light: #7ee0b3;
+$accent-green-deep: #006239;
+$accent-green-deep-hover: #004529;
+
+// Backgrounds — three distinct elevation levels
+$bg-body: #121212;
+$bg-surface: #1a1a1a;
+$bg-surface-2: #222222;
+$bg-surface-3: #2a2a2a;
+$bg-surface-4: #333333;
+$bg-popover: #242424;
+
+// Translucent surfaces (for hover/active states)
+$bg-hover: rgba(255, 255, 255, 0.05);
+$bg-active: rgba(255, 255, 255, 0.08);
+$bg-selected: rgba(62, 207, 142, 0.10);
+
+// Text — WCAG AA on #121212 / #1a1a1a (bumped for scannability)
+$text-white: #fafafa;
+$text-primary: $text-white;
+$text-secondary: #c8c8c8;
+$text-muted: #b0b0b0;
+$text-disabled: #949494;
+
+// Borders — dark theme hierarchy
+$border-default: #2e2e2e;
+$border-strong: #3d3d3d;
+$border-stronger: #4a4a4a;
+$border-subtle: rgba(255, 255, 255, 0.06);
+$border-translucent: rgba(255, 255, 255, 0.08);
+
+// Semantic UI colors — distinct from primary accent
+$color-success: #5dd39e;
+$color-danger: #f07178;
+$color-warning: #f5a623;
+$color-info: #4ecdc4;
+
+// One Dark Pro (zhuangtongfa / Binaryify) — classic token palette
+// https://github.com/Binaryify/OneDark-Pro
+$odp-chalky: #e5c07b;
+$odp-coral: #e06c75;
+$odp-dark: #5c6370;
+$odp-fountain-blue: #56b6c2;
+$odp-green: #98c379;
+$odp-malibu: #61afef;
+$odp-purple: #c678dd;
+$odp-whiskey: #d19a66;
+$odp-light-white: #abb2bf;
+$odp-light-dark: #7f848e;
+
+// Code / cell values (aligned with One Dark Pro)
+$color-string: $odp-green;
+$color-number: $odp-whiskey;
+$color-type: $odp-chalky;
+$color-keyword: $odp-purple;
+$color-function: $odp-malibu;
+$color-operator: $odp-fountain-blue;
+$color-comment: $odp-light-dark;
+$color-null: $odp-dark;
+
+// Shadows — close-range, higher opacity for dark mode
+$shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+$shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+$shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.45);
+$shadow-focus: 0 0 0 2px rgba(62, 207, 142, 0.28);
+$shadow-green: 0 8px 24px rgba(0, 98, 57, 0.18);
+
+// phpMyAdmin layout variables
+$navi-width: 240px;
+$navi-color: $text-primary;
+$navi-background: $bg-surface;
+$navi-right-gradient: $bg-surface-2;
+$navi-pointer-color: $text-primary;
+$navi-pointer-background: $bg-hover;
+
+$main-color: $text-primary;
+$browse-pointer-color: $text-primary;
+$browse-pointer-background: rgba($accent-green, 0.08);
+$browse-marker-color: $accent-green;
+$browse-marker-background: rgba($accent-green, 0.14);
+
+$border: 0;
+$th-background: $bg-surface;
+$th-color: $text-secondary;
+$bg-one: $bg-surface;
+$bg-two: $bg-surface-2;
+
+// --- Bootstrap Overrides ---
+
+$body-bg: $bg-body;
+$body-color: $text-primary;
+
+$link-color: $accent-green;
+$link-decoration: none;
+$link-hover-color: $accent-green-light;
+$link-hover-decoration: underline;
+
+// UI: local FiraCode Nerd Font trial (system font). Propo for UI, Mono for SQL.
+// Falls back to Inter / JetBrains if FiraCode NF is not installed.
+$font-family-base: "FiraCode Nerd Font Propo", "FiraCode Nerd Font", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+$font-family-monospace: "FiraCode Nerd Font Mono", "FiraCode Nerd Font", "JetBrains Mono", "Cascadia Code", "Fira Code", Menlo, Consolas, monospace;
+$font-size-base: 0.875rem;
+$font-weight-lighter: 300;
+$font-weight-light: 300;
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semibold: 500;
+$font-weight-bold: 600;
+$line-height-base: 1.5;
+
+$h1-font-size: 1.375rem;
+$h2-font-size: 1.125rem;
+$h3-font-size: 1rem;
+$h1-font-weight: 500;
+$h2-font-weight: 500;
+$h3-font-weight: 500;
+
+$border-radius: 8px;
+$border-radius-sm: 6px;
+$border-radius-lg: 12px;
+$border-radius-xl: 16px;
+$border-radius-pill: 9999px;
+
+$table-cell-padding-y: 0.55rem;
+$table-cell-padding-x: 0.75rem;
+$table-cell-padding-y-sm: 0.3rem;
+$table-cell-padding-x-sm: 0.5rem;
+$table-bg: transparent;
+$table-head-bg: $bg-surface;
+$table-head-color: $text-secondary;
+$table-striped-order: even;
+$table-striped-bg: rgba(255, 255, 255, 0.045);
+$table-hover-bg: rgba($accent-green, 0.07);
+$table-border-color: $border-default;
+$table-border-width: 1px;
+$table-caption-color: $text-secondary;
+$table-color: $text-primary;
+
+$enable-gradients: false;
+$enable-shadows: false;
+$enable-transitions: true;
+
+$primary: $accent-green;
+$secondary: $bg-surface-4;
+$success: $color-success;
+$danger: $color-danger;
+$warning: $color-warning;
+$info: $color-info;
+
+// Remap Bootstrap "light" utilities so .bg-light / .table-light stay dark
+$white: $text-white;
+$gray-100: $bg-surface-4;
+$gray-200: $bg-surface-3;
+$gray-300: $border-stronger;
+$gray-400: $text-disabled;
+$gray-500: $text-muted;
+$gray-600: $text-secondary;
+$gray-700: $bg-surface-2;
+$gray-800: $bg-surface;
+$gray-900: $bg-body;
+$black: #000;
+
+$light: $bg-surface-2;
+$dark: $bg-body;
+
+$primary-text-emphasis: $accent-green-light;
+$secondary-text-emphasis: $text-secondary;
+$success-text-emphasis: $color-success;
+$info-text-emphasis: $color-info;
+$warning-text-emphasis: $color-warning;
+$danger-text-emphasis: $color-danger;
+$light-text-emphasis: $text-primary;
+$dark-text-emphasis: $text-primary;
+
+$primary-bg-subtle: rgba($accent-green, 0.12);
+$secondary-bg-subtle: $bg-surface-2;
+$success-bg-subtle: rgba($color-success, 0.12);
+$info-bg-subtle: rgba($color-info, 0.12);
+$warning-bg-subtle: rgba($color-warning, 0.14);
+$danger-bg-subtle: rgba($color-danger, 0.12);
+$light-bg-subtle: $bg-surface;
+$dark-bg-subtle: $bg-body;
+
+$btn-border-radius: $border-radius-sm;
+$btn-line-height: 1.5;
+$btn-padding-y: 0.4rem;
+$btn-padding-x: 0.85rem;
+$btn-font-weight: 500;
+
+$btn-primary-color: $text-white;
+$btn-primary-bg: $accent-green-deep;
+$btn-primary-border-color: $accent-green-deep;
+$btn-primary-hover-color: $text-white;
+$btn-primary-hover-bg: $accent-green-deep-hover;
+$btn-primary-hover-border-color: $accent-green-deep-hover;
+$btn-primary-active-color: $text-white;
+$btn-primary-active-bg: darken($accent-green-deep, 3%);
+$btn-primary-active-border-color: darken($accent-green-deep, 3%);
+
+$btn-secondary-color: $text-primary;
+$btn-secondary-bg: transparent;
+$btn-secondary-border-color: $border-strong;
+$btn-secondary-hover-color: $text-primary;
+$btn-secondary-hover-bg: $bg-hover;
+$btn-secondary-hover-border-color: $border-stronger;
+$btn-secondary-active-color: $text-primary;
+$btn-secondary-active-bg: $bg-active;
+$btn-secondary-active-border-color: $border-stronger;
+
+$btn-danger-color: $text-white;
+$btn-danger-bg: $color-danger;
+$btn-danger-border-color: $color-danger;
+
+$btn-link-color: $accent-green;
+$btn-link-hover-color: $accent-green-light;
+$btn-link-decoration: none;
+$btn-link-hover-decoration: underline;
+
+$btn-disabled-color: $text-disabled;
+$btn-disabled-bg: $bg-surface-2;
+$btn-disabled-border-color: $border-default;
+
+$dropdown-bg: $bg-popover;
+$dropdown-border-color: $border-default;
+$dropdown-color: $text-primary;
+$dropdown-hover-bg: $bg-hover;
+$dropdown-hover-color: $text-primary;
+$dropdown-padding-y: 0.25rem;
+$dropdown-padding-x: 0.5rem;
+$dropdown-item-padding-y: 0.375rem;
+$dropdown-item-padding-x: 0.75rem;
+$dropdown-box-shadow: $shadow-md, $shadow-green;
+
+$input-bg: $bg-surface;
+$input-border-color: $border-strong;
+$input-color: $text-primary;
+$input-focus-border-color: $accent-green;
+$input-focus-bg: $bg-surface;
+$input-focus-box-shadow: 0 0 0 2px rgba($accent-green, 0.18);
+$input-placeholder-color: $text-muted;
+$input-disabled-bg: $bg-surface-2;
+$input-disabled-color: $text-disabled;
+$input-disabled-border-color: $border-default;
+
+$form-check-input-bg: $bg-surface-2;
+$form-check-input-border-color: $border-strong;
+$form-check-input-checked-bg-color: $accent-green;
+$form-check-input-checked-border-color: $accent-green;
+
+$form-select-bg: $bg-surface;
+$form-select-border-color: $border-strong;
+$form-select-color: $text-primary;
+$form-select-focus-border-color: $accent-green;
+
+$form-text-color: $text-secondary;
+
+$nav-tabs-border-color: $border-default;
+$nav-tabs-link-hover-bg: transparent;
+$nav-tabs-link-hover-border-color: transparent transparent $border-strong;
+$nav-tabs-link-active-bg: transparent;
+$nav-tabs-link-active-color: $accent-green;
+$nav-tabs-link-active-border-color: transparent transparent $accent-green;
+$nav-link-color: $text-secondary;
+$nav-link-hover-color: $text-primary;
+$nav-link-active-color: $accent-green;
+$nav-link-font-weight: 400;
+
+// Pills used as top menu — restyle as underline tabs (not green CTA pills)
+$nav-pills-border-radius: 0;
+$nav-pills-link-active-color: $accent-green;
+$nav-pills-link-active-bg: transparent;
+
+$enable-caret: false;
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+$navbar-dark-color: $text-secondary;
+$navbar-dark-hover-color: $text-primary;
+$navbar-dark-active-color: $accent-green;
+$navbar-dark-disabled-color: $text-disabled;
+$navbar-bg: $bg-body;
+$navbar-brand-color: $text-primary;
+$navbar-height: 38px;
+$breadcrumb-height: 36px;
+$sticky-offset: calc(#{$navbar-height} + #{$breadcrumb-height});
+
+$pagination-color: $text-secondary;
+$pagination-bg: $bg-surface;
+$pagination-border-color: $border-default;
+$pagination-hover-color: $text-primary;
+$pagination-hover-bg: $bg-hover;
+$pagination-hover-border-color: $border-strong;
+$pagination-active-color: $text-primary;
+$pagination-active-bg: $accent-green-deep;
+$pagination-active-border-color: $accent-green-deep;
+$pagination-disabled-color: $text-disabled;
+$pagination-disabled-bg: $bg-surface-2;
+$pagination-disabled-border-color: $border-default;
+
+$card-bg: $bg-surface;
+$card-border-color: $border-default;
+$card-cap-bg: transparent;
+$card-cap-color: $text-primary;
+$card-color: $text-primary;
+$card-border-radius: $border-radius-lg;
+$card-border-width: 1px;
+$card-img-height: 16vh;
+
+$accordion-bg: $bg-surface;
+$accordion-border-color: $border-default;
+$accordion-button-color: $text-primary;
+$accordion-button-active-color: $accent-green;
+$accordion-button-active-bg: $bg-surface-2;
+$accordion-button-focus-border-color: $accent-green;
+$accordion-button-focus-box-shadow: 0 0 0 2px rgba($accent-green, 0.18);
+$accordion-button-padding-y: 0.75rem;
+$accordion-button-padding-x: 1rem;
+
+$breadcrumb-navbar-padding-y: 0.5rem;
+$breadcrumb-navbar-padding-x: 1.8rem;
+$breadcrumb-navbar-margin-bottom: 0;
+$breadcrumb-navbar-bg: $bg-surface;
+$breadcrumb-navbar-bg-dark: $bg-surface;
+$breadcrumb-bg: transparent;
+$breadcrumb-color: $text-secondary;
+$breadcrumb-active-color: $text-primary;
+$breadcrumb-divider-color: $text-muted;
+$breadcrumb-link-color: $text-secondary;
+$breadcrumb-link-hover-color: $accent-green;
+$breadcrumb-divider: quote("\00bb");
+
+$modal-content-bg: $bg-surface;
+$modal-content-border-color: $border-default;
+$modal-content-border-radius: $border-radius-lg;
+$modal-header-bg: $bg-surface;
+$modal-header-border-color: $border-default;
+$modal-header-color: $text-primary;
+$modal-body-color: $text-primary;
+$modal-footer-bg: transparent;
+$modal-backdrop-bg: rgba(0, 0, 0, 0.72);
+$modal-inner-padding: 1rem;
+$modal-footer-margin-between: 0.5rem;
+$modal-header-padding-y: 0.75rem;
+
+$alert-bg: transparent;
+$alert-border-width: 0;
+$alert-border-radius: $border-radius;
+$alert-margin-bottom: 0.75em;
+
+$alert-success-color: $color-success;
+$alert-success-bg: rgba($color-success, 0.14);
+$alert-success-border-color: $color-success;
+
+$alert-danger-color: $color-danger;
+$alert-danger-bg: rgba($color-danger, 0.14);
+$alert-danger-border-color: $color-danger;
+
+$alert-warning-color: $color-warning;
+$alert-warning-bg: rgba($color-warning, 0.14);
+$alert-warning-border-color: $color-warning;
+
+$alert-info-color: $color-info;
+$alert-info-bg: rgba($color-info, 0.14);
+$alert-info-border-color: $color-info;
+
+$list-group-bg: transparent;
+$list-group-border-color: $border-default;
+$list-group-color: $text-primary;
+$list-group-hover-bg: $bg-hover;
+$list-group-hover-color: $text-primary;
+$list-group-active-bg: $bg-active;
+$list-group-active-color: $text-primary;
+$list-group-item-padding-x: 0.75rem;
+$list-group-item-padding-y: 0.5rem;
+
+$toast-background-color: $bg-popover;
+$toast-color: $text-primary;
+$toast-border-color: $border-default;
+
+$tooltip-bg: $bg-surface-4;
+$tooltip-color: $text-primary;
+
+$btn-close-color: $text-secondary;
+$btn-close-hover-color: $text-primary;
+
+$label-margin-bottom: 0.25rem;
+$form-label-color: $text-secondary;
+
+$spinner-color: $accent-green;
+
+$badge-color: $bg-body;
+$badge-bg: $accent-green;
+
+$transition-base: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;

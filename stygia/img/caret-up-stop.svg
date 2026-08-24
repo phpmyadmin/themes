@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="#b4b4b4" role="img" aria-hidden="true">
+  <!-- Arrow up to stop bar — filled, optically centered -->
+  <rect x="3.5" y="2.25" width="9" height="1.75" rx="0.5"/>
+  <path d="M8 4.75c.2 0 .39.08.53.22l3.25 3.25a.75.75 0 1 1-1.06 1.06L8.75 7.31v4.44a.75.75 0 0 1-1.5 0V7.31L5.28 9.28a.75.75 0 0 1-1.06-1.06l3.25-3.25A.75.75 0 0 1 8 4.75Z"/>
+</svg>

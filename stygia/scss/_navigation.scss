@@ -1,0 +1,791 @@
+// ============================================================
+// Stygia — Navigation Sidebar
+// Green left border active indicator
+// ============================================================
+
+#pma_navigation {
+  width: $navi-width;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  background: $bg-surface;
+  color: $navi-color;
+  z-index: 800;
+  border-right: 1px solid $border-default;
+  display: flex;
+  flex-direction: column;
+
+  ul {
+    margin: 0;
+  }
+
+  form {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  select {
+    &#select_server,
+    &#lightm_db {
+      width: 100%;
+    }
+  }
+
+  div {
+    &.pageselector {
+      text-align: left;
+      margin: 0;
+      padding: 4px 10px;
+    }
+  }
+
+  #pmalogo {
+    text-align: left;
+    padding: 12px 12px 10px;
+    border: 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    // Single CSS lockup: mark + wordmark. Host may inject <img> (PNG)
+    // or fall back to <h1>phpMyAdmin</h1> — both must stay invisible.
+    a,
+    a[href] {
+      display: inline-flex !important;
+      align-items: center;
+      gap: 8px;
+      width: auto !important;
+      max-width: 100%;
+      height: 28px;
+      min-height: 28px;
+      padding: 0;
+      margin: 0;
+      background: none !important;
+      background-image: none !important;
+      overflow: visible;
+      text-decoration: none !important;
+      position: relative;
+      font-size: 0; // kill any leaked host text metrics
+      line-height: 0;
+
+      &::before {
+        content: "";
+        display: block;
+        flex-shrink: 0;
+        width: 24px;
+        height: 24px;
+        background: url("../img/logo-mark.svg") no-repeat center / contain;
+      }
+
+      &::after {
+        content: "phpMyAdmin · Stygia";
+        display: block;
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 24px;
+        white-space: nowrap;
+        color: $text-primary;
+        // php accent + Stygia mint via clipped gradient on the wordmark
+        background: linear-gradient(
+          90deg,
+          $accent-green 0 1.7ch,
+          $text-primary 1.7ch 8.4ch,
+          $text-muted 8.4ch 9.5ch,
+          lighten($accent-green, 12%) 9.5ch 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+
+      img,
+      h1,
+      #imgpmalogo {
+        position: absolute !important;
+        width: 1px !important;
+        height: 1px !important;
+        padding: 0 !important;
+        margin: -1px !important;
+        overflow: hidden !important;
+        clip: rect(0, 0, 0, 0) !important;
+        white-space: nowrap !important;
+        border: 0 !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+        color: transparent !important;
+        font-size: 0 !important;
+      }
+    }
+
+    // Bare h1 if host renders without a wrapping link
+    > h1 {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin: 0;
+      font-size: 0;
+      line-height: 0;
+      color: transparent;
+
+      &::before {
+        content: "";
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("../img/logo-mark.svg") no-repeat center / contain;
+      }
+
+      &::after {
+        content: "phpMyAdmin · Stygia";
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        line-height: 24px;
+        white-space: nowrap;
+        background: linear-gradient(
+          90deg,
+          $accent-green 0 1.7ch,
+          $text-primary 1.7ch 8.4ch,
+          $text-muted 8.4ch 9.5ch,
+          lighten($accent-green, 12%) 9.5ch 100%
+        );
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+      }
+    }
+  }
+
+  #serverChoice,
+  #databaseList,
+  div.pageselector.dbselector {
+    text-align: left;
+    padding: 5px 10px 0;
+    border: 0;
+  }
+
+  #navipanellinks {
+    text-align: left;
+    padding: 6px 10px;
+    border: 0;
+    border-bottom: 1px solid $border-default;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px;
+
+    a {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 28px;
+      height: 28px;
+      min-width: 28px;
+      min-height: 28px;
+      padding: 0;
+      margin: 0;
+      color: $text-secondary;
+      border: 0;
+      border-radius: $border-radius-sm;
+      background: transparent;
+      box-sizing: border-box;
+      transition: color 0.15s ease, background 0.15s ease;
+
+      &:hover {
+        color: $text-primary;
+        background: $bg-hover;
+        text-decoration: none;
+      }
+    }
+
+    .icon {
+      margin: 0 !important;
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      min-height: 14px !important;
+      background-color: $text-secondary;
+    }
+
+    a:hover .icon {
+      background-color: $text-primary;
+    }
+  }
+
+  #serverChoice select {
+    width: 80%;
+  }
+}
+
+// --- Drag & Drop / SQL Import Overlay ---
+.pma_drop_handler {
+  position: absolute;
+  bottom: 40px;
+  left: 8px;
+  right: 8px;
+  background: $bg-surface-2;
+  color: $text-secondary;
+  text-align: center;
+  padding: 12px;
+  font-size: 0.8em;
+  border: 1px dashed $border-strong;
+  border-radius: $border-radius-sm;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+  z-index: 10;
+}
+
+.pma_sql_import_status {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: $bg-surface-2;
+  border-top: 1px solid $border-default;
+  padding: 0;
+  z-index: 10;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+
+  h2 {
+    font-size: 0.8em;
+    font-weight: 500;
+    color: $text-secondary;
+    padding: 6px 10px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+
+    .close,
+    .minimize {
+      cursor: pointer;
+      color: $text-secondary;
+      font-size: 1em;
+
+      &:hover {
+        color: $text-primary;
+      }
+    }
+  }
+}
+
+// Show drag handler when dragging over
+#pma_navigation.dragover .pma_drop_handler {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+// Show import status when there are imports
+#pma_navigation.has-imports .pma_sql_import_status {
+  max-height: 200px;
+  overflow: auto;
+}
+
+#pma_navigation_header {
+  overflow: hidden;
+}
+
+#pma_navigation_content {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  .dropdown-menu {
+    box-shadow: $shadow-md, $shadow-green;
+  }
+
+  > img.throbber {
+    display: block;
+    margin: 0.5em auto;
+    width: 20px;
+    height: 20px;
+    background: url("../img/spinner.svg") center / contain no-repeat;
+    border: 0;
+  }
+}
+
+#pma_navigation_select_database {
+  text-align: left;
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+#pma_navigation_db_select {
+  margin-top: 0.5em;
+  padding: 0 10px;
+
+  select {
+    background: $bg-surface;
+    border-radius: $border-radius-sm;
+    border: 1px solid $border-strong;
+    color: $text-primary;
+    padding: 0.4rem 0.5rem;
+    margin: 0;
+    width: 92%;
+    font-size: 1.11em;
+
+    &:focus {
+      border-color: $accent-green;
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+}
+
+#pma_navigation_tree_content {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  position: absolute;
+  height: 100%;
+
+  a.hover_show_full {
+    position: relative;
+    z-index: 100;
+    vertical-align: sub;
+  }
+}
+
+#pma_navigation_tree {
+  margin: 0;
+  margin-left: 5px;
+  overflow: hidden;
+  color: $text-secondary;
+  flex: 1 1 auto;
+  min-height: 0;
+  height: auto;
+  position: relative;
+
+  a {
+    color: $text-secondary;
+    padding-left: 0;
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover {
+      color: $text-primary;
+      text-decoration: none;
+    }
+  }
+
+  ul {
+    clear: both;
+    padding: 0;
+    list-style-type: none;
+    margin: 0;
+
+    ul {
+      position: relative;
+    }
+  }
+
+  li {
+    margin-bottom: 0;
+    color: $text-secondary;
+
+    // Only the hovered/selected *row* — not every descendant link
+    &.activePointer,
+    &.selected {
+      color: $text-primary;
+      background-color: rgba($accent-green, 0.06);
+      border-radius: 0;
+      border-left: 0;
+      padding-left: 0;
+      box-shadow: inset 2px 0 0 $accent-green;
+
+      // Nested tree under a selected DB stays neutral (readable grey)
+      > .list_container,
+      > ul {
+        background: $navi-background;
+        box-shadow: none;
+        color: $text-secondary;
+
+        > li {
+          background: transparent;
+          box-shadow: none;
+        }
+
+        a {
+          color: $text-secondary;
+
+          &:hover {
+            color: $text-primary;
+          }
+        }
+      }
+
+      // Direct label of this row only
+      > a {
+        color: $accent-green;
+      }
+    }
+
+    // Nested selected/hovered rows still get the accent
+    .list_container li.activePointer,
+    .list_container li.selected,
+    ul li.activePointer,
+    ul li.selected {
+      background-color: rgba($accent-green, 0.06);
+      box-shadow: inset 2px 0 0 $accent-green;
+
+      > a {
+        color: $accent-green;
+      }
+    }
+
+    .dbItemControls {
+      padding-right: 4px;
+      float: right;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .navItemControls {
+      display: none;
+      padding-right: 4px;
+      float: right;
+      align-items: center;
+      gap: 2px;
+
+      a,
+      .icon {
+        min-width: 28px;
+        min-height: 28px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: $border-radius-sm;
+      }
+    }
+
+    &.activePointer .navItemControls,
+    &:focus-within .navItemControls {
+      display: flex;
+      opacity: 0.85;
+
+      &:hover,
+      &:focus-within {
+        opacity: 1;
+      }
+
+      a:hover,
+      a:focus-visible {
+        background: $bg-hover;
+        opacity: 1;
+      }
+    }
+  }
+
+  li {
+    white-space: nowrap;
+    clear: both;
+    min-height: 16px;
+
+    &.fast_filter {
+      white-space: normal;
+      clear: both;
+      min-height: 28px;
+      overflow: visible;
+    }
+  }
+
+  img {
+    margin: 0;
+  }
+
+  i {
+    display: block;
+  }
+
+  div {
+    &.block {
+      position: relative;
+      width: 1.5em;
+      height: 1.5em;
+      min-width: 16px;
+      min-height: 16px;
+      float: left;
+
+      &.double {
+        width: 2.5em;
+      }
+
+      i,
+      b {
+        width: 1.5em;
+        height: 1.7em;
+        min-width: 16px;
+        min-height: 8px;
+        position: absolute;
+        bottom: 0.7em;
+        left: 0.75em;
+        z-index: 0;
+      }
+
+      i {
+        display: block;
+        border-left: 1px solid $border-default;
+        border-bottom: 1px solid $border-default;
+        position: relative;
+        z-index: 0;
+
+        &.first {
+          border-left: 0;
+        }
+      }
+
+      b {
+        display: block;
+        height: 0.75em;
+        bottom: -0.5rem;
+        left: 0.75em;
+        border-left: 1px solid $border-default;
+      }
+
+      a,
+      u {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 10;
+      }
+
+      a + a {
+        left: 100%;
+      }
+
+      &.double {
+        a,
+        u {
+          left: 33%;
+        }
+        a + a {
+          left: 85%;
+        }
+      }
+
+      img {
+        position: relative;
+        top: -0.6em;
+        left: 0;
+        margin-left: -7px;
+      }
+    }
+
+    &.throbber img {
+      top: 2px;
+      left: 2px;
+    }
+  }
+
+  li {
+    &.last > ul {
+      background: none;
+    }
+
+    > {
+      a,
+      i {
+        line-height: 1.5em;
+        height: 1.5em;
+        padding-left: 0.3em;
+      }
+    }
+  }
+
+  .list_container {
+    border-left: 1px solid $border-default;
+    margin-left: 0.5em;
+    padding-left: 0.5em;
+
+    li.last.database {
+      margin-bottom: 0 !important;
+    }
+  }
+
+  .last > .list_container {
+    border-left: 0 solid $border-default;
+  }
+}
+
+// Fast filter — full width of sidebar, clear button inside the field
+li.fast_filter {
+  position: relative;
+  padding: 6px 8px;
+  margin: 0;
+  border-left: 0;
+  list-style: none;
+  white-space: normal;
+  overflow: visible;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  input,
+  input[type="text"] {
+    font-size: 0.75rem;
+    min-height: 28px;
+    width: 100%;
+    max-width: 100%;
+    margin: 0 !important;
+    padding: 0.35rem 1.75rem 0.35rem 0.5rem;
+    box-sizing: border-box;
+  }
+
+  .searchClauseClear {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 0;
+    background: transparent;
+    font-weight: bold;
+    color: $color-danger;
+    font-size: 1rem;
+    line-height: 1;
+    min-width: 24px;
+    min-height: 24px;
+    padding: 0;
+    cursor: pointer;
+    z-index: 2;
+  }
+
+  .searchClauseClear:hover {
+    background-color: transparent;
+    border-color: transparent;
+    color: lighten($color-danger, 8%);
+  }
+
+  &.db_fast_filter {
+    border: 0;
+    margin-left: 0;
+    padding: 6px 8px;
+  }
+}
+
+#navigation_controls_outer {
+  min-height: 36px !important;
+  padding: 4px 8px;
+  clear: both;
+
+  &.activePointer {
+    background-color: transparent !important;
+    box-shadow: none !important;
+  }
+}
+
+#navigation_controls {
+  float: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 0;
+  flex-wrap: wrap;
+
+  a,
+  .icon {
+    min-width: 32px;
+    min-height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-sm;
+  }
+
+  select,
+  .pageselector {
+    margin: 0;
+  }
+}
+
+// Resize handler
+#pma_navigation_resizer {
+  width: 3px;
+  height: 100%;
+  background-color: $border-default;
+  cursor: col-resize;
+  position: fixed;
+  top: 0;
+  left: $navi-width;
+  z-index: 801;
+}
+
+#pma_navigation_collapser {
+  width: 20px;
+  height: 35px;
+  line-height: 35px;
+  background: $bg-surface-2;
+  color: $text-secondary;
+  font-weight: 500;
+  position: fixed;
+  top: 0;
+  left: $navi-width;
+  text-align: center;
+  cursor: pointer;
+  z-index: 800;
+  border: 1px solid $border-default;
+  border-left: 0;
+  border-radius: 0 $border-radius-sm $border-radius-sm 0;
+  transition: background 0.15s ease, color 0.15s ease;
+
+  &:hover {
+    background: $bg-hover;
+    color: $text-primary;
+  }
+}
+
+// --- Recent / Favorites Quick Access ---
+#recentFavoriteTablesWrapper {
+  padding: 0 8px;
+  margin-bottom: 8px;
+
+  .btn-outline-secondary {
+    color: $text-secondary;
+    border-color: $border-strong;
+    background: transparent;
+    font-size: 0.8em;
+    padding: 3px 10px;
+    border-radius: 9999px;
+
+    &:hover {
+      color: $text-primary;
+      background: $bg-hover;
+      border-color: $border-strong;
+    }
+
+    &.show {
+      color: $text-primary;
+      background: $bg-hover;
+    }
+  }
+
+  .dropdown-menu {
+    background: $bg-surface-2;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm;
+    padding: 4px 0;
+    font-size: 0.85em;
+
+    .dropdown-item {
+      color: $text-secondary;
+      padding: 4px 12px;
+
+      &:hover {
+        background: $bg-hover;
+        color: $text-primary;
+      }
+    }
+  }
+}

@@ -1,0 +1,329 @@
+// ============================================================
+// Stygia — Navbar
+// ============================================================
+
+#floating_menubar {
+  z-index: 99;
+  position: sticky;
+  top: 0;
+  background: $bg-body;
+}
+
+.navbar {
+  background: $bg-body;
+  border-bottom: 1px solid $border-default;
+  padding: 0 1rem;
+  min-height: $navbar-height;
+
+  .navbar-collapse {
+    padding: 0;
+  }
+}
+
+.navbar.bg-light {
+  background: $bg-body;
+  border-bottom: 1px solid $border-default;
+}
+
+.navbar-nav {
+  font-weight: 400;
+  gap: 0;
+
+  .nav-link {
+    color: $text-secondary;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.875em;
+    font-weight: 400;
+    min-height: 36px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    transition: color 0.15s ease, background 0.15s ease;
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      background-color: $text-muted;
+    }
+
+    &:hover,
+    &:focus {
+      color: $text-primary;
+      background: $bg-hover;
+
+      .icon {
+        background-color: $text-primary;
+      }
+    }
+  }
+}
+
+.navbar-nav .icon {
+  margin-right: 0;
+  vertical-align: middle;
+}
+
+.navbar-nav .nav-item {
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid transparent;
+  border-radius: 0;
+  padding: 0;
+
+  .nav-link {
+    color: $text-secondary;
+    padding: 0.45rem 0.75rem;
+    font-size: 0.875em;
+    font-weight: 400;
+    transition: color 0.15s ease, background 0.15s ease;
+
+    &:hover {
+      background: $bg-hover;
+      color: $text-primary;
+    }
+  }
+
+  &.active {
+    background: transparent;
+
+    .nav-link {
+      color: $accent-green;
+      border-bottom: 2px solid $accent-green;
+      font-weight: 500;
+      background: transparent;
+
+      .icon {
+        background-color: $accent-green;
+      }
+    }
+  }
+}
+
+.navbar-brand {
+  color: $text-primary;
+  &:hover {
+    color: $accent-green;
+  }
+}
+
+.navbar-toggler {
+  border-color: $border-default;
+  color: $text-secondary;
+  padding: 0.35rem 0.5rem;
+  min-width: 36px;
+  min-height: 36px;
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(180, 180, 180, 1)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  }
+
+  &:hover {
+    color: $text-primary;
+    background: $bg-hover;
+  }
+}
+
+.nav-link {
+  color: $text-secondary;
+
+  &:hover {
+    color: $text-primary;
+  }
+}
+
+// Breadcrumb navbar
+.breadcrumb-navbar {
+  background: $bg-surface;
+  border-bottom: 1px solid $border-default;
+  padding: 6px 1rem;
+  margin-bottom: 0;
+  border-radius: 0;
+  min-height: $breadcrumb-height;
+  position: sticky;
+  top: $navbar-height;
+  z-index: 98;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25rem 0.5rem;
+
+  .breadcrumb-item {
+    color: $text-secondary;
+    font-size: 0.85em;
+    line-height: 1.4;
+
+    a {
+      color: $text-secondary;
+      text-decoration: none;
+      transition: color 0.15s ease;
+      padding: 0.15rem 0;
+
+      &:hover {
+        color: $accent-green;
+        text-decoration: none;
+      }
+    }
+
+    &.active {
+      color: $text-primary;
+      font-weight: 500;
+    }
+
+    + .breadcrumb-item::before {
+      color: $text-muted;
+    }
+  }
+
+  .breadcrumb-comment {
+    color: $text-muted;
+    font-size: 0.85em;
+    font-style: italic;
+  }
+}
+
+// Top menu container
+#topmenucontainer {
+  padding: 0 1em;
+  width: 100%;
+  border-bottom: 1px solid $border-default;
+  background: $bg-body;
+
+  .menucontainer {
+    padding: 0;
+    text-align: left;
+  }
+
+  ul,
+  li {
+    text-align: left;
+  }
+}
+
+// Page nav icons (top-right toolbar)
+#page_nav_icons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  margin: 0 !important;
+  padding: 0 8px !important;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2px;
+  min-height: $navbar-height;
+  height: $navbar-height;
+  background: $bg-body;
+  border-bottom: 1px solid $border-default;
+  border-left: 1px solid $border-default;
+  box-sizing: border-box;
+
+  // Neutralize Bootstrap row/col spacing that throws off icon alignment
+  &.row {
+    --bs-gutter-x: 0;
+    --bs-gutter-y: 0;
+  }
+
+  > .col-12 {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2px;
+    width: auto;
+    padding: 0;
+    margin: 0;
+    flex: 0 0 auto;
+  }
+
+  .dropdown-toggle {
+    color: $text-secondary;
+    border-color: $border-strong;
+    background: transparent;
+    padding: 0;
+    font-size: 0.8em;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: $border-radius-sm;
+    line-height: 1;
+
+    &:hover,
+    &:focus-visible {
+      color: $text-primary;
+      background: $bg-hover;
+    }
+
+    .icon {
+      margin: 0;
+      width: 14px;
+      height: 14px;
+      min-width: 14px;
+      min-height: 14px;
+      padding: 0;
+    }
+  }
+
+  // Chrome controls only — do not style dropdown links/spans
+  #goto_pagetop,
+  #lock_page_icon,
+  #page_settings_icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
+    vertical-align: middle;
+    border-radius: $border-radius-sm;
+    color: $text-secondary;
+    box-sizing: border-box;
+    text-decoration: none;
+    transition: color 0.15s ease, background-color 0.15s ease;
+
+    &:hover,
+    &:focus-visible {
+      color: $text-primary;
+      background: $bg-hover;
+      text-decoration: none;
+    }
+
+    .icon {
+      display: block;
+      width: 14px !important;
+      height: 14px !important;
+      min-width: 14px !important;
+      min-height: 14px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      box-sizing: border-box;
+      vertical-align: middle;
+      background-color: $text-secondary;
+      background-origin: padding-box;
+      border-radius: 0;
+    }
+
+    &:hover .icon,
+    &:focus-visible .icon {
+      background-color: $text-primary;
+    }
+  }
+}
+
+#page_settings_icon {
+  cursor: pointer;
+  display: none;
+}
+
+#lock_page_icon:empty {
+  display: none;
+}

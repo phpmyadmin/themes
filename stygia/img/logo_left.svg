@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="200" height="28" viewBox="0 0 200 28" fill="none" role="img" aria-label="phpMyAdmin - Stygia">
+  <!-- Mark only — wordmark is painted via CSS to avoid SVG <text> double-render -->
+  <rect x="0" y="2" width="24" height="24" rx="6" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1"/>
+  <path d="M6.5 20c0-4.2 11-4.2 11-8.4S6.5 7.4 6.5 8" stroke="#3ecf8e" stroke-width="1.75" stroke-linecap="round" fill="none"/>
+  <circle cx="15.8" cy="7.6" r="1.8" fill="#3ecf8e"/>
+</svg>

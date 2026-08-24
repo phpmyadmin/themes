@@ -1,0 +1,1517 @@
+// ============================================================
+// Stygia — Core phpMyAdmin Overrides
+// ============================================================
+
+h2 {
+  img {
+    display: none;
+  }
+  a img {
+    display: inline;
+  }
+}
+
+.data {
+  margin: 0 0 12px;
+}
+
+// --- Links & Actions ---
+a {
+  color: $accent-green;
+  text-decoration: none;
+
+  &:hover {
+    color: $accent-green-light;
+    text-decoration: underline;
+  }
+}
+
+button.mult_submit,
+.checkall_box + label {
+  text-decoration: none;
+  color: $accent-green;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    color: $accent-green-light;
+  }
+}
+
+.linkElem:hover {
+  text-decoration: underline;
+  color: $accent-green;
+  cursor: pointer;
+}
+
+// --- Form Elements ---
+form {
+  padding: 0;
+  margin: 0;
+  display: inline;
+}
+
+input {
+  &[type=text],
+  &[type=password],
+  &[type=number],
+  &[type=date] {
+    border-radius: $border-radius-sm;
+    background: $bg-surface;
+    border: 1px solid $border-strong;
+    color: $text-primary;
+    padding: 0.4rem 0.5rem;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+
+  &:not(.form-check-input)[type=text],
+  &:not(.form-check-input)[type=password],
+  &:not(.form-check-input)[type=number],
+  &[type=date],
+  &:not(.form-check-input)[type=checkbox] {
+    margin: 4px;
+  }
+
+  &[type=text],
+  &[type=password],
+  &[type=number],
+  &[type=date] {
+    &:hover {
+      border-color: $border-stronger;
+    }
+    &:focus {
+      border-color: $accent-green;
+      box-shadow: 0 0 0 2px rgba($accent-green, 0.15);
+      background: $bg-surface;
+    }
+  }
+
+  &[type=text][disabled],
+  &[type=password][disabled],
+  &[type=number][disabled],
+  &[type=date][disabled] {
+    background: $bg-surface-2;
+    color: $text-muted;
+    box-shadow: none;
+    &:hover {
+      background: $bg-surface-2;
+      box-shadow: none;
+    }
+  }
+
+  &[type=text].invalid_value,
+  &[type=password].invalid_value,
+  &[type=number].invalid_value,
+  &[type=date].invalid_value {
+    background: rgba($color-danger, 0.08);
+    border-color: $color-danger;
+  }
+}
+
+select:not(.form-select) {
+  margin: 4px;
+}
+
+select {
+  border-radius: $border-radius-sm;
+  border: 1px solid $border-strong;
+  color: $text-primary;
+  padding: 0.4rem;
+  background: $bg-surface;
+  transition: border-color 0.15s ease;
+
+  &:not(.form-select) {
+    margin: 4px;
+  }
+
+  &:focus {
+    border-color: $accent-green;
+    box-shadow: 0 0 0 2px rgba($accent-green, 0.15);
+  }
+
+  &[multiple] {
+    background: $bg-surface;
+  }
+
+  &[disabled] {
+    background: $bg-surface-2;
+    color: $text-muted;
+    box-shadow: none;
+  }
+}
+
+select.invalid_value,
+.invalid_value {
+  background: rgba($color-danger, 0.08);
+  border-color: $color-danger;
+}
+
+textarea {
+  overflow: visible;
+  margin: 4px;
+  background: $bg-surface;
+  border: 1px solid $border-strong;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+  padding: 0.5rem;
+  transition: border-color 0.15s ease;
+
+  &:focus {
+    border-color: $accent-green;
+    box-shadow: 0 0 0 2px rgba($accent-green, 0.15);
+  }
+
+  &.char {
+    margin: 4px;
+  }
+
+  &.charField {
+    width: 95%;
+  }
+}
+
+button {
+  display: inline;
+}
+
+img,
+button {
+  vertical-align: middle;
+}
+
+input {
+  &:not(.form-check-input)[type=checkbox],
+  &[type=radio] {
+    vertical-align: -11%;
+  }
+}
+
+// --- Separator ---
+.separator {
+  color: $text-muted;
+}
+
+// --- NULL values ---
+td.null {
+  font-style: italic;
+  color: $text-muted !important;
+}
+
+div.null_div {
+  height: 20px;
+  text-align: center;
+  font-style: normal;
+  min-width: 50px;
+
+  label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+  }
+}
+
+// --- Values ---
+table {
+  .valueHeader,
+  .value {
+    text-align: right;
+    white-space: normal;
+  }
+}
+
+.value {
+  font-family: $font-family-monospace;
+}
+
+// --- Disabled text ---
+.disabled {
+  color: $text-disabled;
+  a {
+    &:link,
+    &:active,
+    &:visited {
+      color: $text-disabled;
+    }
+    &:hover {
+      color: $text-disabled;
+      text-decoration: none;
+    }
+  }
+}
+
+.pre_wrap {
+  white-space: pre-wrap;
+  br {
+    display: none;
+  }
+}
+
+// --- Error boxes ---
+.error {
+  border: 1px solid $color-danger !important;
+  padding: 0.27em;
+  color: $text-primary;
+  background: rgba($color-danger, 0.08);
+  border-radius: $border-radius-sm;
+}
+
+
+
+// --- Modal Overlay: see _layout.scss (canonical) ---
+
+// --- Condition markers ---
+.condition {
+  border-color: $browse-marker-color !important;
+}
+
+th.condition {
+  border-width: 1px 1px 0 1px;
+  border-style: solid;
+}
+
+td.condition {
+  border-width: 0 1px 0 1px;
+  border-style: solid;
+}
+
+tr:last-child td.condition {
+  border-width: 0 1px 1px 1px;
+}
+
+.before-condition {
+  border-right: 1px solid $browse-marker-color;
+}
+
+// --- Column comments ---
+.commented_column {
+  border-bottom: 1px dashed $text-muted;
+}
+
+.column_attribute {
+  font-size: 70%;
+}
+
+.column_name {
+  font-size: 80%;
+  margin: 5px 2px;
+}
+
+// --- Heading ---
+#topmenucontainer {
+  padding: 0 1em;
+  width: 100%;
+}
+
+
+
+#page_settings_modal,
+#pma_navigation_settings {
+  display: none;
+}
+
+#textSQLDUMP {
+  width: 95%;
+  height: 95%;
+  font-family: $font-family-monospace;
+  font-size: 110%;
+}
+
+// --- Tooltip ---
+#TooltipContainer {
+  position: absolute;
+  z-index: 99;
+  width: 20em;
+  height: auto;
+  overflow: visible;
+  visibility: hidden;
+  background-color: $bg-surface-4;
+  color: $text-primary;
+  border: 1px solid $border-default;
+  padding: 0.5em;
+  border-radius: $border-radius-sm;
+}
+
+#tooltip {
+  position: absolute;
+  border: 1px solid $border-strong;
+  padding: 2px;
+  background-color: $bg-surface-4;
+  color: $text-primary;
+  opacity: 0.9;
+  border-radius: $border-radius-sm;
+}
+
+.tooltip {
+  background: $bg-surface-4 !important;
+  color: $text-primary !important;
+  opacity: 0.95 !important;
+  z-index: 9999;
+  border: 1px solid $border-default !important;
+  border-radius: $border-radius-sm !important;
+  font-size: 0.8em !important;
+  padding: 4px 8px !important;
+
+  * {
+    background: none !important;
+    color: $text-primary !important;
+  }
+}
+
+// --- User Privileges ---
+#fieldset_add_user_login {
+  div.item {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem 0.75rem;
+    border-bottom: 1px solid $border-default;
+    padding-bottom: 0.5em;
+    margin-bottom: 0.5em;
+  }
+
+  label {
+    display: block;
+    flex: 0 0 10em;
+    max-width: 100%;
+    text-align: right;
+    padding-right: 0.5em;
+    margin-bottom: 0;
+    color: $text-secondary;
+  }
+
+  input {
+    width: 12em;
+    max-width: 100%;
+    flex: 1 1 12em;
+  }
+
+  span.options {
+    display: flex;
+    flex: 1 1 12em;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.35rem;
+    max-width: 100%;
+    padding-right: 0.5em;
+
+    #select_pred_username,
+    #select_pred_hostname,
+    #select_pred_password {
+      width: 100%;
+      max-width: 100%;
+    }
+
+    input {
+      width: auto;
+      flex: 0 0 auto;
+    }
+  }
+}
+
+#fieldset_user_priv {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+
+  div.item {
+    flex: 0 1 9em;
+    max-width: 100%;
+    min-width: 7em;
+
+    div.item {
+      display: block;
+      flex: none;
+    }
+
+    label {
+      white-space: nowrap;
+    }
+
+    select {
+      width: 100%;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #fieldset_add_user_login {
+    label {
+      flex-basis: 100%;
+      text-align: left;
+      padding-right: 0;
+    }
+  }
+}
+
+// --- Server Status ---
+div {
+  &#serverstatus table {
+    tbody td.descr a {
+      white-space: nowrap;
+    }
+  }
+
+  &.liveChart {
+    clear: both;
+    min-width: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 400px;
+    padding-bottom: 80px;
+  }
+}
+
+div#chartVariableSettings {
+  border: 1px solid $border-default;
+  background-color: $bg-surface-2;
+  margin-left: 10px;
+  border-radius: $border-radius-sm;
+}
+
+#serverstatus h3 {
+  margin: 15px 0;
+  font-weight: 400;
+  color: $text-muted;
+  font-size: 1.7em;
+}
+
+// --- SQL Query ---
+textarea {
+  &#sqlquery {
+    width: 100%;
+    border-radius: $border-radius;
+    border: 1px solid $border-strong;
+    padding: 0.5rem;
+    font-family: $font-family-monospace;
+    background: $bg-surface;
+    color: $text-primary;
+  }
+
+  &#sql_query_edit {
+    height: 7em;
+    width: 95%;
+    display: block;
+  }
+}
+
+#togglequerybox {
+  margin: 0 10px;
+}
+
+// --- Result Query ---
+.result_query div.sqlOuter {
+  background: $bg-surface;
+  text-align: left;
+  border-radius: $border-radius-sm;
+}
+
+#PMA_slidingMessage code.sql,
+div.sqlvalidate {
+  background: $bg-surface;
+  border-radius: $border-radius-sm;
+}
+
+div.sqlvalidate {
+  display: block;
+  padding: 1em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-height: 10em;
+  overflow: auto;
+}
+
+.result_query .alert {
+  margin-bottom: 0;
+  border-bottom: none !important;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  padding-bottom: 5px;
+}
+
+// --- SQL Doc links ---
+.cm-sql-doc {
+  text-decoration: none;
+  border-bottom: 1px dotted $text-muted;
+  color: inherit !important;
+}
+
+// --- Main Container ---
+#maincontainer {
+  ul {
+    list-style-type: disc;
+    vertical-align: middle;
+  }
+  li {
+    margin-bottom: 0.3em;
+  }
+}
+
+#full_name_layer {
+  position: absolute;
+  padding: 2px;
+  margin-top: -3px;
+  z-index: 801;
+  border-radius: $border-radius-sm;
+  border: 1px solid $border-default;
+  background: $bg-surface;
+  color: $text-primary;
+}
+
+#body_browse_foreigners {
+  background: $bg-surface;
+  margin: 0.5em 0.5em 0 0.5em;
+  border-radius: $border-radius;
+}
+
+kbd {
+  color: $text-primary;
+  background-color: $bg-surface-2;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  padding: 0.1em 0.4em;
+  box-shadow: none;
+}
+
+// --- Upload Progress ---
+div {
+  &.upload_progress {
+    width: min(400px, calc(100vw - 2rem));
+    max-width: 100%;
+    margin: 3em auto;
+    text-align: center;
+  }
+
+  &.upload_progress_bar_outer {
+    border: 1px solid $border-default;
+    width: min(202px, 100%);
+    position: relative;
+    margin: 0 auto 1em;
+    color: $text-primary;
+    border-radius: $border-radius-sm;
+  }
+
+  &.upload_progress_bar_inner {
+    background-color: $accent-green;
+    width: 0;
+    height: 12px;
+    margin: 1px;
+    overflow: hidden;
+    position: relative;
+    border-radius: $border-radius-sm;
+  }
+}
+
+// --- Ajax Notification ---
+.ajax_notification {
+  top: 0;
+  position: fixed;
+  margin-top: min(200px, 20vh);
+  margin-right: auto;
+  margin-bottom: 0;
+  margin-left: auto;
+  padding: 10px 15px 10px 18px;
+  width: min(350px, calc(100vw - 2rem));
+  max-width: calc(100vw - 2rem);
+  box-sizing: border-box;
+  z-index: 1100;
+  text-align: center;
+  display: inline;
+  left: 0;
+  right: 0;
+  background-image: none;
+  border: 1px solid $color-warning;
+  background-color: rgba($color-warning, 0.14);
+  color: $color-warning;
+  border-radius: $border-radius;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 8px;
+    border: 2px solid rgba($color-warning, 0.28);
+    border-top-color: $color-warning;
+    border-radius: 50%;
+    animation: stygia-spin 0.7s linear infinite;
+    vertical-align: -2px;
+  }
+}
+
+@keyframes stygia-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+#loading_parent {
+  position: relative;
+  width: 100%;
+}
+
+// --- Config Forms ---
+.config-form {
+  .card {
+    margin-top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  fieldset {
+    margin-top: 0;
+    padding: 0;
+    clear: both;
+    border-radius: 0;
+
+    p {
+      margin: 0;
+      padding: 0.5em;
+      background: $bg-surface;
+      border-top: 0;
+    }
+
+    .errors {
+      margin: 0 -2px 1em;
+      padding: 0.5em 1.5em;
+      background: rgba($color-danger, 0.08);
+      list-style: none;
+      font-family: $font-family-base;
+      font-size: small;
+      color: $color-danger;
+      border-radius: $border-radius-sm;
+    }
+
+    .inline_errors {
+      margin: 0.3em 0 0.3em;
+      padding: 0;
+      list-style: none;
+      color: $color-danger;
+      font-size: small;
+    }
+
+    .doc {
+      margin-left: 1em;
+    }
+
+    .disabled-notice {
+      margin-left: 1em;
+      font-size: 80%;
+      text-transform: uppercase;
+      color: $color-danger;
+      cursor: help;
+    }
+
+    th {
+      padding: 0.3em 0.5em;
+      text-align: left;
+      vertical-align: top;
+      background: transparent;
+      border-top: 1px solid $border-default;
+      border-right: none;
+
+      small {
+        display: block;
+        font-weight: normal;
+        font-family: $font-family-base;
+        font-size: x-small;
+        color: $text-muted;
+      }
+    }
+
+    td {
+      padding-top: 0.3em;
+      padding-bottom: 0.3em;
+      vertical-align: top;
+      border-top: 1px solid $border-default;
+      border-right: none;
+    }
+
+    span.checkbox {
+      padding: 2px;
+      display: inline-block;
+    }
+
+    .field-comment-mark {
+      font-family: serif;
+      color: $accent-green;
+      cursor: help;
+      padding: 0 0.2em;
+      font-weight: 500;
+      font-style: italic;
+    }
+
+    .field-comment-warning {
+      color: $color-danger;
+    }
+  }
+
+  legend {
+    display: none;
+  }
+}
+
+fieldset {
+  .group-header {
+    th {
+      background: $bg-surface-2;
+    }
+    + tr th {
+      padding-top: 0.6em;
+    }
+  }
+
+  .group-field-1 th,
+  .group-header-2 th {
+    padding-left: 1.5em;
+  }
+
+  .group-field-2 th,
+  .group-header-3 th {
+    padding-left: 3em;
+  }
+
+  .group-field-3 th {
+    padding-left: 4.5em;
+  }
+
+  .disabled-field {
+    th {
+      color: $text-muted;
+      background-color: $bg-surface-2;
+      small {
+        color: $text-muted;
+        background-color: $bg-surface-2;
+      }
+    }
+    td {
+      color: $text-muted;
+      background-color: $bg-surface-2;
+    }
+  }
+}
+
+// --- Indexes ---
+#index_frm {
+  .index_info {
+    input[type=text],
+    select {
+      width: 100%;
+      margin: 0;
+      box-sizing: border-box;
+    }
+    div {
+      padding: 0.2em 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .label {
+      flex: 0 0 12em;
+      min-width: 8em;
+    }
+  }
+  .slider {
+    width: 10em;
+    margin: 0.6em;
+  }
+  .add_fields {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    input { margin-left: 0; }
+  }
+  input { margin: 0; }
+  td { vertical-align: middle; }
+}
+
+table#index_columns {
+  width: 100%;
+  select {
+    width: 85%;
+  }
+}
+
+#move_columns_dialog {
+  div { padding: 1em; }
+  ul { list-style: none; margin: 0; padding: 0; }
+  li {
+    background: $bg-surface-2;
+    border: 1px solid $border-default;
+    color: $text-primary;
+    font-weight: 500;
+    margin: 0.4em;
+    padding: 0.3em 0.5em;
+    border-radius: $border-radius-sm;
+  }
+}
+
+// --- Inline Edit ---
+.cEdit {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  overflow: visible;
+
+  input[type=text] {
+    background: $bg-surface;
+    color: $text-primary;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .edit_area {
+    background: $bg-surface;
+    border: 1px solid $border-strong;
+    min-width: 10em;
+    padding: 0.3em 0.5em;
+    border-radius: $border-radius-sm;
+    overflow: visible;
+
+    select,
+    textarea {
+      width: 97%;
+    }
+  }
+
+  .cell_edit_hint {
+    color: $text-muted;
+    font-size: 0.8em;
+    margin: 0.3em 0.2em;
+  }
+
+  .edit_box {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    padding: 3px;
+    margin: 0;
+  }
+
+  .edit_box_posting {
+    background: $bg-surface url('../img/spinner.svg') no-repeat right center;
+    padding-right: 1.5em;
+  }
+
+  .edit_area_loading {
+    background: $bg-surface url("../img/spinner.svg") no-repeat center;
+    height: 10em;
+    border-radius: $border-radius-sm;
+  }
+
+  .goto_link {
+    background: $bg-surface-2;
+    color: $text-secondary;
+    padding: 0.2em 0.3em;
+    border-radius: $border-radius-sm;
+  }
+}
+
+.saving_edited_data {
+  background: url('../img/spinner.svg') no-repeat left;
+  padding-left: 20px;
+}
+
+// --- Table columns ---
+#table_name_col_no_outer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#table_name_col_no {
+  position: fixed;
+  top: 55px;
+  width: 100%;
+  background: $bg-body;
+  z-index: 100;
+}
+
+#table_columns {
+  display: block;
+  overflow: auto;
+  input {
+    &[type=text],
+    &[type=password],
+    &[type=number] {
+      width: 10em;
+      box-sizing: border-box;
+    }
+  }
+  select {
+    width: 10em;
+    box-sizing: border-box;
+  }
+}
+
+// --- With Selected ---
+.with-selected {
+  margin-left: 2em;
+}
+
+// --- Navigation (top) ---
+.navigation {
+  margin: 0.8em 0;
+  border-radius: $border-radius;
+  background: $bg-surface;
+  border: 1px solid $border-default;
+
+  td {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+
+  input {
+    &[type=submit] {
+      background: none;
+      border: 0;
+      margin: 0;
+      padding: 0.8em 0.5em;
+      border-radius: 0;
+      color: $text-secondary;
+      transition: background 0.15s ease, color 0.15s ease;
+
+      &:hover {
+        color: $text-primary;
+        cursor: pointer;
+        background: $bg-hover;
+      }
+    }
+
+    &.edit_mode_active {
+      color: $text-primary;
+      cursor: pointer;
+      background: $bg-active;
+    }
+  }
+
+  .btn-link {
+    color: $text-secondary;
+    &:hover {
+      color: $text-primary;
+      background-image: none;
+      text-decoration: none;
+    }
+  }
+
+  select {
+    margin: 0 0.8em;
+  }
+}
+
+.navigation_separator {
+  color: $text-muted;
+  display: inline-block;
+  font-size: 1.5em;
+  text-align: center;
+  height: 1.4em;
+  width: 1.2em;
+}
+
+// --- Visualization ---
+#visualization-placeholder {
+  position: relative;
+  border: 1px solid $border-default;
+  overflow: hidden;
+  box-sizing: content-box;
+  resize: vertical;
+  border-radius: $border-radius-sm;
+}
+
+// --- PDF ---
+.pdflayout {
+  overflow: hidden;
+  clip: inherit;
+  background-color: $bg-surface;
+  display: none;
+  border: 1px solid $border-default;
+  position: relative;
+  border-radius: $border-radius-sm;
+}
+
+.pdflayout_table {
+  background: $bg-surface-2;
+  color: $text-primary;
+  overflow: hidden;
+  clip: inherit;
+  z-index: 2;
+  display: inline;
+  visibility: inherit;
+  cursor: move;
+  position: absolute;
+  font-size: 80%;
+  border: 1px dashed $border-default;
+}
+
+// --- Column Drag/Drop ---
+.cRsz {
+  position: absolute;
+}
+
+.colborder {
+  cursor: col-resize;
+  height: 100%;
+  margin-left: -6px;
+  position: absolute;
+  width: 5px;
+}
+
+.colborder_active {
+  border-right: 2px solid $color-danger;
+}
+
+.pma_table {
+  th.draggable span {
+    display: block;
+    overflow: hidden;
+  }
+  td { position: static; }
+  th.draggable span { margin-right: 10px; }
+}
+
+.cDrop {
+  right: 0;
+  position: absolute;
+  top: 0;
+}
+
+.coldrop {
+  cursor: pointer;
+  height: 16px;
+  margin-top: 0.3em;
+  width: 16px;
+  &:hover {
+    background-color: $bg-hover;
+  }
+}
+
+.coldrop-hover {
+  background-color: $bg-hover;
+}
+
+.cList {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  position: absolute;
+  box-shadow: $shadow-md;
+  margin-left: 75%;
+  right: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+  border-radius: $border-radius-sm;
+
+  .lDiv div {
+    padding: 0.3em 0.5em;
+    white-space: nowrap;
+    color: $text-primary;
+
+    &:hover {
+      background: $bg-hover;
+      cursor: pointer;
+    }
+  }
+}
+
+.showAllColBtn {
+  border-bottom: 1px solid $border-default;
+  border-top: 1px solid $border-default;
+  cursor: pointer;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 0.35em 1em;
+  text-align: center;
+  color: $text-primary;
+
+  &:hover {
+    background: $bg-hover;
+  }
+}
+
+.turnOffSelect {
+  user-select: none;
+}
+
+// --- Copy box ---
+.cCpy {
+  background: $bg-surface-4;
+  color: $text-primary;
+  font-weight: 500;
+  margin: 0.1em;
+  padding: 0.3em;
+  position: absolute;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+}
+
+.modal-copy input {
+  display: block;
+  width: 100%;
+  margin-top: 1.5em;
+  padding: 0.3em 0;
+}
+
+// --- Alias modal ---
+#alias_modal {
+  table { width: 100%; }
+  label { font-weight: 500; }
+}
+
+.small_font {
+  font-size: smaller;
+}
+
+.smallIndent {
+  padding-left: 7px;
+}
+
+// --- Resizer ---
+#resizer {
+  border: 1px solid $border-default;
+}
+
+#inner-resizer {
+  padding: 10px;
+}
+
+// --- List server ---
+#list_server {
+  list-style-type: none;
+  padding: 0;
+}
+
+// --- Table Stats ---
+div#tablestatistics {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+
+  table {
+    float: none;
+    margin: 0.5em 0;
+    min-width: 16em;
+  }
+}
+
+// --- Structure Action Links ---
+#structure-action-links a {
+  margin-right: 1em;
+}
+
+#addColumns input[type=radio] {
+  margin: 3px 0 0;
+  margin-left: 1em;
+}
+
+// --- Import ---
+input#import_merge {
+  margin: 0;
+}
+
+// --- Prefs ---
+.click-hide-message {
+  cursor: pointer;
+}
+
+.prefsmanage_opts {
+  margin-left: 2em;
+}
+
+#prefs_autoload {
+  margin-bottom: 0.5em;
+  margin-left: 0.5em;
+}
+
+input#auto_increment_opt {
+  width: min-content;
+}
+
+.wrapper {
+  float: left;
+  margin-bottom: 1.5em;
+}
+
+// --- Toggle Button ---
+.toggleButton {
+  position: relative;
+  cursor: pointer;
+  font-size: 0.8em;
+  text-align: center;
+  line-height: 1.4em;
+  height: 1.55em;
+  overflow: hidden;
+  border-right: 1px solid $border-default;
+  border-left: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  background: $bg-surface-2;
+
+  .toggleOn {
+    color: $accent-green;
+    padding: 0 1em;
+  }
+
+  .toggleOff {
+    color: $text-muted;
+    padding: 0 1em;
+  }
+}
+
+// --- Message Errors ---
+.message_errors_found {
+  margin-top: 20px;
+}
+
+.repl_gui_skip_err_cnt {
+  width: 30px;
+}
+
+.color_gray {
+  color: $text-muted;
+}
+
+li.last.database {
+  margin-bottom: 15px !important;
+}
+
+// --- Zoom Search ---
+div#dataDisplay {
+  input,
+  select {
+    margin: 0;
+    margin-right: 0.5em;
+  }
+  th {
+    line-height: 2em;
+  }
+}
+
+img.calendar {
+  border: none;
+}
+
+form.clock {
+  text-align: center;
+}
+
+
+
+// --- Page content ---
+div#page_content div {
+  &#tableslistcontainer {
+    margin-top: 1em;
+  }
+  &.result_query {
+    margin-top: 1em;
+  }
+}
+
+// --- Tableslistcontainer ---
+#tableslistcontainer table.data {
+  border-top: 0;
+}
+
+
+
+
+
+// --- Page errors ---
+#pma_errors {
+  clear: both;
+}
+
+// ENUM/SET editor styles live in _modals.scss (#enum_editor)
+
+
+
+
+
+// --- Tables data ---
+table.data {
+  caption-side: top;
+}
+
+// --- Replication ---
+.replication {
+  th {
+    background: $bg-surface-2;
+  }
+}
+
+// --- Clearfix ---
+.clearfloat {
+  clear: both;
+}
+
+// --- Improved Go Button (primary only — not every .btn) ---
+input[type=submit].btn-primary,
+.go-btn,
+button.btn-primary {
+  border-radius: $border-radius-pill;
+  font-weight: 500;
+  padding: 0.4rem 1.2rem;
+  font-size: 0.875rem;
+  transition: all 0.15s ease;
+  background: $accent-green-deep;
+  border: 1px solid $accent-green-deep;
+  color: $text-white;
+  cursor: pointer;
+
+  &:hover {
+    background: $accent-green-deep-hover;
+    border-color: $accent-green-deep-hover;
+  }
+}
+
+input[type=submit].btn-secondary,
+button.btn-secondary {
+  border-radius: $border-radius-sm;
+  font-weight: 400;
+}
+
+// --- Action links in tables ---
+.mult_submit,
+button.mult_submit {
+  color: $text-secondary;
+  text-decoration: none;
+  transition: color 0.15s ease;
+
+  &:hover {
+    color: $text-primary;
+    text-decoration: none;
+  }
+}
+
+// --- Indexes section ---
+#index_frm,
+#index_columns {
+  .index_info {
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: $border-radius;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+// --- Structure table improvements ---
+.table-primary {
+  th {
+    color: $text-secondary;
+    font-weight: 500;
+    font-size: 0.85em;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+  }
+}
+
+// --- Better select styling ---
+select.go-btn,
+select[name="sql_query"] {
+  border-radius: $border-radius-sm;
+  padding: 0.4rem 0.75rem;
+}
+
+// --- Checkbox alignment ---
+input[type="checkbox"] {
+  margin: 0 0.25em;
+  vertical-align: middle;
+}
+
+// --- Table link & text colors ---
+// Dense action labels (Browse, Structure…): regular weight + muted color.
+// font-weight 300 looks washed out at ~14px on dark UI and we don't ship Inter Thin.
+.table a,
+td a {
+  color: $text-secondary;
+  font-weight: 400;
+  text-decoration: none;
+  letter-spacing: 0;
+
+  &:hover {
+    color: $accent-green;
+    text-decoration: none;
+  }
+}
+
+// Name / primary links in tables can stay a touch clearer
+.table td:nth-child(2) a,
+td a[href*="db_structure"],
+td a[href*="sql.php"] {
+  font-weight: 400;
+}
+
+.table td {
+  color: $text-primary;
+}
+
+td.null {
+  color: $text-muted !important;
+}
+
+// --- "With selected" bar ---
+.selectall-bar,
+.with-selected {
+  background: $bg-surface-2;
+  border: 1px solid $border-default;
+  border-radius: $border-radius;
+  padding: 0.5rem 0.85rem;
+  margin: 0.5rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+// --- Tab content spacing ---
+.nav-tabs + .tab-content,
+.tab-pane {
+  padding-top: 0.75rem;
+}
+
+// --- Better form spacing ---
+.form-horizontal .control-label {
+  text-align: right;
+  padding-top: 0.375rem;
+}
+
+// --- Index table styling ---
+#index_columns {
+  border-collapse: collapse;
+
+  td, th {
+    padding: 0.4rem 0.6rem;
+    border: 1px solid $border-default;
+  }
+
+  th {
+    background: $bg-surface-2;
+    color: $text-secondary;
+    font-weight: 500;
+  }
+}
+
+// --- Alert improvements ---
+.alert {
+  border-radius: $border-radius;
+  padding: 0.75rem 1rem;
+  font-size: 0.875rem;
+}
+
+// --- Improve table row actions ---
+// Round Edit/Copy/Delete chips live in `_tables.scss`.
+.pointer[id*="anchor"] {
+  color: $text-secondary;
+}
+
+// --- Key icon color ---
+.key {
+  color: $color-warning;
+}
+
+.pk {
+  color: $accent-green;
+}

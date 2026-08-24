@@ -1,0 +1,261 @@
+// ============================================================
+// Stygia — Buttons
+// Pill radius only on primary CTAs (Go / Save)
+// ============================================================
+
+.btn {
+  transition: all 0.15s ease;
+  font-weight: 400;
+  border-radius: $border-radius-sm;
+  padding: $btn-padding-y $btn-padding-x;
+  font-size: 0.875rem;
+  letter-spacing: 0;
+  line-height: 1.4;
+  min-height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35em;
+
+  .icon {
+    width: 14px;
+    height: 14px;
+    margin: 0;
+    background-color: currentColor;
+  }
+
+  &:focus-visible {
+    box-shadow: $shadow-focus;
+  }
+}
+
+.btn-primary,
+input[type=submit].btn-primary,
+.go-btn,
+input[type=submit].go-btn {
+  background: $accent-green-deep;
+  border-color: $accent-green-deep;
+  color: $text-white;
+  border-radius: $border-radius-pill;
+  padding: 0.4rem 1.2rem;
+
+  &:hover {
+    background: $accent-green-deep-hover;
+    border-color: $accent-green-deep-hover;
+    color: $text-white;
+  }
+
+  &:active,
+  &.active {
+    background: darken($accent-green-deep, 3%);
+    border-color: darken($accent-green-deep, 3%);
+    color: $text-white;
+  }
+
+  &:disabled,
+  &.disabled {
+    background: $bg-surface-3;
+    border-color: $border-default;
+    color: $text-disabled;
+  }
+}
+
+.btn-secondary {
+  background: transparent;
+  border-color: $border-strong;
+  color: $text-primary;
+
+  &:hover {
+    background: $bg-hover;
+    border-color: $border-stronger;
+    color: $text-primary;
+  }
+
+  &:active,
+  &.active {
+    background: $bg-active;
+    border-color: $border-stronger;
+  }
+
+  &:disabled,
+  &.disabled {
+    background: $bg-surface-2;
+    border-color: $border-default;
+    color: $text-disabled;
+  }
+}
+
+.btn-danger {
+  background: $color-danger;
+  border-color: $color-danger;
+  color: $text-white;
+
+  &:hover {
+    background: darken($color-danger, 6%);
+    border-color: darken($color-danger, 6%);
+    color: $text-white;
+  }
+}
+
+.btn-success {
+  background: darken($color-success, 28%);
+  border-color: darken($color-success, 28%);
+  color: $text-white;
+
+  &:hover {
+    background: darken($color-success, 34%);
+    border-color: darken($color-success, 34%);
+    color: $text-white;
+  }
+}
+
+.btn-warning {
+  background: $color-warning;
+  border-color: $color-warning;
+  color: $bg-body;
+
+  &:hover {
+    background: darken($color-warning, 5%);
+    border-color: darken($color-warning, 5%);
+    color: $bg-body;
+  }
+}
+
+.btn-info {
+  background: darken($color-info, 18%);
+  border-color: darken($color-info, 18%);
+  color: $text-white;
+
+  &:hover {
+    background: darken($color-info, 24%);
+    border-color: darken($color-info, 24%);
+    color: $text-white;
+  }
+}
+
+.btn-outline-primary {
+  color: $accent-green;
+  border-color: $accent-green;
+  background: transparent;
+
+  &:hover {
+    background: rgba($accent-green, 0.1);
+    color: $accent-green;
+    border-color: $accent-green;
+  }
+}
+
+.btn-outline-secondary {
+  color: $text-primary;
+  border-color: $border-strong;
+  background: transparent;
+
+  &:hover {
+    background: $bg-hover;
+    color: $text-primary;
+    border-color: $border-stronger;
+  }
+}
+
+.btn-outline-danger {
+  color: $color-danger;
+  border-color: $color-danger;
+  background: transparent;
+
+  &:hover {
+    background: rgba($color-danger, 0.1);
+    color: $color-danger;
+  }
+}
+
+.btn-link {
+  color: $accent-green;
+  text-decoration: none;
+  border-radius: 0;
+  min-height: auto;
+
+  &:hover {
+    color: $accent-green-light;
+    text-decoration: underline;
+    background: transparent;
+  }
+}
+
+.btn-sm,
+.btn-group-sm > .btn {
+  border-radius: $border-radius-sm;
+  padding: 0.25rem 0.55rem;
+  min-height: 1.85rem;
+  font-size: 0.8125rem;
+}
+
+.btn-pill {
+  border-radius: $border-radius-pill;
+}
+
+.btn-standard {
+  border-radius: $border-radius-sm;
+}
+
+.btn:has(.icon),
+.btn-group .btn {
+  border-radius: $border-radius-sm;
+}
+
+// Toolbar rhythm
+.btn-group,
+.btn-toolbar,
+.toolbar,
+#table_results_form .btn-group,
+.navigation .btn-group {
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.btn-group > .btn,
+.btn-group > .btn-group {
+  margin: 0;
+}
+
+.btn-group-sm {
+  gap: 0.25rem;
+}
+
+// Icon-only buttons — compact chrome, not oversized hit slabs
+.btn:has(> .icon:only-child),
+.btn.btn-icon {
+  min-width: 1.85rem;
+  min-height: 1.85rem;
+  padding: 0.3rem;
+}
+
+.dt-button {
+  background: $bg-surface-2 !important;
+  border: 1px solid $border-default !important;
+  color: $text-primary !important;
+  border-radius: $border-radius-sm !important;
+  padding: 0.35rem 0.65rem !important;
+  font-size: 0.8rem !important;
+  min-height: 1.85rem !important;
+  transition: all 0.15s ease !important;
+
+  &:hover {
+    background: $bg-hover !important;
+    border-color: $border-strong !important;
+  }
+
+  &:disabled,
+  &.disabled {
+    color: $text-disabled !important;
+    opacity: 1 !important;
+  }
+}
+
+.navigation {
+  input[type=submit] {
+    border-radius: $border-radius-sm;
+    min-height: 1.85rem;
+  }
+}

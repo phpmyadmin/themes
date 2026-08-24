@@ -1,0 +1,312 @@
+// ============================================================
+// Stygia — Icon Mappings (mask-image so color can change)
+// ============================================================
+
+@mixin icon-mask($file) {
+  -webkit-mask-image: url($file);
+  mask-image: url($file);
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  mask-position: center;
+  background-image: none;
+  background-color: $text-secondary;
+}
+
+.icon {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  width: 16px;
+  height: 16px;
+  background-repeat: no-repeat;
+  background-color: $text-secondary;
+  vertical-align: middle;
+}
+
+a:hover > .icon,
+.nav-link:hover .icon,
+button:hover .icon {
+  background-color: $text-primary;
+}
+
+// Active tabs / pills — icon matches accent (readable on dark, not on green fill)
+.nav-link.active .icon,
+.nav-item.active .nav-link .icon,
+.nav-pills .nav-link.active .icon,
+.btn-primary .icon,
+.btn-success .icon {
+  background-color: currentColor;
+}
+
+.icon_fulltext {
+  width: 50px;
+  height: 19px;
+}
+
+.ic_select_all_arrow {
+  width: 38px;
+  height: 22px;
+  margin-right: 1rem;
+  @include icon-mask("../img/select-all-arrow.svg");
+
+  &[dir=rtl] {
+    transform: scaleX(-1);
+  }
+}
+
+// --- Actions ---
+.ic_b_edit { @include icon-mask("../img/edit.svg"); }
+.ic_b_close { @include icon-mask("../img/close.svg"); }
+.ic_b_plus { @include icon-mask("../img/plus.svg"); }
+.ic_b_minus { @include icon-mask("../img/minus.svg"); }
+.ic_b_save,
+.ic_b_saveimage { @include icon-mask("../img/save.svg"); }
+.ic_b_undo { @include icon-mask("../img/undo.svg"); }
+.ic_b_search { @include icon-mask("../img/search.svg"); }
+.ic_b_select { @include icon-mask("../img/search-across.svg"); }
+.ic_b_find_replace { @include icon-mask("../img/search-replace.svg"); }
+.ic_b_drop { @include icon-mask("../img/minus.svg"); }
+.ic_b_empty { @include icon-mask("../img/shredder.svg"); }
+.ic_b_insrow { @include icon-mask("../img/row-plus.svg"); }
+.ic_b_move { @include icon-mask("../img/col-move.svg"); }
+.ic_b_print { @include icon-mask("../img/print.svg"); }
+.ic_b_export,
+.ic_b_tblexport { @include icon-mask("../img/export.svg"); }
+.ic_b_import,
+.ic_b_tblimport { @include icon-mask("../img/import.svg"); }
+.ic_b_rename { @include icon-mask("../img/b_rename.svg"); }
+.ic_s_reload,
+.ic_b_reload { @include icon-mask("../img/reload.svg"); }
+
+// --- Navigation / pagination ---
+.ic_b_home { @include icon-mask("../img/home.svg"); }
+.ic_b_firstpage { @include icon-mask("../img/firstpage.svg"); }
+.ic_b_lastpage { @include icon-mask("../img/lastpage.svg"); }
+.ic_b_nextpage { @include icon-mask("../img/nextpage.svg"); }
+.ic_b_prevpage { @include icon-mask("../img/prevpage.svg"); }
+.ic_b_left { @include icon-mask("../img/chevron-left.svg"); }
+.ic_b_right { @include icon-mask("../img/chevron-right.svg"); }
+.ic_b_more { @include icon-mask("../img/triangle-down-1.svg"); }
+.ic_b_globe { @include icon-mask("../img/globe-alt.svg"); }
+.ic_b_tipp { @include icon-mask("../img/b_tipp.svg"); }
+
+// --- Database ---
+.ic_database,
+.ic_s_db { @include icon-mask("../img/database.svg"); }
+.ic_b_newdb { @include icon-mask("../img/database-plus.svg"); }
+.ic_db_drop { @include icon-mask("../img/database-minus.svg"); }
+.ic_b_engine { @include icon-mask("../img/database-engine.svg"); }
+.ic_b_group { @include icon-mask("../img/databases.svg"); }
+.ic_b_sdb {
+  @include icon-mask("../img/b_sdb.svg");
+  width: 10px;
+  height: 10px;
+}
+.ic_b_dbstatistics { @include icon-mask("../img/b_dbstatistics.svg"); }
+.ic_b_docsql { @include icon-mask("../img/b_docsql.svg"); }
+
+// --- Table ---
+.ic_b_newtbl,
+.ic_b_snewtbl,
+.ic_b_table_add { @include icon-mask("../img/table-plus.svg"); }
+.ic_b_deltbl { @include icon-mask("../img/table-minus.svg"); }
+.ic_b_browse,
+.ic_b_sbrowse { @include icon-mask("../img/table-browse.svg"); }
+.ic_b_tblanalyse { @include icon-mask("../img/table-analyse.svg"); }
+.ic_b_props { @include icon-mask("../img/table-engine.svg"); }
+.ic_b_views { @include icon-mask("../img/table-view.svg"); }
+.ic_b_view_add { @include icon-mask("../img/table-view-plus.svg"); }
+.ic_b_view { @include icon-mask("../img/table-view.svg"); }
+.ic_b_tblops { @include icon-mask("../img/preferences.svg"); }
+.ic_b_tbloptimize { @include icon-mask("../img/optimize.svg"); }
+
+// --- Keys & Indexes ---
+.ic_b_key { @include icon-mask("../img/key.svg"); }
+.ic_b_primary { @include icon-mask("../img/key-primary.svg"); }
+.ic_b_unique { @include icon-mask("../img/field-index-unique.svg"); }
+.ic_b_ftext { @include icon-mask("../img/field-index-text.svg"); }
+.ic_b_spatial { @include icon-mask("../img/field-spatial.svg"); }
+.ic_b_index { @include icon-mask("../img/field-index.svg"); }
+.ic_b_index_add { @include icon-mask("../img/index-plus.svg"); }
+.ic_s_tbl { @include icon-mask("../img/table.svg"); }
+
+// --- Users ---
+.ic_b_usradd { @include icon-mask("../img/user-plus.svg"); }
+.ic_b_usrdrop { @include icon-mask("../img/user-minus.svg"); }
+.ic_b_usredit,
+.ic_b_usrcheck,
+.ic_user { @include icon-mask("../img/user.svg"); }
+.ic_b_usrlist { @include icon-mask("../img/users.svg"); }
+.ic_s_rights { @include icon-mask("../img/user-props.svg"); }
+
+// --- Status (semantic colors) ---
+.ic_s_okay {
+  @include icon-mask("../img/check.svg");
+  background-color: $color-success;
+}
+.ic_s_error {
+  @include icon-mask("../img/error.svg");
+  background-color: $color-danger;
+}
+.ic_s_notice { @include icon-mask("../img/notice.svg"); }
+.ic_s_success {
+  @include icon-mask("../img/success.svg");
+  background-color: $color-success;
+}
+.ic_s_attention {
+  @include icon-mask("../img/s_attention.svg");
+  background-color: $color-warning;
+}
+.ic_s_info {
+  @include icon-mask("../img/s_info.svg");
+  background-color: $color-info;
+}
+.ic_s_really {
+  @include icon-mask("../img/s_really.svg");
+  width: 11px;
+  height: 11px;
+}
+.ic_s_cancel { @include icon-mask("../img/s_cancel.svg"); }
+.ic_s_cancel2 { @include icon-mask("../img/s_cancel2.svg"); }
+
+// --- Chart & Reports ---
+.ic_b_chart { @include icon-mask("../img/chart.svg"); }
+.ic_b_report { @include icon-mask("../img/report.svg"); }
+.ic_b_comment { @include icon-mask("../img/comment.svg"); }
+.ic_console { @include icon-mask("../img/console.svg"); }
+.ic_b_relations { @include icon-mask("../img/designer.svg"); }
+.ic_b_events { @include icon-mask("../img/event.svg"); }
+.ic_b_event_add { @include icon-mask("../img/event-plus.svg"); }
+.ic_b_favorite { @include icon-mask("../img/favorite.svg"); }
+.ic_b_no_favorite { @include icon-mask("../img/favorite-alt.svg"); }
+.ic_b_triggers { @include icon-mask("../img/flag.svg"); }
+.ic_b_trigger_add { @include icon-mask("../img/flag-plus.svg"); }
+
+// --- Visibility ---
+.ic_eye { @include icon-mask("../img/eye.svg"); }
+.ic_eye_grey { @include icon-mask("../img/eye_grey.svg"); }
+.ic_show { @include icon-mask("../img/visibility.svg"); }
+.ic_hide { @include icon-mask("../img/visibility-hidden.svg"); }
+
+// --- Help ---
+.ic_b_help { @include icon-mask("../img/help-alt.svg"); }
+.ic_b_docs { @include icon-mask("../img/help.svg"); }
+.ic_b_sqlhelp { @include icon-mask("../img/manual.svg"); }
+
+// --- Server ---
+.ic_s_host { @include icon-mask("../img/host.svg"); }
+.ic_s_status { @include icon-mask("../img/server.svg"); }
+.ic_b_versions { @include icon-mask("../img/version.svg"); }
+.ic_s_lang { @include icon-mask("../img/language.svg"); }
+.ic_s_link { @include icon-mask("../img/link.svg"); }
+.ic_s_unlink { @include icon-mask("../img/link-broken.svg"); }
+.ic_s_lock { @include icon-mask("../img/lock.svg"); }
+.ic_s_unlock { @include icon-mask("../img/lock-open.svg"); }
+.ic_s_loggoff { @include icon-mask("../img/sign-out.svg"); }
+.ic_s_passwd { @include icon-mask("../img/password.svg"); }
+.ic_b_plugin { @include icon-mask("../img/plugin.svg"); }
+.ic_s_replication { @include icon-mask("../img/replication.svg"); }
+.ic_b_routines { @include icon-mask("../img/routine.svg"); }
+.ic_b_routine_add { @include icon-mask("../img/routine-plus.svg"); }
+
+// --- Sorting ---
+.ic_asc_order,
+.ic_s_asc { @include icon-mask("../img/sort-asc.svg"); }
+.ic_s_desc { @include icon-mask("../img/sort-desc.svg"); }
+.ic_s_sortable { @include icon-mask("../img/s_sortable.svg"); }
+
+// --- SQL / theme ---
+.ic_b_sql { @include icon-mask("../img/sql.svg"); }
+.ic_b_sqldoc { @include icon-mask("../img/b_sqldoc.svg"); }
+.ic_s_theme { @include icon-mask("../img/theme.svg"); }
+.ic_s_top { @include icon-mask("../img/caret-up-stop.svg"); }
+.ic_s_vars { @include icon-mask("../img/database-vars.svg"); }
+.ic_s_views { @include icon-mask("../img/s_views.svg"); }
+.ic_normalize { @include icon-mask("../img/wizard.svg"); }
+.ic_pause { @include icon-mask("../img/pause.svg"); }
+.ic_play { @include icon-mask("../img/triangle-right-1.svg"); }
+.ic_window-new { @include icon-mask("../img/windows.svg"); }
+.ic_window { @include icon-mask("../img/window.svg"); }
+
+// --- Central Columns ---
+.ic_centralColumns { @include icon-mask("../img/col.svg"); }
+.ic_centralColumns_add { @include icon-mask("../img/col-plus.svg"); }
+.ic_centralColumns_delete { @include icon-mask("../img/col-minus.svg"); }
+.ic_col_drop { @include icon-mask("../img/col-drop.svg"); }
+
+.ic_lightbulb { @include icon-mask("../img/lightbulb.svg"); }
+.ic_lightbulb_off { @include icon-mask("../img/lightbulb_off.svg"); }
+.ic_more {
+  @include icon-mask("../img/more.svg");
+  width: 13px;
+}
+
+.ic_new_data { @include icon-mask("../img/new_data.svg"); }
+.ic_new_data_hovered { @include icon-mask("../img/new_data_hovered.svg"); }
+.ic_new_data_selected { @include icon-mask("../img/new_data_selected.svg"); }
+.ic_new_data_selected_hovered { @include icon-mask("../img/new_data_selected_hovered.svg"); }
+.ic_new_struct { @include icon-mask("../img/new_struct.svg"); }
+.ic_new_struct_hovered { @include icon-mask("../img/new_struct_hovered.svg"); }
+.ic_new_struct_selected { @include icon-mask("../img/new_struct_selected.svg"); }
+.ic_new_struct_selected_hovered { @include icon-mask("../img/new_struct_selected_hovered.svg"); }
+
+.ic_php_sym { @include icon-mask("../img/php_sym.svg"); }
+.ic_item {
+  @include icon-mask("../img/item.svg");
+  width: 9px;
+  height: 9px;
+}
+.ic_s_cog { @include icon-mask("../img/preferences.svg"); }
+.ic_s_collapseall {
+  @include icon-mask("../img/s_collapseall.svg");
+  background-position: center;
+}
+.ic_s_asci { @include icon-mask("../img/charset.svg"); }
+.ic_b_inline_edit { @include icon-mask("../img/b_inline_edit.svg"); }
+.ic_b_pdfdoc { @include icon-mask("../img/b_pdfdoc.svg"); }
+.ic_b_column_add { @include icon-mask("../img/b_column_add.svg"); }
+.ic_b_calendar { @include icon-mask("../img/b_calendar.svg"); }
+.ic_b_bookmark { @include icon-mask("../img/b_bookmark.svg"); }
+
+.ic_s_expandall { @include icon-mask("../img/tree-expand.svg"); }
+.ic_s_collapse { @include icon-mask("../img/tree-collapse.svg"); }
+
+// --- BD variants (same SVGs as browse/table actions) ---
+.ic_bd_browse,
+.ic_bd_sbrowse { @include icon-mask("../img/table-browse.svg"); }
+.ic_bd_deltbl { @include icon-mask("../img/table-minus.svg"); }
+.ic_bd_drop { @include icon-mask("../img/minus.svg"); }
+.ic_bd_edit { @include icon-mask("../img/edit.svg"); }
+.ic_bd_empty { @include icon-mask("../img/shredder.svg"); }
+.ic_bd_export { @include icon-mask("../img/export.svg"); }
+.ic_bd_firstpage { @include icon-mask("../img/firstpage.svg"); }
+.ic_bd_ftext { @include icon-mask("../img/field-index-text.svg"); }
+.ic_bd_index { @include icon-mask("../img/field-index.svg"); }
+.ic_bd_insrow { @include icon-mask("../img/row-plus.svg"); }
+.ic_bd_lastpage { @include icon-mask("../img/lastpage.svg"); }
+.ic_bd_nextpage { @include icon-mask("../img/nextpage.svg"); }
+.ic_bd_prevpage { @include icon-mask("../img/prevpage.svg"); }
+.ic_bd_primary { @include icon-mask("../img/key-primary.svg"); }
+.ic_bd_routine_add { @include icon-mask("../img/routine-plus.svg"); }
+.ic_bd_select { @include icon-mask("../img/search-across.svg"); }
+.ic_bd_spatial { @include icon-mask("../img/field-spatial.svg"); }
+.ic_bd_unique { @include icon-mask("../img/field-index-unique.svg"); }
+
+// Semantic tints AFTER masks (mask mixin resets background-color)
+.ic_b_primary,
+.ic_bd_primary {
+  background-color: $accent-green;
+}
+
+.ic_ajax_clock_small {
+  @include icon-mask("../img/spinner.svg");
+  background-color: $accent-green;
+  animation: stygia-spin 0.7s linear infinite;
+}
+.ic_s_partialtext { @include icon-mask("../img/s_partialtext.svg"); }
+.ic_s_fulltext { @include icon-mask("../img/s_fulltext.svg"); }
+.ic_s_process { @include icon-mask("../img/s_process.svg"); }
+.ic_s_sync { @include icon-mask("../img/sync.svg"); }

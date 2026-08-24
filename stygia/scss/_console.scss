@@ -1,0 +1,496 @@
+// ============================================================
+// Stygia — SQL Console
+// Match original/pmahomme STRUCTURE (see console/display.twig):
+//   .switch_button = "Console" title (LEFT, not floated)
+//   .button = Clear / History / Options (float RIGHT)
+//   .text = used in nested cards only
+// ============================================================
+
+#pma_console_container {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+  pointer-events: none;
+}
+
+#pma_console {
+  position: relative;
+  margin-left: $navi-width;
+  z-index: 100;
+  // Do not set width:100% — that + margin would overflow under the nav
+
+  .templates {
+    display: none;
+  }
+
+  .mid_text {
+    vertical-align: middle;
+  }
+
+  .toolbar {
+    position: relative;
+    background: $bg-surface-2;
+    border-top: 1px solid $border-strong;
+    cursor: n-resize;
+    pointer-events: auto;
+    // NO display:flex — floats need normal block flow (original layout)
+    min-height: 1.6em;
+    line-height: 1.6em;
+    padding: 0 4px;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: $text-secondary;
+    box-sizing: border-box;
+
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &.collapsed {
+      cursor: pointer;
+
+      // Compact chip (original): only as wide as the Console switch
+      &:not(:hover) {
+        display: inline-block;
+        border-top-right-radius: $border-radius-sm;
+        border-right: 1px solid $border-strong;
+      }
+
+      > .button {
+        display: none;
+      }
+    }
+
+    .button,
+    .text {
+      padding: 0 0.4em;
+      display: inline-block;
+      margin-right: 0.4em;
+      float: right;
+      color: $text-secondary;
+      cursor: pointer;
+      font-weight: 400;
+      line-height: 1.6em;
+
+      &:hover {
+        color: $text-primary;
+        background: $bg-hover;
+      }
+    }
+
+    .button.active {
+      color: $text-primary;
+      background: $bg-active;
+    }
+
+    .text {
+      font-weight: 500;
+      color: $text-primary;
+      cursor: default;
+    }
+  }
+
+  // Title control — LEFT side (must NOT float right)
+  .switch_button {
+    padding: 0 0.4em;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    float: none;
+    color: $text-primary;
+    cursor: pointer;
+    font-weight: 500;
+    line-height: 1.6em;
+    vertical-align: middle;
+
+    .icon,
+    .ic_console {
+      width: 14px;
+      height: 14px;
+      margin: 0;
+      vertical-align: middle;
+      background-color: $text-secondary;
+      flex-shrink: 0;
+    }
+
+    span {
+      vertical-align: middle;
+    }
+
+    &:hover {
+      color: $text-primary;
+      background: $bg-hover;
+
+      .icon,
+      .ic_console {
+        background-color: $text-primary;
+      }
+    }
+  }
+
+  .message span.action,
+  .toolbar .button,
+  .switch_button {
+    cursor: pointer;
+  }
+
+  .content {
+    overflow-x: hidden;
+    overflow-y: auto;
+    margin-bottom: -65px;
+    border-top: 1px solid $border-strong;
+    background: $bg-surface;
+    color: $text-primary;
+    padding-top: 0.4em;
+    pointer-events: auto;
+    font-weight: 400;
+    line-height: 1.45;
+
+    &.console_dark_theme {
+      background: $bg-body;
+      color: $text-primary;
+
+      .CodeMirror-wrap {
+        background: $bg-body;
+        color: $text-primary;
+      }
+
+      .action_content {
+        color: $text-primary;
+        background: $bg-surface-2;
+      }
+
+      .message {
+        border-color: $border-default;
+      }
+
+      .CodeMirror-cursor {
+        border-color: $text-primary;
+      }
+    }
+  }
+
+  .message,
+  .query_input {
+    position: relative;
+    font-family: $font-family-monospace;
+    cursor: text;
+    margin: 0 10px 0.2em 1.4em;
+  }
+
+  .message {
+    border-bottom: 1px solid $border-default;
+    padding-bottom: 0.2em;
+    color: $text-primary;
+    font-size: 0.8125rem;
+    font-weight: 400;
+
+    span.text,
+    span.action {
+      padding: 0 3px;
+      display: inline-block;
+    }
+
+    span.action {
+      color: $text-secondary;
+      font-weight: 400;
+
+      &:hover {
+        color: $accent-green;
+        background: $bg-hover;
+      }
+    }
+
+    &.expanded > .action_content {
+      position: relative;
+    }
+
+    &::before {
+      left: -0.7em;
+      position: absolute;
+      content: ">";
+      color: $text-muted;
+      font-weight: 400;
+    }
+
+    &:hover::before {
+      color: $accent-green;
+      font-weight: 500;
+    }
+
+    &.expanded::before {
+      content: "]";
+    }
+
+    &.welcome::before {
+      display: none;
+    }
+
+    &.welcome {
+      margin-left: 0.75em;
+      font-family: $font-family-base;
+      font-size: 0.8rem;
+      color: $text-muted;
+      border-bottom: 0;
+      cursor: default;
+    }
+
+    &.failed {
+      &::before,
+      &.expanded::before,
+      &:hover::before {
+        content: "=";
+        color: $color-danger;
+      }
+    }
+
+    &.pending::before {
+      opacity: 0.3;
+    }
+
+    &.collapsed > .query {
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &.expanded > .query {
+      display: block;
+      white-space: pre;
+      word-wrap: break-word;
+    }
+
+    .text.targetdb,
+    &.collapsed .action.collapse,
+    &.expanded .action.expand {
+      display: none;
+    }
+
+    .action {
+      &.requery,
+      &.profiling,
+      &.explain,
+      &.bookmark {
+        display: none;
+      }
+    }
+
+    &.select .action {
+      &.profiling,
+      &.explain {
+        display: inline-block;
+      }
+    }
+
+    &.history .text.targetdb,
+    &.successed .text.targetdb {
+      display: inline-block;
+    }
+
+    &.history .action {
+      &.requery,
+      &.bookmark {
+        display: inline-block;
+      }
+    }
+
+    &.bookmark .action {
+      &.requery,
+      &.bookmark {
+        display: inline-block;
+      }
+    }
+
+    &.successed .action {
+      &.requery,
+      &.bookmark {
+        display: inline-block;
+      }
+    }
+
+    .action_content {
+      position: absolute;
+      bottom: 100%;
+      background: $bg-surface-2;
+      border: 1px solid $border-default;
+      border-top-left-radius: $border-radius-sm;
+      color: $text-primary;
+      padding: 0.25em 0.4em;
+      z-index: 2;
+    }
+
+    &.bookmark .text.targetdb,
+    .text.query_time {
+      margin: 0;
+      display: inline-block;
+    }
+
+    &.failed .text.query_time,
+    .text.failed {
+      display: none;
+    }
+
+    &.failed .text.failed {
+      display: inline-block;
+    }
+
+    .text {
+      background: transparent;
+    }
+
+    &.collapsed {
+      > .action_content {
+        display: none;
+      }
+
+      &:hover > .action_content {
+        display: block;
+      }
+    }
+
+    .bookmark_label {
+      position: absolute;
+      left: 0;
+      top: 0;
+      background: $bg-surface-3;
+      padding: 0 0.3em;
+      font-size: 0.75em;
+      color: $text-secondary;
+
+      &.shared {
+        background: rgba($accent-green, 0.15);
+        color: $accent-green;
+      }
+    }
+
+    &.expanded .bookmark_label {
+      position: relative;
+    }
+  }
+
+  .query_input {
+    &::before {
+      left: -0.7em;
+      position: absolute;
+      content: ">";
+      top: -2px;
+      color: $text-muted;
+      font-weight: 400;
+    }
+
+    textarea,
+    .console_query_input {
+      width: 100%;
+      min-height: 4em;
+      resize: vertical;
+      background: $bg-body;
+      border: 1px solid $border-strong;
+      border-radius: $border-radius-sm;
+      color: $text-primary;
+      padding: 6px 8px;
+      font-family: $font-family-monospace;
+      font-size: 0.8125rem;
+      font-weight: 400;
+      display: block;
+      box-sizing: border-box;
+    }
+
+    textarea:focus,
+    .console_query_input:focus-within {
+      border-color: $accent-green;
+      outline: none;
+      box-shadow: $input-focus-box-shadow;
+    }
+  }
+
+  .mid_layer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 150;
+    display: none;
+    pointer-events: auto;
+  }
+
+  .card {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 160;
+    display: none;
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm $border-radius-sm 0 0;
+    pointer-events: auto;
+    box-sizing: border-box;
+
+    &.show {
+      display: block;
+    }
+
+    // Nested toolbars (Options / Debug / Bookmarks cards)
+    .toolbar {
+      .switch_button {
+        float: right;
+        margin-right: 0.4em;
+      }
+    }
+  }
+
+  .button.hide,
+  .message span.text.hide {
+    display: none;
+  }
+
+  .debug,
+  .debug_output,
+  .options {
+    color: $text-secondary;
+    font-size: 0.85em;
+    font-weight: 400;
+    padding: 6px 8px;
+    line-height: 1.45;
+
+    h3,
+    .header {
+      color: $text-primary;
+      font-weight: 500;
+      margin-bottom: 4px;
+      font-size: 0.9em;
+    }
+  }
+
+  .restore-defaults,
+  .button.default {
+    color: $text-muted;
+    font-size: 0.8em;
+    font-weight: 400;
+
+    &:hover {
+      color: $accent-green;
+    }
+  }
+}
+
+#pma_console_options .content {
+  padding: 0.75rem 1rem;
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  #pma_console {
+    margin-left: 0;
+  }
+}

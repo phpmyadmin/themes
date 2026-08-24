@@ -1,0 +1,21 @@
+{
+  "name": "stygia",
+  "version": "2.1.1",
+  "description": "A dark, elegant theme for phpMyAdmin 6.x inspired by the mythological river Styx.",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:ltr && npm run build:rtl",
+    "build:ltr": "sass scss/theme.scss css/theme.css --load-path=node_modules --style=compressed --source-map --quiet-deps --silence-deprecation=import --silence-deprecation=global-builtin --silence-deprecation=color-functions",
+    "build:rtl": "node scripts/build-rtl.js",
+    "watch": "node scripts/watch.js",
+    "zip": "node scripts/pack.js"
+  },
+  "devDependencies": {
+    "bootstrap": "5.3.3",
+    "rtlcss": "^4.1.1",
+    "sass": "^1.77.0"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

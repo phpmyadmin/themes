@@ -1,0 +1,338 @@
+// ============================================================
+// Stygia — Tables
+// ============================================================
+
+.table {
+  caption-side: top;
+  color: $text-primary;
+  font-weight: 400;
+
+  th,
+  td {
+    vertical-align: middle;
+    color: $text-primary;
+    line-height: 1.45;
+    font-weight: 400;
+
+    > span:empty::before {
+      content: "\200b";
+    }
+  }
+
+  th {
+    color: $th-color;
+    font-weight: 500;
+    font-size: 0.8125rem;
+  }
+
+  td {
+    touch-action: manipulation;
+  }
+
+  td.value,
+  .value {
+    font-family: $font-family-monospace;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    color: $text-primary;
+    letter-spacing: 0.01em;
+  }
+
+  thead th {
+    border-right: 1px solid $border-default;
+    background: $bg-surface-2;
+    border-bottom: 1px solid $border-strong;
+  }
+
+  caption {
+    background-color: $th-background;
+    font-weight: 500;
+    text-align: center;
+    color: $text-primary;
+    padding: 0.55rem;
+    border-radius: $border-radius-sm $border-radius-sm 0 0;
+  }
+
+  .cell-selected {
+    outline: 1px solid $accent-green;
+    outline-offset: -1px;
+
+    &.with-bg-color {
+      background-color: $browse-marker-background;
+    }
+  }
+
+  tbody tr.marked,
+  tbody tr.marked:hover,
+  tbody tr.selected,
+  tbody tr.selected:hover {
+    background: $browse-marker-background !important;
+    color: $browse-marker-color;
+  }
+
+  // Nested header rows (FK / relation editors)
+  thead tr + tr th {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: $text-muted;
+    text-transform: none;
+    letter-spacing: 0;
+    background: $bg-surface;
+  }
+}
+
+.table-hover {
+  tbody tr {
+    &:hover > * {
+      background: $browse-pointer-background;
+      color: $browse-pointer-color;
+      box-shadow: none;
+    }
+  }
+}
+
+.table-striped {
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > * {
+    background-color: $table-striped-bg;
+    box-shadow: none;
+  }
+
+  > tbody > tr:nth-of-type(#{$table-striped-order}) > th {
+    color: $th-color;
+  }
+}
+
+@media only screen and (width >= 768px) {
+  .table th.position-sticky {
+    top: $sticky-offset;
+    z-index: 2;
+    box-shadow: 0 1px 0 $border-default;
+  }
+}
+
+.navigation {
+  margin: 0.9em 0;
+  border-radius: $border-radius;
+  background: $bg-surface-2;
+  border: 1px solid $border-default;
+  padding: 0.25rem 0.45rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem;
+
+  td {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    white-space: nowrap;
+  }
+}
+
+// Foreign key / relation editors
+table.relationalTable,
+#relationalTable,
+table#foreign_keys,
+.card table.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+
+  th,
+  td {
+    padding: 0.55rem 0.65rem;
+    vertical-align: top;
+    border-color: $border-default;
+  }
+
+  input[type="text"],
+  select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 2rem;
+    font-weight: 400;
+  }
+
+  label {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: $text-muted;
+    text-transform: none;
+    letter-spacing: 0;
+  }
+}
+
+// Soften shouting ON DELETE / ON UPDATE labels inside FK editors
+.card-body,
+#relationalTable,
+table.relationalTable {
+  td {
+    strong,
+    b,
+    label {
+      font-weight: 400;
+      color: $text-secondary;
+      font-size: 0.75rem;
+      letter-spacing: 0.02em;
+    }
+  }
+}
+
+// "+ Add constraint" / "+ Add column" as quiet actions, not orphan footers
+.card-footer {
+  a,
+  .add_foreign_key,
+  a[href*="foreign"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35em;
+    font-weight: 400;
+    font-size: 0.875rem;
+    color: $accent-green;
+    text-decoration: none;
+    padding: 0.25rem 0;
+
+    &:hover {
+      color: $accent-green-light;
+      text-decoration: underline;
+    }
+  }
+}
+
+.card:has(table) {
+  .card-footer {
+    padding: 0.65rem 1rem;
+    min-height: auto;
+    background: $bg-surface-2;
+  }
+
+  .card-header {
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+}
+
+// --- Browse row actions: round icon-only 3D chips ---
+// Edit / Copy / Delete in `.table_results` + bulk `mult_submit` bar.
+$row-action-size: 1.7rem;
+
+@mixin row-action-chip($glow) {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: $row-action-size;
+  height: $row-action-size;
+  min-width: $row-action-size;
+  min-height: $row-action-size;
+  padding: 0;
+  margin: 0 0.12rem;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+  letter-spacing: 0;
+  color: transparent;
+  text-decoration: none !important;
+  vertical-align: middle;
+  cursor: pointer;
+  background:
+    linear-gradient(145deg, lighten($bg-surface-3, 4%), $bg-surface-2 45%, darken($bg-surface-2, 3%));
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 1px rgba(0, 0, 0, 0.35),
+    0 1px 2px rgba(0, 0, 0, 0.45),
+    0 2px 7px rgba($glow, 0.2);
+  transition:
+    box-shadow 0.18s ease,
+    transform 0.15s ease,
+    border-color 0.15s ease,
+    background 0.15s ease;
+
+  > .text-nowrap,
+  .text-nowrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0;
+    line-height: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .icon {
+    margin: 0;
+    width: 13px;
+    height: 13px;
+    background-color: $text-secondary;
+    flex-shrink: 0;
+  }
+
+  &:hover,
+  &:focus-visible {
+    color: transparent;
+    text-decoration: none !important;
+    transform: translateY(-1px);
+    border-color: rgba($glow, 0.35);
+    background:
+      linear-gradient(145deg, lighten($bg-surface-3, 7%), $bg-surface-3 50%, $bg-surface-2);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.14),
+      inset 0 -1px 1px rgba(0, 0, 0, 0.4),
+      0 2px 4px rgba(0, 0, 0, 0.5),
+      0 4px 14px rgba($glow, 0.48),
+      0 0 0 1px rgba($glow, 0.22);
+
+    .icon {
+      background-color: $text-primary;
+    }
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow:
+      inset 0 1px 2px rgba(0, 0, 0, 0.45),
+      inset 0 -1px 0 rgba(255, 255, 255, 0.04),
+      0 1px 3px rgba($glow, 0.28);
+  }
+}
+
+.table_results td.d-print-none {
+  padding-left: 0.28rem;
+  padding-right: 0.28rem;
+  white-space: nowrap;
+
+  a:has(.ic_b_edit) {
+    @include row-action-chip($color-info);
+  }
+
+  a:has(.ic_b_insrow) {
+    @include row-action-chip($accent-green);
+  }
+
+  a.delete_row,
+  a:has(.ic_b_drop) {
+    @include row-action-chip(darken($color-danger, 8%));
+  }
+}
+
+// Bulk “With selected” Edit / Copy / Delete
+button.mult_submit:has(.ic_b_edit) {
+  @include row-action-chip($color-info);
+}
+
+button.mult_submit:has(.ic_b_insrow) {
+  @include row-action-chip($accent-green);
+}
+
+button.mult_submit:has(.ic_b_drop) {
+  @include row-action-chip(darken($color-danger, 8%));
+}
+
+button.mult_submit:has(.ic_b_edit, .ic_b_insrow, .ic_b_drop) {
+  &.btn,
+  &.btn-link {
+    --bs-btn-padding-x: 0;
+    --bs-btn-padding-y: 0;
+    text-decoration: none !important;
+  }
+}

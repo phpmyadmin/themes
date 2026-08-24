@@ -1,0 +1,635 @@
+// ============================================================
+// Stygia — jQuery UI (datepicker, dialog, slider, autocomplete)
+// Prefer design tokens over invert filters
+// ============================================================
+
+// UI chrome for pickers: Inter (not FiraCode) so overlays don't look terminal-like
+$jquery-ui-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+
+body .ui-widget {
+  font-family: $jquery-ui-font;
+  font-size: 1em;
+  color: $text-primary;
+}
+
+body .ui-widget-content {
+  background: $bg-popover;
+  color: $text-primary;
+  border: 1px solid $border-default;
+}
+
+body .ui-widget-header {
+  background: $bg-surface-2;
+  color: $text-primary;
+  border: 0;
+  border-bottom: 1px solid $border-default;
+  font-weight: 500;
+}
+
+body .ui-state-default,
+body .ui-widget-content .ui-state-default {
+  background: $bg-surface;
+  border: 1px solid $border-strong;
+  color: $text-secondary;
+}
+
+body .ui-state-hover,
+body .ui-widget-content .ui-state-hover,
+body .ui-state-focus {
+  background: $bg-hover;
+  border-color: $accent-green;
+  color: $text-primary;
+}
+
+body .ui-state-active,
+body .ui-state-highlight {
+  background: rgba($accent-green, 0.16);
+  border-color: $accent-green;
+  color: $accent-green;
+}
+
+body .ui-icon {
+  filter: brightness(0) invert(0.78);
+  opacity: 0.9;
+}
+
+body .ui-state-hover .ui-icon,
+body .ui-state-focus .ui-icon,
+body .ui-state-active .ui-icon {
+  filter: invert(72%) sepia(42%) saturate(557%) hue-rotate(103deg) brightness(94%) contrast(92%);
+  opacity: 1;
+}
+
+// --- Calendar trigger (host JS requests b_calendar.png) ---
+// PNG avoids 404; mask + background-color paint the SVG glyph.
+img.ui-datepicker-trigger {
+  @include icon-mask("../img/b_calendar.svg");
+  display: inline-block;
+  width: 1.75rem;
+  height: 1.75rem;
+  margin-inline-start: 0.35rem;
+  box-sizing: border-box;
+  vertical-align: middle;
+  cursor: pointer;
+  border-radius: $border-radius-sm;
+  border: 1px solid transparent;
+  object-fit: none;
+  object-position: -9999px -9999px;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+
+  &:hover {
+    background-color: $text-primary;
+    background-image: none;
+    border-color: $border-strong;
+  }
+
+  &:focus-visible {
+    background-color: $text-primary;
+    background-image: none;
+    border-color: $accent-green;
+    box-shadow: $shadow-focus;
+    outline: none;
+  }
+}
+
+body .ui-widget-overlay {
+  background: $modal-backdrop-bg;
+  opacity: 1;
+}
+
+body #ui-datepicker-div {
+  z-index: 9999 !important;
+  width: auto;
+  min-width: 20em;
+  max-width: min(22rem, calc(100vw - 2rem));
+  background: $bg-popover;
+  border: 1px solid $border-default;
+  border-radius: $border-radius;
+  box-shadow: $shadow-md, $shadow-green;
+  padding: 0.85rem;
+  font-family: $jquery-ui-font;
+  color: $text-primary;
+}
+
+.ui-datepicker {
+  width: auto !important;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  font-family: $jquery-ui-font;
+
+  .ui-datepicker-header {
+    position: relative;
+    background: transparent;
+    border: 0;
+    padding: 0.15rem 0 0.65rem;
+    font-weight: 500;
+  }
+
+  .ui-datepicker-title {
+    color: $text-primary;
+    font-weight: 500;
+    line-height: 1.85rem;
+    margin: 0 2.4em;
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+    margin: 0;
+    table-layout: fixed;
+    border-collapse: separate;
+    border-spacing: 2px;
+
+    th {
+      color: $text-muted;
+      font-weight: 500;
+      font-size: 0.75rem;
+      padding: 0.4em 0.15em;
+      border: 0;
+    }
+
+    td {
+      padding: 0;
+      border: 0;
+
+      span,
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        margin: 0 auto;
+        padding: 0;
+        text-align: center;
+        text-decoration: none;
+        border-radius: 50%;
+        border: 1px solid transparent !important;
+        background: transparent !important;
+        color: $text-primary;
+        font-variant-numeric: tabular-nums;
+        box-sizing: border-box;
+        transition: background-color 0.12s ease, border-color 0.12s ease, color 0.12s ease;
+      }
+
+      a.ui-state-default {
+        background: transparent !important;
+        border-color: transparent !important;
+        color: $text-primary !important;
+      }
+
+      a:hover,
+      a.ui-state-hover {
+        background: $bg-hover !important;
+        border-color: transparent !important;
+        color: $text-primary !important;
+      }
+
+      &.ui-datepicker-other-month span,
+      &.ui-datepicker-unselectable span {
+        color: $text-disabled;
+        opacity: 0.55;
+        background: transparent !important;
+        border: 0 !important;
+      }
+    }
+
+    .ui-datepicker-today a {
+      border-color: $accent-green !important;
+      font-weight: 500;
+      background: transparent !important;
+      color: $text-primary !important;
+    }
+
+    .ui-datepicker-current-day a,
+    .ui-datepicker-current-day a.ui-state-active,
+    td a.ui-state-active {
+      background: $accent-green-deep !important;
+      border-color: $accent-green-deep !important;
+      color: $text-white !important;
+      font-weight: 500;
+    }
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    position: absolute;
+    top: 0.2rem;
+    width: 1.85rem;
+    height: 1.85rem;
+    cursor: pointer;
+    border: 0 !important;
+    background: transparent !important;
+    border-radius: $border-radius-sm;
+    text-indent: 0;
+    overflow: hidden;
+
+    // Kill jQuery UI 1px nudge on hover
+    &,
+    &.ui-state-hover,
+    &.ui-datepicker-prev-hover,
+    &.ui-datepicker-next-hover {
+      top: 0.2rem;
+      left: auto;
+      right: auto;
+    }
+
+    span.ui-icon {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      text-indent: -9999px;
+      background-image: none !important;
+      filter: none !important;
+      opacity: 1;
+      background-color: $text-secondary;
+      -webkit-mask-size: 12px 12px;
+      mask-size: 12px 12px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+
+    &:hover {
+      background: $bg-hover !important;
+
+      span.ui-icon {
+        background-color: $text-primary;
+      }
+    }
+  }
+
+  .ui-datepicker-prev {
+    left: 0;
+
+    &,
+    &.ui-state-hover,
+    &.ui-datepicker-prev-hover {
+      left: 0;
+    }
+
+    span.ui-icon {
+      -webkit-mask-image: url("../img/chevron-left.svg");
+      mask-image: url("../img/chevron-left.svg");
+    }
+  }
+
+  .ui-datepicker-next {
+    right: 0;
+
+    &,
+    &.ui-state-hover,
+    &.ui-datepicker-next-hover {
+      right: 0;
+    }
+
+    span.ui-icon {
+      -webkit-mask-image: url("../img/chevron-right.svg");
+      mask-image: url("../img/chevron-right.svg");
+    }
+  }
+
+  select.ui-datepicker-month,
+  select.ui-datepicker-year {
+    background: $bg-surface;
+    border: 1px solid $border-strong;
+    color: $text-primary;
+    border-radius: $border-radius-sm;
+    padding: 0.15rem 0.4rem;
+    min-height: 1.85rem;
+    font-size: 0.8rem;
+    font-family: $jquery-ui-font;
+    width: auto;
+    max-width: 48%;
+
+    &:focus {
+      border-color: $accent-green;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($accent-green, 0.18);
+    }
+  }
+
+  // MySQL tip note appended by host JS
+  > p,
+  > .note,
+  > small {
+    margin: 0.65rem 0 0;
+    padding-top: 0.5rem;
+    border-top: 1px solid $border-default;
+    color: $text-muted;
+    font-size: 0.75rem;
+    font-weight: 300;
+    line-height: 1.4;
+  }
+}
+
+// --- Timepicker addon ---
+.ui-timepicker-div {
+  margin-top: 0.75rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid $border-default;
+  font-family: $jquery-ui-font;
+
+  .ui-widget-header {
+    margin-bottom: 0.5rem;
+    background: transparent;
+    border: 0;
+    color: $text-secondary;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  dl {
+    display: grid;
+    grid-template-columns: 7.5rem minmax(0, 1fr);
+    gap: 0.55rem 0.85rem;
+    align-items: center;
+    margin: 0;
+    text-align: left;
+
+    dt,
+    dd {
+      float: none;
+      clear: none;
+      height: auto;
+      margin: 0;
+      padding: 0;
+    }
+
+    dt {
+      color: $text-muted;
+      font-size: 0.75rem;
+      font-weight: 400;
+      line-height: 1.3;
+    }
+
+    dd {
+      min-width: 0;
+    }
+  }
+
+  .ui_tpicker_time_label {
+    align-self: center;
+  }
+
+  .ui_tpicker_time .ui_tpicker_time_input {
+    width: 100%;
+    min-height: 1.85rem !important;
+    padding: 0.25rem 0.5rem !important;
+    font-family: $font-family-monospace;
+    font-size: 0.8rem;
+    font-variant-numeric: tabular-nums;
+    background: $bg-surface !important;
+    color: $text-primary !important;
+    border: 1px solid $border-strong !important;
+    border-radius: $border-radius-sm;
+    outline: none;
+
+    &:focus {
+      border-color: $accent-green !important;
+      box-shadow: 0 0 0 2px rgba($accent-green, 0.18);
+    }
+  }
+
+  select {
+    width: 100%;
+    max-width: 100%;
+    min-height: 1.85rem;
+    background: $bg-surface;
+    border: 1px solid $border-strong;
+    color: $text-primary;
+    border-radius: $border-radius-sm;
+    padding: 0.15rem 0.4rem;
+    font-size: 0.8rem;
+
+    &:focus {
+      border-color: $accent-green;
+      outline: none;
+      box-shadow: 0 0 0 2px rgba($accent-green, 0.18);
+    }
+  }
+
+  td {
+    font-size: 90%;
+  }
+}
+
+.ui-tpicker-grid-label {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.ui-timepicker-rtl {
+  direction: rtl;
+
+  dl {
+    text-align: right;
+  }
+}
+
+.ui-draggable {
+  z-index: 801;
+}
+
+// --- Dialogs ---
+.ui-dialog {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  color: $text-primary;
+  padding: 0;
+  font-family: $jquery-ui-font;
+
+  .ui-dialog-titlebar {
+    background: $bg-surface-2;
+    border-bottom: 1px solid $border-default;
+    color: $text-primary;
+    border-radius: $border-radius-lg $border-radius-lg 0 0;
+    padding: 0.65rem 1rem;
+    font-weight: 500;
+  }
+
+  .ui-dialog-title {
+    font-size: $h3-font-size;
+    font-weight: 500;
+  }
+
+  .ui-dialog-content {
+    padding: 1rem;
+    color: $text-primary;
+    background: $bg-surface;
+  }
+
+  .ui-dialog-buttonpane {
+    background: $bg-surface;
+    border-top: 1px solid $border-default;
+    margin-top: 0;
+    padding: 0.65rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-end;
+    align-items: center;
+
+    .ui-dialog-buttonset {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      float: none;
+    }
+
+    .ui-button {
+      background: $bg-surface-2;
+      border: 1px solid $border-strong;
+      color: $text-primary;
+      border-radius: $border-radius-sm;
+      padding: 0.35rem 0.85rem;
+      min-height: 2rem;
+      font-family: $jquery-ui-font;
+      font-weight: 400;
+
+      &:hover {
+        background: $bg-hover;
+        border-color: $border-stronger;
+      }
+
+      &.ui-state-default:first-child,
+      &.btn-primary {
+        background: $accent-green-deep;
+        border-color: $accent-green-deep;
+        color: $text-white;
+        border-radius: $border-radius-pill;
+        font-weight: 500;
+
+        &:hover {
+          background: $accent-green-deep-hover;
+          border-color: $accent-green-deep-hover;
+        }
+      }
+    }
+  }
+
+  .ui-dialog-titlebar-close {
+    position: absolute;
+    right: 0.65rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1.85rem;
+    height: 1.85rem;
+    margin: 0;
+    padding: 0;
+    border: 0 !important;
+    background: transparent !important;
+    border-radius: $border-radius-sm;
+    overflow: hidden;
+
+    .ui-icon {
+      position: absolute;
+      inset: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      text-indent: -9999px;
+      background-image: none !important;
+      filter: none !important;
+      opacity: 1;
+      background-color: $text-secondary;
+      -webkit-mask-image: url("../img/close.svg");
+      mask-image: url("../img/close.svg");
+      -webkit-mask-size: 12px 12px;
+      mask-size: 12px 12px;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+    }
+
+    &:hover {
+      background: $bg-hover !important;
+
+      .ui-icon {
+        background-color: $text-primary;
+      }
+    }
+  }
+}
+
+// --- Sliders (beat .ui-state-default specificity) ---
+body .ui-slider {
+  background: $bg-surface-3;
+  border: 0;
+  border-radius: $border-radius-pill;
+  height: 0.4em;
+  margin: 0.55em 0.35em 0.55em 0;
+
+  .ui-slider-range {
+    background: $accent-green-deep;
+    border: 0;
+  }
+
+  .ui-slider-handle,
+  .ui-slider-handle.ui-state-default,
+  .ui-slider-handle.ui-state-hover,
+  .ui-slider-handle.ui-state-focus,
+  .ui-slider-handle.ui-state-active {
+    background: $accent-green !important;
+    border: 0 !important;
+    border-radius: 50%;
+    width: 0.9em;
+    height: 0.9em;
+    top: -0.3em;
+    margin-left: -0.45em;
+    filter: none !important;
+    cursor: pointer;
+    box-shadow: $shadow-sm;
+    outline: none;
+  }
+
+  .ui-slider-handle:focus-visible,
+  .ui-slider-handle.ui-state-focus {
+    box-shadow: $shadow-focus !important;
+  }
+
+  .ui-slider-handle:hover,
+  .ui-slider-handle.ui-state-hover {
+    background: $accent-green-light !important;
+  }
+}
+
+body .ui-slider-horizontal .ui-slider-handle {
+  top: -0.3em;
+  margin-left: -0.45em;
+}
+
+.ui-autocomplete {
+  background: $bg-popover;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+  color: $text-primary;
+  padding: 0.25rem;
+  font-family: $jquery-ui-font;
+
+  .ui-menu-item-wrapper {
+    color: $text-primary;
+    border-radius: $border-radius-sm;
+    padding: 0.35rem 0.65rem;
+
+    &.ui-state-active {
+      background: $bg-hover;
+      border: 0;
+      color: $accent-green;
+      margin: 0;
+    }
+  }
+}

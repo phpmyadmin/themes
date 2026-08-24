@@ -1,0 +1,298 @@
+// ============================================================
+// Stygia — SQL Profiling (tables + chart panel)
+// Chart slice colors come from Chart.js host defaults; we polish
+// layout, tables, and the canvas presentation only.
+// ============================================================
+
+// Sortable headers (tablesorter) — used by profiling tables
+th.header {
+  cursor: pointer;
+  color: $text-secondary;
+  user-select: none;
+
+  &:hover {
+    color: $text-primary;
+    text-decoration: none;
+  }
+
+  .sorticon {
+    width: 14px;
+    height: 14px;
+    margin-left: 0.35rem;
+    display: inline-block;
+    vertical-align: middle;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.35;
+  }
+}
+
+th.headerSortUp .sorticon {
+  background-image: url("../img/sort-desc.svg");
+  opacity: 0.85;
+}
+
+th.headerSortDown {
+  .sorticon {
+    background-image: url("../img/sort-asc.svg");
+    opacity: 0.85;
+  }
+
+  &:hover .sorticon {
+    background-image: url("../img/sort-desc.svg");
+  }
+}
+
+th.headerSortUp:hover .sorticon {
+  background-image: url("../img/sort-asc.svg");
+}
+
+// Full-bleed profiling block inside Bootstrap .container
+.container:has(#profiletable),
+.container:has(#profilingChartCanvas) {
+  max-width: 100%;
+  padding-inline: 0;
+}
+
+.card:has(#profiletable),
+.card:has(#profilingChartCanvas) {
+  margin-top: 1rem;
+  overflow: hidden;
+
+  > .card-header {
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  .card-body {
+    padding: 1.1rem 1.15rem 1.25rem;
+  }
+
+  // Three panels: detail | summary | chart
+  .card-body > .row {
+    display: grid;
+    grid-template-columns: minmax(200px, 0.85fr) minmax(260px, 1.2fr) minmax(240px, 0.95fr);
+    gap: 1.25rem;
+    align-items: start;
+
+    > .col {
+      width: auto;
+      max-width: none;
+      flex: none;
+      padding: 0;
+      min-width: 0;
+    }
+
+    @media (max-width: 1200px) {
+      grid-template-columns: 1fr 1fr;
+
+      > .col:has(#profilingChartCanvas) {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  h3 {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin: 0 0 0.7rem;
+    padding: 0;
+    font-size: 0.72rem;
+    font-weight: 500;
+    line-height: 1.3;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: $text-muted;
+
+    .icon {
+      width: 14px;
+      height: 14px;
+      opacity: 0.7;
+    }
+
+    a {
+      display: inline-flex;
+      color: $text-muted;
+
+      &:hover {
+        color: $accent-green;
+      }
+    }
+  }
+}
+
+@mixin profiling-table {
+  width: 100%;
+  margin: 0;
+  font-size: 0.8125rem;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  border-collapse: separate;
+  border-spacing: 0;
+  overflow: hidden;
+  background: $bg-surface;
+
+  thead th {
+    position: relative;
+    padding: 0.5rem 0.65rem;
+    font-size: 0.68rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    color: $text-muted;
+    background: $bg-surface-2;
+    border-bottom: 1px solid $border-strong;
+    border-right: 1px solid $border-default;
+    vertical-align: middle;
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    &.header {
+      color: $text-secondary;
+    }
+  }
+
+  tbody {
+    tr {
+      transition: background-color 0.12s ease;
+
+      &:hover {
+        background: rgba($accent-green, 0.06);
+      }
+
+      &:last-child td {
+        border-bottom: 0;
+      }
+    }
+
+    td {
+      padding: 0.38rem 0.65rem;
+      border-bottom: 1px solid $border-default;
+      border-right: 1px solid rgba($border-default, 0.6);
+      vertical-align: middle;
+      color: $text-primary;
+      line-height: 1.35;
+
+      &:last-child {
+        border-right: 0;
+      }
+    }
+  }
+
+  // Times / counts — never wrap "281 µs"
+  td.text-end {
+    white-space: nowrap;
+    font-family: $font-family-monospace;
+    font-size: 0.75rem;
+    font-variant-numeric: tabular-nums;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+    color: $odp-whiskey;
+  }
+
+  .rawvalue {
+    display: none !important;
+  }
+}
+
+#profiletable {
+  @include profiling-table;
+
+  // Order
+  tbody td:nth-child(1) {
+    width: 1%;
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-family: $font-family-monospace;
+    font-size: 0.75rem;
+    color: $text-muted;
+    text-align: end;
+  }
+
+  // State
+  tbody td:nth-child(2) {
+    color: $text-primary;
+    white-space: nowrap;
+  }
+}
+
+#profilesummarytable {
+  @include profiling-table;
+
+  // State name
+  tbody td:nth-child(1) {
+    white-space: nowrap;
+    color: $text-primary;
+    font-weight: 400;
+  }
+
+  // % Time — scannable accent
+  tbody td:nth-child(3) {
+    white-space: nowrap;
+    font-family: $font-family-monospace;
+    font-variant-numeric: tabular-nums;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: $accent-green;
+  }
+
+  // Calls
+  tbody td:nth-child(4) {
+    white-space: nowrap;
+    font-variant-numeric: tabular-nums;
+    font-family: $font-family-monospace;
+    font-size: 0.75rem;
+    color: $text-secondary;
+  }
+}
+
+.col:has(#profiletable),
+.col:has(#profilesummarytable) {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+// Chart panel — modern frame around host Chart.js canvas
+.col:has(#profilingChartCanvas),
+.col:has(#queryProfilingCanvas) {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-start;
+  min-height: 280px;
+  padding: 1rem 1rem 1.1rem;
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 35%, rgba($accent-green, 0.06), transparent 65%),
+    $bg-surface-2;
+  border: 1px solid $border-default;
+  border-radius: $border-radius;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+#profilingChartCanvas,
+#queryProfilingCanvas {
+  display: block;
+  width: 100% !important;
+  max-width: 100%;
+  height: auto !important;
+  margin: 0 auto;
+  // Soften Chart.js default rainbow toward Stygia dark UI
+  filter: saturate(0.7) brightness(0.9) contrast(1.04);
+}
+
+// Query stats pie (same Chart.js default look)
+#query-statistics-chart {
+  display: block;
+  max-width: 100%;
+  height: auto !important;
+  filter: saturate(0.7) brightness(0.9) contrast(1.04);
+}

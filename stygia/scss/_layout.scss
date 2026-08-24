@@ -1,0 +1,210 @@
+// ============================================================
+// Stygia — Page layout, overlay, scrollbar, selflink
+// ============================================================
+
+.hide {
+  display: none;
+}
+
+#page_content {
+  margin: 0 0.75em;
+  padding-bottom: 3rem;
+  line-height: 1.5;
+
+  > h1,
+  > h2,
+  > .card,
+  > .alert,
+  > form {
+    margin-bottom: 1rem;
+  }
+}
+
+div#page_content div {
+  &#tableslistcontainer {
+    margin-top: 1.15em;
+  }
+
+  &.result_query {
+    margin-top: 1.15em;
+  }
+}
+
+#tableslistcontainer table.data {
+  border-top: 0;
+}
+
+// Canonical modal styles (single source — do not duplicate in _common)
+div.container.modal_form {
+  margin: 0 auto;
+  width: min(30em, calc(100vw - 2rem));
+  text-align: center;
+  background: var(--stygia-bg-surface, #{$bg-surface});
+  border: 1px solid var(--stygia-border-default, #{$border-default});
+  border-radius: var(--stygia-radius-lg, #{$border-radius-lg});
+  box-shadow: var(--stygia-shadow-lg, #{$shadow-lg});
+  z-index: 999;
+  padding: 1rem;
+  color: var(--stygia-text-primary, #{$text-primary});
+
+  h1,
+  h2,
+  .modal-title {
+    font-size: $h2-font-size;
+    font-weight: 500;
+    color: var(--stygia-text-primary, #{$text-primary});
+    margin: 0 0 0.75rem;
+  }
+}
+
+div#modalOverlay {
+  position: fixed;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  background: $modal-backdrop-bg;
+  z-index: 900;
+}
+
+#selflink {
+  clear: both;
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0;
+  width: 100%;
+  text-align: right;
+  border-top: 1px solid $border-default;
+  padding: 8px 0;
+  font-size: 0.8em;
+
+  a {
+    color: $text-muted;
+
+    &:hover {
+      color: $text-primary;
+      text-decoration: none;
+    }
+  }
+}
+
+#pma_errors {
+  clear: both;
+}
+
+// Scrollbars — WebKit + Firefox
+* {
+  scrollbar-width: thin;
+  scrollbar-color: $bg-surface-4 $bg-surface;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: $bg-surface;
+}
+
+::-webkit-scrollbar-thumb {
+  background: $bg-surface-4;
+  border-radius: 4px;
+
+  &:hover {
+    background: $border-stronger;
+  }
+}
+
+div.liveChart,
+.chart-container,
+#serverstatus .chart {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $border-radius;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+.legendColorBox > div {
+  border-color: $border-default !important;
+}
+
+// --- Responsive shell ---
+@media (max-width: 1280px) {
+  #page_content {
+    margin: 0 0.5em;
+  }
+
+  .navbar-nav .nav-link {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+}
+
+@media (max-width: 1024px) {
+  #page_nav_icons {
+    padding: 2px 6px;
+    gap: 2px;
+
+    .dropdown-toggle {
+      padding: 4px 6px;
+    }
+  }
+
+  .breadcrumb-navbar {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+
+  div.liveChart {
+    min-width: 0 !important;
+    width: 100%;
+    height: auto;
+    min-height: 240px;
+    padding-bottom: 48px;
+  }
+}
+
+@media (max-width: 992px) {
+  #page_content {
+    margin: 0 0.35em;
+  }
+
+  .navbar {
+    flex-wrap: wrap;
+    min-height: auto;
+  }
+
+  .navbar-nav {
+    flex-wrap: wrap;
+    row-gap: 0;
+  }
+
+  #topmenucontainer {
+    overflow-x: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  #page_content {
+    margin: 0 0.25em;
+    padding-bottom: 3.5rem;
+  }
+
+  #page_nav_icons {
+    position: static;
+    float: right;
+    border-left: 0;
+    max-width: 100%;
+    flex-wrap: wrap;
+  }
+
+  div.upload_progress {
+    width: min(400px, calc(100vw - 2rem)) !important;
+  }
+
+  .ajax_notification {
+    width: min(350px, calc(100vw - 2rem)) !important;
+    margin-top: 4rem;
+  }
+}
