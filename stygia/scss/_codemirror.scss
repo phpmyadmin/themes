@@ -1,0 +1,175 @@
+// ============================================================
+// Stygia — CodeMirror SQL Editor
+// ============================================================
+
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+.CodeMirror {
+  height: 20rem;
+  background: $bg-surface;
+  color: $text-primary;
+  font-family: $font-family-monospace;
+  font-size: 0.8125rem;
+  line-height: 1.55;
+  border: 1px solid $border-strong;
+  border-radius: $border-radius-sm;
+  padding: 0;
+
+  // Gutters (line numbers)
+  .CodeMirror-gutters {
+    background-color: $bg-surface-2;
+    border-right: 1px solid $border-default;
+    white-space: nowrap;
+    padding-right: 2px;
+  }
+
+  .CodeMirror-gutter {
+    background-color: $bg-surface-2;
+    color: $text-muted;
+  }
+
+  .CodeMirror-linenumber {
+    color: $text-disabled;
+    padding: 0 8px 0 6px;
+    min-width: 2.25em;
+  }
+
+  .CodeMirror-gutter-filler,
+  .CodeMirror-scrollbar-filler {
+    background-color: $bg-surface-2;
+  }
+
+  .CodeMirror-scroll {
+    background: $bg-surface;
+  }
+
+  .CodeMirror-sizer,
+  .CodeMirror-lines {
+    background: transparent;
+    padding: 6px 0;
+  }
+
+  .CodeMirror-code {
+    padding-right: 8px;
+  }
+}
+
+// CodeMirror default style
+.CodeMirror.cm-s-default {
+  div.CodeMirror-scroll {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * 0.4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-height: ceil($textarea-rows * 0.6em);
+  min-width: ceil($textarea-cols * 0.6em);
+  border: 1px solid $border-strong;
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  display: inline-block;
+  float: right;
+  color: $text-muted;
+  margin-left: 1em;
+}
+
+.CodeMirror-hints {
+  z-index: 1999;
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+
+  .CodeMirror-hint {
+    color: $text-primary;
+    padding: 5px 10px;
+    border-radius: 2px;
+    cursor: pointer;
+
+    &:hover,
+    &.CodeMirror-hint-active {
+      background: $bg-hover;
+      color: $text-primary;
+    }
+  }
+}
+
+.CodeMirror-lint-tooltip {
+  z-index: 2000;
+  font-family: inherit;
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  color: $text-primary;
+
+  code {
+    font-family: monospace;
+    font-weight: 500;
+  }
+}
+
+// SQL syntax highlighting — One Dark Pro classic tokens
+.cm-s-default {
+  .cm-keyword { color: $odp-purple; font-weight: 500; }
+  .cm-atom { color: $odp-whiskey; }
+  .cm-number { color: $odp-whiskey; }
+  .cm-def { color: $odp-chalky; }
+  .cm-variable { color: $odp-coral; }
+  .cm-property { color: $odp-coral; }
+  .cm-operator { color: $odp-fountain-blue; }
+  .cm-comment { color: $odp-light-dark; font-style: italic; }
+  .cm-string { color: $odp-green; }
+  .cm-string-2 { color: $odp-green; }
+  .cm-builtin { color: $odp-malibu; }
+  .cm-meta { color: $odp-light-dark; }
+  .cm-bracket { color: $odp-light-white; }
+  .cm-tag { color: $odp-coral; }
+  .cm-attribute { color: $odp-chalky; }
+  .cm-qualifier { color: $odp-chalky; }
+  .cm-type { color: $odp-chalky; }
+  .cm-error {
+    color: $odp-coral;
+    background: rgba($odp-coral, 0.12);
+    border-radius: 2px;
+  }
+
+  .CodeMirror-cursor {
+    border-left: 2px solid $odp-light-white;
+  }
+
+  .CodeMirror-selected {
+    background: rgba($odp-malibu, 0.18) !important;
+  }
+
+  .CodeMirror-focused .CodeMirror-selected {
+    background: rgba($odp-malibu, 0.24) !important;
+  }
+
+  .CodeMirror-line::selection,
+  .CodeMirror-line > span::selection,
+  .CodeMirror-line > span > span::selection {
+    background: rgba($odp-malibu, 0.24);
+  }
+
+  .CodeMirror-activeline-background {
+    background: rgba(255, 255, 255, 0.04);
+  }
+
+  .CodeMirror-matchingbracket {
+    color: $odp-fountain-blue !important;
+    font-weight: 500;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}

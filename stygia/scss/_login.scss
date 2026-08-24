@@ -1,0 +1,354 @@
+// ============================================================
+// Stygia — Login
+// Single centered column; brand mark + lockup above the card
+// ============================================================
+
+$login-col: min(22.5rem, calc(100vw - 2.5rem));
+
+body#loginform {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 2.5rem 1.25rem;
+  text-align: center;
+  box-sizing: border-box;
+  background:
+    radial-gradient(ellipse 70% 45% at 50% 18%, rgba($accent-green, 0.12), transparent 60%),
+    radial-gradient(ellipse 50% 30% at 50% 100%, rgba($accent-green-deep, 0.15), transparent 55%),
+    $bg-body;
+
+  // Force every top-level chunk into the same column width
+  > * {
+    width: $login-col;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Logo wrappers from host HTML (often a bare <div>)
+  > div:not(.container):not(.modal_form) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 0.35rem;
+  }
+
+  #pmalogo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 0;
+    margin: 0 0 0.25rem;
+    text-align: center;
+  }
+
+  // Welcome heading (not the brand lockup)
+  div.container > h1 {
+    display: block;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // Brand lockup: mark badge + CSS wordmark (host <img> fully hidden)
+  a.logo {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    height: auto;
+    min-height: 88px;
+    margin: 0 auto 0.75rem;
+    padding: 0;
+    background: none !important;
+    background-image: none !important;
+    text-decoration: none !important;
+    position: relative;
+    font-size: 0;
+    line-height: 0;
+    animation: stygia-login-fade 0.5s ease-out both;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 56px;
+      height: 56px;
+      margin-bottom: 0.65rem;
+      background: url("../img/logo-login.svg") no-repeat center / contain;
+      filter: drop-shadow(0 0 18px rgba($accent-green, 0.22));
+    }
+
+    &::after {
+      content: "phpMyAdmin · STYGIA";
+      display: block;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      white-space: nowrap;
+      background: linear-gradient(
+        90deg,
+        $accent-green 0 1.7ch,
+        $text-primary 1.7ch 8.4ch,
+        $text-muted 8.4ch 9.5ch,
+        lighten($accent-green, 12%) 9.5ch 100%
+      );
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
+    }
+
+    img,
+    #imLogo {
+      position: absolute !important;
+      width: 1px !important;
+      height: 1px !important;
+      padding: 0 !important;
+      margin: -1px !important;
+      overflow: hidden !important;
+      clip: rect(0, 0, 0, 0) !important;
+      white-space: nowrap !important;
+      border: 0 !important;
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      color: transparent !important;
+      font-size: 0 !important;
+      max-height: none !important;
+    }
+  }
+
+  // Welcome + form share one column
+  div.container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: $login-col;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0;
+    text-align: left;
+    animation: stygia-login-rise 0.55s ease-out 0.06s both;
+  }
+
+  // Welcome — secondary to the brand, centered in the column
+  h1 {
+    order: 0;
+    width: 100%;
+    margin: 0 0 1.25rem;
+    padding: 0;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    color: $text-muted;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  .card {
+    width: 100%;
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-lg;
+    box-shadow:
+      $shadow-lg,
+      0 0 0 1px rgba($accent-green, 0.04),
+      $shadow-green;
+    overflow: hidden;
+  }
+
+  .card-header {
+    background: linear-gradient(180deg, $bg-surface-2 0%, $bg-surface 100%);
+    border-bottom: 1px solid $border-default;
+    text-align: center;
+    font-weight: $font-weight-semibold;
+    letter-spacing: -0.02em;
+    font-size: 0.95rem;
+    color: $text-primary;
+    padding: 1rem 1.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+
+    // Hide the odd clock/compass glyph if PMA injects an icon next to "Log in"
+    .icon,
+    img,
+    .ic_b_login,
+    .ic_s_loggoff {
+      display: none !important;
+    }
+  }
+
+  .card-body {
+    padding: 1.5rem 1.5rem 1.25rem;
+  }
+
+  .card-footer {
+    background: $bg-surface;
+    border-top: 1px solid $border-default;
+    padding: 1rem 1.5rem 1.25rem;
+  }
+
+  .row,
+  .mb-3,
+  .form-group {
+    margin-bottom: 1rem !important;
+  }
+
+  label,
+  .form-label,
+  .col-form-label {
+    color: $text-secondary;
+    font-weight: 500;
+    font-size: 0.8rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    margin-bottom: 0.4rem;
+    display: block;
+    text-align: left;
+  }
+
+  input[type="text"],
+  input[type="password"],
+  select,
+  .form-control,
+  .form-select {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 0 0.15rem;
+    padding: 0.65rem 0.85rem;
+    min-height: 2.5rem;
+    background: $bg-body;
+    border: 1px solid $border-strong;
+    border-radius: $border-radius-sm;
+    color: $text-primary;
+    transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      border-color: $border-stronger;
+    }
+
+    &:focus {
+      border-color: $accent-green;
+      box-shadow: $input-focus-box-shadow;
+      outline: none;
+      background: $bg-body;
+    }
+  }
+
+  select,
+  .form-select {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23b0b0b0' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='m2 5 6 6 6-6'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 12px;
+    padding-right: 2.25rem;
+  }
+
+  .btn-primary,
+  input[type="submit"],
+  button[type="submit"] {
+    width: 100%;
+    border-radius: $border-radius-pill;
+    padding: 0.65rem 1.5rem;
+    min-height: 2.6rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+    background: $accent-green-deep;
+    border-color: $accent-green-deep;
+    color: $text-white;
+    transition: background 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
+
+    &:hover {
+      background: $accent-green-deep-hover;
+      border-color: $accent-green-deep-hover;
+      transform: translateY(-1px);
+      box-shadow: $shadow-green;
+      color: $text-white;
+    }
+
+    &:active {
+      transform: translateY(0);
+    }
+  }
+
+  // Language / footer links under the card
+  .card + *,
+  > p,
+  .footer {
+    margin-top: 1.25rem;
+    text-align: center;
+    color: $text-muted;
+    font-size: 0.8rem;
+
+    a {
+      color: $text-secondary;
+
+      &:hover {
+        color: $accent-green;
+      }
+    }
+  }
+}
+
+#login_form .card-footer {
+  text-align: stretch;
+
+  .btn,
+  input[type="submit"] {
+    width: 100%;
+  }
+}
+
+@keyframes stygia-login-fade {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes stygia-login-rise {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body#loginform {
+    a.logo,
+    div.container {
+      animation: none;
+    }
+
+    .btn-primary:hover,
+    input[type="submit"]:hover,
+    button[type="submit"]:hover {
+      transform: none;
+    }
+  }
+}

@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+  <!-- Opaque stroke for CSS mask-image; animate with .ic_ajax_clock_small -->
+  <circle cx="8" cy="8" r="5.5" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-dasharray="20 14"/>
+</svg>

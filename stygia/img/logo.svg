@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none" role="img" aria-label="phpMyAdmin - Stygia">
+  <rect x="1" y="1" width="30" height="30" rx="8" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1"/>
+  <path d="M8 23c0-5.2 16-5.2 16-10.4S8 7.4 8 8.2" stroke="#3ecf8e" stroke-width="2.25" stroke-linecap="round" fill="none"/>
+  <circle cx="22.5" cy="8.2" r="2.4" fill="#3ecf8e"/>
+</svg>

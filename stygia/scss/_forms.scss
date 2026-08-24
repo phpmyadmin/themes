@@ -1,0 +1,241 @@
+// ============================================================
+// Stygia — Forms
+// Unified height, borders, and focus ring across Bootstrap + legacy
+// ============================================================
+
+$form-control-height: 2.25rem;
+$form-focus-ring: 0 0 0 2px rgba($accent-green, 0.18);
+
+.form-control {
+  background-color: $bg-surface;
+  border-color: $border-strong;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+  padding: 0.45rem 0.75rem;
+  min-height: $form-control-height;
+  line-height: 1.4;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    background-color: $bg-surface;
+    border-color: $accent-green;
+    color: $text-primary;
+    box-shadow: $form-focus-ring;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+    opacity: 1;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $bg-surface-2;
+    color: $text-disabled;
+    border-color: $border-default;
+    opacity: 1;
+  }
+}
+
+.form-select {
+  background-color: $bg-surface;
+  border-color: $border-strong;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+  padding: 0.45rem 2rem 0.45rem 0.75rem;
+  min-height: $form-control-height;
+  line-height: 1.4;
+
+  &:focus {
+    border-color: $accent-green;
+    box-shadow: $form-focus-ring;
+  }
+
+  &:disabled {
+    background-color: $bg-surface-2;
+    color: $text-disabled;
+    border-color: $border-default;
+  }
+}
+
+.form-check-input {
+  background-color: $bg-surface-2;
+  border-color: $border-strong;
+  width: 1.1em;
+  height: 1.1em;
+  margin-top: 0.2em;
+
+  &:checked {
+    background-color: $accent-green;
+    border-color: $accent-green;
+  }
+
+  &:focus {
+    box-shadow: $form-focus-ring;
+    border-color: $accent-green;
+  }
+
+  &[type=checkbox]:indeterminate {
+    background-color: $accent-green;
+    border-color: $accent-green;
+  }
+}
+
+.form-check-label {
+  color: $text-primary;
+  line-height: 1.45;
+}
+
+.form-label {
+  color: $text-secondary;
+  font-weight: 400;
+  margin-bottom: 0.3rem;
+  font-size: 0.8rem;
+}
+
+.form-text {
+  color: $text-muted;
+  font-size: 0.8rem;
+}
+
+.form-control-sm {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  min-height: 1.85rem;
+}
+
+.form-select-sm {
+  padding: 0.25rem 1.5rem 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  min-height: 1.85rem;
+}
+
+// Legacy PMA inputs — match Bootstrap forms
+input[type="text"],
+input[type="password"],
+input[type="number"],
+input[type="email"],
+input[type="search"],
+input[type="url"],
+input[type="tel"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="time"],
+select:not(.form-select):not([multiple]),
+textarea:not(.form-control) {
+  background-color: $bg-surface;
+  border: 1px solid $border-strong;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+  padding: 0.4rem 0.65rem;
+  min-height: $form-control-height;
+  line-height: 1.4;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+
+  &:focus {
+    border-color: $accent-green;
+    outline: none;
+    box-shadow: $form-focus-ring;
+  }
+
+  &:disabled,
+  &[readonly] {
+    background-color: $bg-surface-2;
+    color: $text-disabled;
+    border-color: $border-default;
+  }
+
+  &::placeholder {
+    color: $text-muted;
+    opacity: 1;
+  }
+}
+
+textarea:not(.form-control) {
+  min-height: 4.5rem;
+  font-family: $font-family-monospace;
+}
+
+select[multiple] {
+  min-height: 6rem;
+  background-color: $bg-surface;
+  border: 1px solid $border-strong;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+
+  &:focus {
+    border-color: $accent-green;
+    outline: none;
+    box-shadow: $form-focus-ring;
+  }
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  accent-color: $accent-green;
+  width: 1.05em;
+  height: 1.05em;
+
+  &:focus-visible {
+    outline: 2px solid $accent-green;
+    outline-offset: 2px;
+  }
+}
+
+// Input group
+.input-group {
+  .form-control {
+    &:not(:first-child) {
+      border-left: 0;
+    }
+    &:not(:last-child) {
+      border-right: 0;
+    }
+
+    &:focus {
+      border-color: $accent-green;
+      box-shadow: $form-focus-ring;
+    }
+  }
+
+  .input-group-text {
+    background-color: $bg-surface-2;
+    border-color: $border-strong;
+    color: $text-muted;
+    min-height: $form-control-height;
+    transition: border-color 0.15s ease;
+  }
+
+  &:focus-within {
+    .input-group-text {
+      border-color: $accent-green;
+    }
+  }
+}
+
+// Validation
+.was-validated .form-control:valid,
+.form-control.is-valid {
+  border-color: $color-success;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color-success, 0.15);
+  }
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+  border-color: $color-danger;
+
+  &:focus {
+    box-shadow: 0 0 0 2px rgba($color-danger, 0.15);
+  }
+}
+
+.valid-feedback {
+  color: $color-success;
+}
+
+.invalid-feedback {
+  color: $color-danger;
+}

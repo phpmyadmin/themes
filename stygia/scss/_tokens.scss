@@ -1,0 +1,69 @@
+// ============================================================
+// Stygia — CSS custom properties (runtime-inspectable tokens)
+// Sourced from Sass variables in _variables.scss
+// ============================================================
+
+:root {
+  color-scheme: dark;
+
+  // Accent
+  --stygia-accent: #{$accent-green};
+  --stygia-accent-dark: #{$accent-green-dark};
+  --stygia-accent-light: #{$accent-green-light};
+  --stygia-accent-deep: #{$accent-green-deep};
+  --stygia-accent-deep-hover: #{$accent-green-deep-hover};
+
+  // Surfaces
+  --stygia-bg-body: #{$bg-body};
+  --stygia-bg-surface: #{$bg-surface};
+  --stygia-bg-surface-2: #{$bg-surface-2};
+  --stygia-bg-surface-3: #{$bg-surface-3};
+  --stygia-bg-surface-4: #{$bg-surface-4};
+  --stygia-bg-popover: #{$bg-popover};
+  --stygia-bg-hover: #{$bg-hover};
+  --stygia-bg-active: #{$bg-active};
+  --stygia-bg-selected: #{$bg-selected};
+
+  // Text
+  --stygia-text-primary: #{$text-primary};
+  --stygia-text-secondary: #{$text-secondary};
+  --stygia-text-muted: #{$text-muted};
+  --stygia-text-disabled: #{$text-disabled};
+
+  // Borders
+  --stygia-border-default: #{$border-default};
+  --stygia-border-strong: #{$border-strong};
+  --stygia-border-stronger: #{$border-stronger};
+
+  // Semantic
+  --stygia-success: #{$color-success};
+  --stygia-danger: #{$color-danger};
+  --stygia-warning: #{$color-warning};
+  --stygia-info: #{$color-info};
+  --stygia-string: #{$color-string};
+  --stygia-number: #{$color-number};
+
+  // One Dark Pro data-type tokens
+  --stygia-odp-chalky: #{$odp-chalky};
+  --stygia-odp-coral: #{$odp-coral};
+  --stygia-odp-green: #{$odp-green};
+  --stygia-odp-whiskey: #{$odp-whiskey};
+  --stygia-odp-malibu: #{$odp-malibu};
+  --stygia-odp-purple: #{$odp-purple};
+  --stygia-odp-fountain: #{$odp-fountain-blue};
+  --stygia-odp-comment: #{$odp-light-dark};
+
+  // Shadows
+  --stygia-shadow-sm: #{$shadow-sm};
+  --stygia-shadow-md: #{$shadow-md};
+  --stygia-shadow-lg: #{$shadow-lg};
+  --stygia-shadow-focus: #{$shadow-focus};
+
+  // Layout
+  --stygia-navi-width: #{$navi-width};
+  --stygia-navbar-height: #{$navbar-height};
+  --stygia-breadcrumb-height: #{$breadcrumb-height};
+  --stygia-radius: #{$border-radius};
+  --stygia-radius-sm: #{$border-radius-sm};
+  --stygia-radius-lg: #{$border-radius-lg};
+}

@@ -1,0 +1,263 @@
+// ============================================================
+// Stygia — Bootstrap modals + field editors (ENUM, GIS, inline)
+// ============================================================
+
+// --- Bootstrap modal shell ---
+.modal-content {
+  background-color: $bg-surface;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-lg;
+  box-shadow: $shadow-lg;
+  color: $text-primary;
+}
+
+.modal-header {
+  background: $bg-surface-2;
+  border-bottom: 1px solid $border-default;
+  padding: 0.75rem 1rem;
+  border-radius: $border-radius-lg $border-radius-lg 0 0;
+
+  .modal-title {
+    font-weight: 500;
+    font-size: $h3-font-size;
+    color: $text-primary;
+  }
+}
+
+.modal-body {
+  padding: 1rem;
+  color: $text-primary;
+  background: $bg-surface;
+}
+
+.modal-footer {
+  background: $bg-surface;
+  border-top: 1px solid $border-default;
+  padding: 0.65rem 1rem;
+  gap: 0.5rem;
+  border-radius: 0 0 $border-radius-lg $border-radius-lg;
+}
+
+.modal-backdrop {
+  background-color: #000;
+
+  &.show {
+    opacity: 0.72;
+  }
+}
+
+.btn-close {
+  filter: invert(0.85) grayscale(1);
+  opacity: 0.7;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    box-shadow: $shadow-focus;
+    opacity: 1;
+  }
+}
+
+// Dense tables inside modal bodies (index dialog, etc.)
+.modal-body {
+  table {
+    color: $text-primary;
+  }
+
+  .CodeMirror {
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm;
+  }
+}
+
+// --- ENUM / SET editor (#enum_editor injected into #enumEditorModal) ---
+p.enum_notice {
+  margin: 0.35rem 0.15rem 0.65rem;
+  font-size: 0.8rem;
+  color: $text-muted;
+  font-weight: 300;
+}
+
+#enum_editor {
+  p {
+    margin-top: 0;
+    font-style: italic;
+    color: $text-secondary;
+    font-size: 0.85rem;
+    font-weight: 300;
+  }
+
+  .values {
+    width: 100%;
+    background: $bg-surface-2;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm;
+    padding: 0.5rem;
+    max-height: 220px;
+    overflow-y: auto;
+
+    td.drop {
+      width: 1.8em;
+      cursor: pointer;
+      vertical-align: middle;
+      color: $text-muted;
+
+      &:hover {
+        color: $color-danger;
+      }
+    }
+
+    input {
+      margin: 0.15em 0;
+      padding-right: 2em;
+      width: 100%;
+      min-height: 1.85rem;
+    }
+
+    img {
+      vertical-align: middle;
+    }
+
+    tr:hover td {
+      background: $bg-hover;
+    }
+  }
+
+  .add {
+    width: 100%;
+    margin-top: 0.65rem;
+
+    td {
+      vertical-align: middle;
+      width: 50%;
+      padding: 0;
+      padding-inline-start: 0.75em;
+    }
+  }
+
+  input.add_value {
+    margin: 0;
+    margin-inline-end: 0.4em;
+  }
+}
+
+#enum_editor_output textarea {
+  width: 100%;
+  margin: 1em 0 0;
+  font-family: $font-family-monospace;
+  min-height: 4rem;
+}
+
+.enum_hint {
+  position: relative;
+
+  a {
+    position: absolute;
+    inset-inline-start: 81%;
+    bottom: 0.35em;
+  }
+}
+
+// --- GIS editor ---
+#gisEditorModal {
+  .modal-body {
+    min-height: 12rem;
+  }
+}
+
+#gis_editor {
+  color: $text-primary;
+
+  label {
+    color: $text-secondary;
+    font-size: 0.8rem;
+    font-weight: 400;
+  }
+
+  select,
+  input[type="text"],
+  input[type="number"] {
+    min-height: 1.85rem;
+  }
+
+  // Visualization / map canvas area
+  #placeholder,
+  .gis_canvas,
+  .ol-viewport,
+  canvas {
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm;
+  }
+
+  #visualization {
+    background: $bg-surface;
+    border: 1px solid $border-default;
+    border-radius: $border-radius-sm;
+    padding: 0.5rem;
+    margin: 0.75rem 0;
+  }
+
+  textarea,
+  #gis_data_textarea,
+  .gis_data {
+    font-family: $font-family-monospace;
+    font-size: 0.8rem;
+  }
+
+  .form-check-label {
+    color: $text-primary;
+  }
+}
+
+// GIS data editor form (loaded into #gis_editor)
+#gis_data_editor_form,
+form[name="gis_data"] {
+  .card,
+  fieldset {
+    background: $bg-surface;
+    border-color: $border-default;
+  }
+}
+
+// --- Inline cell editor (browse) — keep datepicker visible ---
+.cEdit {
+  overflow: visible;
+
+  .edit_area {
+    overflow: visible;
+    box-shadow: $shadow-md;
+  }
+
+  // Datepicker is repositioned relative inside .cEdit by host JS
+  #ui-datepicker-div,
+  .ui-datepicker {
+    position: relative;
+  }
+
+  img.ui-datepicker-trigger {
+    vertical-align: middle;
+  }
+
+  input[type="text"].datefield,
+  input[type="text"].datetimefield,
+  input[type="text"].timefield {
+    font-family: $font-family-monospace;
+    font-variant-numeric: tabular-nums;
+    min-height: 1.85rem;
+    padding: 0.25rem 0.5rem;
+  }
+}
+
+// Preview SQL / index dialog body polish
+#previewSqlModal .modal-body,
+#indexDialogModal .modal-body,
+#previewSqlConfirmModal .modal-body {
+  .CodeMirror,
+  pre,
+  code {
+    font-family: $font-family-monospace;
+  }
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none" role="img" aria-label="Stygia">
+  <defs>
+    <radialGradient id="g" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#3ecf8e" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3ecf8e" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <ellipse cx="32" cy="30" rx="28" ry="22" fill="url(#g)"/>
+  <rect x="8" y="8" width="48" height="48" rx="14" fill="#1a1a1a" stroke="#2e2e2e" stroke-width="1"/>
+  <path d="M20 44c0-8.5 24-8.5 24-17s-24-8.5-24-7.5" stroke="#3ecf8e" stroke-width="2.75" stroke-linecap="round" fill="none"/>
+  <circle cx="40.5" cy="19.5" r="3.4" fill="#3ecf8e"/>
+</svg>

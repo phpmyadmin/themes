@@ -1,0 +1,68 @@
+// ============================================================
+// Stygia — Designer / relation view
+// ============================================================
+
+#designer,
+#canvas_outer,
+#osn_tab {
+  background: $bg-body;
+  color: $text-primary;
+}
+
+.designer_tab,
+#tabs {
+  background: $bg-surface;
+  border-color: $border-default;
+}
+
+.designer_table,
+.pmd_tab {
+  background: $bg-surface;
+  border: 1px solid $border-default;
+  color: $text-primary;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-sm;
+
+  .tab_zag,
+  .tab_zag_nohidden {
+    background: $bg-surface-2;
+    color: $text-primary;
+    font-weight: 600;
+    border-bottom: 1px solid $border-default;
+    padding: 0.35rem 0.5rem;
+  }
+
+  .tab_field,
+  .tab_field_3left {
+    background: $bg-surface;
+    color: $text-secondary;
+    border-top: 1px solid $border-subtle;
+
+    &:hover {
+      background: $bg-hover;
+      color: $text-primary;
+    }
+  }
+}
+
+.designer_panel,
+#layer_menu {
+  background: $bg-popover;
+  border: 1px solid $border-default;
+  border-radius: $border-radius-sm;
+  box-shadow: $shadow-md;
+  color: $text-primary;
+}
+
+#layer_menu_sizer {
+  background: $border-default;
+}
+
+.pmd_icon,
+.designer_header a {
+  color: $text-secondary;
+
+  &:hover {
+    color: $accent-green;
+  }
+}

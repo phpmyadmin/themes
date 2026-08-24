@@ -1,0 +1,150 @@
+// ============================================================
+// Stygia — RTL overrides applied AFTER rtlcss(theme.css)
+// Keep this lean: only rules rtlcss cannot infer correctly.
+// ============================================================
+
+@import "variables";
+
+// SQL / code stay LTR even in RTL UI
+#sqlquery,
+#sql_query_edit,
+.CodeMirror,
+.result_query .sqlOuter,
+textarea.codemirror-textarea {
+  direction: ltr !important;
+  text-align: left !important;
+}
+
+// Do NOT force all inputs to LTR (comments / localized text need RTL)
+
+#page_nav_icons {
+  left: 0;
+  right: auto;
+  border-left: 0;
+  border-right: 1px solid $border-default;
+}
+
+#pma_console_container {
+  left: 0;
+  right: auto;
+  width: 100%;
+}
+
+#pma_console {
+  margin-left: 0;
+  margin-right: $navi-width;
+}
+
+// Tree block connectors use absolute left; nudge for RTL
+#pma_navigation_tree div.block {
+  float: right;
+
+  i,
+  b {
+    left: auto;
+    right: 0.75em;
+    border-left: 0;
+    border-right: 1px solid $border-default;
+  }
+
+  b {
+    right: 0.75em;
+  }
+
+  a,
+  u {
+    left: auto;
+    right: 50%;
+  }
+
+  a + a {
+    left: auto;
+    right: 100%;
+  }
+
+  &.double {
+    a,
+    u {
+      left: auto;
+      right: 33%;
+    }
+
+    a + a {
+      left: auto;
+      right: 85%;
+    }
+  }
+
+  img {
+    left: auto;
+    right: 0;
+    margin-left: 0;
+    margin-right: -7px;
+  }
+}
+
+#pma_navigation_tree .list_container {
+  border-left: 0;
+  border-right: 1px solid $border-default;
+}
+
+// Selected accent bar already flipped by rtlcss for box-shadow; ensure nested reset
+#pma_navigation_tree li.activePointer > .list_container,
+#pma_navigation_tree li.selected > .list_container {
+  box-shadow: none;
+}
+
+.ic_select_all_arrow[dir="rtl"] {
+  transform: scaleX(-1);
+}
+
+// Date/time picker — grid + chrome that rtlcss cannot infer
+.ui-timepicker-div dl {
+  text-align: right;
+}
+
+.ui-datepicker {
+  .ui-datepicker-prev {
+    left: auto;
+    right: 0;
+
+    &,
+    &.ui-state-hover,
+    &.ui-datepicker-prev-hover {
+      left: auto;
+      right: 0;
+    }
+
+    span.ui-icon {
+      -webkit-mask-image: url("../img/chevron-right.svg");
+      mask-image: url("../img/chevron-right.svg");
+    }
+  }
+
+  .ui-datepicker-next {
+    right: auto;
+    left: 0;
+
+    &,
+    &.ui-state-hover,
+    &.ui-datepicker-next-hover {
+      right: auto;
+      left: 0;
+    }
+
+    span.ui-icon {
+      -webkit-mask-image: url("../img/chevron-left.svg");
+      mask-image: url("../img/chevron-left.svg");
+    }
+  }
+}
+
+.ui-dialog .ui-dialog-titlebar-close {
+  right: auto;
+  left: 0.65rem;
+}
+
+img.ui-datepicker-trigger {
+  margin-inline-start: 0;
+  margin-inline-end: 0.35rem;
+}

@@ -1,0 +1,108 @@
+// ============================================================
+// Stygia — Cards
+// ============================================================
+
+.card {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  background-color: $card-bg;
+  border-color: $card-border-color;
+  border-radius: $card-border-radius;
+  border-width: $card-border-width;
+  color: $card-color;
+
+  > .card-header + .card-body {
+    padding-top: 0;
+  }
+}
+
+.card-header {
+  position: relative;
+  margin: 0;
+  width: auto;
+  max-width: 100%;
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  border-bottom: 1px solid $border-default;
+  background-color: $bg-surface-2;
+  color: $text-primary;
+  font-size: 0.9rem;
+  border-radius: $card-border-radius $card-border-radius 0 0;
+
+  &,
+  &:first-child {
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+}
+
+.card-body {
+  padding: 1rem;
+  color: $card-color;
+}
+
+.card-footer {
+  color: $text-secondary;
+  background: $bg-surface;
+  padding: 0.75rem 1rem;
+  border-top: 1px solid $border-default;
+  border-radius: 0 0 $card-border-radius $card-border-radius;
+}
+
+.card-title {
+  color: $text-primary;
+  font-weight: 500;
+}
+
+.card-text {
+  color: $text-secondary;
+}
+
+.card-link {
+  color: $accent-green;
+
+  &:hover {
+    color: $accent-green-dark;
+    text-decoration: underline;
+  }
+}
+
+.card-img-container {
+  height: $card-img-height;
+  overflow: hidden;
+
+  img {
+    object-fit: cover;
+  }
+}
+
+// Main container cards
+#maincontainer .card-header {
+  position: static;
+  width: auto;
+  margin: 0;
+  border: none;
+
+  &:first-child {
+    border-radius: $card-border-radius $card-border-radius 0 0;
+  }
+}
+
+#maincontainer {
+  .card {
+    background-color: $bg-surface;
+    border: 1px solid $border-default;
+    box-shadow: none;
+
+    > .card-header + .card-body {
+      padding-top: 1rem;
+    }
+  }
+
+  .card-header {
+    padding: 0.75rem 1rem;
+    background-color: $bg-surface-2;
+    color: $text-primary;
+    font-size: 1.1em;
+    font-weight: 500;
+  }
+}
