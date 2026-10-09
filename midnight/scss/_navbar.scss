@@ -1,0 +1,40 @@
+.navbar.bg-light {
+  background: linear-gradient($pma-chrome, #1a202f);
+}
+
+.navbar-nav {
+  font-weight: bold;
+}
+
+.navbar-nav .icon {
+  margin-right: 0.5em;
+  vertical-align: -3px;
+}
+
+.navbar-nav .nav-item {
+  background: linear-gradient($pma-chrome, #1a202f);
+  border-right: 1px solid $pma-border-soft;
+  border-left: 1px solid $pma-deep;
+  border-bottom: 1px solid $pma-deep;
+
+  &:first-child {
+    border-left: 0;
+  }
+
+  &:hover {
+    background: linear-gradient($pma-active, $pma-hover);
+
+    .nav-link {
+      color: $pma-accent;
+    }
+  }
+
+  &.active {
+    background: $pma-deep;
+    border-bottom: 0;
+
+    .nav-link {
+      color: $pma-accent;
+    }
+  }
+}

@@ -1,0 +1,246 @@
+$textarea-cols: 40;
+$textarea-rows: 15;
+
+// ---------------------------------------------------------------------------
+// CodeMirror base
+//
+// js/vendor/codemirror/lib/codemirror.css (and the addon stylesheets) are
+// linked before the theme and ship light defaults: black text, white
+// scrollbars, #f7f7f7 gutters, #d9d9d9 selection. They are re-declared here
+// so the editors sit on the dark palette.
+// ---------------------------------------------------------------------------
+.CodeMirror {
+  height: 20rem;
+  color: $pma-text;
+  background-color: $pma-input-bg;
+}
+
+// CodeMirror inserts a real <textarea> to capture keystrokes. It is clipped by
+// an overflow:hidden 3x0 wrapper, but it still carries the browser's white
+// default background - paint it with the input palette so no white surface can
+// ever show through.
+.CodeMirror textarea {
+  background-color: $pma-input-bg;
+  color: $pma-input-color;
+}
+
+// Code mirror default style (do not affect the console style)
+.CodeMirror.cm-s-default {
+  // @see: issue #17705
+  div.CodeMirror-scroll {
+    margin-right: 0;
+    padding-bottom: 0;
+  }
+}
+
+.CodeMirror-gutters {
+  background-color: $pma-sunken;
+  border-right: 1px solid $pma-border-soft;
+}
+
+.CodeMirror-linenumber {
+  color: $pma-text-faint;
+}
+
+.CodeMirror-guttermarker {
+  color: $pma-text;
+}
+
+.CodeMirror-guttermarker-subtle {
+  color: $pma-text-faint;
+}
+
+.CodeMirror-cursor {
+  border-left: 1px solid $pma-text;
+}
+
+div.CodeMirror-secondarycursor {
+  border-left: 1px solid $pma-text-muted;
+}
+
+.CodeMirror-scrollbar-filler,
+.CodeMirror-gutter-filler {
+  background-color: $pma-sunken;
+}
+
+.CodeMirror-selected {
+  background: rgba($pma-accent, .32);
+}
+
+.CodeMirror-focused .CodeMirror-selected {
+  background: rgba($pma-accent, .45);
+}
+
+.CodeMirror-line::selection,
+.CodeMirror-line > span::selection,
+.CodeMirror-line > span > span::selection,
+.CodeMirror-line::-moz-selection,
+.CodeMirror-line > span::-moz-selection,
+.CodeMirror-line > span > span::-moz-selection {
+  background: rgba($pma-accent, .45);
+}
+
+.CodeMirror-activeline-background {
+  background: rgba($pma-text, .07);
+}
+
+.CodeMirror-matchingtag {
+  background: rgba($pma-accent, .3);
+}
+
+div.CodeMirror span.CodeMirror-matchingbracket {
+  color: $pma-success-text;
+  font-weight: bold;
+}
+
+div.CodeMirror span.CodeMirror-nonmatchingbracket {
+  color: $pma-danger-text;
+}
+
+#inline_editor_outer .CodeMirror {
+  height: ceil($textarea-rows * 0.4em);
+}
+
+.insertRowTable .CodeMirror {
+  min-height: ceil($textarea-rows * 0.6em);
+  min-width: ceil($textarea-cols * 0.6em);
+  border: 1px solid $pma-border;
+}
+
+#pma_console .CodeMirror-gutters {
+  background-color: initial;
+  border: none;
+}
+
+// ---------------------------------------------------------------------------
+// Syntax colours
+//
+// Google's dark-mode syntax family, i.e. the same hues as the reference
+// screenshot. Two selector forms are declared: `span.cm-*` for the console's
+// cm-s-pma theme, and `.cm-s-default .cm-*` to beat the light values shipped
+// in codemirror.css (same specificity, this stylesheet is loaded afterwards).
+// ---------------------------------------------------------------------------
+span.cm-keyword,
+span.cm-statement-verb,
+.cm-s-default .cm-keyword,
+.cm-s-default .cm-statement-verb {
+  color: #8ab4f8;
+}
+
+span.cm-variable,
+.cm-s-default .cm-variable,
+.cm-s-default .cm-property {
+  color: $pma-text;
+}
+
+span.cm-comment,
+.cm-s-default .cm-comment,
+.cm-s-default .cm-meta,
+.cm-s-default .cm-qualifier {
+  color: #9aa0a6;
+}
+
+span.cm-mysql-string,
+span.cm-string,
+.cm-s-default .cm-string,
+.cm-s-default .cm-string-2 {
+  color: #81c995;
+}
+
+span.cm-operator,
+span.cm-separator,
+.cm-s-default .cm-operator,
+.cm-s-default .cm-punctuation,
+.cm-s-default .cm-bracket {
+  color: #c58af9;
+}
+
+span.cm-mysql-word,
+.cm-s-default .cm-atom {
+  color: $pma-text;
+}
+
+span.cm-builtin,
+.cm-s-default .cm-builtin,
+.cm-s-default .cm-tag {
+  color: #f28b82;
+}
+
+span.cm-variable-2,
+.cm-s-default .cm-variable-2,
+.cm-s-default .cm-def,
+.cm-s-default .cm-attribute {
+  color: #fdd663;
+}
+
+span.cm-variable-3,
+.cm-s-default .cm-variable-3,
+.cm-s-default .cm-type {
+  color: #78d9ec;
+}
+
+span.cm-number,
+.cm-s-default .cm-number {
+  color: #78d9ec;
+}
+
+.cm-s-default .cm-header,
+.cm-s-default .cm-link {
+  color: #8ab4f8;
+}
+
+.cm-s-default .cm-error,
+.cm-invalidchar,
+.cm-s-default .cm-negative {
+  color: $pma-danger-text;
+}
+
+.cm-s-default .cm-positive {
+  color: $pma-success-text;
+}
+
+.autocomplete-column-name {
+  display: inline-block;
+}
+
+.autocomplete-column-hint {
+  display: inline-block;
+  float: right;
+  color: $pma-text-muted;
+  margin-left: 1em;
+}
+
+// ---------------------------------------------------------------------------
+// Autocomplete popup (show-hint.css) and lint tooltips (lint.css)
+// ---------------------------------------------------------------------------
+.CodeMirror-hints {
+  z-index: 1999;
+  background: $pma-deep;
+  color: $pma-text;
+  border: 1px solid $pma-border;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .55);
+
+  li {
+    color: $pma-text;
+  }
+
+  li.CodeMirror-hint-active {
+    background: $pma-accent-deep;
+    color: #fff;
+  }
+}
+
+.CodeMirror-lint-tooltip {
+  z-index: 2000;
+  font-family: inherit;
+  background-color: $pma-panel;
+  color: $pma-text;
+  border: 1px solid $pma-border;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .5);
+
+  code {
+    font-family: monospace;
+    font-weight: bold;
+    color: $pma-warning-text;
+  }
+}

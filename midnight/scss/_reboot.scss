@@ -1,0 +1,71 @@
+// Colour scheme
+//
+// Tell the browser this document is dark: native scrollbars, <select> popup
+// lists, form-control autofill, the caret and the default selection colour then
+// follow the dark palette instead of shipping light OS widgets next to the dark
+// UI. Reset for print so paper output stays white-on-black as before.
+:root {
+  color-scheme: dark;
+}
+
+@media print {
+  :root {
+    color-scheme: light;
+  }
+}
+
+// Body
+
+body {
+  text-align: left;
+}
+
+// templates/error/generic.twig prints a standalone <style> block (light gray
+// page, black text, light pink message box) when phpMyAdmin reports a missing
+// parameter. That fragment is injected after the theme stylesheet, so its
+// `body` rule wins the cascade on that page. Re-assert the dark page palette at
+// a higher specificity; the values are read straight from the Bootstrap body
+// tokens, so regular pages render exactly the same as before.
+html body {
+  background-color: var(--bs-body-bg);
+  color: var(--bs-body-color);
+  font-family: var(--bs-body-font-family);
+  font-size: var(--bs-body-font-size);
+}
+
+// ...and keep that fragment's message box (the <p> directly following its
+// banner heading, only present in the error fragment) legible on the dark page.
+#page_content > h1 + p {
+  background-color: $pma-danger-bg;
+  border-color: $pma-danger;
+  color: $pma-danger-text;
+}
+
+// Typography
+
+h1 {
+  font-weight: bold;
+}
+
+h2 {
+  font-weight: normal;
+  text-shadow: none;
+  padding: 10px 0 10px 3px;
+  color: $pma-text-muted;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+// Forms
+
+input,
+select {
+  font-size: 1em;
+}
+
+textarea {
+  font-family: $font-family-monospace;
+  font-size: 1.2em;
+}

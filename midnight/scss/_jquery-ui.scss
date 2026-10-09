@@ -1,0 +1,255 @@
+// ---------------------------------------------------------------------------
+// jQuery UI
+//
+// themes/<theme>/jquery/jquery-ui.css is linked before this stylesheet, so
+// equal-specificity rules declared here replace the light base theme: white
+// widget panels (#ffffff), #cccccc headers, #e6e6e6/#dadada buttons, the pale
+// highlight and error cues, the grey overlay and the dark icon sprite.
+//
+// This partial is imported right after "variables" (i.e. before Bootstrap and
+// "common"), so component rules that mention the same selectors — a jQuery UI
+// button that also carries .btn-secondary, for instance — still win.
+// ---------------------------------------------------------------------------
+
+.ui-widget {
+  color: $pma-text;
+}
+
+.ui-widget-content {
+  border-color: $pma-border;
+  background-color: $pma-panel;
+  background-image: none;
+  color: $pma-text;
+}
+
+.ui-widget-content a,
+.ui-widget-content a:link,
+.ui-widget-content a:visited {
+  color: $pma-accent;
+}
+
+.ui-widget-header {
+  border-color: $pma-border;
+  background-color: $pma-deep;
+  background-image: none;
+  color: $pma-text;
+}
+
+.ui-widget-header a,
+.ui-widget-header a:link,
+.ui-widget-header a:visited {
+  color: $pma-accent;
+}
+
+// --- Interaction states -------------------------------------------------------
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+  border-color: $pma-border;
+  background-color: $pma-chrome;
+  background-image: none;
+  color: $pma-text;
+}
+
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button {
+  color: $pma-text;
+  text-decoration: none;
+}
+
+.ui-state-hover,
+.ui-widget-content .ui-state-hover,
+.ui-widget-header .ui-state-hover,
+.ui-state-focus,
+.ui-widget-content .ui-state-focus,
+.ui-widget-header .ui-state-focus,
+.ui-button:hover,
+.ui-button:focus {
+  border-color: $pma-accent;
+  background-color: $pma-hover;
+  background-image: none;
+  color: $pma-accent;
+}
+
+.ui-state-hover a,
+.ui-state-hover a:link,
+.ui-state-hover a:visited,
+.ui-state-focus a,
+.ui-state-focus a:link,
+.ui-state-focus a:visited,
+a.ui-button:hover,
+a.ui-button:focus {
+  color: $pma-accent;
+  text-decoration: none;
+}
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+  border-color: $pma-accent-deep;
+  background-color: $pma-accent-deep;
+  background-image: none;
+  color: #fff;
+}
+
+.ui-state-active a,
+.ui-state-active a:link,
+.ui-state-active a:visited {
+  color: #fff;
+  text-decoration: none;
+}
+
+.ui-icon-background,
+.ui-state-active .ui-icon-background {
+  background-color: $pma-text;
+}
+
+.ui-visual-focus {
+  box-shadow: 0 0 3px 1px $pma-accent;
+}
+
+// --- Interaction cues ---------------------------------------------------------
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border-color: $pma-warning;
+  background-color: $pma-warning-bg;
+  background-image: none;
+  color: $pma-warning-text;
+}
+
+.ui-state-highlight a,
+.ui-widget-content .ui-state-highlight a,
+.ui-widget-header .ui-state-highlight a {
+  color: $pma-warning-text;
+}
+
+.ui-state-checked {
+  border-color: $pma-warning;
+  background-color: $pma-warning-bg;
+}
+
+.ui-state-error,
+.ui-widget-content .ui-state-error,
+.ui-widget-header .ui-state-error {
+  border-color: $pma-danger;
+  background-color: $pma-danger-bg;
+  background-image: none;
+  color: $pma-danger-text;
+}
+
+.ui-state-error a,
+.ui-widget-content .ui-state-error a,
+.ui-widget-header .ui-state-error a {
+  color: $pma-danger-text;
+}
+
+.ui-state-error-text,
+.ui-widget-content .ui-state-error-text,
+.ui-widget-header .ui-state-error-text {
+  color: $pma-danger-text;
+}
+
+// --- Icons --------------------------------------------------------------------
+
+// The theme only ships the dark grey sprites (222222 / 454545 / 888888); on a
+// light background they read as black glyphs, on the dark panels they would
+// disappear, so they are inverted. The semantic sprites (blue highlight, red
+// error) already have enough contrast and are exempted below.
+.ui-icon,
+.ui-widget-content .ui-icon,
+.ui-widget-header .ui-icon {
+  filter: invert(1);
+}
+
+.ui-button .ui-icon {
+  filter: invert(1) brightness(1.5);
+}
+
+.ui-state-highlight .ui-icon,
+.ui-state-error .ui-icon,
+.ui-state-error-text .ui-icon {
+  filter: none;
+}
+
+// --- Datepicker ----------------------------------------------------------------
+
+.ui-datepicker {
+  .ui-datepicker-title {
+    color: $pma-text;
+  }
+
+  th {
+    color: $pma-text-muted;
+  }
+
+  td {
+    border: 0;
+    padding: 1px;
+  }
+
+  td a,
+  td span {
+    color: $pma-text;
+    border-radius: 0.3rem;
+  }
+
+  td a:hover {
+    background-color: $pma-hover;
+    color: $pma-accent;
+  }
+
+  td a.ui-state-active,
+  td a.ui-state-active:hover {
+    background-color: $pma-accent-deep;
+    color: #fff;
+  }
+
+  .ui-datepicker-today a {
+    color: $pma-accent;
+    box-shadow: inset 0 0 0 1px $pma-accent;
+  }
+
+  .ui-datepicker-today a:hover {
+    color: $pma-accent-hover;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    &:hover {
+      background-color: $pma-hover;
+      border-radius: 0.3rem;
+    }
+  }
+
+  select.ui-datepicker-month,
+  select.ui-datepicker-year {
+    background-color: $pma-input-bg;
+    color: $pma-input-color;
+    border: 1px solid $pma-border;
+  }
+}
+
+// --- Overlays & shadows --------------------------------------------------------
+
+.ui-widget-overlay {
+  background-color: #0d1220;
+  opacity: .7;
+  filter: none;
+}
+
+.ui-widget-shadow {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, .55);
+}

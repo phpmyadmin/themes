@@ -1,0 +1,8 @@
+{
+    "name": "midnight",
+    "version": "1.0.0",
+    "description": "A modern dark redesign of the default phpMyAdmin pmahomme theme.",
+    "author": "SA2N",
+    "url": "https://github.com/sa2ncom",
+    "supports": ["5.2"]
+}

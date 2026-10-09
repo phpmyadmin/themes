@@ -1,0 +1,434 @@
+// configures general layout for detailed layout configuration please refer to the css files
+
+// =============================================================================
+// pmahomme-dark — design tokens
+// -----------------------------------------------------------------------------
+// The whole palette is sampled from the reference screenshot (Chrome's dark
+// new tab page). Original sampled values are kept in the comments so the theme
+// can be re-derived later:
+//
+//   page background  #343b4d   browser chrome   #1f2536   headers   #181f30
+//   sunken surfaces  #1d2334   card rows        #2b303c   borders   #454d63
+//   primary text     #e8eaed   muted text       #9799a3   accent    #8ab4f8
+//   filled action    #24417c   white pill       #ffffff
+//
+// Every colour used anywhere in this theme is declared in this block. Change a
+// token here and the whole interface follows — no literal colours should be
+// introduced in the partials below.
+// =============================================================================
+
+// --- Surfaces, darkest to lightest --------------------------------------------
+$pma-deep: #181f30;        // tab strips, dropdowns, tooltips, modal headers
+$pma-chrome: #1f2536;      // sidebar, top bars, form controls
+$pma-sunken: #1d2334;      // code blocks, wells, chips, shortcut tiles
+$pma-panel: #2a3040;       // cards, dialogs, popups, secondary panels
+$pma-page: #343b4d;        // main content background (screenshot's dominant tone)
+$pma-hover: #3b4356;       // hover / raised surface
+$pma-active: #47516a;      // active / pressed surface
+
+// --- Lines ---------------------------------------------------------------------
+$pma-border: #464e64;      // control, card and modal borders
+$pma-border-soft: #394053;  // divider between table cells / rows
+
+// --- Typography -----------------------------------------------------------------
+$pma-text: #e8eaed;        // primary text (9.3:1 on $pma-page)
+$pma-text-muted: #a3abbd;  // secondary text (4.9:1 on $pma-page)
+$pma-text-faint: #6d7488;  // disabled / de-emphasised text
+
+// --- Form controls (the omnibox colour from the reference screenshot) -----------
+$pma-input-bg: $pma-chrome;
+$pma-input-color: $pma-text;
+$pma-input-disabled-bg: $pma-sunken;
+
+// --- Accent (Google blue, dark-mode variant) -------------------------------------
+$pma-accent: #8ab4f8;      // links, focus rings, active tabs, "see more"
+$pma-accent-hover: #a9c7fb;
+$pma-accent-deep: #2f5cc4; // filled primary action ("Customize Chrome" pill)
+$pma-accent-deep-hover: #3a6ad6;
+$pma-accent-deep-text: #fff;
+
+// --- Status colours (dark-surface variants of the same accents) --------------------
+$pma-success: #2ea043;
+$pma-success-bg: #1b2e26;
+$pma-success-text: #7ee2a8;
+$pma-warning: #d9a406;
+$pma-warning-bg: #322a1a;
+$pma-warning-text: #f2c94c;
+$pma-danger: #e5534b;
+$pma-danger-bg: #35212a;
+$pma-danger-text: #ff9b93;
+$pma-info: #4f8ce8;
+$pma-info-bg: #1d2740;
+$pma-info-text: #9cc3ff;
+
+// =============================================================================
+// Layout & legacy theme variables (consumed by the theme partials)
+// =============================================================================
+
+$navi-width: 240px;
+$navi-color: $pma-text;
+$navi-background: $pma-chrome;
+$navi-right-gradient: #232a3d;
+$navi-pointer-color: $pma-text;
+$navi-pointer-background: #2b3245;
+
+$main-color: $pma-text;
+
+$browse-pointer-color: $pma-text;
+$browse-pointer-background: #1d4032;
+$browse-marker-color: #141825;
+$browse-marker-background: #4d461f;
+
+$border: 0;
+$th-background: #2b3242;
+$th-color: $pma-text;
+$bg-one: #3b4356;
+$bg-two: #2f3646;
+
+$main-difference: #2c3444;
+$second-lvl-pointer: #3b4356;
+$third-lvl-pointer: #47516a;
+
+$font-family-fixed: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas,
+  "Liberation Mono", monospace;
+$border-radius: .3rem;
+$drop-arrow: $pma-text-muted;
+
+// =============================================================================
+// Bootstrap overrides
+//
+// These are declared before `bootstrap/scss/variables` is imported (see
+// theme.scss) so the `!default` values in Bootstrap resolve to the palette
+// above instead of the light defaults.
+// =============================================================================
+
+// --- Core ----------------------------------------------------------------------
+$body-color: $pma-text;
+$body-bg: $pma-page;
+$body-emphasis-color: $pma-text;
+$border-color: $pma-border;
+$border-color-translucent: rgba($pma-text, .22);
+$text-muted: $pma-text-muted;
+$link-color: $pma-accent;
+$link-hover-color: $pma-accent-hover;
+$link-decoration: none;
+$link-hover-decoration: underline;
+
+// --- Semantic palette roles ----------------------------------------------------
+$primary: $pma-accent-deep;
+$secondary: $pma-hover;
+$success: $pma-success;
+$info: $pma-info;
+$warning: $pma-warning;
+$danger: $pma-danger;
+$light: $pma-hover;
+$dark: $pma-deep;
+
+// Bootstrap derives these by tinting towards white, which would produce light
+// surfaces on a dark base — declare the dark equivalents explicitly.
+$primary-text-emphasis: #9dbaf5;
+$secondary-text-emphasis: $pma-text;
+$success-text-emphasis: $pma-success-text;
+$info-text-emphasis: $pma-info-text;
+$warning-text-emphasis: $pma-warning-text;
+$danger-text-emphasis: $pma-danger-text;
+$light-text-emphasis: $pma-text;
+$dark-text-emphasis: $pma-text;
+
+$primary-bg-subtle: #22304e;
+$secondary-bg-subtle: $pma-sunken;
+$success-bg-subtle: $pma-success-bg;
+$info-bg-subtle: $pma-info-bg;
+$warning-bg-subtle: $pma-warning-bg;
+$danger-bg-subtle: $pma-danger-bg;
+$light-bg-subtle: $pma-panel;
+$dark-bg-subtle: $pma-deep;
+
+$primary-border-subtle: #35507f;
+$secondary-border-subtle: $pma-border;
+$success-border-subtle: #2f6b47;
+$info-border-subtle: #35507f;
+$warning-border-subtle: #6b5a20;
+$danger-border-subtle: #6b3330;
+$light-border-subtle: $pma-border;
+$dark-border-subtle: $pma-border;
+
+// --- Shadows (dark surfaces need deeper shadows to read as elevation) -----------
+$box-shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .45);
+$box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .5);
+$box-shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .55);
+$focus-ring-color: rgba($pma-accent, .55);
+$focus-ring-width: .2rem;
+$focus-ring-opacity: .5;
+
+// --- Tables ---------------------------------------------------------------------
+$table-color: $pma-text;
+$table-bg: $pma-page;
+$table-accent-bg: transparent;
+$table-striped-color: $pma-text;
+$table-striped-bg: rgba($pma-text, .045);
+$table-active-color: $pma-text;
+$table-active-bg: rgba($pma-accent, .12);
+$table-hover-color: $pma-text;
+$table-hover-bg: rgba($pma-text, .07);
+$table-border-color: $pma-border;
+$table-border-width: 0;
+$table-border-style: solid;
+$table-caption-color: $pma-text-muted;
+$table-group-separator-color: $pma-border;
+
+// --- Form controls ----------------------------------------------------------------
+$input-bg: $pma-input-bg;
+$input-color: $pma-input-color;
+$input-border-color: $pma-border;
+$input-border-width: 1px;
+$input-focus-border-color: $pma-accent;
+$input-focus-bg: $pma-input-bg;
+$input-focus-color: $pma-input-color;
+$input-placeholder-color: $pma-text-muted;
+$input-disabled-bg: $pma-input-disabled-bg;
+$input-disabled-color: $pma-text-faint;
+$input-group-addon-bg: $pma-sunken;
+$input-group-addon-border-color: $pma-border;
+$input-plaintext-color: $pma-text;
+
+$form-select-bg: $pma-chrome;
+$form-select-color: $pma-text;
+$form-select-border-color: $pma-border;
+$form-select-focus-border-color: $pma-accent;
+$form-select-focus-bg: $pma-chrome;
+$form-select-focus-color: $pma-text;
+$form-select-disabled-bg: $pma-sunken;
+$form-select-disabled-color: $pma-text-faint;
+$form-select-indicator-color: $pma-text-muted;
+$form-select-focus-box-shadow: 0 0 0 .2rem rgba($pma-accent, .35);
+
+$form-check-input-bg: $pma-sunken;
+$form-check-input-border: 1px solid $pma-border;
+$form-check-input-checked-bg-color: #3b6fe0;
+$form-check-input-checked-border-color: #3b6fe0;
+$form-check-input-checked-color: #fff;
+$form-check-input-focus-border-color: $pma-accent;
+
+$form-text-color: $pma-text-muted;
+$form-feedback-valid-color: $pma-success-text;
+$form-feedback-invalid-color: $pma-danger-text;
+$form-label-color: $pma-text;
+$form-check-input-active-filter: brightness(125%);
+
+// --- Buttons --------------------------------------------------------------------
+$btn-color: $pma-text;
+$btn-box-shadow: inset 0 1px 0 rgba($pma-text, .12), 0 1px 2px rgba(0, 0, 0, .35);
+$btn-focus-box-shadow: 0 0 0 .2rem rgba($pma-accent, .45);
+$btn-link-color: $pma-accent;
+$btn-link-hover-color: $pma-accent-hover;
+$btn-close-color: $pma-text;
+$btn-close-opacity: .7;
+$btn-close-hover-opacity: 1;
+
+// --- Navigation / tabs -----------------------------------------------------------
+$nav-link-color: $pma-text;
+$nav-link-hover-color: $pma-accent;
+$nav-link-disabled-color: $pma-text-faint;
+
+$nav-tabs-border-color: $pma-border;
+$nav-tabs-link-hover-color: $pma-accent;
+$nav-tabs-link-hover-bg: $pma-hover;
+$nav-tabs-link-hover-border-color: $pma-hover $pma-hover $pma-border;
+$nav-tabs-link-active-color: $pma-text;
+$nav-tabs-link-active-bg: $pma-page;
+$nav-tabs-link-active-border-color: $pma-border $pma-border $pma-page;
+
+$navbar-bg: $pma-chrome;
+$navbar-color: $pma-text-muted;
+$navbar-hover-color: $pma-accent;
+$navbar-active-color: $pma-accent;
+$navbar-brand-color: $pma-text;
+$navbar-brand-hover-color: $pma-accent;
+$navbar-toggler-icon-filter: invert(1) grayscale(100%) brightness(150%);
+$navbar-light-color: $pma-text-muted;
+$navbar-light-hover-color: $pma-accent;
+$navbar-light-active-color: $pma-accent;
+$navbar-light-disabled-color: $pma-text-faint;
+$navbar-light-brand-color: $pma-text;
+$navbar-light-brand-hover-color: $pma-accent;
+$navbar-light-toggler-border-color: rgba($pma-text, .2);
+
+// --- Dropdowns ---------------------------------------------------------------------
+$dropdown-bg: $pma-deep;
+$dropdown-color: $pma-text;
+$dropdown-border-color: $pma-border;
+$dropdown-border-radius: .5rem;
+$dropdown-link-color: $pma-text;
+$dropdown-link-hover-color: $pma-accent;
+$dropdown-link-hover-bg: #262d3f;
+$dropdown-link-active-color: $pma-accent;
+$dropdown-link-active-bg: #262d3f;
+$dropdown-link-disabled-color: $pma-text-faint;
+$dropdown-header-color: $pma-text-muted;
+$dropdown-item-color: $pma-text;
+$dropdown-item-hover-color: $pma-accent;
+$dropdown-item-hover-bg: #262d3f;
+$dropdown-item-active-color: $pma-accent;
+$dropdown-item-active-bg: #262d3f;
+$dropdown-dark: $pma-deep;
+
+// --- Cards ------------------------------------------------------------------------
+$card-bg: $pma-panel;
+$card-color: $pma-text;
+$card-border-color: $pma-border;
+$card-cap-bg: $pma-deep;
+$card-cap-color: $pma-text;
+$card-title-color: $pma-text;
+$card-border-radius: .6rem;
+$card-box-shadow: 0 .35rem 1rem rgba(0, 0, 0, .35);
+
+// --- Accordion ---------------------------------------------------------------------
+$accordion-button-color: $pma-text;
+$accordion-button-bg: $pma-panel;
+$accordion-button-active-color: $pma-accent;
+$accordion-button-active-bg: $pma-chrome;
+$accordion-button-active-box-shadow: inset 0 -.0625rem 0 rgba($pma-text, .12);
+$accordion-button-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238ab4f8'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-button-active-icon: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%238ab4f8'><path fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/></svg>");
+$accordion-bg: $pma-page;
+$accordion-border-color: $pma-border;
+$accordion-border-radius: .6rem;
+
+// --- Breadcrumb (declared here, consumed when bootstrap/scss/breadcrumb loads) -----
+$breadcrumb-navbar-bg: #2b3242;
+$breadcrumb-bg: transparent;
+$breadcrumb-link-color: $pma-text;
+$breadcrumb-link-hover-color: $pma-accent;
+$breadcrumb-active-color: $pma-text-muted;
+$breadcrumb-divider-color: $pma-text-faint;
+$breadcrumb-item-divider: $breadcrumb-divider-color;
+$breadcrumb-item-active-color: $pma-text-muted;
+$breadcrumb-navbar-color: $pma-text;
+
+// --- Pagination ------------------------------------------------------------------
+$pagination-color: $pma-text;
+$pagination-bg: #2b3242;
+$pagination-border-color: $pma-border;
+$pagination-hover-color: $pma-accent;
+$pagination-hover-bg: $pma-hover;
+$pagination-hover-border-color: $pma-border;
+$pagination-focus-color: $pma-accent;
+$pagination-focus-bg: $pma-hover;
+$pagination-focus-box-shadow: 0 0 0 .2rem rgba($pma-accent, .4);
+$pagination-active-color: #fff;
+$pagination-active-bg: $pma-accent-deep;
+$pagination-active-border-color: $pma-accent-deep;
+$pagination-disabled-color: $pma-text-faint;
+$pagination-disabled-bg: $pma-sunken;
+$pagination-disabled-border-color: $pma-border;
+
+// --- List groups ------------------------------------------------------------------
+// Items are transparent so a list always shows its host surface (the card, the
+// fieldset or the page behind it) instead of painting its own panel colour and
+// cutting a second background into the layout. Hover/active/disabled states keep
+// their own colours.
+$list-group-bg: transparent;
+$list-group-color: $pma-text;
+$list-group-border-color: $pma-border;
+$list-group-hover-bg: $pma-hover;
+$list-group-hover-color: $pma-text;
+$list-group-active-color: #fff;
+$list-group-active-bg: $pma-accent-deep;
+$list-group-active-border-color: $pma-accent-deep;
+$list-group-disabled-color: $pma-text-faint;
+$list-group-disabled-bg: $pma-sunken;
+$list-group-action-color: $pma-text;
+$list-group-action-hover-color: $pma-accent;
+$list-group-action-active-color: $pma-text;
+$list-group-action-active-bg: $pma-active;
+$list-group-border-radius: .5rem;
+$list-group-header-bg: #2b3242;
+
+// --- Alerts ------------------------------------------------------------------------
+$alert-color-scale: .85;
+$alert-border-scale: .5;
+$alert-bg-scale: .15;
+
+// --- Modals ------------------------------------------------------------------------
+$modal-content-bg: $pma-panel;
+$modal-content-color: $pma-text;
+$modal-content-border-color: $pma-border;
+$modal-backdrop-bg: #0d1220;
+$modal-backdrop-opacity: .7;
+$modal-header-border-color: $pma-border;
+$modal-footer-border-color: $pma-border;
+$modal-footer-bg: transparent;
+
+// --- Badges / code ------------------------------------------------------------------
+$code-color: $pma-accent;
+$kbd-color: $pma-text;
+$kbd-bg: $pma-sunken;
+$pre-color: $pma-text;
+
+// =============================================================================
+// Layout & component sizing
+//
+// These mirror the parent theme (pmahomme) so the dark variant keeps the exact
+// same metrics — only the colours change.
+// =============================================================================
+
+// Typography
+$font-family-base: sans-serif;
+$font-family-monospace: monospace;
+$font-size-base: 0.82rem;
+$h1-font-size: 140%;
+$h2-font-size: 2em;
+$h3-font-size: 1rem;
+
+// Feature flags used by Bootstrap
+$enable-gradients: true;
+$enable-shadows: true;
+$enable-transitions: false;
+$enable-caret: false;
+
+// Tables
+$table-cell-padding-y: 0.1em;
+$table-cell-padding-x: 0.3em;
+$table-cell-padding-y-sm: $table-cell-padding-y;
+$table-cell-padding-x-sm: $table-cell-padding-x;
+
+// Buttons
+$btn-border-radius: 0.85rem;
+$btn-line-height: 1.15;
+
+// Dropdowns
+$dropdown-padding-y: 0;
+$dropdown-item-padding-y: 0;
+$dropdown-item-padding-x: 0;
+
+// Forms
+$label-margin-bottom: 0;
+$form-check-input-margin-y: 0.1rem;
+
+// Navbar
+$navbar-padding-y: 0;
+$navbar-padding-x: 0;
+
+// Accordion
+$accordion-button-padding-y: 0.375rem;
+$accordion-button-padding-x: 0.75rem;
+
+// Breadcrumbs
+$breadcrumb-navbar-padding-y: 0.1rem;
+$breadcrumb-navbar-padding-x: 2.2em;
+$breadcrumb-navbar-margin-bottom: 0;
+$breadcrumb-divider: quote("»");
+
+// Modals
+$modal-inner-padding: 0.75rem;
+$modal-footer-margin-between: 0.1rem;
+$modal-header-padding-y: 0.4rem;
+
+// Alerts
+$alert-margin-bottom: 0.5em;
+$alert-border-radius: 5px;
+
+// List group
+$list-group-item-padding-x: 0.75rem;
+$list-group-item-padding-y: 0.375rem;
