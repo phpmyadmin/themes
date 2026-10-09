@@ -1,0 +1,15 @@
+# OS junk
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Editors
+.vscode/
+.idea/
+
+# Node tooling (npx/npm) if installed locally
+node_modules/
+npm-debug.log*
+
+# Never commit local phpMyAdmin configuration
+config.inc.php

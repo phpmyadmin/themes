@@ -1,0 +1,12 @@
+/**
+ * GIS data editor styles
+ *
+ * Overrides the shared partial in themes/bootstrap/scss/_gis.scss, which is
+ * written for a light background (#d0dce0 paper-like canvas). This file is
+ * imported right after it, so these rules win on equal specificity.
+ */
+
+#gis_data_editor {
+  background: $pma-sunken;
+  color: $pma-text;
+}

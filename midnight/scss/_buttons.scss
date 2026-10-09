@@ -1,0 +1,46 @@
+.btn-primary,
+.btn-outline-primary {
+  font-weight: $font-weight-bold;
+}
+
+// Filled primary action — deep blue from the reference screenshot, kept
+// readable on the page background with a light border and a subtle gloss.
+.btn-primary {
+  color: $pma-accent-deep-text;
+  border-color: rgba($pma-accent, .5);
+  background-image: linear-gradient(rgba($pma-text, .14), transparent);
+
+  &:hover,
+  &:focus {
+    color: $pma-accent-deep-text;
+    background-color: $pma-accent-deep-hover;
+    background-image: linear-gradient(rgba($pma-text, .2), transparent);
+    border-color: $pma-accent;
+  }
+}
+
+.btn-secondary {
+  color: $pma-text;
+  border-color: $pma-border;
+  background-image: linear-gradient(rgba($pma-text, .1), transparent);
+
+  &:hover,
+  &:focus {
+    color: $pma-text;
+    background-color: $pma-active;
+    background-image: linear-gradient(rgba($pma-text, .16), transparent);
+    border-color: $pma-accent;
+  }
+}
+
+.btn-outline-primary,
+.btn-outline-secondary {
+  color: $body-color;
+  border-color: $pma-border;
+
+  &:hover,
+  &:focus {
+    color: $pma-accent;
+    border-color: $pma-accent;
+  }
+}

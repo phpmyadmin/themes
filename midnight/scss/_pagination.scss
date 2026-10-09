@@ -1,0 +1,17 @@
+.page-link {
+  background-image: linear-gradient(rgba($pma-text, .07), transparent);
+
+  &:hover {
+    text-decoration: $link-hover-decoration;
+  }
+}
+
+.page-item {
+  &.active .page-link {
+    background-image: linear-gradient(rgba($pma-text, .18), rgba($pma-text, .05));
+  }
+
+  &.disabled .page-link {
+    background-image: none;
+  }
+}
